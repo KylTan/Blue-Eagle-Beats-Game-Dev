@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://dnoywddxa48vs"]
+
+[ext_resource type="Texture2D" uid="uid://bway2cc4nt4k8" path="res://Assets/Bass-Beat-Container-Mini.png" id="1_qa2vd"]
+[ext_resource type="PackedScene" uid="uid://da4metl6nxxbt" path="res://Objects/Note Receiver.tscn" id="2_30r12"]
+[ext_resource type="Texture2D" uid="uid://cnctnyq7ybcfj" path="res://Assets/Bass-Beater-CharSheet.png" id="3_2rqoa"]
+[ext_resource type="Script" path="res://Objects/Beater Cursour.gd" id="3_wmqhp"]
+[ext_resource type="Script" path="res://Objects/BeaterSprite.gd" id="5_mudu0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfhm2"]
+atlas = ExtResource("3_2rqoa")
+region = Rect2(0, 0, 430, 430)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ao4nq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfhm2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mfkri"]
+radius = 31.0
+height = 206.0
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(995, 549)
+
+[node name="Container Path" type="Sprite2D" parent="."]
+position = Vector2(-35, -8)
+texture = ExtResource("1_qa2vd")
+
+[node name="Note Receiver" parent="." instance=ExtResource("2_30r12")]
+position = Vector2(-883, 356)
+
+[node name="Heavy Charge Zone" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Heavy Charge Zone"]
+position = Vector2(4, 84)
+scale = Vector2(1, 1.15157)
+polygon = PackedVector2Array(14, -542, 213, -314, 208, -52, 921, -188, 919, -546)
+
+[node name="Light Charge Zone" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Light Charge Zone"]
+position = Vector2(-292, 510)
+scale = Vector2(1, 1.15157)
+polygon = PackedVector2Array(393, -395.113, 1209, -553.158, 1215, 17.3676, 359, 19.1044)
+
+[node name="Beater Cursour" type="Node2D" parent="."]
+script = ExtResource("3_wmqhp")
+
+[node name="BeaterSprite" type="AnimatedSprite2D" parent="Beater Cursour"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ao4nq")
+script = ExtResource("5_mudu0")
+
+[node name="Area2D" type="Area2D" parent="Beater Cursour"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beater Cursour/Area2D"]
+position = Vector2(2, 1)
+shape = SubResource("CapsuleShape2D_mfkri")
