@@ -38,9 +38,8 @@ script = ExtResource("1_cf0r3")
 position = Vector2(-35, -8)
 texture = ExtResource("1_qa2vd")
 
-[node name="Note Receiver Light" parent="." instance=ExtResource("2_30r12")]
-
-[node name="Note Receiver Heavy" parent="." instance=ExtResource("2_30r12")]
+[node name="Note Receiver" parent="." instance=ExtResource("2_30r12")]
+position = Vector2(-881, 356)
 
 [node name="Heavy Charge Zone" type="Area2D" parent="." groups=["heavyCharge"]]
 
@@ -79,8 +78,8 @@ visible = false
 position = Vector2(2, 1)
 shape = SubResource("CapsuleShape2D_mfkri")
 
-[node name="Node2D" parent="." instance=ExtResource("7_h5hyk")]
-position = Vector2(-883, 250)
+[node name="Bar" parent="." instance=ExtResource("7_h5hyk")]
+position = Vector2(-733, 390)
 
 [connection signal="mouse_entered" from="Heavy Charge Zone" to="." method="_on_heavy_charge_zone_mouse_entered"]
 [connection signal="mouse_entered" from="Light Charge Zone" to="." method="_on_light_charge_zone_mouse_entered"]
