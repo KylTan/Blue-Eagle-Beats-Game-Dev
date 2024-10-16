@@ -22,7 +22,9 @@ var notes_data = [
 	}
 ]
 
-var note_scale = 0.675 # 8 godot units / 1600 somethings, we do 1080/1600 cuz 2d pixels ig
+#
+var note_scale = 0.590
+#0.675 # 8 godot units / 1600 somethings, we do 1080/1600 cuz 2d pixels ig
 #dividing the imagined length over the actual length of the container
 
 # Called when the node enters the scene tree for the first time.

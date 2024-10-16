@@ -8,19 +8,32 @@ var is_Hit = false #changes when clear area is hit with the cursour with a charg
 #bar spawning variables
 var bar_scn = preload("res://Objects/Bar.tscn")
 var barList = []
-@onready var bars_node = $Bar #was called Barsnode
-var bar_Length_In_M = 1080 # 1080 cuz we using 2d pixels not 3d scaling
-var curr_location = Vector2(0, -bar_Length_In_M)	
-var speed = Vector2(0,300)
+@onready var bars_node = $BarNode #was called Barsnode
+var bar_Length_In_M = 0 # 1080 cuz we using 2d pixels not 3d scaling
+var curr_location = Vector2(261, -bar_Length_In_M)	
+#var speed = Vector2(0,300) # speed of notes
 
-#Note Receiver
+#Note Receiver - passes from clear area to here and back to note receiver
 @onready var receiver = $"Note Receiver"
-		
+
+#Audio timing vars
+var tempo
+var quarter_time_in_sec
+var note_speed
+var note_scale
+var start_pos_in_sec #offset
+var audio
+var audiofile = "res://Assets/Shuffle_Through_the_Night.mp3"
+@onready var music_node = $Music
 	
 func _ready():
+	audio = load(audiofile)
 	beaterSprite = get_node("BeaterSprite") #beater
 	NoteRecLight = get_node("Note Receiver Light")
 	NoteRecHeavy = get_node("Note Receiver Heavy")
+	
+	calc_params()
+	music_node.setup(self)
 	
 	# bar spawning on ready
 	for i in range(3):
@@ -29,7 +42,7 @@ func _ready():
 		
 func _process(delta):
 	followMouse()
-	bars_node.translate(speed*delta)
+	bars_node.translate(Vector2(0, note_speed*delta))
 	
 	for bar in barList:
 		if (bar.position.y + bars_node.position.y)/2 >= bar_Length_In_M:
@@ -74,5 +87,13 @@ func remove_bar(bar):
 	bar.queue_free()
 	barList.erase(bar)
 
+# ~~~~~Audio File Timing stuff~~~~~
+func calc_params():
+	tempo = 104
+	bar_Length_In_M = 945
+	quarter_time_in_sec = 60/float(tempo)
+	note_speed = bar_Length_In_M/float(4*quarter_time_in_sec)
+	note_scale = bar_Length_In_M/float(4*400) #idk about the 4*400 bit -> 0.675
+	start_pos_in_sec = 0 
 
 
