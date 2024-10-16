@@ -3,7 +3,7 @@ var beaterSprite
 var chargeValue	
 var NoteRecLight
 var NoteRecHeavy
-var is_Hit = false
+var is_Hit = false #changes when clear area is hit with the cursour with a charge
 
 #bar spawning variables
 var bar_scn = preload("res://Objects/Bar.tscn")
@@ -12,6 +12,9 @@ var barList = []
 var bar_Length_In_M = 1080 # 1080 cuz we using 2d pixels not 3d scaling
 var curr_location = Vector2(0, -bar_Length_In_M)	
 var speed = Vector2(0,300)
+
+#Note Receiver
+@onready var receiver = $"Note Receiver"
 		
 	
 func _ready():
@@ -43,19 +46,21 @@ func followMouse():
 #Value of Bass charge (aka what note type)
 func _on_heavy_charge_zone_mouse_entered():
 	chargeValue = 2
-	#trigger note receiver action
+	receiver.note_Charge = chargeValue
 	
 func _on_light_charge_zone_mouse_entered():
 	chargeValue = 1
-	#trigger note receiver action
+	receiver.note_Charge = chargeValue
 	
 # going to this zone counts the hit with corresponding charge a.k.a the input
 func _on_clear_area_mouse_entered():
 	is_Hit = true
-	chargeValue = 0
+	receiver.is_Hit = is_Hit
 
 func _on_clear_area_mouse_exited():
 	is_Hit = false
+	receiver.is_Hit = is_Hit
+	chargeValue = 0
 	
 # ~~~~~Bar spawning functions~~~~~
 func add_bar():
