@@ -3,6 +3,7 @@ var beaterSprite
 var chargeValue	
 var NoteRecLight
 var NoteRecHeavy
+var is_Hit = false
 
 #bar spawning variables
 var bar_scn = preload("res://Objects/Bar.tscn")
@@ -11,6 +12,7 @@ var barList = []
 var bar_Length_In_M = 1080 # 1080 cuz we using 2d pixels not 3d scaling
 var curr_location = Vector2(0, -bar_Length_In_M)	
 var speed = Vector2(0,300)
+		
 	
 func _ready():
 	beaterSprite = get_node("BeaterSprite") #beater
@@ -47,10 +49,13 @@ func _on_light_charge_zone_mouse_entered():
 	chargeValue = 1
 	#trigger note receiver action
 	
-# going to this zone counts the hit with corresponding charge
+# going to this zone counts the hit with corresponding charge a.k.a the input
 func _on_clear_area_mouse_entered():
+	is_Hit = true
 	chargeValue = 0
-	
+
+func _on_clear_area_mouse_exited():
+	is_Hit = false
 	
 # ~~~~~Bar spawning functions~~~~~
 func add_bar():
@@ -63,3 +68,6 @@ func add_bar():
 func remove_bar(bar):
 	bar.queue_free()
 	barList.erase(bar)
+
+
+
