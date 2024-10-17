@@ -9,8 +9,8 @@ var is_Hit = false #changes when clear area is hit with the cursour with a charg
 var bar_scn = preload("res://Objects/Bar.tscn")
 var barList = []
 @onready var bars_node = $BarNode #was called Barsnode
-var bar_Length_In_M = 0 # 1080 cuz we using 2d pixels not 3d scaling
-var curr_location = Vector2(261, -bar_Length_In_M)	
+var bar_Length_In_M = 945# 1080 cuz we using 2d pixels not 3d scaling
+var curr_location = Vector2(261, -bar_Length_In_M)
 #var speed = Vector2(0,300) # speed of notes
 
 #Note Receiver - passes from clear area to here and back to note receiver
@@ -23,16 +23,25 @@ var note_speed
 var note_scale
 var start_pos_in_sec #offset
 var audio
-var audiofile = "res://Assets/Shuffle_Through_the_Night.mp3"
+var audiofile = "res://Assets/Otso-Cheer.mp3"
 @onready var music_node = $Music
 	
+#mapping file
+var map_file = "res://Assets/Otso-Cheer.mboy"
+var map
+var curr_bar_index = 0 
+var tracks_data
+
 func _ready():
 	audio = load(audiofile)
 	beaterSprite = get_node("BeaterSprite") #beater
 	NoteRecLight = get_node("Note Receiver Light")
 	NoteRecHeavy = get_node("Note Receiver Heavy")
 	
+	map = load_map()	
 	calc_params()
+	tracks_data = map.tracks
+	print(tracks_data)
 	music_node.setup(self)
 	
 	# bar spawning on ready
@@ -54,7 +63,6 @@ func followMouse():
 	# beater following mouse
 	var mouse_pos = get_local_mouse_position()
 	beaterSprite.position = mouse_pos
-	print(mouse_pos)
 
 #Value of Bass charge (aka what note type)
 func _on_heavy_charge_zone_mouse_entered():
@@ -79,9 +87,17 @@ func _on_clear_area_mouse_exited():
 func add_bar():
 	var bar = bar_scn.instantiate()
 	bar.position = curr_location
+	bar.note_scale = note_scale
+	bar.bar_data = get_bar_data()
 	barList.append(bar)
 	bars_node.add_child(bar)
 	curr_location += Vector2(0, -bar_Length_In_M)	
+	curr_bar_index += 1
+	
+func get_bar_data():
+	var heavy_data = tracks_data[0].bars[curr_bar_index]
+	var light_data = tracks_data[1].bars[curr_bar_index]
+	return [heavy_data, light_data] 
 
 func remove_bar(bar):
 	bar.queue_free()
@@ -89,11 +105,23 @@ func remove_bar(bar):
 
 # ~~~~~Audio File Timing stuff~~~~~
 func calc_params():
-	tempo = 104
-	bar_Length_In_M = 945
+	tempo = int(map.tempo)
+	bar_Length_In_M = 1890	# --> tweaking this spaces out but landing time isnt consistent,
+	# maybe tweak starting position too
 	quarter_time_in_sec = 60/float(tempo)
 	note_speed = bar_Length_In_M/float(4*quarter_time_in_sec)
 	note_scale = bar_Length_In_M/float(4*400) #idk about the 4*400 bit -> 0.675
-	start_pos_in_sec = 0 
+	start_pos_in_sec = (float(map.start_pos)/400.0)*quarter_time_in_sec
 
+# ~~~~~Mapping Stuff~~~~~
+func load_map():
+	var file = FileAccess.open(map_file, FileAccess.READ) # opens and reads file
+	var content = file.get_as_text()
+	file.close()
+	
+	var json = JSON.new()
+	var json_result = json.parse(content)
+	#print(json.data)
+	return json.data #right?
+	
 

@@ -1,5 +1,5 @@
 extends Node2D
-var audiofile1 = preload("res://Assets/GoAteneo-Cheer.wav")
+var audiofile1 = preload("res://Assets/Otso-Cheer.mp3")
 @onready var player = $AudioStreamPlayer2D
 
 var speed
