@@ -54,13 +54,10 @@ func _process(delta):
 	followMouse()
 	bars_node.translate(Vector2(0, note_speed*delta))
 	
-	var count = 0
 	for bar in barList:
-		if (bar.position.y + bars_node.position.y)/2 >= bar_Length_In_M and count < 11:
+		if (bar.position.y + bars_node.position.y)/2 >= bar_Length_In_M:
 			remove_bar(bar)
 			add_bar()
-			count +=1
-		break
 			
 # ~~~~~Bass game functions~~~~~
 func followMouse():
@@ -93,19 +90,23 @@ func _on_clear_area_mouse_exited():
 	
 # ~~~~~Bar spawning functions~~~~~
 func add_bar():
-	var bar = bar_scn.instantiate()
-	bar.position = curr_location
-	bar.note_scale = note_scale
-	bar.bar_data = get_bar_data()
-	barList.append(bar)
-	bars_node.add_child(bar)
-	curr_location += Vector2(0, -bar_Length_In_M)	
-	curr_bar_index += 1
+	if get_bar_data() != null: #this check stops it from crashing out
+		var bar = bar_scn.instantiate()
+		bar.position = curr_location
+		bar.note_scale = note_scale
+		bar.bar_data = get_bar_data()
+		barList.append(bar)
+		bars_node.add_child(bar)
+		curr_location += Vector2(0, -bar_Length_In_M)	
+		curr_bar_index += 1
 	
-func get_bar_data(): #crashes here after end of cheer
+func get_bar_data(): 
+	if curr_bar_index < tracks_data[0].bars.size():
 		var heavy_data = tracks_data[0].bars[curr_bar_index]
 		var light_data = tracks_data[1].bars[curr_bar_index]
 		return [heavy_data, light_data] 
+	else:
+		return null
 
 func remove_bar(bar):
 	bar.queue_free()

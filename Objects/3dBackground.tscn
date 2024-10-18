@@ -366,407 +366,2334 @@ mesh = SubResource("BoxMesh_bwbk6")
 transform = Transform3D(0.0167982, 0, 1.5285, 0, 0.05, 0, -0.0493782, 0, 0.519988, -4.97461, 0.0130615, -7.68768)
 mesh = SubResource("BoxMesh_bwbk6")
 
-[node name="One Bloc GA" type="Node3D" parent="."]
+[node name="GA" type="Node3D" parent="."]
 
-[node name="Right Stairs" type="Node3D" parent="One Bloc GA"]
+[node name="One Section" type="Node3D" parent="GA"]
 
-[node name="Floor" type="MeshInstance3D" parent="One Bloc GA/Right Stairs"]
+[node name="One Bloc GA" type="Node3D" parent="GA/One Section"]
+
+[node name="Right Stairs" type="Node3D" parent="GA/One Section/One Bloc GA"]
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="BottomStair" type="MeshInstance3D" parent="One Bloc GA/Right Stairs"]
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair2" type="MeshInstance3D" parent="One Bloc GA/Right Stairs"]
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair3" type="MeshInstance3D" parent="One Bloc GA/Right Stairs"]
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair4" type="MeshInstance3D" parent="One Bloc GA/Right Stairs"]
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair5" type="MeshInstance3D" parent="One Bloc GA/Right Stairs"]
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Rail" type="MeshInstance3D" parent="One Bloc GA/Right Stairs"]
+[node name="Rail" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Wall" type="MeshInstance3D" parent="One Bloc GA/Right Stairs"]
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Billboard" type="MeshInstance3D" parent="One Bloc GA/Right Stairs"]
+[node name="Billboard" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Roof" type="MeshInstance3D" parent="One Bloc GA/Right Stairs"]
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof2" type="MeshInstance3D" parent="One Bloc GA/Right Stairs"]
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof3" type="MeshInstance3D" parent="One Bloc GA/Right Stairs"]
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Left Stairs" type="Node3D" parent="One Bloc GA"]
+[node name="Left Stairs" type="Node3D" parent="GA/One Section/One Bloc GA"]
 transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.065, 0, -2.082)
 
-[node name="Floor" type="MeshInstance3D" parent="One Bloc GA/Left Stairs"]
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Left Stairs"]
 transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="BottomStair" type="MeshInstance3D" parent="One Bloc GA/Left Stairs"]
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Left Stairs"]
 transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair2" type="MeshInstance3D" parent="One Bloc GA/Left Stairs"]
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Left Stairs"]
 transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair3" type="MeshInstance3D" parent="One Bloc GA/Left Stairs"]
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Left Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair4" type="MeshInstance3D" parent="One Bloc GA/Left Stairs"]
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Left Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair5" type="MeshInstance3D" parent="One Bloc GA/Left Stairs"]
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Left Stairs"]
 transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Rail" type="MeshInstance3D" parent="One Bloc GA/Left Stairs"]
+[node name="Rail" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Left Stairs"]
 transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Wall" type="MeshInstance3D" parent="One Bloc GA/Left Stairs"]
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Left Stairs"]
 transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Billboard" type="MeshInstance3D" parent="One Bloc GA/Left Stairs"]
+[node name="Billboard" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Left Stairs"]
 transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Roof" type="MeshInstance3D" parent="One Bloc GA/Left Stairs"]
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Left Stairs"]
 transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof2" type="MeshInstance3D" parent="One Bloc GA/Left Stairs"]
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Left Stairs"]
 transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof3" type="MeshInstance3D" parent="One Bloc GA/Left Stairs"]
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Left Stairs"]
 transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Middle Stairs" type="Node3D" parent="One Bloc GA"]
+[node name="Middle Stairs" type="Node3D" parent="GA/One Section/One Bloc GA"]
 transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, 0.018, 0, -2.21165)
 
-[node name="Floor" type="MeshInstance3D" parent="One Bloc GA/Middle Stairs"]
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Middle Stairs"]
 transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="BottomStair" type="MeshInstance3D" parent="One Bloc GA/Middle Stairs"]
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Middle Stairs"]
 transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair2" type="MeshInstance3D" parent="One Bloc GA/Middle Stairs"]
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Middle Stairs"]
 transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair3" type="MeshInstance3D" parent="One Bloc GA/Middle Stairs"]
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Middle Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair4" type="MeshInstance3D" parent="One Bloc GA/Middle Stairs"]
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Middle Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair5" type="MeshInstance3D" parent="One Bloc GA/Middle Stairs"]
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Middle Stairs"]
 transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Wall" type="MeshInstance3D" parent="One Bloc GA/Middle Stairs"]
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Middle Stairs"]
 transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof" type="MeshInstance3D" parent="One Bloc GA/Middle Stairs"]
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Middle Stairs"]
 transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof2" type="MeshInstance3D" parent="One Bloc GA/Middle Stairs"]
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Middle Stairs"]
 transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof3" type="MeshInstance3D" parent="One Bloc GA/Middle Stairs"]
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Middle Stairs"]
 transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Tiny Stairs" type="Node3D" parent="One Bloc GA"]
+[node name="Tiny Stairs" type="Node3D" parent="GA/One Section/One Bloc GA"]
 transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, -0.114047, -0.0258026, -2.18988)
 
-[node name="BottomStair" type="MeshInstance3D" parent="One Bloc GA/Tiny Stairs"]
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Tiny Stairs"]
 transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair2" type="MeshInstance3D" parent="One Bloc GA/Tiny Stairs"]
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Tiny Stairs"]
 transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair3" type="MeshInstance3D" parent="One Bloc GA/Tiny Stairs"]
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Tiny Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair4" type="MeshInstance3D" parent="One Bloc GA/Tiny Stairs"]
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Tiny Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair5" type="MeshInstance3D" parent="One Bloc GA/Tiny Stairs"]
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Tiny Stairs"]
 transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="One Bloc GA2" type="Node3D" parent="."]
+[node name="One Bloc GA2" type="Node3D" parent="GA/One Section"]
 transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -0.239558, 0, -4.15877)
 
-[node name="Right Stairs" type="Node3D" parent="One Bloc GA2"]
+[node name="Right Stairs" type="Node3D" parent="GA/One Section/One Bloc GA2"]
 
-[node name="Floor" type="MeshInstance3D" parent="One Bloc GA2/Right Stairs"]
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Right Stairs"]
 transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="BottomStair" type="MeshInstance3D" parent="One Bloc GA2/Right Stairs"]
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Right Stairs"]
 transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair2" type="MeshInstance3D" parent="One Bloc GA2/Right Stairs"]
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Right Stairs"]
 transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair3" type="MeshInstance3D" parent="One Bloc GA2/Right Stairs"]
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Right Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair4" type="MeshInstance3D" parent="One Bloc GA2/Right Stairs"]
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Right Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair5" type="MeshInstance3D" parent="One Bloc GA2/Right Stairs"]
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Right Stairs"]
 transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Rail" type="MeshInstance3D" parent="One Bloc GA2/Right Stairs"]
+[node name="Rail" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Right Stairs"]
 transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Wall" type="MeshInstance3D" parent="One Bloc GA2/Right Stairs"]
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Right Stairs"]
 transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Billboard" type="MeshInstance3D" parent="One Bloc GA2/Right Stairs"]
+[node name="Billboard" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Right Stairs"]
 transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Roof" type="MeshInstance3D" parent="One Bloc GA2/Right Stairs"]
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Right Stairs"]
 transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof2" type="MeshInstance3D" parent="One Bloc GA2/Right Stairs"]
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Right Stairs"]
 transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof3" type="MeshInstance3D" parent="One Bloc GA2/Right Stairs"]
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Right Stairs"]
 transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Left Stairs" type="Node3D" parent="One Bloc GA2"]
+[node name="Left Stairs" type="Node3D" parent="GA/One Section/One Bloc GA2"]
 transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.065, 0, -2.082)
 
-[node name="Floor" type="MeshInstance3D" parent="One Bloc GA2/Left Stairs"]
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Left Stairs"]
 transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="BottomStair" type="MeshInstance3D" parent="One Bloc GA2/Left Stairs"]
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Left Stairs"]
 transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair2" type="MeshInstance3D" parent="One Bloc GA2/Left Stairs"]
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Left Stairs"]
 transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair3" type="MeshInstance3D" parent="One Bloc GA2/Left Stairs"]
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Left Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair4" type="MeshInstance3D" parent="One Bloc GA2/Left Stairs"]
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Left Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair5" type="MeshInstance3D" parent="One Bloc GA2/Left Stairs"]
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Left Stairs"]
 transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Rail" type="MeshInstance3D" parent="One Bloc GA2/Left Stairs"]
+[node name="Rail" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Left Stairs"]
 transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Wall" type="MeshInstance3D" parent="One Bloc GA2/Left Stairs"]
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Left Stairs"]
 transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Billboard" type="MeshInstance3D" parent="One Bloc GA2/Left Stairs"]
+[node name="Billboard" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Left Stairs"]
 transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Roof" type="MeshInstance3D" parent="One Bloc GA2/Left Stairs"]
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Left Stairs"]
 transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof2" type="MeshInstance3D" parent="One Bloc GA2/Left Stairs"]
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Left Stairs"]
 transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof3" type="MeshInstance3D" parent="One Bloc GA2/Left Stairs"]
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Left Stairs"]
 transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Middle Stairs" type="Node3D" parent="One Bloc GA2"]
+[node name="Middle Stairs" type="Node3D" parent="GA/One Section/One Bloc GA2"]
 transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, 0.018, 0, -2.21165)
 
-[node name="Floor" type="MeshInstance3D" parent="One Bloc GA2/Middle Stairs"]
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Middle Stairs"]
 transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="BottomStair" type="MeshInstance3D" parent="One Bloc GA2/Middle Stairs"]
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Middle Stairs"]
 transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair2" type="MeshInstance3D" parent="One Bloc GA2/Middle Stairs"]
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Middle Stairs"]
 transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair3" type="MeshInstance3D" parent="One Bloc GA2/Middle Stairs"]
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Middle Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair4" type="MeshInstance3D" parent="One Bloc GA2/Middle Stairs"]
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Middle Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair5" type="MeshInstance3D" parent="One Bloc GA2/Middle Stairs"]
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Middle Stairs"]
 transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Wall" type="MeshInstance3D" parent="One Bloc GA2/Middle Stairs"]
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Middle Stairs"]
 transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof" type="MeshInstance3D" parent="One Bloc GA2/Middle Stairs"]
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Middle Stairs"]
 transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof2" type="MeshInstance3D" parent="One Bloc GA2/Middle Stairs"]
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Middle Stairs"]
 transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof3" type="MeshInstance3D" parent="One Bloc GA2/Middle Stairs"]
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Middle Stairs"]
 transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Tiny Stairs" type="Node3D" parent="One Bloc GA2"]
+[node name="Tiny Stairs" type="Node3D" parent="GA/One Section/One Bloc GA2"]
 transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, -0.114047, -0.0258026, -2.18988)
 
-[node name="BottomStair" type="MeshInstance3D" parent="One Bloc GA2/Tiny Stairs"]
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Tiny Stairs"]
 transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair2" type="MeshInstance3D" parent="One Bloc GA2/Tiny Stairs"]
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Tiny Stairs"]
 transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair3" type="MeshInstance3D" parent="One Bloc GA2/Tiny Stairs"]
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Tiny Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair4" type="MeshInstance3D" parent="One Bloc GA2/Tiny Stairs"]
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Tiny Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair5" type="MeshInstance3D" parent="One Bloc GA2/Tiny Stairs"]
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section/One Bloc GA2/Tiny Stairs"]
 transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Middle Stairs" type="Node3D" parent="."]
+[node name="Middle Stairs" type="Node3D" parent="GA/One Section"]
 transform = Transform3D(0.961064, 0, 0.0421119, 0, 1, 0, -0.257516, 0, 0.157164, -0.290067, 0, -4.27269)
 
-[node name="Floor" type="MeshInstance3D" parent="Middle Stairs"]
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section/Middle Stairs"]
 transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="BottomStair" type="MeshInstance3D" parent="Middle Stairs"]
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section/Middle Stairs"]
 transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair2" type="MeshInstance3D" parent="Middle Stairs"]
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section/Middle Stairs"]
 transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair3" type="MeshInstance3D" parent="Middle Stairs"]
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section/Middle Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair4" type="MeshInstance3D" parent="Middle Stairs"]
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section/Middle Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair5" type="MeshInstance3D" parent="Middle Stairs"]
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section/Middle Stairs"]
 transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Wall" type="MeshInstance3D" parent="Middle Stairs"]
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section/Middle Stairs"]
 transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof" type="MeshInstance3D" parent="Middle Stairs"]
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section/Middle Stairs"]
 transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof2" type="MeshInstance3D" parent="Middle Stairs"]
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section/Middle Stairs"]
 transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Roof3" type="MeshInstance3D" parent="Middle Stairs"]
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section/Middle Stairs"]
 transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
 
-[node name="Tiny Stairs" type="Node3D" parent="."]
+[node name="Tiny Stairs" type="Node3D" parent="GA/One Section"]
 transform = Transform3D(0.961064, 0, 0.0421119, 0, 1, 0, -0.257516, 0, 0.157164, -0.422113, -0.0258026, -4.25092)
 
-[node name="BottomStair" type="MeshInstance3D" parent="Tiny Stairs"]
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section/Tiny Stairs"]
 transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair2" type="MeshInstance3D" parent="Tiny Stairs"]
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section/Tiny Stairs"]
 transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair3" type="MeshInstance3D" parent="Tiny Stairs"]
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section/Tiny Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair4" type="MeshInstance3D" parent="Tiny Stairs"]
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section/Tiny Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
 
-[node name="Stair5" type="MeshInstance3D" parent="Tiny Stairs"]
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs" type="Node3D" parent="GA"]
+transform = Transform3D(0.815029, 0, 0.0933256, 0, 1, 0, -0.570689, 0, 0.133283, -1.99435, -0.00177491, -8.05257)
+
+[node name="Floor" type="MeshInstance3D" parent="GA/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/Middle Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/Middle Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/Middle Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="GA"]
+transform = Transform3D(0.815029, 0, 0.0933256, 0, 1, 0, -0.570689, 0, 0.133283, -2.12639, -0.0275775, -7.96258)
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="One Section 2" type="Node3D" parent="GA"]
+transform = Transform3D(0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, -1.85827, 0, -7.95529)
+
+[node name="One Bloc GA" type="Node3D" parent="GA/One Section 2"]
+
+[node name="Right Stairs" type="Node3D" parent="GA/One Section 2/One Bloc GA"]
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Right Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Right Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Right Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Right Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Left Stairs" type="Node3D" parent="GA/One Section 2/One Bloc GA"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.065, 0, -2.082)
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Left Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Left Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Left Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Left Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Middle Stairs" type="Node3D" parent="GA/One Section 2/One Bloc GA"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, 0.018, 0, -2.21165)
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="GA/One Section 2/One Bloc GA"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, -0.114047, -0.0258026, -2.18988)
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="One Bloc GA2" type="Node3D" parent="GA/One Section 2"]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -0.239558, 0, -4.15877)
+
+[node name="Right Stairs" type="Node3D" parent="GA/One Section 2/One Bloc GA2"]
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Left Stairs" type="Node3D" parent="GA/One Section 2/One Bloc GA2"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.065, 0, -2.082)
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Middle Stairs" type="Node3D" parent="GA/One Section 2/One Bloc GA2"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, 0.018, 0, -2.21165)
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="GA/One Section 2/One Bloc GA2"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, -0.114047, -0.0258026, -2.18988)
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 2/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs" type="Node3D" parent="GA/One Section 2"]
+transform = Transform3D(0.961064, 0, 0.0421119, 0, 1, 0, -0.257516, 0, 0.157164, -0.290067, 0, -4.27269)
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 2/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 2/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 2/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 2/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 2/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 2/Middle Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 2/Middle Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 2/Middle Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="GA/One Section 2"]
+transform = Transform3D(0.961064, 0, 0.0421119, 0, 1, 0, -0.257516, 0, 0.157164, -0.422113, -0.0258026, -4.25092)
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 2/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 2/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 2/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs2" type="Node3D" parent="GA"]
+transform = Transform3D(0.257516, 0, 0.157164, 0, 1, 0, -0.961064, 0, 0.042112, -8.4957, -0.00177485, -12.7981)
+
+[node name="Floor" type="MeshInstance3D" parent="GA/Middle Stairs2"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/Middle Stairs2"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/Middle Stairs2"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/Middle Stairs2"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/Middle Stairs2"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/Middle Stairs2"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/Middle Stairs2"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/Middle Stairs2"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/Middle Stairs2"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/Middle Stairs2"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs2" type="Node3D" parent="GA"]
+transform = Transform3D(0.257516, 0, 0.157164, 0, 1, 0, -0.961064, 0, 0.042112, -8.51082, -0.0275774, -12.7339)
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/Tiny Stairs2"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/Tiny Stairs2"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/Tiny Stairs2"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/Tiny Stairs2"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/Tiny Stairs2"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="One Section 3" type="Node3D" parent="GA"]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, -8.38036, 0, -12.8101)
+
+[node name="One Bloc GA" type="Node3D" parent="GA/One Section 3"]
+
+[node name="Right Stairs" type="Node3D" parent="GA/One Section 3/One Bloc GA"]
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Right Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Right Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Right Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Right Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Left Stairs" type="Node3D" parent="GA/One Section 3/One Bloc GA"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.065, 0, -2.082)
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Left Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Left Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Left Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Left Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Middle Stairs" type="Node3D" parent="GA/One Section 3/One Bloc GA"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, 0.018, 0, -2.21165)
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="GA/One Section 3/One Bloc GA"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, -0.114047, -0.0258026, -2.18988)
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="One Bloc GA2" type="Node3D" parent="GA/One Section 3"]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -0.239558, 0, -4.15877)
+
+[node name="Right Stairs" type="Node3D" parent="GA/One Section 3/One Bloc GA2"]
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Left Stairs" type="Node3D" parent="GA/One Section 3/One Bloc GA2"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.065, 0, -2.082)
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Middle Stairs" type="Node3D" parent="GA/One Section 3/One Bloc GA2"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, 0.018, 0, -2.21165)
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="GA/One Section 3/One Bloc GA2"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, -0.114047, -0.0258026, -2.18988)
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 3/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs" type="Node3D" parent="GA/One Section 3"]
+transform = Transform3D(0.961064, 0, 0.0421119, 0, 1, 0, -0.257516, 0, 0.157164, -0.290067, 0, -4.27269)
+
+[node name="Floor" type="MeshInstance3D" parent="GA/One Section 3/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 3/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 3/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 3/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 3/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 3/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="GA/One Section 3/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof" type="MeshInstance3D" parent="GA/One Section 3/Middle Stairs"]
+transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof2" type="MeshInstance3D" parent="GA/One Section 3/Middle Stairs"]
+transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Roof3" type="MeshInstance3D" parent="GA/One Section 3/Middle Stairs"]
+transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="GA/One Section 3"]
+transform = Transform3D(0.961064, 0, 0.0421119, 0, 1, 0, -0.257516, 0, 0.157164, -0.422113, -0.0258026, -4.25092)
+
+[node name="BottomStair" type="MeshInstance3D" parent="GA/One Section 3/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="GA/One Section 3/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="GA/One Section 3/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="GA/One Section 3/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="GA/One Section 3/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="UB" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.062447, -0.878143, 0)
+
+[node name="One Section" type="Node3D" parent="UB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.89867, 0, 0)
+
+[node name="One Bloc GA" type="Node3D" parent="UB/One Section"]
+
+[node name="Right Stairs" type="Node3D" parent="UB/One Section/One Bloc GA"]
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Right Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Left Stairs" type="Node3D" parent="UB/One Section/One Bloc GA"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.065, 0, -2.082)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Left Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs" type="Node3D" parent="UB/One Section/One Bloc GA"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, 0.018, 0, -2.21165)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="UB/One Section/One Bloc GA"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, -0.114047, -0.0258026, -2.18988)
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="One Bloc GA2" type="Node3D" parent="UB/One Section"]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -0.239558, 0, -4.15877)
+
+[node name="Right Stairs" type="Node3D" parent="UB/One Section/One Bloc GA2"]
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Right Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Left Stairs" type="Node3D" parent="UB/One Section/One Bloc GA2"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.065, 0, -2.082)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.115622, 0, 5.96046e-08, 0, 0.301151, 0, 0, 0, 1.33288, -0.451199, -0.202239, -1.04363)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Left Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs" type="Node3D" parent="UB/One Section/One Bloc GA2"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, 0.018, 0, -2.21165)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="UB/One Section/One Bloc GA2"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, -0.114047, -0.0258026, -2.18988)
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs" type="Node3D" parent="UB/One Section"]
+transform = Transform3D(0.961064, 0, 0.0421119, 0, 1, 0, -0.257516, 0, 0.157164, -0.290067, 0, -4.27269)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="UB/One Section"]
+transform = Transform3D(0.961064, 0, 0.0421119, 0, 1, 0, -0.257516, 0, 0.157164, -0.422113, -0.0258026, -4.25092)
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="One Section2" type="Node3D" parent="UB"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -3.34654, 0.00635409, -7.34312)
+
+[node name="One Bloc GA" type="Node3D" parent="UB/One Section2"]
+
+[node name="Right Stairs" type="Node3D" parent="UB/One Section2/One Bloc GA"]
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Right Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Left Stairs" type="Node3D" parent="UB/One Section2/One Bloc GA"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.065, 0, -2.082)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Left Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs" type="Node3D" parent="UB/One Section2/One Bloc GA"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, 0.018, 0, -2.21165)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="UB/One Section2/One Bloc GA"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, -0.114047, -0.0258026, -2.18988)
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="One Bloc GA2" type="Node3D" parent="UB/One Section2"]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -0.239558, 0, -4.15877)
+
+[node name="Right Stairs" type="Node3D" parent="UB/One Section2/One Bloc GA2"]
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Left Stairs" type="Node3D" parent="UB/One Section2/One Bloc GA2"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.065, 0, -2.082)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs" type="Node3D" parent="UB/One Section2/One Bloc GA2"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, 0.018, 0, -2.21165)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="UB/One Section2/One Bloc GA2"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, -0.114047, -0.0258026, -2.18988)
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section2/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs" type="Node3D" parent="UB/One Section2"]
+transform = Transform3D(0.961064, 0, 0.0421119, 0, 1, 0, -0.257516, 0, 0.157164, -0.290067, 0, -4.27269)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section2/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section2/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section2/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section2/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section2/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="UB/One Section2"]
+transform = Transform3D(0.961064, 0, 0.0421119, 0, 1, 0, -0.257516, 0, 0.157164, -0.422113, -0.0258026, -4.25092)
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section2/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section2/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section2/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="One Section3" type="Node3D" parent="UB"]
+transform = Transform3D(0.26394, 0, 0.964539, 0, 1, 0, -0.964539, 0, 0.26394, -7.95736, 0, -10.931)
+
+[node name="One Bloc GA" type="Node3D" parent="UB/One Section3"]
+
+[node name="Right Stairs" type="Node3D" parent="UB/One Section3/One Bloc GA"]
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Right Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Right Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Left Stairs" type="Node3D" parent="UB/One Section3/One Bloc GA"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.065, 0, -2.082)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Left Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Left Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs" type="Node3D" parent="UB/One Section3/One Bloc GA"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, 0.018, 0, -2.21165)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="UB/One Section3/One Bloc GA"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, -0.114047, -0.0258026, -2.18988)
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="One Bloc GA2" type="Node3D" parent="UB/One Section3"]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -0.239558, 0, -4.15877)
+
+[node name="Right Stairs" type="Node3D" parent="UB/One Section3/One Bloc GA2"]
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Right Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Left Stairs" type="Node3D" parent="UB/One Section3/One Bloc GA2"]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.065, 0, -2.082)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Rail" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.0969982, 0, 0, 0, 0.301151, 0, 0, 0, 1.997, -0.441416, -0.202239, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Billboard" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Left Stairs"]
+transform = Transform3D(0.0701509, 0, 0, 0, 0.337138, 0, 0, 0, 1.64564, 1.36675, 0.598726, -1.42759)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs" type="Node3D" parent="UB/One Section3/One Bloc GA2"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, 0.018, 0, -2.21165)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="UB/One Section3/One Bloc GA2"]
+transform = Transform3D(0.99118, 0, 0.0141809, 0, 1, 0, -0.086717, 0, 0.162089, -0.114047, -0.0258026, -2.18988)
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section3/One Bloc GA2/Tiny Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Middle Stairs" type="Node3D" parent="UB/One Section3"]
+transform = Transform3D(0.961064, 0, 0.0421119, 0, 1, 0, -0.257516, 0, 0.157164, -0.290067, 0, -4.27269)
+
+[node name="Floor" type="MeshInstance3D" parent="UB/One Section3/Middle Stairs"]
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section3/Middle Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section3/Middle Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section3/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section3/Middle Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section3/Middle Stairs"]
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Wall" type="MeshInstance3D" parent="UB/One Section3/Middle Stairs"]
+transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
+mesh = SubResource("PlaneMesh_3mvib")
+
+[node name="Tiny Stairs" type="Node3D" parent="UB/One Section3"]
+transform = Transform3D(0.961064, 0, 0.0421119, 0, 1, 0, -0.257516, 0, 0.157164, -0.422113, -0.0258026, -4.25092)
+
+[node name="BottomStair" type="MeshInstance3D" parent="UB/One Section3/Tiny Stairs"]
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair2" type="MeshInstance3D" parent="UB/One Section3/Tiny Stairs"]
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair3" type="MeshInstance3D" parent="UB/One Section3/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair4" type="MeshInstance3D" parent="UB/One Section3/Tiny Stairs"]
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+mesh = SubResource("BoxMesh_se1y1")
+
+[node name="Stair5" type="MeshInstance3D" parent="UB/One Section3/Tiny Stairs"]
 transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
 mesh = SubResource("BoxMesh_se1y1")

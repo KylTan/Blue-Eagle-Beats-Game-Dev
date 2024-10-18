@@ -75,7 +75,7 @@ handle_input_locally = false
 render_target_update_mode = 4
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(986, 683)
+position = Vector2(1054, 696)
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_tfee0")
 animation = &"idle"
@@ -97,7 +97,7 @@ position = Vector2(992, 544)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Heavy Charge Zone"]
 position = Vector2(4, 84)
 scale = Vector2(1, 1.15157)
-polygon = PackedVector2Array(14, -542, 213, -314, 208, -52, 921, -188, 919, -546)
+polygon = PackedVector2Array(14, -542, 191, -306.538, 208, -52, 921, -188, 919, -546)
 
 [node name="Light Charge Zone" type="Area2D" parent="." groups=["lightCharge"]]
 position = Vector2(992, 544)
@@ -105,7 +105,7 @@ position = Vector2(992, 544)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Light Charge Zone"]
 position = Vector2(-292, 510)
 scale = Vector2(1, 1.15157)
-polygon = PackedVector2Array(393, -395.113, 1209, -553.158, 1215, 17.3676, 359, 19.1044)
+polygon = PackedVector2Array(504, -415.954, 1220, -554.895, 1215, 17.3676, 591, 16.4992)
 
 [node name="Clear Area" type="Area2D" parent="."]
 position = Vector2(992, 544)
