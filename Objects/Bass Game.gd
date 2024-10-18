@@ -15,6 +15,7 @@ var curr_location = Vector2(261, -bar_Length_In_M)
 
 #Note Receiver - passes from clear area to here and back to note receiver
 @onready var receiver = $"Note Receiver"
+@onready var playerSprite = $PlayerSprite
 
 #Audio timing vars
 var tempo
@@ -35,8 +36,8 @@ var tracks_data
 func _ready():
 	audio = load(audiofile)
 	beaterSprite = get_node("BeaterSprite") #beater
-	NoteRecLight = get_node("Note Receiver Light")
-	NoteRecHeavy = get_node("Note Receiver Heavy")
+	#NoteRecLight = get_node("Note Receiver Light")
+	#NoteRecHeavy = get_node("Note Receiver Heavy")
 	
 	map = load_map()	
 	calc_params()
@@ -53,10 +54,13 @@ func _process(delta):
 	followMouse()
 	bars_node.translate(Vector2(0, note_speed*delta))
 	
+	var count = 0
 	for bar in barList:
-		if (bar.position.y + bars_node.position.y)/2 >= bar_Length_In_M:
+		if (bar.position.y + bars_node.position.y)/2 >= bar_Length_In_M and count < 11:
 			remove_bar(bar)
 			add_bar()
+			count +=1
+		break
 			
 # ~~~~~Bass game functions~~~~~
 func followMouse():
@@ -68,20 +72,24 @@ func followMouse():
 func _on_heavy_charge_zone_mouse_entered():
 	chargeValue = 2
 	receiver.note_Charge = chargeValue
+	playerSprite.play("swing")
 	
 func _on_light_charge_zone_mouse_entered():
 	chargeValue = 1
 	receiver.note_Charge = chargeValue
+	playerSprite.play("swing")
 	
 # going to this zone counts the hit with corresponding charge a.k.a the input
 func _on_clear_area_mouse_entered():
 	is_Hit = true
 	receiver.is_Hit = is_Hit
-
+	playerSprite.play("hit")
+	
 func _on_clear_area_mouse_exited():
 	is_Hit = false
 	receiver.is_Hit = is_Hit
 	chargeValue = 0
+	#playerSprite.play("idle")
 	
 # ~~~~~Bar spawning functions~~~~~
 func add_bar():
@@ -94,10 +102,10 @@ func add_bar():
 	curr_location += Vector2(0, -bar_Length_In_M)	
 	curr_bar_index += 1
 	
-func get_bar_data():
-	var heavy_data = tracks_data[0].bars[curr_bar_index]
-	var light_data = tracks_data[1].bars[curr_bar_index]
-	return [heavy_data, light_data] 
+func get_bar_data(): #crashes here after end of cheer
+		var heavy_data = tracks_data[0].bars[curr_bar_index]
+		var light_data = tracks_data[1].bars[curr_bar_index]
+		return [heavy_data, light_data] 
 
 func remove_bar(bar):
 	bar.queue_free()
