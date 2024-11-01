@@ -1,0 +1,149 @@
+[gd_scene load_steps=19 format=3 uid="uid://b2gxjfdnyi2cs"]
+
+[ext_resource type="Script" path="res://Objects/Snare Game.gd" id="1_3dtia"]
+[ext_resource type="PackedScene" uid="uid://be2fgss1xl1th" path="res://Objects/3dBackground.tscn" id="2_gvyoe"]
+[ext_resource type="Texture2D" uid="uid://bhldjj6j7db2w" path="res://Assets/sprite-snare-hit.png" id="3_gxabo"]
+[ext_resource type="Texture2D" uid="uid://djlbopvwghant" path="res://Assets/sprite-snare-idle.png" id="4_ps217"]
+[ext_resource type="Texture2D" uid="uid://vmexaogg6k5s" path="res://Assets/sprite-snare-swing.png" id="5_lw34e"]
+[ext_resource type="Texture2D" uid="uid://bway2cc4nt4k8" path="res://Assets/Bass-Beat-Container-Mini.png" id="6_66f3l"]
+[ext_resource type="Texture2D" uid="uid://eb740uqc8f7c" path="res://Assets/UI-Overlay.png" id="7_ud6be"]
+[ext_resource type="PackedScene" uid="uid://da4metl6nxxbt" path="res://Objects/Note Receiver.tscn" id="8_lnn4t"]
+[ext_resource type="Texture2D" uid="uid://bgx0v0xysjid5" path="res://Assets/Bass-Sprite.png" id="9_ex05r"]
+[ext_resource type="Texture2D" uid="uid://cnctnyq7ybcfj" path="res://Assets/Bass-Beater-CharSheet.png" id="10_36vrv"]
+[ext_resource type="Script" path="res://Objects/BeaterSprite.gd" id="11_8d3f2"]
+[ext_resource type="Script" path="res://Objects/Beater Cursour.gd" id="12_bqb23"]
+[ext_resource type="PackedScene" uid="uid://vgpayaqmtrvl" path="res://music.tscn" id="13_vsbgf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tfee0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gxabo")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ps217")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_lw34e")
+}],
+"loop": true,
+"name": &"swing",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bobao"]
+size = Vector2(392, 402)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfhm2"]
+atlas = ExtResource("10_36vrv")
+region = Rect2(0, 0, 430, 430)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ao4nq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfhm2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mfkri"]
+radius = 31.0
+height = 206.0
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_3dtia")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" parent="SubViewportContainer" instance=ExtResource("2_gvyoe")]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(1141, 718)
+sprite_frames = SubResource("SpriteFrames_tfee0")
+animation = &"idle"
+
+[node name="Container Path" type="Sprite2D" parent="."]
+position = Vector2(957, 536)
+texture = ExtResource("6_66f3l")
+
+[node name="UI Frame" type="Sprite2D" parent="."]
+position = Vector2(953, 542)
+texture = ExtResource("7_ud6be")
+
+[node name="Note Receiver" parent="." instance=ExtResource("8_lnn4t")]
+
+[node name="Heavy Charge Zone" type="Area2D" parent="." groups=["heavyCharge"]]
+visible = false
+position = Vector2(992, 544)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Heavy Charge Zone"]
+position = Vector2(4, 84)
+scale = Vector2(1, 1.15157)
+polygon = PackedVector2Array(14, -542, 191, -306.538, 208, -52, 921, -188, 919, -546)
+
+[node name="Light Charge Zone" type="Area2D" parent="." groups=["lightCharge"]]
+visible = false
+position = Vector2(992, 544)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Light Charge Zone"]
+position = Vector2(-292, 510)
+scale = Vector2(1, 1.15157)
+polygon = PackedVector2Array(504, -415.954, 1220, -554.895, 1215, 17.3676, 591, 16.4992)
+
+[node name="Clear Area" type="Area2D" parent="."]
+visible = false
+position = Vector2(992, 544)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clear Area"]
+position = Vector2(-195, 225)
+shape = SubResource("RectangleShape2D_bobao")
+
+[node name="Sprite2D" type="Sprite2D" parent="Clear Area"]
+position = Vector2(-199, 230)
+texture = ExtResource("9_ex05r")
+
+[node name="BeaterSprite" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(992, 544)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ao4nq")
+script = ExtResource("11_8d3f2")
+
+[node name="Beater Cursour" type="Node2D" parent="."]
+visible = false
+script = ExtResource("12_bqb23")
+
+[node name="Area2D" type="Area2D" parent="Beater Cursour"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beater Cursour/Area2D"]
+visible = false
+position = Vector2(2, 1)
+shape = SubResource("CapsuleShape2D_mfkri")
+
+[node name="Music" parent="." instance=ExtResource("13_vsbgf")]
+position = Vector2(992, 544)
+
+[node name="BarNode" type="Node2D" parent="."]
+
+[connection signal="mouse_entered" from="Heavy Charge Zone" to="." method="_on_heavy_charge_zone_mouse_entered"]
+[connection signal="mouse_entered" from="Light Charge Zone" to="." method="_on_light_charge_zone_mouse_entered"]
+[connection signal="mouse_entered" from="Clear Area" to="." method="_on_clear_area_mouse_entered"]
+[connection signal="mouse_exited" from="Clear Area" to="." method="_on_clear_area_mouse_exited"]
