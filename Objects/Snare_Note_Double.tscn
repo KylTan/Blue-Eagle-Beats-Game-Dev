@@ -1,16 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://djiyy88muq1mv"]
+[gd_scene load_steps=4 format=3 uid="uid://b6x1cpuhk3um5"]
 
-[ext_resource type="Script" path="res://Objects/Snare_Note.gd" id="1_caf7e"]
-[ext_resource type="Texture2D" uid="uid://cinsq60t8usvw" path="res://Assets/Snare Inner Left.png" id="1_tup1x"]
+[ext_resource type="Script" path="res://Objects/Snare_Note_Double.gd" id="1_mb7rc"]
+[ext_resource type="Texture2D" uid="uid://c405xr75rceu0" path="res://Assets/Double Inner mini.png" id="2_cassu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgmnr"]
 size = Vector2(347, 84)
 
 [node name="Snare Note" type="Node2D"]
-script = ExtResource("1_caf7e")
+script = ExtResource("1_mb7rc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_tup1x")
+texture = ExtResource("2_cassu")
 
 [node name="Area2D" type="Area2D" parent="."]
 

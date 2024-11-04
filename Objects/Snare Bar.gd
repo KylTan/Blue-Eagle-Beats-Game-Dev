@@ -1,7 +1,8 @@
 extends Node2D
 
-var bassNoteHeavy = preload("res://Objects/Bass Note Heavy.tscn")
-var bassNoteLight = preload("res://Objects/Bass Note Light.tscn")
+var snareNoteLeft = preload("res://Objects/Snare_Note_Left.tscn")
+var snareNoteRight = preload("res://Objects/Snare_Note_Right.tscn")
+var snareNoteDouble = preload("res://Objects/Snare_Note_Double.tscn")
 
 #var notes_data = [
 	#{
@@ -39,28 +40,21 @@ func add_notes():
 	for line_data in bar_data: #bar_data is the [heavy, light] list -> so plots all the heavy then light?
 		var notes_data = line_data.notes
 		for note_data in notes_data:
-			var noteH = bassNoteHeavy.instantiate()
-			var noteL = bassNoteLight.instantiate()
-			noteH.notePosition = int(note_data.pos) * note_scale
-			noteL.notePosition = int(note_data.pos) * note_scale
+			var noteLft = snareNoteLeft.instantiate()
+			var noteRgt = snareNoteRight.instantiate()
+			var noteDb = snareNoteDouble.instantiate()
+			noteLft.notePosition = int(note_data.pos) * note_scale
+			noteRgt.notePosition = int(note_data.pos) * note_scale
+			noteDb.notePosition = int(note_data.pos) * note_scale
 			match bar:
 				0:
-					add_child(noteH)
+					add_child(noteLft)
 				1:
-					add_child(noteL)
+					add_child(noteRgt)
+				2:
+					add_child(noteDb)
+					
 			line += 1
 		bar +=1
 		#for note type, maybe add a third thing in the json to signify the note type (pos, len, type)
 		#then put an if statement on what instance to use
-		#var note = noteH.instantiate()
-		# note.line = 1 this is for mania type, but we only have one column
-		
-		#randomize()
-		#var noteType = (randi() % 2) +1
-		#match noteType:
-			#1:
-				#noteH.notePosition = int(note_data.pos) * note_scale	 # takes from the list
-				#add_child(noteH)
-			#2:
-				#noteL.notePosition = int(note_data.pos) * note_scale	 # takes from the list
-				#add_child(noteL)

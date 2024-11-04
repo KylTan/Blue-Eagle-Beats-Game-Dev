@@ -2,8 +2,7 @@ extends Node2D
 
 @export var line: int
 
-var leftNote = preload("res://Assets/Snare Inner Left.png")
-var rightNote = preload("res://Assets/Snare Inner Right.png")
+var leftNote = preload("res://Assets/Snare Inner Right.png")
 
 var notePosition
 var is_colliding = false
@@ -20,23 +19,19 @@ func _process(delta):
 	collect()
 
 func set_Material():
-	match line:
-		1:
-			$Sprite2D.texture = leftNote
-		2:
-			$Sprite2D.texture = rightNote
+	$Sprite2D.texture = leftNote
+	
 func set_Position():
 	self.position = Vector2 (0, -notePosition)
 
-func collect():
+func collect(): # takes signal from receiver to know when to delete/hide()
 	if !collected:
-		if is_colliding and receiver.is_Hit: #if its colliding and can access the receiver
+		if is_colliding and receiver.is_Hit and receiver.noteDir == 2: #if its colliding and can access the receiver
 			collected = true
 			receiver.is_Hit = false
 			hide()
 			
-			
-func _on_area_2d_area_entered(area):
+func _on_area_2d_area_entered(area): #if it enters the zone, it gets the parent aka the receiver
 	if area.is_in_group("receiver"):
 		is_colliding = true
 		receiver = area.get_parent()

@@ -6,7 +6,7 @@ var NoteRecHeavy
 var is_Hit = false #changes when clear area is hit with the cursour with a charge
 
 #bar spawning variables
-var bar_scn = preload("res://Objects/Bar.tscn")
+var bar_scn = preload("res://Objects/Snare Bar.tscn")
 var barList = []
 @onready var bars_node = $BarNode #was called Barsnode
 var bar_Length_In_M = 945# 1080 cuz we using 2d pixels not 3d scaling
@@ -28,7 +28,7 @@ var audiofile = "res://Assets/Otso-Cheer.mp3"
 @onready var music_node = $Music
 	
 #mapping file
-var map_file = "res://Assets/Otso-Cheer.mboy"
+var map_file = "res://Assets/Otso-Cheer-Snare.mboy"
 var map
 var curr_bar_index = 0 
 var tracks_data
@@ -51,42 +51,49 @@ func _ready():
 		
 		
 func _process(delta):
-	followMouse()
+	#followMouse()
+	animationCycle()
 	bars_node.translate(Vector2(0, note_speed*delta))
 	
 	for bar in barList:
 		if (bar.position.y + bars_node.position.y)/2 >= bar_Length_In_M:
 			remove_bar(bar)
 			add_bar()
+
+func animationCycle():
+	if receiver.noteDir > 0:
+		playerSprite.play("hit")
+	else:
+		playerSprite.play("swing")
 			
 # ~~~~~Bass game functions~~~~~
-func followMouse():
-	# beater following mouse
-	var mouse_pos = get_local_mouse_position()
-	beaterSprite.position = mouse_pos
-
-#Value of Bass charge (aka what note type)
-func _on_heavy_charge_zone_mouse_entered():
-	chargeValue = 2
-	receiver.note_Charge = chargeValue
-	playerSprite.play("swing")
-	
-func _on_light_charge_zone_mouse_entered():
-	chargeValue = 1
-	receiver.note_Charge = chargeValue
-	playerSprite.play("swing")
-	
-# going to this zone counts the hit with corresponding charge a.k.a the input
-func _on_clear_area_mouse_entered():
-	is_Hit = true
-	receiver.is_Hit = is_Hit
-	playerSprite.play("hit")
-	
-func _on_clear_area_mouse_exited():
-	is_Hit = false
-	receiver.is_Hit = is_Hit
-	chargeValue = 0
-	#playerSprite.play("idle")
+#func followMouse():
+	## beater following mouse
+	#var mouse_pos = get_local_mouse_position()
+	#beaterSprite.position = mouse_pos
+#
+##Value of Bass charge (aka what note type)
+#func _on_heavy_charge_zone_mouse_entered():
+	#chargeValue = 2
+	#receiver.note_Charge = chargeValue
+	#playerSprite.play("swing")
+	#
+#func _on_light_charge_zone_mouse_entered():
+	#chargeValue = 1
+	#receiver.note_Charge = chargeValue
+	#playerSprite.play("swing")
+	#
+## going to this zone counts the hit with corresponding charge a.k.a the input
+#func _on_clear_area_mouse_entered():
+	#is_Hit = true
+	#receiver.is_Hit = is_Hit
+	#playerSprite.play("hit")
+	#
+#func _on_clear_area_mouse_exited():
+	#is_Hit = false
+	#receiver.is_Hit = is_Hit
+	#chargeValue = 0
+	##playerSprite.play("idle")
 	
 # ~~~~~Bar spawning functions~~~~~
 func add_bar():
@@ -104,7 +111,8 @@ func get_bar_data():
 	if curr_bar_index < tracks_data[0].bars.size():
 		var heavy_data = tracks_data[0].bars[curr_bar_index]
 		var light_data = tracks_data[1].bars[curr_bar_index]
-		return [heavy_data, light_data] 
+		var double_data = tracks_data[2].bars[curr_bar_index]
+		return [heavy_data, light_data, double_data] 
 	else:
 		return null
 

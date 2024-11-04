@@ -78,7 +78,7 @@ func _on_light_charge_zone_mouse_entered():
 	
 # going to this zone counts the hit with corresponding charge a.k.a the input
 func _on_clear_area_mouse_entered():
-	is_Hit = true
+	is_Hit = true # changes the is hit in the receiver
 	receiver.is_Hit = is_Hit
 	playerSprite.play("hit")
 	
