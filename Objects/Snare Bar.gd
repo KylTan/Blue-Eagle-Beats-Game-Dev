@@ -44,7 +44,9 @@ func add_notes():
 			var noteRgt = snareNoteRight.instantiate()
 			var noteDb = snareNoteDouble.instantiate()
 			noteLft.notePosition = int(note_data.pos) * note_scale
+			#noteLft.Sprite2D.scale = 0.5
 			noteRgt.notePosition = int(note_data.pos) * note_scale
+			#kdkdkdnoteRgt.Sprite2D.scale = 0.5
 			noteDb.notePosition = int(note_data.pos) * note_scale
 			match bar:
 				0:

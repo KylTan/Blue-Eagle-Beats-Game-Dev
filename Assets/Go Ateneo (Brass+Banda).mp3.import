@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://e1t0wog5oqg6"
+path="res://.godot/imported/Go Ateneo (Brass+Banda).mp3-381f7338c2f8848e07b454d9998f73a0.mp3str"
+
+[deps]
+
+source_file="res://Assets/Go Ateneo (Brass+Banda).mp3"
+dest_files=["res://.godot/imported/Go Ateneo (Brass+Banda).mp3-381f7338c2f8848e07b454d9998f73a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
