@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://Objects/BeaterSprite.gd" id="5_mudu0"]
 [ext_resource type="Texture2D" uid="uid://eb740uqc8f7c" path="res://Assets/UI-Overlay.png" id="7_iie8y"]
 [ext_resource type="PackedScene" uid="uid://vgpayaqmtrvl" path="res://music.tscn" id="8_65oaw"]
-[ext_resource type="Texture2D" uid="uid://bgx0v0xysjid5" path="res://Assets/Bass-Sprite.png" id="9_wput6"]
+[ext_resource type="Texture2D" uid="uid://dmw01f04qux0s" path="res://Assets/Bass-Hitbox-Model-Pearl.png" id="9_d8770"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tfee0"]
 animations = [{
@@ -75,10 +75,10 @@ handle_input_locally = false
 render_target_update_mode = 4
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(1054, 696)
-scale = Vector2(1.2, 1.2)
+position = Vector2(998, 647)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_tfee0")
-animation = &"idle"
+animation = &"hit"
 
 [node name="Container Path" type="Sprite2D" parent="."]
 position = Vector2(957, 536)
@@ -97,7 +97,7 @@ position = Vector2(992, 544)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Heavy Charge Zone"]
 position = Vector2(4, 84)
 scale = Vector2(1, 1.15157)
-polygon = PackedVector2Array(14, -542, 191, -306.538, 208, -52, 921, -188, 919, -546)
+polygon = PackedVector2Array(14, -542, 113, -309.143, 208, -52, 921, -188, 919, -546)
 
 [node name="Light Charge Zone" type="Area2D" parent="." groups=["lightCharge"]]
 position = Vector2(992, 544)
@@ -105,18 +105,20 @@ position = Vector2(992, 544)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Light Charge Zone"]
 position = Vector2(-292, 510)
 scale = Vector2(1, 1.15157)
-polygon = PackedVector2Array(504, -415.954, 1220, -554.895, 1215, 17.3676, 591, 16.4992)
+polygon = PackedVector2Array(501, -418.559, 1220, -554.895, 1215, 17.3676, 346, 13.8941, 390, -301.328)
 
 [node name="Clear Area" type="Area2D" parent="."]
 position = Vector2(992, 544)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clear Area"]
-position = Vector2(-195, 225)
+position = Vector2(-200, 195)
 shape = SubResource("RectangleShape2D_bobao")
 
 [node name="Sprite2D" type="Sprite2D" parent="Clear Area"]
-position = Vector2(-199, 230)
-texture = ExtResource("9_wput6")
+position = Vector2(-201, 176)
+rotation = -0.359538
+scale = Vector2(1.63915, 1.91699)
+texture = ExtResource("9_d8770")
 
 [node name="BeaterSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(992, 544)

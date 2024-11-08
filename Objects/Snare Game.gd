@@ -24,11 +24,11 @@ var note_speed
 var note_scale
 var start_pos_in_sec #offset
 var audio
-var audiofile = "res://Assets/Go Ateneo (Brass+Banda).mp3"
+var audiofile = "res://Assets/Otso-Cheer.mp3"
 @onready var music_node = $Music
 	
 #mapping file
-var map_file = "res://Assets/Go Ateneo (Brass+Banda) - Snare.mboy"
+var map_file = "res://Assets/Otso-Cheer-Snare.mboy"
 var map
 var curr_bar_index = 0 
 var tracks_data
