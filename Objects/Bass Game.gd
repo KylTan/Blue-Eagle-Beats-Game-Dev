@@ -24,20 +24,24 @@ var note_speed
 var note_scale
 var start_pos_in_sec #offset
 var audio
-var audiofile = "res://Assets/Audio/Vary-Cheer.mp3"
+@onready var audiofile #= "res://Assets/Audio/Vary-Cheer.mp3"
 @onready var music_node = $Music
 	
 #mapping file
-var map_file = "res://Assets/Audio/Vary-Cheer-Bass.mboy"
+@onready var map_file #= "res://Assets/Audio/Vary-Cheer-Bass.mboy"
 var map
 var curr_bar_index = 0 
 var tracks_data
+var parentNode = get_parent()
 
 #scoring
 var total_note_count = 0
 var percent_score = 0
 
 func _ready():
+	if parentNode:
+		audiofile = parentNode.audiofile
+		map_file = parentNode.mapfile
 	audio = load(audiofile)
 	beaterSprite = get_node("BeaterSprite") #beater
 	#NoteRecLight = get_node("Note Receiver Light")
