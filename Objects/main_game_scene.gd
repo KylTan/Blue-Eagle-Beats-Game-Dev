@@ -1,7 +1,7 @@
 extends Node2D
 @onready var bassGame = preload("res://Objects/Bass Game.tscn")
-var mapfile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
-var audiofile = "res://Assets/Audio/Fly High (Brass+Banda).mp3"
+var mapfile = "res://Assets/Audio/Jabba - Bass.mboy"
+var audiofile = "res://Assets/Audio/Jabba.mp3"
 
 
 #func _init():
