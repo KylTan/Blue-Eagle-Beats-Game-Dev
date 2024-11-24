@@ -1,4 +1,5 @@
 extends Area2D
+var isCorrect
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,8 +13,28 @@ func _process(delta):
 
 
 func _on_sliding_scale_area_entered(area):
-	print("Entered") # Replace with function body.
-
+	isCorrect = true # Replace with function body.
+	print("Hitting Green Area 1")
 
 func _on_sliding_scale_area_exited(area):
-	print("Exited") # Replace with function body.
+	isCorrect = false # Replace with function body.
+	print("Hitting Red Area 1")
+
+func _on_sliding_scale_2_area_entered(area):
+	isCorrect = true # Replace with function body.
+	print("Hitting Green Area 2")
+
+func _on_sliding_scale_2_area_exited(area):
+	isCorrect = false # Replace with function body.
+	print("Hitting Red Area 2")
+
+func _on_sliding_scale_3_area_entered(area):
+	isCorrect = true # Replace with function body.
+	print("Hitting Green Area 3")
+
+func _on_sliding_scale_3_area_exited(area):
+	isCorrect = false # Replace with function body.
+	print("Hitting Red Area 3")
+	
+func _isHit():
+	return isCorrect

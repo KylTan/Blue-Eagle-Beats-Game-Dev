@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d20ohbao5xm0v"]
+[gd_scene load_steps=19 format=3 uid="uid://d20ohbao5xm0v"]
 
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_0rddx"]
 [ext_resource type="Script" path="res://Objects/Minigames/DrumSeeping/MG-Drum-Seeping.gd" id="1_eoxep"]
@@ -63,6 +63,12 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8wxa"]
 size = Vector2(209, 283)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mte36"]
+size = Vector2(207, 154)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ft2g5"]
+size = Vector2(205, 74)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_d7ldw"]
 radius = 24.8887
 
@@ -101,19 +107,8 @@ libraries = {
 "": SubResource("AnimationLibrary_0rg4d")
 }
 
-[node name="Mg2SlidingScale2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1641, 563)
-scale = Vector2(1.005, 1.319)
-texture = ExtResource("6_yslej")
-
-[node name="Mg2SlidingScale3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1639, 561)
-scale = Vector2(1, 1.319)
-texture = ExtResource("7_emks1")
-
 [node name="SlidingScale" type="Area2D" parent="."]
+visible = false
 
 [node name="Mg2SlidingScale" type="Sprite2D" parent="SlidingScale"]
 position = Vector2(1637, 564)
@@ -124,7 +119,32 @@ texture = ExtResource("5_i0s25")
 position = Vector2(1640.5, 563.5)
 shape = SubResource("RectangleShape2D_e8wxa")
 
+[node name="SlidingScale2" type="Area2D" parent="."]
+visible = false
+
+[node name="Mg2SlidingScale2" type="Sprite2D" parent="SlidingScale2"]
+position = Vector2(1641, 563)
+scale = Vector2(1.005, 1.319)
+texture = ExtResource("6_yslej")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlidingScale2"]
+position = Vector2(1643.5, 563)
+shape = SubResource("RectangleShape2D_mte36")
+
+[node name="SlidingScale3" type="Area2D" parent="."]
+visible = false
+
+[node name="Mg2SlidingScale3" type="Sprite2D" parent="SlidingScale3"]
+position = Vector2(1639, 561)
+scale = Vector2(1, 1.319)
+texture = ExtResource("7_emks1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlidingScale3"]
+position = Vector2(1640.5, 561)
+shape = SubResource("RectangleShape2D_ft2g5")
+
 [node name="SlidingScaleArrow" type="Area2D" parent="."]
+visible = false
 script = ExtResource("8_ted50")
 
 [node name="Mg2SlidingScaleArrow" type="Sprite2D" parent="SlidingScaleArrow"]
@@ -137,5 +157,21 @@ position = Vector2(1726, 564)
 scale = Vector2(0.842448, 0.470052)
 shape = SubResource("CircleShape2D_d7ldw")
 
+[node name="Result" type="Sprite2D" parent="."]
+position = Vector2(280, 215)
+scale = Vector2(0.450521, 0.494792)
+
+[node name="Result2" type="Sprite2D" parent="."]
+position = Vector2(280, 588)
+scale = Vector2(0.450521, 0.494792)
+
+[node name="Result3" type="Sprite2D" parent="."]
+position = Vector2(280, 949)
+scale = Vector2(0.450521, 0.494792)
+
 [connection signal="area_entered" from="SlidingScale" to="SlidingScaleArrow" method="_on_sliding_scale_area_entered"]
 [connection signal="area_exited" from="SlidingScale" to="SlidingScaleArrow" method="_on_sliding_scale_area_exited"]
+[connection signal="area_entered" from="SlidingScale2" to="SlidingScaleArrow" method="_on_sliding_scale_2_area_entered"]
+[connection signal="area_exited" from="SlidingScale2" to="SlidingScaleArrow" method="_on_sliding_scale_2_area_exited"]
+[connection signal="area_entered" from="SlidingScale3" to="SlidingScaleArrow" method="_on_sliding_scale_3_area_entered"]
+[connection signal="area_exited" from="SlidingScale3" to="SlidingScaleArrow" method="_on_sliding_scale_3_area_exited"]
