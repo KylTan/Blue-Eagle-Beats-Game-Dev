@@ -2,28 +2,28 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 "_translation_id": "",
-"color": Color(0, 1, 0.976563, 1),
+"color": Color(1, 0, 0.773438, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
 "style": ""
 },
 "default_portrait": "DefaultFace",
-"description": "Main Player Character",
-"display_name": "Juan",
-"mirror": false,
-"nicknames": ["Juan"],
+"description": "Player's Friend (2nd main char)",
+"display_name": "Maria",
+"mirror": true,
+"nicknames": ["Maria"],
 "offset": Vector2(0, 0),
 "portraits": {
 "DefaultFace": {
 "export_overrides": {
-"image": "\"res://Assets/sprite-bass-idle.png\""
+"image": "\"res://Assets/sprite-snare-portrait.png\""
 },
 "ignore_char_scale": true,
 "mirror": false,
-"offset": Vector2(-75, 100),
+"offset": Vector2(0, 100),
 "scale": 1.0,
-"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+"scene": ""
 }
 },
 "scale": 1.0

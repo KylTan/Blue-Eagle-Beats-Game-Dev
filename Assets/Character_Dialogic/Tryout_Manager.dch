@@ -2,28 +2,27 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 "_translation_id": "",
-"color": Color(0, 1, 0.976563, 1),
+"color": Color(1, 0.9375, 0, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
 "style": ""
 },
 "default_portrait": "DefaultFace",
-"description": "Main Player Character",
-"display_name": "Juan",
+"description": "Blue Babble Tryouts head manager",
+"display_name": "Tryout Manager",
 "mirror": false,
-"nicknames": ["Juan"],
+"nicknames": ["Tryout Manager"],
 "offset": Vector2(0, 0),
 "portraits": {
 "DefaultFace": {
 "export_overrides": {
-"image": "\"res://Assets/sprite-bass-idle.png\""
+"image": "\"res://Assets/sprite-bass-idle-alternative.png\""
 },
-"ignore_char_scale": true,
 "mirror": false,
-"offset": Vector2(-75, 100),
-"scale": 1.0,
-"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+"offset": Vector2(0, 100),
+"scale": 1,
+"scene": ""
 }
 },
 "scale": 1.0

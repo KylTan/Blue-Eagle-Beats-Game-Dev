@@ -1,0 +1,32 @@
+[background arg="res://Assets/matteoRicci.jpg" fade="0.0"]
+join  center
+join Tryout_Manager right
+join Background_BabbleMember rightmost
+join PlayerCharacter leftmost [animation="Slide In Left" length="1.0"]
+join PlayerFriend left [animation="Slide In Left" length="0.9" wait="true"]
+PlayerFriend: Looks like we're here! I'll sign both of us up!
+PlayerCharacter: I'm kinda having doubts about this now that I'm here \:<
+PlayerFriend: Don't worry we got this! Just think about all the memories and friends we would get out of this!
+PlayerFriend: We just gotta get out of our comfort zones or we might regret stuff in the end ya know!
+PlayerCharacter: Didn't know you say some deep stuff like this... Well you're right though. Let's do this!
+Tryout_Manager: Hey guys! Are you guys here to sign up for the Blue Babble try outs?
+PlayerFriend: Yep! We're here for that! Me and my friend here that is!
+PlayerCharacter: Hehe... yeah...
+Tryout_Manager: Alright! Well just sign up here then by tomorrow we will hold a try outs for the newcomers! See you all there!
+Tryout_Manager: In the mean time though... Wanna try out the drums back there to have a taste of how we perform? Just gotta follow the beat and the player next to you!
+PlayerFriend: Heck yeah! Come on, lets try them out Juan!
+PlayerCharacter: Uhh... Ok I Guesss...
+PlayerFriend: NICE!! What drum-type would you choose? I'll just choose the other one so we can perform together hehe!
+- Snare Drums
+	set {Response} = "Snare"
+- Bass Drums
+	set {Response} = "Bass"
+if {Response} == "Snare":
+	PlayerCharacter: Guess, I'll try out the snare drums first.
+	Tryout_Manager: Nice choice! Oh to use that all you have to do is just use your Space bar when you see the big circles with 2 sticks. Then use either the D or F key for the small circle with the left arrow, and the J and K keys for the small circle with the right arrow.
+	do GlobalSceneManager._changeScene_demo_Snare()
+if {Response} == "Bass":
+	PlayerCharacter: Guess, I'll try out the snare drums first.
+	Tryout_Manager: Nice choice! Oh to use that all you have to do is just use your mouse to hit the (PLS EXPLAIN TY)
+	do GlobalSceneManager._changeScene_demo_Bass()
+[end_timeline]

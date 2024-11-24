@@ -22,10 +22,15 @@ GlobalSceneManager="*res://GlobalSceneManager.gd"
 [dialogic]
 
 directories/dch_directory={
-"PlayerCharacter": "res://Assets/Character_Dialogic/PlayerCharacter.dch"
+"Background_BabbleMember": "res://Assets/Character_Dialogic/Background_BabbleMember.dch",
+"PlayerCharacter": "res://Assets/Character_Dialogic/PlayerCharacter.dch",
+"PlayerFriend": "res://Assets/Character_Dialogic/PlayerFriend.dch",
+"Tryout_Manager": "res://Assets/Character_Dialogic/Tryout_Manager.dch"
 }
 directories/dtl_directory={
+"Timeline_Beginning": "res://Dialogue/MainStory/Timeline_Beginning.dtl",
 "Timeline_Level2": "res://Assets/Character_Dialogic/Timeline_Level2.dtl",
+"Timeline_PreTryouts": "res://Dialogue/MainStory/Timeline_PreTryouts.dtl",
 "Timeline_Start": "res://Dialogue/Timeline_Start.dtl"
 }
 variables={
