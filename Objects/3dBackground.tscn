@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://be2fgss1xl1th"]
+[gd_scene load_steps=9 format=3 uid="uid://be2fgss1xl1th"]
 
 [sub_resource type="Environment" id="Environment_u0ssb"]
 
@@ -9,6 +9,13 @@
 [sub_resource type="QuadMesh" id="QuadMesh_ltv88"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bwbk6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fwim1"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0wbtb"]
+material = SubResource("StandardMaterial3D_fwim1")
+
+[sub_resource type="BoxMesh" id="BoxMesh_jawqo"]
 
 [node name="SubViewport" type="SubViewport"]
 size = Vector2i(1920, 1080)
@@ -375,12 +382,12 @@ mesh = SubResource("BoxMesh_bwbk6")
 [node name="Right Stairs" type="Node3D" parent="GA/One Section/One Bloc GA"]
 
 [node name="Floor" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
-transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
-mesh = SubResource("PlaneMesh_3mvib")
+transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0.0160229, -0.34964, -1.39202)
+mesh = SubResource("PlaneMesh_0wbtb")
 
 [node name="BottomStair" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.4)
-mesh = SubResource("BoxMesh_se1y1")
+mesh = SubResource("BoxMesh_jawqo")
 
 [node name="Stair2" type="MeshInstance3D" parent="GA/One Section/One Bloc GA/Right Stairs"]
 transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.4)

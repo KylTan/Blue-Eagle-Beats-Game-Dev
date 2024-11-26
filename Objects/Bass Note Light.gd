@@ -20,6 +20,7 @@ func collect():
 		if is_colliding and receiver.is_Hit and receiver.note_Charge == 1: #if its colliding and can access the receiver
 			collected = true
 			receiver.is_Hit = false
+			receiver.total_hits += 1
 			hide()
 
 func _on_area_2d_area_entered(area):

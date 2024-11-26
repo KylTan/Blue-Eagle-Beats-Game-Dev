@@ -32,6 +32,7 @@ var bar_data
 func _ready():
 	add_notes()
 
+#determines what kind of note to spawn based on the data from the map file
 func add_notes():
 	var line = 1 # line must be like thenotes in a bar or smt
 	var bar = 0

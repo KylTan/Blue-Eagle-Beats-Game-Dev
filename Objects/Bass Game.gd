@@ -24,14 +24,18 @@ var note_speed
 var note_scale
 var start_pos_in_sec #offset
 var audio
-var audiofile = "res://Assets/Otso-Cheer.mp3"
+var audiofile = "res://Assets/Audio/Vary-Cheer.mp3"
 @onready var music_node = $Music
 	
 #mapping file
-var map_file = "res://Assets/Otso-Cheer.mboy"
+var map_file = "res://Assets/Audio/Vary-Cheer-Bass.mboy"
 var map
 var curr_bar_index = 0 
 var tracks_data
+
+#scoring
+var total_note_count = 0
+var percent_score = 0
 
 func _ready():
 	audio = load(audiofile)
@@ -42,7 +46,7 @@ func _ready():
 	map = load_map()	
 	calc_params()
 	tracks_data = map.tracks
-	print(tracks_data)
+	#print(map)
 	music_node.setup(self)
 	
 	# bar spawning on ready
@@ -52,6 +56,7 @@ func _ready():
 		
 func _process(delta):
 	followMouse()
+	score_check()
 	bars_node.translate(Vector2(0, note_speed*delta))
 	
 	for bar in barList:
@@ -70,23 +75,26 @@ func _on_heavy_charge_zone_mouse_entered():
 	chargeValue = 2
 	receiver.note_Charge = chargeValue
 	playerSprite.play("swing")
+	$IdleTimer.stop()
 	
 func _on_light_charge_zone_mouse_entered():
 	chargeValue = 1
 	receiver.note_Charge = chargeValue
 	playerSprite.play("swing")
+	$IdleTimer.stop()
 	
 # going to this zone counts the hit with corresponding charge a.k.a the input
 func _on_clear_area_mouse_entered():
-	is_Hit = true
+	is_Hit = true # changes the is hit in the receiver
 	receiver.is_Hit = is_Hit
 	playerSprite.play("hit")
+	$IdleTimer.start()
 	
 func _on_clear_area_mouse_exited():
 	is_Hit = false
 	receiver.is_Hit = is_Hit
 	chargeValue = 0
-	#playerSprite.play("idle")
+	#playerSprite.play("idle") will idle as soon as u leave the drum hitbox
 	
 # ~~~~~Bar spawning functions~~~~~
 func add_bar():
@@ -99,10 +107,11 @@ func add_bar():
 		bars_node.add_child(bar)
 		curr_location += Vector2(0, -bar_Length_In_M)	
 		curr_bar_index += 1
+	#can put an else here to move to another scene
 	
 func get_bar_data(): 
-	if curr_bar_index < tracks_data[0].bars.size():
-		var heavy_data = tracks_data[0].bars[curr_bar_index]
+	if curr_bar_index < tracks_data[0].bars.size(): # keeps going til laast bar
+		var heavy_data = tracks_data[0].bars[curr_bar_index] # returns bar list in current index
 		var light_data = tracks_data[1].bars[curr_bar_index]
 		return [heavy_data, light_data] 
 	else:
@@ -121,6 +130,21 @@ func calc_params():
 	note_speed = bar_Length_In_M/float(4*quarter_time_in_sec)
 	note_scale = bar_Length_In_M/float(4*400) #idk about the 4*400 bit -> 0.675
 	start_pos_in_sec = (float(map.start_pos)/400.0)*quarter_time_in_sec
+	
+	# ~~ Scoring Init. ~~ #
+	
+	#loops thru each track of the track then every bar to count total beats
+	for i in range(2): #should iterate thru each track type in the track array
+		for j in range(map.tracks[i].bars.size()): #iterates thru all the bars in a track
+				total_note_count += map.tracks[i].bars[j].notes.size() #checks number of notes in each bar
+	print(total_note_count)
+	
+func score_check():
+	if total_note_count > 0 and receiver.total_hits > 0:
+		percent_score = float(receiver.total_hits)/total_note_count * 100
+		#print(percent_score)
+		#print(float(receiver.total_hits))
+		$Label.text = str(int(percent_score)) + "%"
 
 # ~~~~~Mapping Stuff~~~~~
 func load_map():
@@ -134,3 +158,5 @@ func load_map():
 	return json.data #right?
 	
 
+func _on_idle_timer_timeout():
+	playerSprite.play("idle")

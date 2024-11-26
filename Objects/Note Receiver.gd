@@ -1,6 +1,7 @@
 extends Node2D
-var is_Hit = false
+var is_Hit = false #activates hit window to "eat" notes
 var note_Charge = 0
+var total_hits = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

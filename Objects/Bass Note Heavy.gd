@@ -16,10 +16,12 @@ func set_Position():
 	self.position = Vector2 (0, -notePosition)
 
 func collect():
-	if !collected:
+	if !collected: # if beat is not yet collected or hit
+		#only deletes itself if its the proper charge
 		if is_colliding and receiver.is_Hit and receiver.note_Charge == 2: #if its colliding and can access the receiver
 			collected = true
-			receiver.is_Hit = false
+			receiver.is_Hit = false #collecting
+			receiver.total_hits += 1
 			hide()
 
 func _on_area_2d_area_entered(area):

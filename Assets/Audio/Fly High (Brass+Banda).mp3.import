@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7ldojw8jufbh"
+path="res://.godot/imported/Fly High (Brass+Banda).mp3-745133cc7c9cc7dc3372621965f41762.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Fly High (Brass+Banda).mp3"
+dest_files=["res://.godot/imported/Fly High (Brass+Banda).mp3-745133cc7c9cc7dc3372621965f41762.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
