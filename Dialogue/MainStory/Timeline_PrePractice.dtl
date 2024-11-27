@@ -1,0 +1,18 @@
+[background arg="res://Assets/matteoRicci.jpg" fade="0.0"]
+join PlayerCharacter center [mirrored="true"]
+join PlayerFriend left
+join Tryout_Manager rightmost
+Tryout_Manager: Woahh! You guys did great! Are ya'll sure you guys don't have prior experience? \:>
+PlayerFriend: HAHAHA! Thanks for the compliment but yeah its our first time! I was just a huge fan since I was young!
+PlayerCharacter: Thanks a lot for the compliment! But yeah its my first time too. Surprised myself too actually...
+Tryout_Manager: So you wanna try out the other drums as well guys?
+- Yes
+	if {Response} == "Snare":
+		do GlobalSceneManager._changeScene_demo_Snare()
+	else:
+		do GlobalSceneManager._changeScene_demo_Bass()
+- No
+	Tryout_Manager: Well.... Atleast you have quick decision making skills!
+	Tryout_Manager: Well see you guys tomorrow for the actual tryouts! By then you have to choose what drum you will be focusing! Make sure to choose wisely OK! You won't be able to change drums after!
+	jump Timeline_Practice1/
+[end_timeline]

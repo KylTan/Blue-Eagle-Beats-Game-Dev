@@ -27,6 +27,6 @@ if {Response} == "Snare":
 	do GlobalSceneManager._changeScene_demo_Snare()
 if {Response} == "Bass":
 	PlayerCharacter: Guess, I'll try out the snare drums first.
-	Tryout_Manager: Nice choice! Oh to use that all you have to do is just use your mouse to hit the (PLS EXPLAIN TY)
+	Tryout_Manager: Nice choice! Oh to use that all you have to do is just use your mouse to hit the drum by swinging it back and forth from the drum and the charge type you want to use!
 	do GlobalSceneManager._changeScene_demo_Bass()
 [end_timeline]
