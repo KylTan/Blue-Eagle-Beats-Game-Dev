@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dg3gnlsi71vrr"
+path="res://.godot/imported/Go Ateneo Quatro with Brass.mp3-ae1473ea08ad9d2d0c23816c64485e15.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Go Ateneo Quatro with Brass.mp3"
+dest_files=["res://.godot/imported/Go Ateneo Quatro with Brass.mp3-ae1473ea08ad9d2d0c23816c64485e15.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

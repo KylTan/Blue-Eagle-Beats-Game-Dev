@@ -3,6 +3,8 @@ extends Node2D
 var mapfile = "res://Assets/Audio/Vary-Cheer-Bass.mboy"
 var audiofile = "res://Assets/Audio/Vary-Cheer.mp3"
 var nextDialogueScene = "res://Objects/Timeline_beginning.tscn"
+var nextCheerIndex # number corresponds to a cheer
+var nextDialogueIndex #number corresponds to a scene hopefully
 
 #func _init():
 	#audiofile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
