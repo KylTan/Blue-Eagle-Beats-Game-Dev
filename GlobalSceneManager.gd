@@ -2,7 +2,7 @@
 extends Node
 
 func _changeScene_demo_Bass():
-	get_tree().change_scene_to_file("res://Objects/Bass Game.tscn")
+	get_tree().change_scene_to_file("res://Objects/main_game_scene.tscn")
 
 func _changeScene_demo_Snare():
 	get_tree().change_scene_to_file("res://Objects/Snare Game.tscn")

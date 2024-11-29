@@ -29,6 +29,7 @@ var audio
 	
 #mapping file
 @onready var map_file #= "res://Assets/Audio/Vary-Cheer-Bass.mboy"
+@onready var nextScene
 var map
 var curr_bar_index = 0 
 var tracks_data
@@ -112,6 +113,9 @@ func add_bar():
 		curr_location += Vector2(0, -bar_Length_In_M)	
 		curr_bar_index += 1
 	#can put an else here to move to another scene
+	else: # if it is null
+		get_tree().change_scene_to_file(nextScene)
+		
 	
 func get_bar_data(): 
 	if curr_bar_index < tracks_data[0].bars.size(): # keeps going til laast bar
@@ -141,7 +145,7 @@ func calc_params():
 	for i in range(2): #should iterate thru each track type in the track array
 		for j in range(map.tracks[i].bars.size()): #iterates thru all the bars in a track
 				total_note_count += map.tracks[i].bars[j].notes.size() #checks number of notes in each bar
-	print(total_note_count)
+	#print(total_note_count)
 	
 func score_check():
 	if total_note_count > 0 and receiver.total_hits > 0:

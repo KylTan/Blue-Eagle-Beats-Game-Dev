@@ -1,8 +1,8 @@
 extends Node2D
 @onready var bassGame = preload("res://Objects/Bass Game.tscn")
-var mapfile = "res://Assets/Audio/Jabba - Bass.mboy"
-var audiofile = "res://Assets/Audio/Jabba.mp3"
-
+var mapfile = "res://Assets/Audio/Vary-Cheer-Bass.mboy"
+var audiofile = "res://Assets/Audio/Vary-Cheer.mp3"
+var nextDialogueScene = "res://Objects/Timeline_beginning.tscn"
 
 #func _init():
 	#audiofile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
@@ -11,6 +11,7 @@ func _ready():
 	var instance = bassGame.instantiate()
 	instance.audiofile = audiofile
 	instance.map_file = mapfile
+	instance.nextScene = nextDialogueScene
 	
 	add_child(instance)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
