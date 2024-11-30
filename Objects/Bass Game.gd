@@ -24,20 +24,25 @@ var note_speed
 var note_scale
 var start_pos_in_sec #offset
 var audio
-var audiofile = "res://Assets/Audio/Vary-Cheer.mp3"
+@onready var audiofile #= "res://Assets/Audio/Vary-Cheer.mp3"
 @onready var music_node = $Music
 	
 #mapping file
-var map_file = "res://Assets/Audio/Vary-Cheer-Bass.mboy"
+@onready var map_file #= "res://Assets/Audio/Vary-Cheer-Bass.mboy"
+@onready var nextScene
 var map
 var curr_bar_index = 0 
 var tracks_data
+var parentNode = get_parent()
 
 #scoring
 var total_note_count = 0
 var percent_score = 0
 
 func _ready():
+	if parentNode:
+		audiofile = parentNode.audiofile
+		map_file = parentNode.mapfile
 	audio = load(audiofile)
 	beaterSprite = get_node("BeaterSprite") #beater
 	#NoteRecLight = get_node("Note Receiver Light")
@@ -108,6 +113,9 @@ func add_bar():
 		curr_location += Vector2(0, -bar_Length_In_M)	
 		curr_bar_index += 1
 	#can put an else here to move to another scene
+	else: # if it is null
+		get_tree().change_scene_to_file(nextScene)
+		
 	
 func get_bar_data(): 
 	if curr_bar_index < tracks_data[0].bars.size(): # keeps going til laast bar
@@ -137,7 +145,7 @@ func calc_params():
 	for i in range(2): #should iterate thru each track type in the track array
 		for j in range(map.tracks[i].bars.size()): #iterates thru all the bars in a track
 				total_note_count += map.tracks[i].bars[j].notes.size() #checks number of notes in each bar
-	print(total_note_count)
+	#print(total_note_count)
 	
 func score_check():
 	if total_note_count > 0 and receiver.total_hits > 0:
