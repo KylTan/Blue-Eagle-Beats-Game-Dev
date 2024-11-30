@@ -1,0 +1,17 @@
+[background arg="res://Assets/AteneoBasketball.jpeg" fade="0.0"]
+join PlayerCharacter left
+join PlayerFriend left [mirrored="true"]
+join Tryout_Manager right
+update Tryout_Manager [animation="Bounce"]
+Tryout_Manager: OK GUYS! GOODJOB OUT THERE!! Now go and take a breather and don't forget to go over your equipment and do some maintenance for the next half!!
+leave Tryout_Manager [animation="Bounce Out" wait="true"]
+PlayerFriend: Huh..huh.. that was tiring but great! The hype was through the roof bud!
+PlayerCharacter: Yeah!! You can say that again!! It felt great but tiring huh...
+PlayerFriend: Heh now you are sounding much more relaxed hehe...
+PlayerFriend: Maybe you starting to believe in yourself like thsoe anime character hehe!
+PlayerCharacter: Huh. Whatever you say bud..heh..
+PlayerCharacter: Wait a minute..Looks like a screw is kinda looose on my drum..
+PlayerFriend: Oh yeah you're right... You better tighten it or it may sound weird.. Just remember too *EXPLAIN DRUM SCREWING TUTORIAL HERE! *
+PlayerCharacter: Yeah will do... Now where's that tool?
+do GlobalSceneManager._changeScene_minigame_drumScrewing()
+[end_timeline]
