@@ -30,13 +30,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "Timeline_1sthalf_basketball_game": "res://Dialogue/MainStory/Timeline_1sthalf_basketball_game.dtl",
 "Timeline_2ndhalf_basketball_game": "res://Dialogue/MainStory/Timeline_2ndhalf_basketball_game.dtl",
-"Timeline_Beginning": "res://Dialogue/MainStory/Timeline_Beginning.dtl",
 "Timeline_Level2": "res://Assets/Character_Dialogic/Timeline_Level2.dtl",
-"Timeline_PostPrePractice": "res://Dialogue/MainStory/Timeline_PostPrePractice.dtl",
-"Timeline_Practice1": "res://Dialogue/MainStory/Timeline_Practice1.dtl",
-"Timeline_PrePractice": "res://Dialogue/MainStory/Timeline_PrePractice.dtl",
-"Timeline_PreTryouts": "res://Dialogue/MainStory/Timeline_PreTryouts.dtl",
-"Timeline_Start": "res://Dialogue/Timeline_Start.dtl",
 "Timeline_post_basketball_game": "res://Dialogue/MainStory/Timeline_post_basketball_game.dtl",
 "Timeline_post_maintenance": "res://Dialogue/MainStory/Timeline_post_maintenance.dtl",
 "Timeline_post_training": "res://Dialogue/MainStory/Timeline_post_training.dtl",

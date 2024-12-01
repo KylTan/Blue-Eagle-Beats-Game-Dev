@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvxcy3m0uks6u"]
-
-[ext_resource type="Script" path="res://Objects/Timeline_pre_tryouts.gd" id="1_s6ra1"]
-
-[node name="Timeline_PreTryouts" type="Node2D"]
-script = ExtResource("1_s6ra1")

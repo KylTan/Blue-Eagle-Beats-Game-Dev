@@ -1,7 +1,0 @@
-[background arg="res://Assets/matteoRicci.jpg" fade="0.0"]
-join PlayerCharacter center
-join PlayerFriend left
-join Tryout_Manager right
-Tryout_Manager: Woahh! You guys did great! Are ya'll sure you guys don't have prior experience for that as well? \:>
-Tryout_Manager: Well see you guys tomorrow for the actual tryouts! By then you have to choose what drum you will be focusing! Make sure to choose wisely OK! You won't be able to change drums after!
-jump Timeline_Practice1/
