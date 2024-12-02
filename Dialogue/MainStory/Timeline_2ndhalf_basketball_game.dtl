@@ -1,7 +1,7 @@
-[background arg="res://Assets/AteneoBasketball.jpeg" fade="0.0"]
+[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
 join Tryout_Manager right
 join PlayerCharacter left [mirrored="true"]
-join PlayerFriend center
+join PlayerFriend left
 Tryout_Manager: Ok Guys! Get ready for the 2nd half of the Game!!!! Make sure you all are done with your drum maintenance!
 YESSIR!
 Tryout_Manager: Oh yes! JUAN GET OVER HERE!

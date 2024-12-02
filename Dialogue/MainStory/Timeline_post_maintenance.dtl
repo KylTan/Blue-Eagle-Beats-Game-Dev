@@ -1,6 +1,6 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join Tryout_Manager right
-join PlayerCharacter left
+join PlayerCharacter left [mirrored="true"]
 join PlayerFriend left
 Tryout_Manager: Ok guys! That's it for the maintenance for now! Remember to always maintain equipment after using the drums!
 Tryout_Manager: Oh! Before I forget! Remember that there would be performing at an upcoming basketball game! For the rookies this will be your first performance so remember to practice a lot!! Shall we say this would be your first trial!

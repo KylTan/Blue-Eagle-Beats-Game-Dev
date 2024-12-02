@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwml2cl88ghoa"]
 
 [ext_resource type="Script" path="res://Objects/main_menu.gd" id="1_ir266"]
-[ext_resource type="Texture2D" uid="uid://chgc6klpcs6wm" path="res://Assets/Game BG.png" id="2_8kgym"]
 [ext_resource type="Texture2D" uid="uid://c85r7qruib8m4" path="res://Assets/sprite-bass-hit.png" id="3_s7v3q"]
+[ext_resource type="Texture2D" uid="uid://ch4ly4g204yq7" path="res://Assets/BlueEagleBeatsLogo.png" id="4_j8p23"]
 [ext_resource type="Texture2D" uid="uid://vmexaogg6k5s" path="res://Assets/sprite-snare-swing.png" id="4_ygsiv"]
 
 [node name="MainMenu" type="Control"]
@@ -23,8 +23,18 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("1_ir266")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+z_as_relative = false
+layout_mode = 2
+anchor_bottom = 0.5
+offset_left = -411.0
+offset_top = -213.0
+offset_right = 553.0
+offset_bottom = 298.5
+color = Color(0.968627, 0.968627, 0.968627, 1)
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-z_index = 1
+z_index = 3
 layout_mode = 0
 offset_left = -87.0
 offset_top = -12.0
@@ -37,46 +47,29 @@ text = "Start Game"
 
 [node name="Options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Options
+text = "Options (WIP)
 "
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Exit"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -1
-z_as_relative = false
-position = Vector2(228, 389.5)
-scale = Vector2(7.48047, 4.19922)
-texture = ExtResource("2_8kgym")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -154.5
-offset_top = -136.5
-offset_right = 168.5
-offset_bottom = -74.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/default_color = Color(0.246609, 0.468349, 1, 1)
-theme_override_font_sizes/normal_font_size = 35
-theme_override_font_sizes/bold_font_size = 9
-text = "BLUE EAGLE BEATS"
-
 [node name="CharacterLeft" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(336.5, 107)
 texture = ExtResource("3_s7v3q")
 
 [node name="CharacterLeft2" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(-237, 117)
 texture = ExtResource("4_ygsiv")
 flip_h = true
+
+[node name="Logo" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(52, -106)
+scale = Vector2(0.580236, 0.550325)
+texture = ExtResource("4_j8p23")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]

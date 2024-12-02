@@ -4,7 +4,7 @@ extends Node2D
 @onready var animationPlayer2:AnimationPlayer = $AnimationPlayer2
 
 var SlidingScale
-var SlidingScale2 
+var SlidingScale2
 var SlidingScale3
 var SlidingScaleArrow
 
@@ -21,16 +21,17 @@ var nextDialogueScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	nextDialogueIndex = Dialogic.VAR.Dialogue_name 
+	#if
+	nextDialogueIndex = Dialogic.VAR.Dialogue_name
 	SlidingScale = get_node("SlidingScale")
 	SlidingScale2 = get_node("SlidingScale2")
 	SlidingScale3 = get_node("SlidingScale3")
 	SlidingScaleArrow = get_node("SlidingScaleArrow")
-	
+
 	Result = get_node("Result")
 	Result2 = get_node("Result2")
 	Result3 = get_node("Result3")
-	
+
 	animationPlayer.play("Pulsate")
 	GameState += 1
 	_SetSlidingScale()
@@ -48,7 +49,7 @@ func _input(event):
 
 func _PlayGame():
 	if animationPlayer.is_playing():
-		animationPlayer.stop() 
+		animationPlayer.stop()
 		animationPlayer2.play("Slide")
 	else:
 		if(SlidingScaleArrow._isHit()):
@@ -62,7 +63,7 @@ func _PlayGame():
 			_SetResult(Wrong)
 			animationPlayer2.pause()
 			animationPlayer.play("Pulsate")
-	
+
 	if GameState > 3:
 		_EndGame()
 
@@ -102,6 +103,5 @@ func _EndGame():
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_2ndhalf_basketball_game.tscn"
 		5:
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_basketball_game.tscn"
-			
-	get_tree().change_scene_to_file(nextDialogueScene)	
 
+	get_tree().change_scene_to_file(nextDialogueScene)

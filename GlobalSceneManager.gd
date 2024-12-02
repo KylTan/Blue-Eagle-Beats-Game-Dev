@@ -7,6 +7,10 @@ func _changeScene_main_game_Bass():
 
 func _changeScene_main_game_Snare():
 	get_tree().change_scene_to_file("res://Objects/Snare Game.tscn")
+	
+func _changeScene_exit_game():
+	get_tree().quit()
+
 
 func _changeScene_MainMenu():
 	get_tree().change_scene_to_file("res://Objects/main_menu.tscn")
