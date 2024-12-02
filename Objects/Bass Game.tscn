@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dnoywddxa48vs"]
+[gd_scene load_steps=24 format=3 uid="uid://dnoywddxa48vs"]
 
 [ext_resource type="Script" path="res://Objects/Bass Game.gd" id="1_cf0r3"]
 [ext_resource type="Texture2D" uid="uid://bway2cc4nt4k8" path="res://Assets/Bass-Beat-Container-Mini.png" id="1_qa2vd"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dmw01f04qux0s" path="res://Assets/Bass-Hitbox-Model-Pearl.png" id="9_dy6v6"]
 [ext_resource type="Texture2D" uid="uid://tm5qp2rne6bh" path="res://Assets/sprite-bass-beater-cursour.png" id="11_ov4wu"]
 [ext_resource type="Texture2D" uid="uid://dh6d4sge3l06d" path="res://Assets/sprite-bass-beater-cursour-heavy-charge.png" id="12_ot2bq"]
+[ext_resource type="Texture2D" uid="uid://chslfnfikv6du" path="res://Assets/sprite-bass-beater-cursour-hit.png" id="13_71fg4"]
 [ext_resource type="Texture2D" uid="uid://y5bl3t5bxc4p" path="res://Assets/sprite-bass-beater-cursour-light-charge.png" id="13_oadnm"]
 [ext_resource type="FontFile" uid="uid://d0ftogm8y3nwr" path="res://Assets/Kola_Complete/Fonts/OTF/Kola-Regular.otf" id="14_qa7i4"]
 [ext_resource type="FontFile" uid="uid://jq4npb7j4ymj" path="res://Assets/Kola_Complete/Fonts/WEB/fonts/Kola-Regular.ttf" id="15_r2jv8"]
@@ -65,6 +66,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"heavy_charge",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_71fg4")
+}],
+"loop": true,
+"name": &"hit",
 "speed": 5.0
 }, {
 "frames": [{
@@ -145,7 +154,6 @@ texture = ExtResource("9_dy6v6")
 position = Vector2(992, 544)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ao4nq")
-animation = &"light_charge"
 script = ExtResource("5_mudu0")
 
 [node name="Beater Cursour" type="Node2D" parent="."]
