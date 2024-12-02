@@ -20,7 +20,7 @@ YESSIR!
 update PlayerFriend [animation="Bounce" repeat="2"]
 update PlayerCharacter [animation="Bounce" repeat="2" mirrored="true"]
 Tryout_Manager: We will now begin by brushing up on the basics!
-Tryout_Manager: It is very simple! Move your mouse to the specified charge level the note requires (Heavy Charge(top) for BIG notes, and Light Charge(bottom) for SMALL notes) and "hit" the drum after to the beat! See, very simple!!
 set {Song_played} = "1"
+set {Dialogue_name} = "1"
 do GlobalSceneManager._changeScene_main_game_Bass()
 [end_timeline]

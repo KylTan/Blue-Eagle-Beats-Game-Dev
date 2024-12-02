@@ -13,5 +13,6 @@ PlayerCharacter: Huh. Whatever you say bud..heh..
 PlayerCharacter: Wait a minute..Looks like a screw is kinda looose on my drum..
 PlayerFriend: Oh yeah you're right... You better tighten it or it may sound weird.. Just remember too *EXPLAIN DRUM SCREWING TUTORIAL HERE! *
 PlayerCharacter: Yeah will do... Now where's that tool?
+set {Dialogue_name} = "4"
 do GlobalSceneManager._changeScene_minigame_drumScrewing()
 [end_timeline]

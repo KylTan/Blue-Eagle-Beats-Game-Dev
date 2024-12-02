@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dnoywddxa48vs"]
+[gd_scene load_steps=19 format=3 uid="uid://dnoywddxa48vs"]
 
 [ext_resource type="Script" path="res://Objects/Bass Game.gd" id="1_cf0r3"]
 [ext_resource type="Texture2D" uid="uid://bway2cc4nt4k8" path="res://Assets/Bass-Beat-Container-Mini.png" id="1_qa2vd"]
@@ -12,7 +12,6 @@
 [ext_resource type="Script" path="res://Objects/BeaterSprite.gd" id="5_mudu0"]
 [ext_resource type="Texture2D" uid="uid://eb740uqc8f7c" path="res://Assets/UI-Overlay.png" id="7_iie8y"]
 [ext_resource type="PackedScene" uid="uid://vgpayaqmtrvl" path="res://music.tscn" id="8_65oaw"]
-[ext_resource type="Texture2D" uid="uid://dmw01f04qux0s" path="res://Assets/Bass-Hitbox-Model-Pearl.png" id="9_d8770"]
 [ext_resource type="FontFile" uid="uid://d0ftogm8y3nwr" path="res://Assets/Kola_Complete/Fonts/OTF/Kola-Regular.otf" id="14_qa7i4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tfee0"]
@@ -119,7 +118,6 @@ shape = SubResource("RectangleShape2D_bobao")
 position = Vector2(-201, 176)
 rotation = -0.359538
 scale = Vector2(1.5, 1.754)
-texture = ExtResource("9_d8770")
 
 [node name="BeaterSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(992, 544)

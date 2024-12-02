@@ -1,6 +1,7 @@
 #Global Variable For calling function to Change Scenes (needs to be global for dialogic to detect)
 extends Node
 
+#Into the non-dialogue scenes
 func _changeScene_main_game_Bass():
 	get_tree().change_scene_to_file("res://Objects/main_game_scene.tscn")
 
@@ -20,7 +21,7 @@ func _changeScene_minigame_stickTaping():
 	get_tree().change_scene_to_file("res://Objects/Minigames/StickTape/MG-Stick-Tape.tscn")
 
 
-#Scenes for Dialogic Timelines
+#Scenes for Dialogic Timelines (into the dialogs)
 
 func _changeScene_Timeline_pre_training():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_pre_training.tscn")

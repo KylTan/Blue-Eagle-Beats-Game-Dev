@@ -4,6 +4,7 @@ var chargeValue
 var NoteRecLight
 var NoteRecHeavy
 var is_Hit = false #changes when clear area is hit with the cursour with a charge
+var endBuffer = 0
 
 #bar spawning variables
 var bar_scn = preload("res://Objects/Bar.tscn")
@@ -114,8 +115,9 @@ func add_bar():
 		curr_bar_index += 1
 	#can put an else here to move to another scene
 	else: # if it is null
-		get_tree().change_scene_to_file(nextScene)
-		
+		if endBuffer >= 2:
+			get_tree().change_scene_to_file(nextScene)
+		endBuffer += 1
 	
 func get_bar_data(): 
 	if curr_bar_index < tracks_data[0].bars.size(): # keeps going til laast bar

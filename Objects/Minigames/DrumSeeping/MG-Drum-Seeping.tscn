@@ -75,11 +75,6 @@ radius = 24.8887
 [node name="Mg-drum-seeping" type="Node2D"]
 script = ExtResource("1_eoxep")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(958, 540)
-scale = Vector2(6.2, 3.64)
-zoom = Vector2(0.6, 0.6)
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_0rddx")
 rendering_quadrant_size = 128

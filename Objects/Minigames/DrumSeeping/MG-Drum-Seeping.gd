@@ -16,10 +16,13 @@ var Wrong =preload("res://Assets/DrumSeepingMinigame/MG2_X.png")
 var Right =preload("res://Assets/DrumSeepingMinigame/MG2_Check.png")
 
 var GameState = 0
-
+var nextDialogueIndex
+var nextDialogueScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if
+	nextDialogueIndex = Dialogic.VAR.Dialogue_name 
 	SlidingScale = get_node("SlidingScale")
 	SlidingScale2 = get_node("SlidingScale2")
 	SlidingScale3 = get_node("SlidingScale3")
@@ -88,6 +91,18 @@ func _SetResult(result):
 
 func _EndGame():
 	animationPlayer2.pause()
-		
-		
+
+	match nextDialogueIndex:
+		1: #first training arc
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_training.tscn"
+		2:
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_maintenance.tscn"
+		3:
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_1sthalf_basketball_game.tscn"
+		4:
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_2ndhalf_basketball_game.tscn"
+		5:
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_basketball_game.tscn"
+			
+	get_tree().change_scene_to_file(nextDialogueScene)	
 

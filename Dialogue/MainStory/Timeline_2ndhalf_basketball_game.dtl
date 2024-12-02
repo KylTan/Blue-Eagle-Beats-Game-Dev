@@ -20,5 +20,7 @@ PlayerFriend: We've been here before bud.. Just remember to relax and treat this
 PlayerFriend: I know you got this bud.. I believe in you!
 PlayerCharacter: Well... Thanks bud.. The pressure is still there but not as much as before.
 PlayerFriend: Nice to see you calmed down a bit. Now.. LETS DO THIS!!
+set {Song_played} = "3"
+set {Dialogue_name} = "5"
 do GlobalSceneManager._changeScene_main_game_Bass()
 [end_timeline]

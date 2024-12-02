@@ -8,7 +8,7 @@ PlayerCharacter: Oh my goshh... I feel so much pressure.....
 PlayerFriend: I get it.. It makes me feel soo... ALIVEE!!!!
 update PlayerFriend [animation="Bounce" length="0.6" repeat="2"]
 PlayerCharacter: What....
-PlayerFriend: YEEEEE I GET THIS DRIVEEE WAHOOO!!! We got this man!!!!!! 
+PlayerFriend: YEEEEE I GET THIS DRIVEEE WAHOOO!!! We got this man!!!!!!
 PlayerCharacter: Hehe you know what yeah we got this! I wish I always had your energy.
 update Tryout_Manager [animation="Bounce" wait="true"]
 Tryout_Manager: OK GUYSS!! LISTEN UP!!
@@ -16,5 +16,6 @@ Tryout_Manager: REMEMBER WHY WE'RE HERE!! WE ARE HERE TO HYPE UP ATENEO OK!!!
 Tryout_Manager: WE GOTTA MAKE SURE THAT THE HYPE DOES NOT DIE DOWN!
 Tryout_Manager: THAT'S WHAT YOU ALL SIGNED UP AFTER ALL!!!! NOW GO OUT THERE AND PLAY!!!
 set {Song_played} = "2"
+set {Dialogue_name} = "3"
 do GlobalSceneManager._changeScene_main_game_Bass()
 [end_timeline]
