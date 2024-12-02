@@ -1,10 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://dnoywddxa48vs"]
+[gd_scene load_steps=23 format=3 uid="uid://dnoywddxa48vs"]
 
 [ext_resource type="Script" path="res://Objects/Bass Game.gd" id="1_cf0r3"]
 [ext_resource type="Texture2D" uid="uid://bway2cc4nt4k8" path="res://Assets/Bass-Beat-Container-Mini.png" id="1_qa2vd"]
 [ext_resource type="PackedScene" uid="uid://be2fgss1xl1th" path="res://Objects/3dBackground.tscn" id="2_0cdo8"]
 [ext_resource type="PackedScene" uid="uid://da4metl6nxxbt" path="res://Objects/Note Receiver.tscn" id="2_30r12"]
-[ext_resource type="Texture2D" uid="uid://cnctnyq7ybcfj" path="res://Assets/Bass-Beater-CharSheet.png" id="3_2rqoa"]
 [ext_resource type="Texture2D" uid="uid://c85r7qruib8m4" path="res://Assets/sprite-bass-hit.png" id="3_h4igy"]
 [ext_resource type="Script" path="res://Objects/Beater Cursour.gd" id="3_wmqhp"]
 [ext_resource type="Texture2D" uid="uid://bhb3td6mjc0r3" path="res://Assets/sprite-bass-idle.png" id="4_3p5h0"]
@@ -12,7 +11,13 @@
 [ext_resource type="Script" path="res://Objects/BeaterSprite.gd" id="5_mudu0"]
 [ext_resource type="Texture2D" uid="uid://eb740uqc8f7c" path="res://Assets/UI-Overlay.png" id="7_iie8y"]
 [ext_resource type="PackedScene" uid="uid://vgpayaqmtrvl" path="res://music.tscn" id="8_65oaw"]
+[ext_resource type="Texture2D" uid="uid://ci4dhxk8yjbc6" path="res://Assets/Hitzones.png" id="8_itkf6"]
+[ext_resource type="Texture2D" uid="uid://dmw01f04qux0s" path="res://Assets/Bass-Hitbox-Model-Pearl.png" id="9_dy6v6"]
+[ext_resource type="Texture2D" uid="uid://tm5qp2rne6bh" path="res://Assets/sprite-bass-beater-cursour.png" id="11_ov4wu"]
+[ext_resource type="Texture2D" uid="uid://dh6d4sge3l06d" path="res://Assets/sprite-bass-beater-cursour-heavy-charge.png" id="12_ot2bq"]
+[ext_resource type="Texture2D" uid="uid://y5bl3t5bxc4p" path="res://Assets/sprite-bass-beater-cursour-light-charge.png" id="13_oadnm"]
 [ext_resource type="FontFile" uid="uid://d0ftogm8y3nwr" path="res://Assets/Kola_Complete/Fonts/OTF/Kola-Regular.otf" id="14_qa7i4"]
+[ext_resource type="FontFile" uid="uid://jq4npb7j4ymj" path="res://Assets/Kola_Complete/Fonts/WEB/fonts/Kola-Regular.ttf" id="15_r2jv8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tfee0"]
 animations = [{
@@ -44,18 +49,30 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bobao"]
 size = Vector2(392, 402)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lfhm2"]
-atlas = ExtResource("3_2rqoa")
-region = Rect2(0, 0, 430, 430)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_ao4nq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lfhm2")
+"texture": ExtResource("11_ov4wu")
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ot2bq")
+}],
+"loop": true,
+"name": &"heavy_charge",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_oadnm")
+}],
+"loop": true,
+"name": &"light_charge",
 "speed": 5.0
 }]
 
@@ -88,6 +105,10 @@ texture = ExtResource("1_qa2vd")
 position = Vector2(953, 542)
 texture = ExtResource("7_iie8y")
 
+[node name="Hitzones" type="Sprite2D" parent="."]
+position = Vector2(961, 543)
+texture = ExtResource("8_itkf6")
+
 [node name="Note Receiver" parent="." instance=ExtResource("2_30r12")]
 position = Vector2(111, 900)
 
@@ -105,7 +126,7 @@ position = Vector2(992, 544)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Light Charge Zone"]
 position = Vector2(-292, 510)
 scale = Vector2(1, 1.15157)
-polygon = PackedVector2Array(502, -368.193, 1223, -415.086, 1215, 17.3676, 346, 13.8941, 390, -301.328)
+polygon = PackedVector2Array(502, -368.193, 1223, -415.086, 1215, 17.3676, 346, 13.8941, 380, -256.172)
 
 [node name="Clear Area" type="Area2D" parent="."]
 position = Vector2(992, 544)
@@ -115,14 +136,16 @@ position = Vector2(-204, 186)
 shape = SubResource("RectangleShape2D_bobao")
 
 [node name="Sprite2D" type="Sprite2D" parent="Clear Area"]
-position = Vector2(-201, 176)
+position = Vector2(-197, 190)
 rotation = -0.359538
-scale = Vector2(1.5, 1.754)
+scale = Vector2(0.9, 1.013)
+texture = ExtResource("9_dy6v6")
 
 [node name="BeaterSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(992, 544)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ao4nq")
+animation = &"light_charge"
 script = ExtResource("5_mudu0")
 
 [node name="Beater Cursour" type="Node2D" parent="."]
@@ -144,11 +167,29 @@ position = Vector2(992, 544)
 
 [node name="IdleTimer" type="Timer" parent="."]
 
+[node name="Label3" type="Label" parent="."]
+offset_left = 1098.0
+offset_top = 61.0
+offset_right = 1162.0
+offset_bottom = 196.0
+theme_override_fonts/font = ExtResource("15_r2jv8")
+theme_override_font_sizes/font_size = 100
+text = "H"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1101.0
+offset_top = 921.0
+offset_right = 1165.0
+offset_bottom = 1056.0
+theme_override_fonts/font = ExtResource("15_r2jv8")
+theme_override_font_sizes/font_size = 100
+text = "L"
+
 [node name="Label" type="Label" parent="."]
-offset_left = 504.0
-offset_top = -26.0
-offset_right = 896.0
-offset_bottom = 172.0
+offset_left = 570.0
+offset_top = -30.0
+offset_right = 962.0
+offset_bottom = 168.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("14_qa7i4")
 theme_override_font_sizes/font_size = 145

@@ -21,7 +21,6 @@ var nextDialogueScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if
 	nextDialogueIndex = Dialogic.VAR.Dialogue_name 
 	SlidingScale = get_node("SlidingScale")
 	SlidingScale2 = get_node("SlidingScale2")

@@ -81,12 +81,15 @@ func _on_heavy_charge_zone_mouse_entered():
 	chargeValue = 2
 	receiver.note_Charge = chargeValue
 	playerSprite.play("swing")
+	beaterSprite.play("heavy_charge")
 	$IdleTimer.stop()
+	
 	
 func _on_light_charge_zone_mouse_entered():
 	chargeValue = 1
 	receiver.note_Charge = chargeValue
 	playerSprite.play("swing")
+	beaterSprite.play("light_charge")
 	$IdleTimer.stop()
 	
 # going to this zone counts the hit with corresponding charge a.k.a the input
@@ -94,6 +97,7 @@ func _on_clear_area_mouse_entered():
 	is_Hit = true # changes the is hit in the receiver
 	receiver.is_Hit = is_Hit
 	playerSprite.play("hit")
+	beaterSprite.play("default")
 	$IdleTimer.start()
 	
 func _on_clear_area_mouse_exited():

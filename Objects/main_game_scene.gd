@@ -2,14 +2,19 @@ extends Node2D
 @onready var bassGame = preload("res://Objects/Bass Game.tscn")
 var mapfile = "res://Assets/Audio/Vary-Cheer-Bass.mboy"
 var audiofile = "res://Assets/Audio/Vary-Cheer.mp3"
-var nextDialogueScene = "res://Objects/Timeline_beginning.tscn"
-var nextCheerIndex = Dialogic.VAR.Song_played #intercepts what the next cheer index is
-var nextDialogueIndex = Dialogic.VAR.Dialogue_name #number corresponds to a scene hopefully
+var nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_pre_training.tscn"
+var nextCheerIndex = 1 #intercepts what the next cheer index is
+var nextDialogueIndex = 1  #number corresponds to a scene 
 
 #func _init():
 	#audiofile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
 	#mapfile = "res://Assets/Audio/Fly High (Brass+Banda).mp3"
 func _ready():
+	
+	if nextCheerIndex:
+		nextCheerIndex = Dialogic.VAR.Song_played #intercepts what the next cheer index is
+	if nextDialogueIndex:
+		nextDialogueIndex = Dialogic.VAR.Dialogue_name #number corresponds to a scene hopefully
 	
 	match nextCheerIndex:
 		1: #first training
