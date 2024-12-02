@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdon80nt6p3jq"]
+
+[ext_resource type="Texture2D" uid="uid://7g7wnosx47ks" path="res://Assets/CarryEquipmentMinigame/MG4_inventory_texture.png" id="1_c6ehk"]
+[ext_resource type="Script" path="res://Assets/CarryEquipmentMinigame/slot.gd" id="2_6vxlq"]
+
+[node name="Slot" type="TextureRect"]
+custom_minimum_size = Vector2(200, 200)
+texture = ExtResource("1_c6ehk")
+expand_mode = 1
+script = ExtResource("2_6vxlq")
+
+[node name="StatusFilter" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
