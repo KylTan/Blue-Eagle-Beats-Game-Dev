@@ -4,6 +4,7 @@ var chargeValue
 var NoteRecLight
 var NoteRecHeavy
 var is_Hit = false #changes when clear area is hit with the cursour with a charge
+var endBuffer = 0
 
 #bar spawning variables
 var bar_scn = preload("res://Objects/Bar.tscn")
@@ -80,12 +81,15 @@ func _on_heavy_charge_zone_mouse_entered():
 	chargeValue = 2
 	receiver.note_Charge = chargeValue
 	playerSprite.play("swing")
+	beaterSprite.play("heavy_charge")
 	$IdleTimer.stop()
+	
 	
 func _on_light_charge_zone_mouse_entered():
 	chargeValue = 1
 	receiver.note_Charge = chargeValue
 	playerSprite.play("swing")
+	beaterSprite.play("light_charge")
 	$IdleTimer.stop()
 	
 # going to this zone counts the hit with corresponding charge a.k.a the input
@@ -93,12 +97,14 @@ func _on_clear_area_mouse_entered():
 	is_Hit = true # changes the is hit in the receiver
 	receiver.is_Hit = is_Hit
 	playerSprite.play("hit")
+	beaterSprite.play("hit")
 	$IdleTimer.start()
 	
 func _on_clear_area_mouse_exited():
 	is_Hit = false
 	receiver.is_Hit = is_Hit
 	chargeValue = 0
+	beaterSprite.play("default")
 	#playerSprite.play("idle") will idle as soon as u leave the drum hitbox
 	
 # ~~~~~Bar spawning functions~~~~~
@@ -114,8 +120,9 @@ func add_bar():
 		curr_bar_index += 1
 	#can put an else here to move to another scene
 	else: # if it is null
-		get_tree().change_scene_to_file(nextScene)
-		
+		if endBuffer >= 2:
+			get_tree().change_scene_to_file(nextScene)
+		endBuffer += 1
 	
 func get_bar_data(): 
 	if curr_bar_index < tracks_data[0].bars.size(): # keeps going til laast bar

@@ -1,0 +1,26 @@
+[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
+join Tryout_Manager right
+join PlayerCharacter left [mirrored="true"]
+join PlayerFriend left
+Tryout_Manager: Ok Guys! Get ready for the 2nd half of the Game!!!! Make sure you all are done with your drum maintenance!
+YESSIR!
+Tryout_Manager: Oh yes! JUAN GET OVER HERE!
+update PlayerCharacter [animation="Bounce"]
+PlayerCharacter: YESSIR!
+Tryout_Manager: You've been performing very well these past few cheers. We want to give you a shot to play this upcoming harder cheer.
+Tryout_Manager: Me and the other coaches saw how much energy and emotion you've been putting. It may be a bit rough here and there, but we saw potential!
+PlayerCharacter: Uhmm... Ok sir! Will do!
+Tryout_Manager: That's the spirit! See you out there!
+leave Tryout_Manager [animation="Slide Out Right" wait="true"]
+PlayerCharacter: Uhhh I feel stomach cramps now \:<
+PlayerFriend: YOOOOO Congrats on getting a spot to play one of the harder cheers! Must have been an honor!
+update PlayerFriend [animation="Bounce"]
+PlayerCharacter: I jut feel like the pressure came back... What if I mess up this time!!
+PlayerFriend: We've been here before bud.. Just remember to relax and treat this like we did in practice.
+PlayerFriend: I know you got this bud.. I believe in you!
+PlayerCharacter: Well... Thanks bud.. The pressure is still there but not as much as before.
+PlayerFriend: Nice to see you calmed down a bit. Now.. LETS DO THIS!!
+set {Song_played} = "3"
+set {Dialogue_name} = "5"
+do GlobalSceneManager._changeScene_main_game_Bass()
+[end_timeline]

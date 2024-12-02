@@ -1,0 +1,26 @@
+[background arg="res://Assets/AteneoField.jpg" fade="0.0"]
+join PlayerCharacter left [animation="Slide In Left" mirrored="true"]
+join PlayerFriend left [animation="Slide In Left" length="0.7" wait="true"]
+PlayerFriend: Hey! We're finally here! I can't actually believe we got in to Blue Babble! I finally got to achieve my dream of being a snare drummer!!!!
+PlayerFriend: Don't be looking nervous now bud!
+PlayerCharacter: Yeah.. I'm happy for you. I'm just not sure if I actually deserve to be a bass drummer an all that... \:<
+update PlayerFriend left [mirrored="true"]
+PlayerFriend: Don't think that way!! You got passed the tryouts and you are now here! You deserve to be here thanks to your hard work!
+PlayerFriend: So just believe in yourself the same way I believe in you!
+update PlayerFriend [animation="Shake Y" mirrored="true"]
+PlayerCharacter: Thanks... I really appreciate that.
+PlayerCharacter: **Yeah I just gotta believe in myself... I mean I got here with my own hardwork didn't I?**
+PlayerFriend: Looks like the captain just arrived.
+join Tryout_Manager right [animation="Slide In Right" length="0.8" wait="true"]
+Tryout_Manager: OK GUYS SETTLE DOWN NOW!!!
+Tryout_Manager: Ok now that I have your attention! We want to congratulate the new recruits for passing the tryouts!
+Tryout_Manager: Now that's out of the way! We are now going to hold our training!
+Tryout_Manager: Alright rookies! Make a straight line so we can begin our practice!
+YESSIR!
+update PlayerFriend [animation="Bounce" repeat="2"]
+update PlayerCharacter [animation="Bounce" repeat="2" mirrored="true"]
+Tryout_Manager: We will now begin by brushing up on the basics!
+set {Song_played} = "1"
+set {Dialogue_name} = "1"
+do GlobalSceneManager._changeScene_main_game_Bass()
+[end_timeline]

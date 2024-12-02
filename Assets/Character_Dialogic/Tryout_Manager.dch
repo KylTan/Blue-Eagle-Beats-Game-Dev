@@ -9,8 +9,8 @@
 "style": ""
 },
 "default_portrait": "DefaultFace",
-"description": "Blue Babble Tryouts head manager",
-"display_name": "Tryout Manager",
+"description": "The Big man himself",
+"display_name": "Captain",
 "mirror": false,
 "nicknames": ["Tryout Manager"],
 "offset": Vector2(0, 0),

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfcx1qukt5iii"]
+
+[ext_resource type="Script" path="res://Objects/Dialogue_Scenes/timeline_post_training.gd" id="1_74bws"]
+
+[node name="Timeline_post_training" type="Node2D"]
+script = ExtResource("1_74bws")

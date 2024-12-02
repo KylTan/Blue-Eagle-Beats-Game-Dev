@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Dialogic.start("Timeline_Level2") #initialize timeline
+	Dialogic.start("Timeline_pre_training")
 	pass # Replace with function body.
 
 

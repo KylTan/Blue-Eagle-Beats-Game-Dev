@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwj8n1fnxn4aq"]
+
+[ext_resource type="Script" path="res://Objects/Dialogue_Scenes/timeline_1sthalf_basketball_game.gd" id="1_x2wqg"]
+
+[node name="Timeline_1sthalf_basketball_game" type="Node2D"]
+script = ExtResource("1_x2wqg")
