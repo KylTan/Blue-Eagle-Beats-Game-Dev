@@ -3,7 +3,7 @@ var beaterSprite
 var chargeValue	
 var NoteRecLight
 var NoteRecHeavy
-var is_Hit = false #changes when clear area is hit with the cursour with a charge
+var is_Hit = false #changes when clear area is hit with the cursour with a chargek
 
 #bar spawning variables
 var bar_scn = preload("res://Objects/Snare Bar.tscn")
@@ -30,19 +30,23 @@ var audiofile = "res://Assets/Audio/Go Ateneo (Brass+Banda).mp3"
 #mapping file
 var map_file = "res://Assets/Audio/Go Ateneo (Brass+Banda) - Snare.mboy"
 var map
-var curr_bar_index = 0 
+var curr_bar_index = 0
 var tracks_data
+
+#scoring
+var total_note_count = 0
+var percent_score = 0
 
 func _ready():
 	audio = load(audiofile)
-	beaterSprite = get_node("BeaterSprite") #beater
+	#beaterSprite = get_node("BeaterSprite") #beater
 	#NoteRecLight = get_node("Note Receiver Light")
 	#NoteRecHeavy = get_node("Note Receiver Heavy")
 	
 	map = load_map()	
 	calc_params()
 	tracks_data = map.tracks
-	print(tracks_data)
+	#print(tracks_data)
 	music_node.setup(self)
 	
 	# bar spawning on ready
@@ -52,6 +56,7 @@ func _ready():
 		
 func _process(delta):
 	#followMouse()
+	score_check()
 	animationCycle()
 	bars_node.translate(Vector2(0, note_speed*delta))
 	
@@ -133,6 +138,21 @@ func calc_params():
 	note_speed = bar_Length_In_M/float(4*quarter_time_in_sec)
 	note_scale = bar_Length_In_M/float(4*400) #idk about the 4*400 bit -> 0.675
 	start_pos_in_sec = (float(map.start_pos)/400.0)*quarter_time_in_sec
+
+	# ~~ Scoring Init. ~~ #
+	
+	#loops thru each track of the track then every bar to count total beats
+	for i in range(3): #should iterate thru each track type in the track array
+		for j in range(map.tracks[i].bars.size()): #iterates thru all the bars in a track
+				total_note_count += map.tracks[i].bars[j].notes.size() #checks number of notes in each bar
+	#print(total_note_count)
+
+func score_check():
+	if total_note_count > 0 and receiver.total_hits > 0:
+		percent_score = float(receiver.total_hits)/total_note_count * 100
+		#print(percent_score)
+		#print(float(receiver.total_hits))
+		$Label.text = str(int(percent_score)) + "%"
 
 # ~~~~~Mapping Stuff~~~~~
 func load_map():

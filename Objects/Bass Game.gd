@@ -40,6 +40,9 @@ var parentNode = get_parent()
 var total_note_count = 0
 var percent_score = 0
 
+#particle effect on hit
+var particle = preload("res://Objects/particle_explosion.tscn")
+
 func _ready():
 	if parentNode:
 		audiofile = parentNode.audiofile
@@ -98,7 +101,14 @@ func _on_clear_area_mouse_entered():
 	receiver.is_Hit = is_Hit
 	playerSprite.play("hit")
 	beaterSprite.play("hit")
+	
+	var particleChild = particle.instantiate()
+	particleChild.position = Vector2(250, 900)
+	particleChild.emitting = true
+	add_child(particleChild)
+	
 	$IdleTimer.start()
+
 	
 func _on_clear_area_mouse_exited():
 	is_Hit = false
@@ -155,8 +165,8 @@ func calc_params():
 	#print(total_note_count)
 	
 func score_check():
-	if total_note_count > 0 and receiver.total_hits > 0:
-		percent_score = float(receiver.total_hits)/total_note_count * 100
+	if total_note_count > 0 and receiver.total_hits > 0: #check if number greater than 0
+		percent_score = float(receiver.total_hits)/total_note_count * 100 # calc percent score
 		#print(percent_score)
 		#print(float(receiver.total_hits))
 		$Label.text = str(int(percent_score)) + "%"

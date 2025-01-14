@@ -169,7 +169,7 @@ position = Vector2(2, 1)
 shape = SubResource("CapsuleShape2D_mfkri")
 
 [node name="Music" parent="." instance=ExtResource("8_65oaw")]
-position = Vector2(992, 544)
+position = Vector2(785, 731)
 
 [node name="BarNode" type="Node2D" parent="."]
 
