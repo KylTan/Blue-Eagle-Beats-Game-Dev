@@ -61,7 +61,8 @@ func _ready():
 	# bar spawning on ready
 	for i in range(3):
 		add_bar()
-		
+	
+	$BeatLight.texture_scale = 0.0
 		
 func _process(delta):
 	followMouse()
@@ -107,6 +108,8 @@ func _on_clear_area_mouse_entered():
 	particleChild.emitting = true
 	add_child(particleChild)
 	
+	$BeatLight.texture_scale = 1.0
+	
 	$IdleTimer.start()
 
 	
@@ -115,6 +118,7 @@ func _on_clear_area_mouse_exited():
 	receiver.is_Hit = is_Hit
 	chargeValue = 0
 	beaterSprite.play("default")
+	$BeatLight.texture_scale = 0.0
 	#playerSprite.play("idle") will idle as soon as u leave the drum hitbox
 	
 # ~~~~~Bar spawning functions~~~~~
@@ -185,3 +189,4 @@ func load_map():
 
 func _on_idle_timer_timeout():
 	playerSprite.play("idle")
+	$BeatLight.texture_scale = 0.0
