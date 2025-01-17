@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://b07jp0aj6mxbg"]
+
+[sub_resource type="Environment" id="Environment_l1lo4"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ioiwl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3pdg7"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lu24d"]
+
+[node name="SubViewport" type="SubViewport"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0.0627704, 0.570055, 0.201277)
+environment = SubResource("Environment_l1lo4")
+fov = 85.0
+
+[node name="Floor" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.131272, 0, -4.59768)
+mesh = SubResource("PlaneMesh_ioiwl")
+
+[node name="Platform" type="Node3D" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="Platform"]
+transform = Transform3D(1.72959, 0, 0, 0, 0.07, 0, 0, 0, 1.52294, 0, 0.032324, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+
+[node name="Pillar" type="MeshInstance3D" parent="Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.470775, 0.348173, -1.35054)
+mesh = SubResource("CylinderMesh_lu24d")
+
+[node name="Pillar" type="MeshInstance3D" parent="Platform/Pillar"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+
+[node name="PillarSlab" type="MeshInstance3D" parent="Platform/Pillar"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787183, 0, 0, 0, 1.2, 0, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.464606, 0.348173, -1.35054)
+mesh = SubResource("CylinderMesh_lu24d")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Platform/Pillar2"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0.0186939, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+
+[node name="PillarSlab2" type="MeshInstance3D" parent="Platform/Pillar2"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787184, 0, 0, 0, 1.2, -0.00369072, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
