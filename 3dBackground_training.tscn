@@ -1,39 +1,66 @@
-[gd_scene load_steps=21 format=3 uid="uid://b07jp0aj6mxbg"]
+[gd_scene load_steps=29 format=3 uid="uid://b07jp0aj6mxbg"]
 
+[ext_resource type="Texture2D" uid="uid://1kp2kp3op18u" path="res://Assets/Textures/Clouds 5/1.png" id="1_33n47"]
 [ext_resource type="Texture2D" uid="uid://cwelffrmbc12j" path="res://Assets/Textures/Concrete.png" id="1_yxfta"]
-[ext_resource type="Texture2D" uid="uid://c4mpi6ce1jft7" path="res://Assets/Textures/Bricks.png" id="2_dx5c5"]
+[ext_resource type="Texture2D" uid="uid://bcolopctauoc7" path="res://Assets/Textures/BricksAltGrey.png" id="2_4oovu"]
+[ext_resource type="Texture2D" uid="uid://dj5p0i2nl3x0j" path="res://Assets/Textures/Clouds 5/3.png" id="2_17gvv"]
+[ext_resource type="Texture2D" uid="uid://bgvvon83st246" path="res://Assets/Textures/BricksAlt.png" id="3_p4wr6"]
 [ext_resource type="Texture2D" uid="uid://c6qt58brh82f7" path="res://Assets/Textures/fence.png" id="3_sbsja"]
+[ext_resource type="Texture2D" uid="uid://bmpxqcckhuaql" path="res://Assets/Textures/Wood.png" id="4_vm7ce"]
+[ext_resource type="Texture2D" uid="uid://br1e6vrs8xptq" path="res://Assets/Textures/WallLight.png" id="6_lpmx0"]
+[ext_resource type="Texture2D" uid="uid://bow1evvdvyqc5" path="res://Assets/Textures/Metal.png" id="7_vu5nv"]
 
-[sub_resource type="Environment" id="Environment_l1lo4"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_vw3jv"]
+panorama = ExtResource("1_33n47")
+
+[sub_resource type="Sky" id="Sky_v0ik2"]
+sky_material = SubResource("PanoramaSkyMaterial_vw3jv")
+
+[sub_resource type="Environment" id="Environment_fojr2"]
+background_mode = 2
+sky = SubResource("Sky_v0ik2")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ioiwl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yh31n"]
+albedo_color = Color(0.352941, 0.356863, 0.352941, 1)
+albedo_texture = ExtResource("1_yxfta")
+uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_3pdg7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a75ib"]
-albedo_texture = ExtResource("1_yxfta")
-uv1_scale = Vector3(10, 10, 10)
+albedo_texture = ExtResource("2_4oovu")
+uv1_scale = Vector3(14.285, 8.164, 10.204)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xllv1"]
-albedo_texture = ExtResource("2_dx5c5")
-uv1_scale = Vector3(7, 4, 5)
+albedo_texture = ExtResource("3_p4wr6")
+uv1_scale = Vector3(12.8, 7.315, 9.143)
 point_size = 94.4
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lu24d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_prfp6"]
-albedo_texture = ExtResource("2_dx5c5")
-uv1_scale = Vector3(2, 2.5, 2)
+albedo_color = Color(0.995411, 0.773714, 0.62418, 1)
+albedo_texture = ExtResource("4_vm7ce")
+uv1_scale = Vector3(2.005, 3.042, 2.005)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uonr8"]
-albedo_texture = ExtResource("1_yxfta")
-uv1_scale = Vector3(1, 3, 1)
+albedo_color = Color(0.703808, 0.703808, 0.703808, 1)
+albedo_texture = ExtResource("7_vu5nv")
+uv1_scale = Vector3(0.657, 3.285, 0.657)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gcpdn"]
-albedo_texture = ExtResource("2_dx5c5")
+albedo_color = Color(0.995411, 0.773714, 0.62418, 1)
+albedo_texture = ExtResource("4_vm7ce")
 uv1_scale = Vector3(0.25, 0.25, 0.25)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_wrhfq"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ej2ix"]
+albedo_color = Color(0.703808, 0.703808, 0.703808, 1)
+albedo_texture = ExtResource("7_vu5nv")
+metallic = 0.15
+uv1_scale = Vector3(12.46, 12.46, 12.46)
+uv1_offset = Vector3(-1.365, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxxw0"]
 albedo_color = Color(1, 1, 0, 1)
@@ -41,11 +68,6 @@ albedo_texture = ExtResource("1_yxfta")
 uv1_scale = Vector3(5, 5, 5)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_q7rfe"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yh31n"]
-albedo_color = Color(0.352941, 0.356863, 0.352941, 1)
-albedo_texture = ExtResource("1_yxfta")
-uv1_scale = Vector3(4, 4, 4)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m21h8"]
 
@@ -64,21 +86,29 @@ albedo_color = Color(1, 0, 0, 1)
 albedo_texture = ExtResource("1_yxfta")
 uv1_scale = Vector3(5, 5, 5)
 
-[node name="SubViewport" type="SubViewport"]
+[node name="SubViewport2" type="SubViewport"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fojr2")
+
+[node name="Sprite3D" type="Sprite3D" parent="WorldEnvironment"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 2.66, 3.049, -11.877)
+texture = ExtResource("2_17gvv")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.999999, 0.00174533, -1.29428e-10, -0.00173842, 0.99604, 0.0888943, 0.00015515, -0.0888942, 0.996041, 0, 0.692, -0.116)
+fov = 85.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.827473, 0.561506, 0, -0.561506, 0.827473, 0, 1.10302, -0.700238)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.999999, 0.00174533, -1.29419e-10, -0.00173842, 0.99604, 0.0888943, 0.00015515, -0.0888942, 0.996041, -0.000487234, 0.756662, 0.41386)
-environment = SubResource("Environment_l1lo4")
-fov = 85.0
+light_energy = 0.75
 
 [node name="Floor" type="Node3D" parent="."]
 
 [node name="FloorMesh" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.131272, 0, -4.59768)
 mesh = SubResource("PlaneMesh_ioiwl")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
 
 [node name="Block" type="Node3D" parent="."]
 
@@ -96,7 +126,7 @@ mesh = SubResource("BoxMesh_3pdg7")
 surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
 
 [node name="Pillar" type="MeshInstance3D" parent="Block/Platform"]
-transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.733, 0.413, -1.351)
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.733, 0.482344, -1.351)
 mesh = SubResource("CylinderMesh_lu24d")
 surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
 
@@ -115,13 +145,18 @@ transform = Transform3D(-1.74846e-08, -3.053, 0, 0.4, -1.33451e-07, 0, 0, 0, 0.4
 mesh = SubResource("CylinderMesh_lu24d")
 surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
 
-[node name="WallLight" type="MeshInstance3D" parent="Block/Platform/Pillar"]
-transform = Transform3D(0.25, 0, 0, 0, 0.167, 0, 0, 0, 0.25, 0, 0.597565, 0.472983)
-mesh = SubResource("CapsuleMesh_wrhfq")
-skeleton = NodePath("../..")
+[node name="Pillar3" type="MeshInstance3D" parent="Block/Platform/Pillar"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block/Platform/Pillar"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.621733)
+billboard = 1
+texture = ExtResource("6_lpmx0")
 
 [node name="Pillar2" type="MeshInstance3D" parent="Block/Platform"]
-transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.741611, 0.413005, -1.35054)
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.741611, 0.482349, -1.35054)
 mesh = SubResource("CylinderMesh_lu24d")
 surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
 
@@ -137,15 +172,20 @@ mesh = SubResource("CylinderMesh_lu24d")
 skeleton = NodePath("../../Pillar")
 surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
 
-[node name="WallLight" type="MeshInstance3D" parent="Block/Platform/Pillar2"]
-transform = Transform3D(0.25, 0, 0, 0, 0.167, 0, 0, 0, 0.25, 0, 0.597565, 0.472983)
-mesh = SubResource("CapsuleMesh_wrhfq")
-skeleton = NodePath("../..")
+[node name="Pillar3" type="MeshInstance3D" parent="Block/Platform/Pillar2"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block/Platform/Pillar2"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.613286)
+billboard = 1
+texture = ExtResource("6_lpmx0")
 
 [node name="Roof" type="MeshInstance3D" parent="Block/Platform"]
 transform = Transform3D(2.22248, 0, 0, 0, 0.0684703, 0.316637, 0, -0.0145538, 1.48966, 0, 1.70687, -1.25652)
 mesh = SubResource("BoxMesh_3pdg7")
-surface_material_override/0 = SubResource("StandardMaterial3D_a75ib")
+surface_material_override/0 = SubResource("StandardMaterial3D_ej2ix")
 
 [node name="BGPlatform" type="Node3D" parent="Block"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, -3.8206)
@@ -203,6 +243,42 @@ mesh = SubResource("PlaneMesh_m21h8")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
 
+[node name="Fence7" type="MeshInstance3D" parent="Block/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.745259, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence8" type="MeshInstance3D" parent="Block/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.500869, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence9" type="MeshInstance3D" parent="Block/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.741822, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence10" type="MeshInstance3D" parent="Block/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.220285, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence11" type="MeshInstance3D" parent="Block/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.216581, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence12" type="MeshInstance3D" parent="Block/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.502159, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
 [node name="Building" type="MeshInstance3D" parent="Block/BGPlatform"]
 transform = Transform3D(2.22248, 0, 0, 0, 1.50649, 0, 0, 0, 2.282, -0.0224155, 0.685069, -4.62352)
 mesh = SubResource("BoxMesh_3pdg7")
@@ -217,6 +293,1917 @@ surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
 
 [node name="Road2" type="MeshInstance3D" parent="Block/BGPlatform"]
 transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, -0.00674234, 0.0110426, -2.5166)
+mesh = SubResource("PlaneMesh_q7rfe")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Block2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21787, 0, 0)
+
+[node name="Platform" type="Node3D" parent="Block2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="Block2/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 1.52294, 0, 0.032324, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_a75ib")
+
+[node name="Floor2" type="MeshInstance3D" parent="Block2/Platform"]
+transform = Transform3D(1.94184, 0, 0, 0, 0.07, 0, 0, 0, 1.33097, 0, 0.0528529, -1.22091)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block2/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.733, 0.482344, -1.351)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block2/Platform/Pillar"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab" type="MeshInstance3D" parent="Block2/Platform/Pillar"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787183, 0, 0, 0, 1.2, 0, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block2/Platform/Pillar"]
+transform = Transform3D(-1.74846e-08, -3.053, 0, 0.4, -1.33451e-07, 0, 0, 0, 0.4, 2.98177, 2.25435, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block2/Platform/Pillar"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block2/Platform/Pillar"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0.355, 0.63, 0.622)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block2/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.741611, 0.482349, -1.35054)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block2/Platform/Pillar2"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0.0186939, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab2" type="MeshInstance3D" parent="Block2/Platform/Pillar2"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787184, 0, 0, 0, 1.2, -0.00369072, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block2/Platform/Pillar2"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block2/Platform/Pillar2"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.613286)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Roof" type="MeshInstance3D" parent="Block2/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0684703, 0.316637, 0, -0.0145538, 1.48966, 0, 1.70687, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ej2ix")
+
+[node name="BGPlatform" type="Node3D" parent="Block2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, -3.8206)
+
+[node name="Floor2" type="MeshInstance3D" parent="Block2/BGPlatform"]
+transform = Transform3D(2.225, 0, 0, 0, 0.07, 0, 0, 0, 0.64, 0, 0.0528529, -0.934332)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Floor" type="MeshInstance3D" parent="Block2/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 0.810026, 0, 0.032324, -0.913927)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxxw0")
+
+[node name="Road" type="MeshInstance3D" parent="Block2/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, 0, 0.0110426, 0.632091)
+mesh = SubResource("PlaneMesh_q7rfe")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Fencing" type="Node3D" parent="Block2/BGPlatform"]
+
+[node name="Fence" type="MeshInstance3D" parent="Block2/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence2" type="MeshInstance3D" parent="Block2/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence3" type="MeshInstance3D" parent="Block2/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence4" type="MeshInstance3D" parent="Block2/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence5" type="MeshInstance3D" parent="Block2/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence6" type="MeshInstance3D" parent="Block2/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence7" type="MeshInstance3D" parent="Block2/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.745259, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence8" type="MeshInstance3D" parent="Block2/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.500869, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence9" type="MeshInstance3D" parent="Block2/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.741822, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence10" type="MeshInstance3D" parent="Block2/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.220285, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence11" type="MeshInstance3D" parent="Block2/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.216581, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence12" type="MeshInstance3D" parent="Block2/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.502159, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Building" type="MeshInstance3D" parent="Block2/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 1.50649, 0, 0, 0, 2.282, -0.0224155, 0.685069, -4.62352)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrtfr")
+
+[node name="Roof" type="MeshInstance3D" parent="Block2/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0848491, -0.408555, 0, 0.0124341, 2.78794, -0.0224155, 1.55608, -4.59853)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
+
+[node name="Road2" type="MeshInstance3D" parent="Block2/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, -0.00674234, 0.0110426, -2.5166)
+mesh = SubResource("PlaneMesh_q7rfe")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Block3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20652, 0, 0)
+
+[node name="Platform" type="Node3D" parent="Block3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="Block3/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 1.52294, 0, 0.032324, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_a75ib")
+
+[node name="Floor2" type="MeshInstance3D" parent="Block3/Platform"]
+transform = Transform3D(1.94184, 0, 0, 0, 0.07, 0, 0, 0, 1.33097, 0, 0.0528529, -1.22091)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block3/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.733, 0.482344, -1.351)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block3/Platform/Pillar"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab" type="MeshInstance3D" parent="Block3/Platform/Pillar"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787183, 0, 0, 0, 1.2, 0, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block3/Platform/Pillar"]
+transform = Transform3D(-1.74846e-08, -3.053, 0, 0.4, -1.33451e-07, 0, 0, 0, 0.4, 2.98177, 2.25435, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block3/Platform/Pillar"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block3/Platform/Pillar"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.621733)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block3/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.741611, 0.482349, -1.35054)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block3/Platform/Pillar2"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0.0186939, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab2" type="MeshInstance3D" parent="Block3/Platform/Pillar2"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787184, 0, 0, 0, 1.2, -0.00369072, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block3/Platform/Pillar2"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block3/Platform/Pillar2"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, -0.375, 0.63, 0.613)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Roof" type="MeshInstance3D" parent="Block3/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0684703, 0.316637, 0, -0.0145538, 1.48966, 0, 1.70687, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ej2ix")
+
+[node name="BGPlatform" type="Node3D" parent="Block3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, -3.8206)
+
+[node name="Floor2" type="MeshInstance3D" parent="Block3/BGPlatform"]
+transform = Transform3D(2.225, 0, 0, 0, 0.07, 0, 0, 0, 0.64, 0, 0.0528529, -0.934332)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Floor" type="MeshInstance3D" parent="Block3/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 0.810026, 0, 0.032324, -0.913927)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxxw0")
+
+[node name="Road" type="MeshInstance3D" parent="Block3/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, 0, 0.0110426, 0.632091)
+mesh = SubResource("PlaneMesh_q7rfe")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Fencing" type="Node3D" parent="Block3/BGPlatform"]
+
+[node name="Fence" type="MeshInstance3D" parent="Block3/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence2" type="MeshInstance3D" parent="Block3/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence3" type="MeshInstance3D" parent="Block3/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence4" type="MeshInstance3D" parent="Block3/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence5" type="MeshInstance3D" parent="Block3/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence6" type="MeshInstance3D" parent="Block3/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence7" type="MeshInstance3D" parent="Block3/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.745259, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence8" type="MeshInstance3D" parent="Block3/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.500869, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence9" type="MeshInstance3D" parent="Block3/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.741822, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence10" type="MeshInstance3D" parent="Block3/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.220285, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence11" type="MeshInstance3D" parent="Block3/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.216581, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence12" type="MeshInstance3D" parent="Block3/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.502159, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Building" type="MeshInstance3D" parent="Block3/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 1.50649, 0, 0, 0, 2.282, -0.0224155, 0.685069, -4.62352)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrtfr")
+
+[node name="Roof" type="MeshInstance3D" parent="Block3/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0848491, -0.408555, 0, 0.0124341, 2.78794, -0.0224155, 1.55608, -4.59853)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
+
+[node name="Road2" type="MeshInstance3D" parent="Block3/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, -0.00674234, 0.0110426, -2.5166)
+mesh = SubResource("PlaneMesh_q7rfe")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Block4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.65256, 0, 0)
+
+[node name="Platform" type="Node3D" parent="Block4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="Block4/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 1.52294, 0, 0.032324, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_a75ib")
+
+[node name="Floor2" type="MeshInstance3D" parent="Block4/Platform"]
+transform = Transform3D(1.94184, 0, 0, 0, 0.07, 0, 0, 0, 1.33097, 0, 0.0528529, -1.22091)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block4/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.733, 0.482344, -1.351)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block4/Platform/Pillar"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab" type="MeshInstance3D" parent="Block4/Platform/Pillar"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787183, 0, 0, 0, 1.2, 0, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block4/Platform/Pillar"]
+transform = Transform3D(-1.74846e-08, -3.053, 0, 0.4, -1.33451e-07, 0, 0, 0, 0.4, 2.98177, 2.25435, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block4/Platform/Pillar"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block4/Platform/Pillar"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.621733)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block4/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.741611, 0.482349, -1.35054)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block4/Platform/Pillar2"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0.0186939, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab2" type="MeshInstance3D" parent="Block4/Platform/Pillar2"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787184, 0, 0, 0, 1.2, -0.00369072, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block4/Platform/Pillar2"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block4/Platform/Pillar2"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.613286)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Roof" type="MeshInstance3D" parent="Block4/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0684703, 0.316637, 0, -0.0145538, 1.48966, 0, 1.70687, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ej2ix")
+
+[node name="BGPlatform" type="Node3D" parent="Block4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, -3.8206)
+
+[node name="Floor2" type="MeshInstance3D" parent="Block4/BGPlatform"]
+transform = Transform3D(2.225, 0, 0, 0, 0.07, 0, 0, 0, 0.64, 0, 0.0528529, -0.934332)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Floor" type="MeshInstance3D" parent="Block4/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 0.810026, 0, 0.032324, -0.913927)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxxw0")
+
+[node name="Road" type="MeshInstance3D" parent="Block4/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, 0, 0.0110426, 0.632091)
+mesh = SubResource("PlaneMesh_q7rfe")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Fencing" type="Node3D" parent="Block4/BGPlatform"]
+
+[node name="Fence" type="MeshInstance3D" parent="Block4/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence2" type="MeshInstance3D" parent="Block4/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence3" type="MeshInstance3D" parent="Block4/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence4" type="MeshInstance3D" parent="Block4/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence5" type="MeshInstance3D" parent="Block4/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence6" type="MeshInstance3D" parent="Block4/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence7" type="MeshInstance3D" parent="Block4/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.745259, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence8" type="MeshInstance3D" parent="Block4/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.500869, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence9" type="MeshInstance3D" parent="Block4/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.741822, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence10" type="MeshInstance3D" parent="Block4/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.220285, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence11" type="MeshInstance3D" parent="Block4/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.216581, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence12" type="MeshInstance3D" parent="Block4/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.502159, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Building" type="MeshInstance3D" parent="Block4/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 1.50649, 0, 0, 0, 2.282, -0.0224155, 0.685069, -4.62352)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrtfr")
+
+[node name="Roof" type="MeshInstance3D" parent="Block4/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0848491, -0.408555, 0, 0.0124341, 2.78794, -0.0224155, 1.55608, -4.59853)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
+
+[node name="Road2" type="MeshInstance3D" parent="Block4/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, -0.00674234, 0.0110426, -2.5166)
+mesh = SubResource("PlaneMesh_q7rfe")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Block5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.43469, 0, 0)
+
+[node name="Platform" type="Node3D" parent="Block5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="Block5/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 1.52294, 0, 0.032324, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_a75ib")
+
+[node name="Floor2" type="MeshInstance3D" parent="Block5/Platform"]
+transform = Transform3D(1.94184, 0, 0, 0, 0.07, 0, 0, 0, 1.33097, 0, 0.0528529, -1.22091)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block5/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.733, 0.482344, -1.351)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block5/Platform/Pillar"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab" type="MeshInstance3D" parent="Block5/Platform/Pillar"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787183, 0, 0, 0, 1.2, 0, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block5/Platform/Pillar"]
+transform = Transform3D(-1.74846e-08, -3.053, 0, 0.4, -1.33451e-07, 0, 0, 0, 0.4, 2.98177, 2.25435, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block5/Platform/Pillar"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block5/Platform/Pillar"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0.355, 0.63, 0.622)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block5/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.741611, 0.482349, -1.35054)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block5/Platform/Pillar2"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0.0186939, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab2" type="MeshInstance3D" parent="Block5/Platform/Pillar2"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787184, 0, 0, 0, 1.2, -0.00369072, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block5/Platform/Pillar2"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block5/Platform/Pillar2"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.613286)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Roof" type="MeshInstance3D" parent="Block5/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0684703, 0.316637, 0, -0.0145538, 1.48966, 0, 1.70687, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ej2ix")
+
+[node name="BGPlatform" type="Node3D" parent="Block5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, -3.8206)
+
+[node name="Floor2" type="MeshInstance3D" parent="Block5/BGPlatform"]
+transform = Transform3D(2.225, 0, 0, 0, 0.07, 0, 0, 0, 0.64, 0, 0.0528529, -0.934332)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Floor" type="MeshInstance3D" parent="Block5/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 0.810026, 0, 0.032324, -0.913927)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxxw0")
+
+[node name="Road" type="MeshInstance3D" parent="Block5/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, 0, 0.0110426, 0.632091)
+mesh = SubResource("PlaneMesh_q7rfe")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Fencing" type="Node3D" parent="Block5/BGPlatform"]
+
+[node name="Fence" type="MeshInstance3D" parent="Block5/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence2" type="MeshInstance3D" parent="Block5/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence3" type="MeshInstance3D" parent="Block5/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence4" type="MeshInstance3D" parent="Block5/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence5" type="MeshInstance3D" parent="Block5/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence6" type="MeshInstance3D" parent="Block5/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence7" type="MeshInstance3D" parent="Block5/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.745259, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence8" type="MeshInstance3D" parent="Block5/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.500869, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence9" type="MeshInstance3D" parent="Block5/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.741822, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence10" type="MeshInstance3D" parent="Block5/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.220285, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence11" type="MeshInstance3D" parent="Block5/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.216581, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence12" type="MeshInstance3D" parent="Block5/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.502159, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Building" type="MeshInstance3D" parent="Block5/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 1.50649, 0, 0, 0, 2.282, -0.0224155, 0.685069, -4.62352)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrtfr")
+
+[node name="Roof" type="MeshInstance3D" parent="Block5/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0848491, -0.408555, 0, 0.0124341, 2.78794, -0.0224155, 1.55608, -4.59853)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
+
+[node name="Road2" type="MeshInstance3D" parent="Block5/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, -0.00674234, 0.0110426, -2.5166)
+mesh = SubResource("PlaneMesh_q7rfe")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Block6" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.43254, 0, 0)
+
+[node name="Platform" type="Node3D" parent="Block6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="Block6/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 1.52294, 0, 0.032324, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_a75ib")
+
+[node name="Floor2" type="MeshInstance3D" parent="Block6/Platform"]
+transform = Transform3D(1.94184, 0, 0, 0, 0.07, 0, 0, 0, 1.33097, 0, 0.0528529, -1.22091)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block6/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.733, 0.482344, -1.351)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block6/Platform/Pillar"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab" type="MeshInstance3D" parent="Block6/Platform/Pillar"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787183, 0, 0, 0, 1.2, 0, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block6/Platform/Pillar"]
+transform = Transform3D(-1.74846e-08, -3.053, 0, 0.4, -1.33451e-07, 0, 0, 0, 0.4, 2.98177, 2.25435, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block6/Platform/Pillar"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block6/Platform/Pillar"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.621733)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block6/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.741611, 0.482349, -1.35054)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block6/Platform/Pillar2"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0.0186939, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab2" type="MeshInstance3D" parent="Block6/Platform/Pillar2"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787184, 0, 0, 0, 1.2, -0.00369072, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block6/Platform/Pillar2"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block6/Platform/Pillar2"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.613286)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Roof" type="MeshInstance3D" parent="Block6/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0684703, 0.316637, 0, -0.0145538, 1.48966, 0, 1.70687, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ej2ix")
+
+[node name="BGPlatform" type="Node3D" parent="Block6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, -3.8206)
+
+[node name="Floor2" type="MeshInstance3D" parent="Block6/BGPlatform"]
+transform = Transform3D(2.225, 0, 0, 0, 0.07, 0, 0, 0, 0.64, 0, 0.0528529, -0.934332)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Floor" type="MeshInstance3D" parent="Block6/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 0.810026, 0, 0.032324, -0.913927)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxxw0")
+
+[node name="Road" type="MeshInstance3D" parent="Block6/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, 0, 0.0110426, 0.632091)
+mesh = SubResource("PlaneMesh_q7rfe")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Fencing" type="Node3D" parent="Block6/BGPlatform"]
+
+[node name="Fence" type="MeshInstance3D" parent="Block6/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence2" type="MeshInstance3D" parent="Block6/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence3" type="MeshInstance3D" parent="Block6/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence4" type="MeshInstance3D" parent="Block6/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence5" type="MeshInstance3D" parent="Block6/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence6" type="MeshInstance3D" parent="Block6/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence7" type="MeshInstance3D" parent="Block6/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.745259, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence8" type="MeshInstance3D" parent="Block6/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.500869, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence9" type="MeshInstance3D" parent="Block6/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.741822, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence10" type="MeshInstance3D" parent="Block6/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.220285, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence11" type="MeshInstance3D" parent="Block6/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.216581, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence12" type="MeshInstance3D" parent="Block6/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.502159, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Building" type="MeshInstance3D" parent="Block6/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 1.50649, 0, 0, 0, 2.282, -0.0224155, 0.685069, -4.62352)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrtfr")
+
+[node name="Roof" type="MeshInstance3D" parent="Block6/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0848491, -0.408555, 0, 0.0124341, 2.78794, -0.0224155, 1.55608, -4.59853)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
+
+[node name="Road2" type="MeshInstance3D" parent="Block6/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, -0.00674234, 0.0110426, -2.5166)
+mesh = SubResource("PlaneMesh_q7rfe")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Block7" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.65041, 0, 0)
+
+[node name="Platform" type="Node3D" parent="Block7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="Block7/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 1.52294, 0, 0.032324, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_a75ib")
+
+[node name="Floor2" type="MeshInstance3D" parent="Block7/Platform"]
+transform = Transform3D(1.94184, 0, 0, 0, 0.07, 0, 0, 0, 1.33097, 0, 0.0528529, -1.22091)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block7/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.733, 0.482344, -1.351)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block7/Platform/Pillar"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab" type="MeshInstance3D" parent="Block7/Platform/Pillar"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787183, 0, 0, 0, 1.2, 0, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block7/Platform/Pillar"]
+transform = Transform3D(-1.74846e-08, -3.053, 0, 0.4, -1.33451e-07, 0, 0, 0, 0.4, 2.98177, 2.25435, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block7/Platform/Pillar"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block7/Platform/Pillar"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0.355, 0.63, 0.622)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block7/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.741611, 0.482349, -1.35054)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block7/Platform/Pillar2"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0.0186939, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab2" type="MeshInstance3D" parent="Block7/Platform/Pillar2"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787184, 0, 0, 0, 1.2, -0.00369072, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block7/Platform/Pillar2"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block7/Platform/Pillar2"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.613286)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Roof" type="MeshInstance3D" parent="Block7/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0684703, 0.316637, 0, -0.0145538, 1.48966, 0, 1.70687, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ej2ix")
+
+[node name="BGPlatform" type="Node3D" parent="Block7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, -3.8206)
+
+[node name="Floor2" type="MeshInstance3D" parent="Block7/BGPlatform"]
+transform = Transform3D(2.225, 0, 0, 0, 0.07, 0, 0, 0, 0.64, 0, 0.0528529, -0.934332)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Floor" type="MeshInstance3D" parent="Block7/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 0.810026, 0, 0.032324, -0.913927)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxxw0")
+
+[node name="Road" type="MeshInstance3D" parent="Block7/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, 0, 0.0110426, 0.632091)
+mesh = SubResource("PlaneMesh_q7rfe")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Fencing" type="Node3D" parent="Block7/BGPlatform"]
+
+[node name="Fence" type="MeshInstance3D" parent="Block7/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence2" type="MeshInstance3D" parent="Block7/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence3" type="MeshInstance3D" parent="Block7/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence4" type="MeshInstance3D" parent="Block7/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence5" type="MeshInstance3D" parent="Block7/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence6" type="MeshInstance3D" parent="Block7/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence7" type="MeshInstance3D" parent="Block7/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.745259, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence8" type="MeshInstance3D" parent="Block7/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.500869, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence9" type="MeshInstance3D" parent="Block7/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.741822, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence10" type="MeshInstance3D" parent="Block7/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.220285, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence11" type="MeshInstance3D" parent="Block7/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.216581, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence12" type="MeshInstance3D" parent="Block7/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.502159, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Building" type="MeshInstance3D" parent="Block7/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 1.50649, 0, 0, 0, 2.282, -0.0224155, 0.685069, -4.62352)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrtfr")
+
+[node name="Roof" type="MeshInstance3D" parent="Block7/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0848491, -0.408555, 0, 0.0124341, 2.78794, -0.0224155, 1.55608, -4.59853)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
+
+[node name="Road2" type="MeshInstance3D" parent="Block7/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, -0.00674234, 0.0110426, -2.5166)
+mesh = SubResource("PlaneMesh_q7rfe")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Block8" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.86021, 0, 0)
+
+[node name="Platform" type="Node3D" parent="Block8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="Block8/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 1.52294, 0, 0.032324, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_a75ib")
+
+[node name="Floor2" type="MeshInstance3D" parent="Block8/Platform"]
+transform = Transform3D(1.94184, 0, 0, 0, 0.07, 0, 0, 0, 1.33097, 0, 0.0528529, -1.22091)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block8/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.733, 0.482344, -1.351)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block8/Platform/Pillar"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab" type="MeshInstance3D" parent="Block8/Platform/Pillar"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787183, 0, 0, 0, 1.2, 0, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block8/Platform/Pillar"]
+transform = Transform3D(-1.74846e-08, -3.053, 0, 0.4, -1.33451e-07, 0, 0, 0, 0.4, 2.98177, 2.25435, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block8/Platform/Pillar"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block8/Platform/Pillar"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.621733)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block8/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.741611, 0.482349, -1.35054)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block8/Platform/Pillar2"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0.0186939, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab2" type="MeshInstance3D" parent="Block8/Platform/Pillar2"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787184, 0, 0, 0, 1.2, -0.00369072, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block8/Platform/Pillar2"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block8/Platform/Pillar2"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, -0.375, 0.63, 0.613)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Roof" type="MeshInstance3D" parent="Block8/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0684703, 0.316637, 0, -0.0145538, 1.48966, 0, 1.70687, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ej2ix")
+
+[node name="BGPlatform" type="Node3D" parent="Block8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, -3.8206)
+
+[node name="Floor2" type="MeshInstance3D" parent="Block8/BGPlatform"]
+transform = Transform3D(2.225, 0, 0, 0, 0.07, 0, 0, 0, 0.64, 0, 0.0528529, -0.934332)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Floor" type="MeshInstance3D" parent="Block8/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 0.810026, 0, 0.032324, -0.913927)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxxw0")
+
+[node name="Road" type="MeshInstance3D" parent="Block8/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, 0, 0.0110426, 0.632091)
+mesh = SubResource("PlaneMesh_q7rfe")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Fencing" type="Node3D" parent="Block8/BGPlatform"]
+
+[node name="Fence" type="MeshInstance3D" parent="Block8/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence2" type="MeshInstance3D" parent="Block8/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence3" type="MeshInstance3D" parent="Block8/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence4" type="MeshInstance3D" parent="Block8/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence5" type="MeshInstance3D" parent="Block8/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence6" type="MeshInstance3D" parent="Block8/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence7" type="MeshInstance3D" parent="Block8/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.745259, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence8" type="MeshInstance3D" parent="Block8/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.500869, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence9" type="MeshInstance3D" parent="Block8/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.741822, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence10" type="MeshInstance3D" parent="Block8/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.220285, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence11" type="MeshInstance3D" parent="Block8/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.216581, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence12" type="MeshInstance3D" parent="Block8/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.502159, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Building" type="MeshInstance3D" parent="Block8/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 1.50649, 0, 0, 0, 2.282, -0.0224155, 0.685069, -4.62352)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrtfr")
+
+[node name="Roof" type="MeshInstance3D" parent="Block8/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0848491, -0.408555, 0, 0.0124341, 2.78794, -0.0224155, 1.55608, -4.59853)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
+
+[node name="Road2" type="MeshInstance3D" parent="Block8/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, -0.00674234, 0.0110426, -2.5166)
+mesh = SubResource("PlaneMesh_q7rfe")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Block9" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3063, 0, 0)
+
+[node name="Platform" type="Node3D" parent="Block9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="Block9/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 1.52294, 0, 0.032324, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_a75ib")
+
+[node name="Floor2" type="MeshInstance3D" parent="Block9/Platform"]
+transform = Transform3D(1.94184, 0, 0, 0, 0.07, 0, 0, 0, 1.33097, 0, 0.0528529, -1.22091)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block9/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.733, 0.482344, -1.351)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block9/Platform/Pillar"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab" type="MeshInstance3D" parent="Block9/Platform/Pillar"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787183, 0, 0, 0, 1.2, 0, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block9/Platform/Pillar"]
+transform = Transform3D(-1.74846e-08, -3.053, 0, 0.4, -1.33451e-07, 0, 0, 0, 0.4, 2.98177, 2.25435, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block9/Platform/Pillar"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block9/Platform/Pillar"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.621733)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block9/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.741611, 0.482349, -1.35054)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block9/Platform/Pillar2"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0.0186939, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab2" type="MeshInstance3D" parent="Block9/Platform/Pillar2"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787184, 0, 0, 0, 1.2, -0.00369072, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block9/Platform/Pillar2"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block9/Platform/Pillar2"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.613286)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Roof" type="MeshInstance3D" parent="Block9/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0684703, 0.316637, 0, -0.0145538, 1.48966, 0, 1.70687, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ej2ix")
+
+[node name="BGPlatform" type="Node3D" parent="Block9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, -3.8206)
+
+[node name="Floor2" type="MeshInstance3D" parent="Block9/BGPlatform"]
+transform = Transform3D(2.225, 0, 0, 0, 0.07, 0, 0, 0, 0.64, 0, 0.0528529, -0.934332)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Floor" type="MeshInstance3D" parent="Block9/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 0.810026, 0, 0.032324, -0.913927)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxxw0")
+
+[node name="Road" type="MeshInstance3D" parent="Block9/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, 0, 0.0110426, 0.632091)
+mesh = SubResource("PlaneMesh_q7rfe")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Fencing" type="Node3D" parent="Block9/BGPlatform"]
+
+[node name="Fence" type="MeshInstance3D" parent="Block9/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence2" type="MeshInstance3D" parent="Block9/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence3" type="MeshInstance3D" parent="Block9/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence4" type="MeshInstance3D" parent="Block9/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence5" type="MeshInstance3D" parent="Block9/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence6" type="MeshInstance3D" parent="Block9/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence7" type="MeshInstance3D" parent="Block9/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.745259, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence8" type="MeshInstance3D" parent="Block9/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.500869, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence9" type="MeshInstance3D" parent="Block9/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.741822, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence10" type="MeshInstance3D" parent="Block9/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.220285, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence11" type="MeshInstance3D" parent="Block9/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.216581, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence12" type="MeshInstance3D" parent="Block9/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.502159, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Building" type="MeshInstance3D" parent="Block9/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 1.50649, 0, 0, 0, 2.282, -0.0224155, 0.685069, -4.62352)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrtfr")
+
+[node name="Roof" type="MeshInstance3D" parent="Block9/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0848491, -0.408555, 0, 0.0124341, 2.78794, -0.0224155, 1.55608, -4.59853)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
+
+[node name="Road2" type="MeshInstance3D" parent="Block9/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, -0.00674234, 0.0110426, -2.5166)
+mesh = SubResource("PlaneMesh_q7rfe")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Building2" type="MeshInstance3D" parent="Block9/BGPlatform"]
+transform = Transform3D(2.08924, 0, -0.778244, 0, 1.50649, 0, 0.757945, 0, 2.14519, 1.26705, 0.685069, -4.62352)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrtfr")
+
+[node name="Roof2" type="MeshInstance3D" parent="Block9/BGPlatform"]
+transform = Transform3D(2.09287, -0.00418412, -0.938152, 0, 0.0848491, -0.408555, 0.747873, 0.011709, 2.62535, 1.76539, 1.55608, -4.30498)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
+
+[node name="Block10" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0884, 0, 0)
+
+[node name="Platform" type="Node3D" parent="Block10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="Block10/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 1.52294, 0, 0.032324, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_a75ib")
+
+[node name="Floor2" type="MeshInstance3D" parent="Block10/Platform"]
+transform = Transform3D(1.94184, 0, 0, 0, 0.07, 0, 0, 0, 1.33097, 0, 0.0528529, -1.22091)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block10/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.733, 0.482344, -1.351)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block10/Platform/Pillar"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab" type="MeshInstance3D" parent="Block10/Platform/Pillar"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787183, 0, 0, 0, 1.2, 0, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block10/Platform/Pillar"]
+transform = Transform3D(-1.74846e-08, -3.053, 0, 0.4, -1.33451e-07, 0, 0, 0, 0.4, 2.98177, 2.25435, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block10/Platform/Pillar"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block10/Platform/Pillar"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0.355, 0.63, 0.622)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block10/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.741611, 0.482349, -1.35054)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block10/Platform/Pillar2"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0.0186939, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab2" type="MeshInstance3D" parent="Block10/Platform/Pillar2"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787184, 0, 0, 0, 1.2, -0.00369072, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block10/Platform/Pillar2"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block10/Platform/Pillar2"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.613286)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Roof" type="MeshInstance3D" parent="Block10/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0684703, 0.316637, 0, -0.0145538, 1.48966, 0, 1.70687, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ej2ix")
+
+[node name="BGPlatform" type="Node3D" parent="Block10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, -3.8206)
+
+[node name="Floor2" type="MeshInstance3D" parent="Block10/BGPlatform"]
+transform = Transform3D(2.225, 0, 0, 0, 0.07, 0, 0, 0, 0.64, 0, 0.0528529, -0.934332)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Floor" type="MeshInstance3D" parent="Block10/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 0.810026, 0, 0.032324, -0.913927)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxxw0")
+
+[node name="Road" type="MeshInstance3D" parent="Block10/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, 0, 0.0110426, 0.632091)
+mesh = SubResource("PlaneMesh_q7rfe")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Fencing" type="Node3D" parent="Block10/BGPlatform"]
+
+[node name="Fence" type="MeshInstance3D" parent="Block10/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence2" type="MeshInstance3D" parent="Block10/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence3" type="MeshInstance3D" parent="Block10/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence4" type="MeshInstance3D" parent="Block10/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence5" type="MeshInstance3D" parent="Block10/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence6" type="MeshInstance3D" parent="Block10/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence7" type="MeshInstance3D" parent="Block10/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.745259, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence8" type="MeshInstance3D" parent="Block10/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.500869, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence9" type="MeshInstance3D" parent="Block10/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.741822, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence10" type="MeshInstance3D" parent="Block10/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.220285, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence11" type="MeshInstance3D" parent="Block10/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.216581, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence12" type="MeshInstance3D" parent="Block10/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.502159, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Building" type="MeshInstance3D" parent="Block10/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 1.50649, 0, 0, 0, 2.282, -0.0224155, 0.685069, -4.62352)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrtfr")
+
+[node name="Roof" type="MeshInstance3D" parent="Block10/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0848491, -0.408555, 0, 0.0124341, 2.78794, -0.0224155, 1.55608, -4.59853)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
+
+[node name="Road2" type="MeshInstance3D" parent="Block10/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, -0.00674234, 0.0110426, -2.5166)
+mesh = SubResource("PlaneMesh_q7rfe")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Block11" type="Node3D" parent="."]
+transform = Transform3D(0.944949, 0, 0.327218, 0, 1, 0, -0.327218, 0, 0.944949, -7.04894, 2.38419e-07, 0.144757)
+
+[node name="Platform" type="Node3D" parent="Block11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, 0)
+visible = false
+
+[node name="Floor" type="MeshInstance3D" parent="Block11/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 1.52294, 0, 0.032324, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_a75ib")
+
+[node name="Floor2" type="MeshInstance3D" parent="Block11/Platform"]
+transform = Transform3D(1.94184, 0, 0, 0, 0.07, 0, 0, 0, 1.33097, 0, 0.0528529, -1.22091)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block11/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, -0.733, 0.482344, -1.351)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar" type="MeshInstance3D" parent="Block11/Platform/Pillar"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab" type="MeshInstance3D" parent="Block11/Platform/Pillar"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787183, 0, 0, 0, 1.2, 0, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block11/Platform/Pillar"]
+transform = Transform3D(-1.74846e-08, -3.053, 0, 0.4, -1.33451e-07, 0, 0, 0, 0.4, 2.98177, 2.25435, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block11/Platform/Pillar"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block11/Platform/Pillar"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0.355, 0.63, 0.622)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block11/Platform"]
+transform = Transform3D(0.24, 0, 0, 0, 0.36, 0, 0, 0, 0.24, 0.741611, 0.482349, -1.35054)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_prfp6")
+
+[node name="Pillar2" type="MeshInstance3D" parent="Block11/Platform/Pillar2"]
+transform = Transform3D(0.45, 0, 0, 0, 1.645, 0, 0, 0, 0.45, 0.0186939, 2.02581, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="PillarSlab2" type="MeshInstance3D" parent="Block11/Platform/Pillar2"]
+transform = Transform3D(1.2, 0, 0, 0, 0.0787184, 0, 0, 0, 1.2, -0.00369072, 0.923426, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+skeleton = NodePath("../../Pillar")
+surface_material_override/0 = SubResource("StandardMaterial3D_gcpdn")
+
+[node name="Pillar3" type="MeshInstance3D" parent="Block11/Platform/Pillar2"]
+transform = Transform3D(0.880327, 0, 0, 0, 0.317219, 0, 0, 0, 0.865289, 0, -1.02633, 0)
+mesh = SubResource("CylinderMesh_lu24d")
+surface_material_override/0 = SubResource("StandardMaterial3D_uonr8")
+
+[node name="WallLight" type="Sprite3D" parent="Block11/Platform/Pillar2"]
+transform = Transform3D(0.203423, 0, 0, 0, 0.143964, 0, 0, 0, 0.1, 0, 0.630169, 0.613286)
+billboard = 1
+texture = ExtResource("6_lpmx0")
+
+[node name="Roof" type="MeshInstance3D" parent="Block11/Platform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.0684703, 0.316637, 0, -0.0145538, 1.48966, 0, 1.70687, -1.25652)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ej2ix")
+
+[node name="BGPlatform" type="Node3D" parent="Block11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, -3.8206)
+
+[node name="Floor2" type="MeshInstance3D" parent="Block11/BGPlatform"]
+transform = Transform3D(2.225, 0, 0, 0, 0.07, 0, 0, 0, 0.64, 0, 0.0528529, -0.934332)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xllv1")
+
+[node name="Floor" type="MeshInstance3D" parent="Block11/BGPlatform"]
+transform = Transform3D(2.22248, 0, 0, 0, 0.07, 0, 0, 0, 0.810026, 0, 0.032324, -0.913927)
+mesh = SubResource("BoxMesh_3pdg7")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxxw0")
+
+[node name="Road" type="MeshInstance3D" parent="Block11/BGPlatform"]
+transform = Transform3D(1.11266, 0, 0, 0, 1, 0, 0, 0, 1.22288, 0, 0.0110426, 0.632091)
+mesh = SubResource("PlaneMesh_q7rfe")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Fencing" type="Node3D" parent="Block11/BGPlatform"]
+
+[node name="Fence" type="MeshInstance3D" parent="Block11/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence2" type="MeshInstance3D" parent="Block11/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence3" type="MeshInstance3D" parent="Block11/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence4" type="MeshInstance3D" parent="Block11/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.592756, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence5" type="MeshInstance3D" parent="Block11/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.119517, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence6" type="MeshInstance3D" parent="Block11/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.826655, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence7" type="MeshInstance3D" parent="Block11/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.745259, 1.33039, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence8" type="MeshInstance3D" parent="Block11/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.500869, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence9" type="MeshInstance3D" parent="Block11/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.741822, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence10" type="MeshInstance3D" parent="Block11/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.220285, 0.510814, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence11" type="MeshInstance3D" parent="Block11/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0.216581, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Fence12" type="MeshInstance3D" parent="Block11/BGPlatform/Fencing"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, -0.502159, 1.32958, -1.29009)
+mesh = SubResource("PlaneMesh_m21h8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qhx6")
+
+[node name="Building" type="MeshInstance3D" parent="Block11/BGPlatform"]
+transform = Transform3D(3.56472, 0, -2.98023e-07, 0, 1.32007, 0, 0, 0, 2.75924, 0.0389581, 0.685069, -4.80075)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrtfr")
+
+[node name="Building2" type="MeshInstance3D" parent="Block11/BGPlatform"]
+transform = Transform3D(2.56645, 0, 1.91496, 0, 1.32007, 0, -2.47398, 0, 1.98654, -3.198, 0.685069, -3.84676)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrtfr")
+
+[node name="Roof" type="MeshInstance3D" parent="Block11/BGPlatform"]
+transform = Transform3D(3.78546, 6.98492e-10, -5.96046e-08, 0, 0.0856811, -0.42533, 0, 0.012556, 2.90241, -0.0224156, 1.55608, -4.59853)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
+
+[node name="Roof2" type="MeshInstance3D" parent="Block11/BGPlatform"]
+transform = Transform3D(2.69066, 0.00883199, 2.04158, 0, 0.0856811, -0.42533, -2.66272, 0.00892466, 2.063, -3.27195, 1.55608, -3.59368)
+mesh = SubResource("BoxMesh_3pdg7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_i5bui")
+
+[node name="Road2" type="MeshInstance3D" parent="Block11/BGPlatform"]
+transform = Transform3D(1.81134, 0, 0, 0, 1, 0, 0, 0, 1.48879, -0.006742, 0.0110426, -2.5166)
+mesh = SubResource("PlaneMesh_q7rfe")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Road3" type="MeshInstance3D" parent="Block11/BGPlatform"]
+transform = Transform3D(1.81134, 0, 0, 0, 1, 0, 0, 0, 1.48879, -1.97991, 0.0190921, -1.93552)
 mesh = SubResource("PlaneMesh_q7rfe")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
