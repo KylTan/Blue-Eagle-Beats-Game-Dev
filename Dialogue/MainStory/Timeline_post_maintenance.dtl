@@ -17,6 +17,9 @@ update PlayerFriend [animation="Shake Y" wait="true"]
 PlayerCharacter: Thanks bud... I really appreciate whenever you do this.
 PlayerFriend: Don't worry bud! Anyway it's getting pretty late, wanna grab a bite before going home?
 PlayerCharacter: Yea! Let's go.
+set {Mission_unlock_bass} += 1
+set {Mission_unlock_snare} += 1
 leave PlayerFriend [animation="Slide Out Left"]
 leave PlayerCharacter [animation="Slide Out Left" wait="true"]
-jump Timeline_pre_basketball_game/
+do GlobalSceneManager._changeScene_LevelSelect()
+[end_timeline]

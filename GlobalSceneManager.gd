@@ -7,13 +7,17 @@ func _changeScene_main_game_Bass():
 
 func _changeScene_main_game_Snare():
 	get_tree().change_scene_to_file("res://Objects/Snare Game.tscn")
-	
+
 func _changeScene_exit_game():
 	get_tree().quit()
 
-
 func _changeScene_MainMenu():
 	get_tree().change_scene_to_file("res://Objects/main_menu.tscn")
+
+func _changeScene_LevelSelect():
+	get_tree().change_scene_to_file("res://Objects/level_select.tscn")
+
+#Scenes for Minigames Timelines (into the dialogs)
 
 func _changeScene_minigame_drumSeeping():
 	get_tree().change_scene_to_file("res://Objects/Minigames/DrumSeeping/MG-Drum-Seeping.tscn")

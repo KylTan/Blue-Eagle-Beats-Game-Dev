@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_start_pressed():
-	GlobalSceneManager._changeScene_Timeline_pre_training()
+	GlobalSceneManager._changeScene_LevelSelect()
 	pass # Replace with function body.
 
 

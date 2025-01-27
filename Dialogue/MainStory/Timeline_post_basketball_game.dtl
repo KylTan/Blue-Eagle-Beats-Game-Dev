@@ -4,5 +4,6 @@ join PlayerCharacter left [mirrored="true"]
 join PlayerFriend left
 Tryout_Manager: OK GUYS!!! Goodjob on your performance! Shoutout to the rookies too! It's a bit rough here and there but it's a start! Just keep joining our practices to get more used to the cheers!
 Tryout_Manager: Now that's out of the way! Remember to pack the equipment up and head back! That's all for now!
-do 
+set {Mission_unlock_bass} += 1
+do GlobalSceneManager._changeScene_LevelSelect()
 [end_timeline]
