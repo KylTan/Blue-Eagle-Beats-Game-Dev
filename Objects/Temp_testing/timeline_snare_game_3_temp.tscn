@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwcamhiq2gy16"]
+
+[ext_resource type="Script" path="res://Objects/Temp_testing/timeline_snare_game_3_temp.gd" id="1_2hjx1"]
+
+[node name="timeline_snare_game_3_temp" type="Node2D"]
+script = ExtResource("1_2hjx1")

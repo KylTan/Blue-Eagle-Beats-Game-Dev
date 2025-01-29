@@ -33,11 +33,16 @@ directories/dtl_directory={
 "Timeline_1sthalf_basketball_game": "res://Dialogue/MainStory/Timeline_1sthalf_basketball_game.dtl",
 "Timeline_2ndhalf_basketball_game": "res://Dialogue/MainStory/Timeline_2ndhalf_basketball_game.dtl",
 "Timeline_Level2": "res://Assets/Character_Dialogic/Timeline_Level2.dtl",
+"Timeline_SnareGame_2_temp": "res://Dialogue/MainStory/Timeline_SnareGame_2_temp.dtl",
+"Timeline_SnareGame_3_temp": "res://Dialogue/MainStory/Timeline_SnareGame_3_temp.dtl",
 "Timeline_post_basketball_game": "res://Dialogue/MainStory/Timeline_post_basketball_game.dtl",
 "Timeline_post_maintenance": "res://Dialogue/MainStory/Timeline_post_maintenance.dtl",
 "Timeline_post_training": "res://Dialogue/MainStory/Timeline_post_training.dtl",
 "Timeline_pre_basketball_game": "res://Dialogue/MainStory/Timeline_pre_basketball_game.dtl",
-"Timeline_pre_training": "res://Dialogue/MainStory/Timeline_pre_training.dtl"
+"Timeline_pre_training": "res://Dialogue/MainStory/Timeline_pre_training.dtl",
+"Timeline_snare_post_maintenance_1": "res://Dialogue/MainStory/Timeline_snare_post_maintenance_1.dtl",
+"Timeline_snare_post_training": "res://Dialogue/MainStory/Timeline_snare_post_training.dtl",
+"Timeline_snare_tutorial": "res://Dialogue/MainStory/Timeline_snare_tutorial.dtl"
 }
 variables={
 "Dialogue_name": 0,

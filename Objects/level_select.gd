@@ -25,20 +25,20 @@ func _on_bass_tutorial_pressed():
 
 
 func _on_snare_tutorial_pressed():
-	pass # Place the Scene change for snare tutorial here
+	GlobalSceneManager._changeScene_Timeline_snare_tutorial()
 
 
 func _on_bass_basketball_1_pressed():
-	GlobalSceneManager._changeScene_Timeline_pre_basketball_game()
+	pass
 
 
 func _on_snare_basketball_1_pressed():
-	pass # Place the Scene change for snare bball level here
+	GlobalSceneManager._changeScene_Timeline_snare_Mission2()
 
 
 func _on_bass_basketball_2_pressed():
-	pass # Replace with function body.
+	GlobalSceneManager._changeScene_Timeline_pre_basketball_game()
 
 
 func _on_snare_basketball_2_pressed():
-	pass # Place the Scene change for snare finals level here
+	GlobalSceneManager._changeScene_Timeline_snare_Mission3()
