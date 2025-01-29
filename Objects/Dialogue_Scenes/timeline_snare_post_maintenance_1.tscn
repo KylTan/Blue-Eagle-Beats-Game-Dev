@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cehm3rfwayqxv"]
+
+[ext_resource type="Script" path="res://Objects/Dialogue_Scenes/timeline_snare_post_maintenance_1.gd" id="1_xeywo"]
+
+[node name="timeline_snare_post_maintenance_1" type="Node2D"]
+script = ExtResource("1_xeywo")

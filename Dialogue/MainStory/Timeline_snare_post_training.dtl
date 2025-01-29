@@ -1,0 +1,14 @@
+[background arg="res://Assets/AteneoField.jpg" fade="0.0"]
+join PlayerCharacter left [mirrored="true"]
+join PlayerFriend left
+join Tryout_Manager right
+Tryout_Manager: OK THATS IT!!! Goodjob rookies! You did well for your 1st training!!!
+Tryout_Manager: Keep in mind that our trainings would be similar to this from here on out until the start of a UAAP season!
+Tryout_Manager: When the UAAP season starts, our trainings will be longer and harder!!! So keep that in mind!
+Tryout_Manager: NOWW!!! It's time for equipment maintenance!!
+Tryout_Manager: So for this equipment maintenance! We would do what you call "Taping"!
+Tryout_Manager: ADD TUTORIAL TEXT HERE
+Tryout_Manager: Now its your turn to try!
+set {Dialogue_name} = "2"
+do GlobalSceneManager._changeScene_minigame_drumSeeping()
+[end_timeline]

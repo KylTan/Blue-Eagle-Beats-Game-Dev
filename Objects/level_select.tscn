@@ -69,6 +69,7 @@ text = "Snare: Mission 1
 
 [node name="bass_basketball_2" type="Button" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 1435.0
 offset_top = 350.0
 offset_right = 1589.0
@@ -79,6 +80,7 @@ text = "Bass: Blue Finals
 
 [node name="snare_basketball_2" type="Button" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 1435.0
 offset_top = 685.0
 offset_right = 1589.0

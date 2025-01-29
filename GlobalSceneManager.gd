@@ -51,3 +51,18 @@ func _changeScene_Timeline_2ndhalf_basketball_game():
 
 func _changeScene_Timeline_post_basketball_game():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_post_basketball_game.tscn")
+
+func _changeScene_Timeline_snare_tutorial():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_tutorial.tscn")
+
+func _changeScene_Timeline_snare_post_training():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_tutorial.tscn")
+
+func _changeScene_Timeline_snare_post_maintenance_1():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_tutorial.tscn")
+
+func _changeScene_Timeline_snare_Mission2():
+	get_tree().change_scene_to_file("res://Objects/Temp_testing/timeline_snare_game_2_temp.tscn")
+
+func _changeScene_Timeline_snare_Mission3():
+	get_tree().change_scene_to_file("res://Objects/Temp_testing/timeline_snare_game_3_temp.tscn")
