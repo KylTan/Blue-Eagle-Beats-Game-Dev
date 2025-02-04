@@ -4,6 +4,7 @@ var chargeValue
 var NoteRecLight
 var NoteRecHeavy
 var is_Hit = false #changes when clear area is hit with the cursour with a chargek
+var endBuffer = 0
 
 #bar spawning variables
 var bar_scn = preload("res://Objects/Snare Bar.tscn")
@@ -28,16 +29,21 @@ var audiofile = "res://Assets/Audio/Go Ateneo (Brass+Banda).mp3"
 @onready var music_node = $Music
 	
 #mapping file
-var map_file = "res://Assets/Audio/Go Ateneo (Brass+Banda) - Snare.mboy"
+@onready var map_file #= "res://Assets/Audio/Go Ateneo (Brass+Banda) - Snare.mboy"
+@onready var nextScene
 var map
 var curr_bar_index = 0
 var tracks_data
+var parentNode = get_parent()
 
 #scoring
 var total_note_count = 0
 var percent_score = 0
 
 func _ready():
+	if parentNode:
+		audiofile = parentNode.audiofile
+		map_file = parentNode.mapfile
 	audio = load(audiofile)
 	#beaterSprite = get_node("BeaterSprite") #beater
 	#NoteRecLight = get_node("Note Receiver Light")
@@ -115,6 +121,11 @@ func add_bar():
 		bars_node.add_child(bar)
 		curr_location += Vector2(0, -bar_Length_In_M)	
 		curr_bar_index += 1
+		
+	else: # if it is null
+		if endBuffer >= 2:
+			get_tree().change_scene_to_file(nextScene)
+		endBuffer += 1
 	
 func get_bar_data(): 
 	if curr_bar_index < tracks_data[0].bars.size():

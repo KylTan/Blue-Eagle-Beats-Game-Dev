@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="New Rhythm System Experimental"
-run/main_scene="res://Objects/Minigames/CarryEquipment/MG-Carry-Equipment.tscn"
+run/main_scene="res://Objects/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -46,9 +46,11 @@ directories/dtl_directory={
 }
 variables={
 "Dialogue_name": 0,
+"Dialogue_name_snare": 0,
 "Mission_unlock_bass": 0,
 "Mission_unlock_snare": 0,
-"Song_played": 0
+"Song_played": 0,
+"Song_played_snare": 0
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
