@@ -1,0 +1,5 @@
+join PlayerCharacter center
+PlayerCharacter: This is the placeholder for the Bass level 3 mission!
+set {Mission_unlock_bass} = 2
+do GlobalSceneManager._changeScene_LevelSelect()
+[end_timeline]
