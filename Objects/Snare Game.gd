@@ -25,7 +25,7 @@ var note_speed
 var note_scale
 var start_pos_in_sec #offset
 var audio
-var audiofile = "res://Assets/Audio/Go Ateneo (Brass+Banda).mp3"
+var audiofile = "res://Assets/Audio/Get that Ball.mp3"
 @onready var music_node = $Music
 	
 #mapping file

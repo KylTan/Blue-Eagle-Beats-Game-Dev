@@ -114,14 +114,13 @@ size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="GameBG" type="SubViewportContainer" parent="."]
-visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="SubViewport" parent="GameBG" instance=ExtResource("2_0cdo8")]
 own_world_3d = true
 handle_input_locally = false
-render_target_update_mode = 0
+render_target_update_mode = 4
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(998, 647)
