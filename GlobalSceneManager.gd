@@ -52,6 +52,9 @@ func _changeScene_Timeline_2ndhalf_basketball_game():
 func _changeScene_Timeline_post_basketball_game():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_post_basketball_game.tscn")
 
+func _changeScene_Timeline_bass_Mission3():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_bass_game_3.tscn")
+
 func _changeScene_Timeline_snare_tutorial():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_tutorial.tscn")
 

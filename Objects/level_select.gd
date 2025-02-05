@@ -1,6 +1,7 @@
 extends Control
-var mission_unlock_bass = Dialogic.VAR.Mission_unlock_bass
-var mission_unlock_snare = Dialogic.VAR.Mission_unlock_snare
+var mission_unlock_bass = Dialogic.VAR.Mission_unlock_snare
+var mission_unlock_snare = Dialogic.VAR.Mission_unlock_bass
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,7 +30,7 @@ func _on_snare_tutorial_pressed():
 
 
 func _on_bass_basketball_1_pressed():
-	pass
+	GlobalSceneManager._changeScene_Timeline_pre_basketball_game()
 
 
 func _on_snare_basketball_1_pressed():
@@ -37,7 +38,7 @@ func _on_snare_basketball_1_pressed():
 
 
 func _on_bass_basketball_2_pressed():
-	GlobalSceneManager._changeScene_Timeline_pre_basketball_game()
+	GlobalSceneManager._changeScene_Timeline_bass_Mission3()
 
 
 func _on_snare_basketball_2_pressed():
