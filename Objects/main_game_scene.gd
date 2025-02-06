@@ -31,20 +31,19 @@ func _ready():
 			mapfile = "res://Assets/Audio/Vary-Cheer-Bass.mboy"
 			audiofile = "res://Assets/Audio/Vary-Cheer.mp3"
 		5:  #bball finals 2 - mission 3
-			
 			mapfile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
 			audiofile = "res://Assets/Audio/Fly High (Brass+Banda).mp3"
 	
 	match nextDialogueIndex:
 		1: #first training arc
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_training.tscn"
-		2:
+		2: #first training arc
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_maintenance.tscn"
-		3:
+		3: # first bball 1 - mission 2
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_1sthalf_basketball_game.tscn"
-		4:
+		4:# first bball 2 - mission 2
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_2ndhalf_basketball_game.tscn"
-		5:
+		5: # first bball 3 - mission 2
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_basketball_game.tscn"
 		
 			
