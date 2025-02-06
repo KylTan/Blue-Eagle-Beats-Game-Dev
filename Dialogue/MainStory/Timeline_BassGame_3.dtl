@@ -1,5 +1,13 @@
-join PlayerCharacter center
-PlayerCharacter: This is the placeholder for the Bass level 3 mission!
-set {Mission_unlock_bass} = 2
+[background arg="res://Assets/AteneoField.jpg" fade="0.0"]
+join PlayerCharacter left
+join PlayerFriend center
+PlayerCharacter: Ahh... I couldn't believe we are actually playing in the UAAP finals...
+PlayerCharacter: I thought it woukd just be a dream but we are really here now!
+PlayerFriend: YEEEEEEEE!!!! I told you we would make it eventually!
+PlayerFriend: We just had to work our butts off to actually reach this place!
+PlayerFriend: Told you our practice wasn't for nothing! Just gotta believe in yourself!
+PlayerCharacter: Yeah yeahh you are right as always... Anyway we just gotta load this equipment on the truck thats going to the venue now. Make sure you're not forgetting anything ok?
+PlayerFriend: Yup! Can you help me out here in sorting these though, so I can fit all of it properly?
+PlayerCharacter: Sure, no problem!
 do GlobalSceneManager._changeScene_LevelSelect()
 [end_timeline]

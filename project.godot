@@ -33,6 +33,7 @@ directories/dtl_directory={
 "Timeline_1sthalf_basketball_game": "res://Dialogue/MainStory/Timeline_1sthalf_basketball_game.dtl",
 "Timeline_2ndhalf_basketball_game": "res://Dialogue/MainStory/Timeline_2ndhalf_basketball_game.dtl",
 "Timeline_BassGame_3": "res://Dialogue/MainStory/Timeline_BassGame_3.dtl",
+"Timeline_BassGame_3_pre_finals": "res://Dialogue/MainStory/Timeline_BassGame_3_pre_finals.dtl",
 "Timeline_Level2": "res://Assets/Character_Dialogic/Timeline_Level2.dtl",
 "Timeline_SnareGame_2_temp": "res://Dialogue/MainStory/Timeline_SnareGame_2_temp.dtl",
 "Timeline_SnareGame_3_temp": "res://Dialogue/MainStory/Timeline_SnareGame_3_temp.dtl",
