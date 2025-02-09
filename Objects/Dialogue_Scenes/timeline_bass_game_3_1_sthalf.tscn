@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://cafc6pmsnien6"]
+[gd_scene load_steps=2 format=3 uid="uid://cafc6pmsnien6"]
+
+[ext_resource type="Script" path="res://Objects/Dialogue_Scenes/timeline_bass_game_3_1_sthalf.gd" id="1_kqgr6"]
 
 [node name="timeline_bass_game_3_1sthalf" type="Node2D"]
+script = ExtResource("1_kqgr6")
