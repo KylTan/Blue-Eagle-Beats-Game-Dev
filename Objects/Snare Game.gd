@@ -24,11 +24,11 @@ var note_speed
 var note_scale
 var start_pos_in_sec #offset
 var audio
-var audiofile = "res://Assets/Audio/Otso-Cheer.mp3"
+var audiofile = "res://Assets/Audio/Go Ateneo (Brass+Banda).mp3"
 @onready var music_node = $Music
 	
 #mapping file
-var map_file = "res://Assets/Audio/Otso-Cheer-Snare.mboy"
+var map_file = "res://Assets/Audio/Go Ateneo (Brass+Banda) - Snare.mboy"
 var map
 var curr_bar_index = 0 
 var tracks_data
@@ -61,7 +61,11 @@ func _process(delta):
 			add_bar()
 
 func animationCycle():
-	if receiver.noteDir > 0:
+	if receiver.noteDir == 1: #D
+		playerSprite.play("right_hit")
+	elif receiver.noteDir == 2: #K
+		playerSprite.play("left_hit")
+	elif receiver.noteDir == 3: #space
 		playerSprite.play("hit")
 	else:
 		playerSprite.play("swing")
