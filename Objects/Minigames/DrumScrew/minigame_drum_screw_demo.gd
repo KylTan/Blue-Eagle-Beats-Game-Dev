@@ -1,7 +1,7 @@
 extends Node2D
 
 var screwTotal #total screws in scene
-var nextDialogueIndex = Dialogic.VAR.Dialogue_name 
+var nextDialogueIndex = 1
 var nextDialogueScene
 
 var cursor = preload("res://Assets/DrumScrewMinigame/MG_Screw_RatchetKey.png")
