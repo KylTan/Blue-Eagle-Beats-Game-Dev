@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvg4uv7ib28ig"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1wegq"]
+
+[node name="SubViewport" type="SubViewport"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.67608, 0, 0, 0, -4.37114e-08, -1.63977, 0, 1, -7.16767e-08, 0, 0, -2.12318)
+mesh = SubResource("PlaneMesh_1wegq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.898832, 0.382203, -0.214526, 0, 0.489459, 0.872027, 0.438293, -0.783806, 0.439941, -0.00106668, 0.266875, 1.27175)

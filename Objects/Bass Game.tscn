@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Objects/Bass Game.gd" id="1_cf0r3"]
 [ext_resource type="Texture2D" uid="uid://bway2cc4nt4k8" path="res://Assets/Bass-Beat-Container-Mini.png" id="1_qa2vd"]
 [ext_resource type="PackedScene" uid="uid://be2fgss1xl1th" path="res://Objects/3dBackground.tscn" id="2_0cdo8"]
-[ext_resource type="PackedScene" path="res://3dBackground_training.tscn" id="2_7ma1y"]
+[ext_resource type="PackedScene" uid="uid://b07jp0aj6mxbg" path="res://Objects/3dBackground_training.tscn" id="2_3qkv2"]
 [ext_resource type="PackedScene" uid="uid://da4metl6nxxbt" path="res://Objects/Note Receiver.tscn" id="2_30r12"]
 [ext_resource type="Script" path="res://Objects/Beater Cursour.gd" id="3_wmqhp"]
 [ext_resource type="Texture2D" uid="uid://c85r7qruib8m4" path="res://Assets/sprite-bass-hit.png" id="4_remf0"]
@@ -107,7 +107,7 @@ script = ExtResource("1_cf0r3")
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="SubViewport2" parent="TrainingBG" instance=ExtResource("2_7ma1y")]
+[node name="SubViewport2" parent="TrainingBG" instance=ExtResource("2_3qkv2")]
 own_world_3d = true
 handle_input_locally = false
 size = Vector2i(1920, 1080)
