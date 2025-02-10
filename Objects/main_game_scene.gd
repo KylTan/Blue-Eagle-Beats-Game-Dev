@@ -1,5 +1,6 @@
 extends Node2D
 @onready var bassGame = preload("res://Objects/Bass Game.tscn")
+@onready var bassGameTr = preload("res://Objects/Bass Game Training.tscn")
 var mapfile = "res://Assets/Audio/Vary-Cheer-Bass.mboy"
 var audiofile = "res://Assets/Audio/Vary-Cheer.mp3"
 var nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_pre_training.tscn"
@@ -47,12 +48,18 @@ func _ready():
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_basketball_game.tscn"
 		
 			
-	
-	var instance = bassGame.instantiate()
-	instance.audiofile = audiofile
-	instance.map_file = mapfile
-	instance.nextScene = nextDialogueScene
-	add_child(instance)
+	if nextCheerIndex == 1:
+		var instance = bassGameTr.instantiate()
+		instance.audiofile = audiofile
+		instance.map_file = mapfile
+		instance.nextScene = nextDialogueScene
+		add_child(instance)
+	else:
+		var instance = bassGame.instantiate()
+		instance.audiofile = audiofile
+		instance.map_file = mapfile
+		instance.nextScene = nextDialogueScene
+		add_child(instance)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
