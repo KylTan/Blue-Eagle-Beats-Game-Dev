@@ -55,6 +55,19 @@ func _changeScene_Timeline_post_basketball_game():
 func _changeScene_Timeline_bass_Mission3():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_bass_game_3.tscn")
 
+func _changeScene_Timeline_bass_Mission3_pre_finals():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_bass_game_3_pre_finals.tscn")
+
+func _changeScene_Timeline_bass_Mission3_1sthalf():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_bass_game_3_1_sthalf.tscn")
+
+func _changeScene_Timeline_bass_Mission3_2ndhalf():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_bass_game_3_2_ndhalf.tscn")
+
+func _changeScene_Timeline_bass_Mission3_post_finals():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_bass_game_3_post_finals.tscn")
+
+
 func _changeScene_Timeline_snare_tutorial():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_tutorial.tscn")
 

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtc5slrtsh2dc"]
+
+[ext_resource type="Script" path="res://Objects/Dialogue_Scenes/timeline_bass_game_3_2_ndhalf.gd" id="1_povbk"]
+
+[node name="timeline_bass_game_3_2ndhalf" type="Node2D"]
+script = ExtResource("1_povbk")
