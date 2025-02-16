@@ -1,0 +1,13 @@
+[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
+join PlayerCharacter left [mirrored="true"]
+join Tryout_Manager right
+update Tryout_Manager [animation="Bounce"]
+Tryout_Manager: OK GUYS! GOODJOB OUT THERE!! Now go and take a breather and don't forget to go over your equipment and do some maintenance for the next half!!
+leave Tryout_Manager [animation="Bounce Out" wait="true"]
+PlayerCharacter: It’s just not the same without him. It’s supposed to be the two of us out here, keeping the beat, pumping up the crowd. But... here I am, alone.
+PlayerCharacter: It feels weird without having her around as much. I gotta hold it together. I gotta focus on the cheering right now...
+PlayerCharacter: It’s just halftime. No reason to get down. I’ve still got a job to do. The crowd’s waiting, the team's counting on us to keep that energy up. I can’t let them down. I can't let my friend down either
+PlayerFriend: Wel before all that, I should do some maintainance before the next cheer starts..
+PlayerCharacter: Now where's that tool?
+do GlobalSceneManager._changeScene_minigame_stickTaping()
+[end_timeline]

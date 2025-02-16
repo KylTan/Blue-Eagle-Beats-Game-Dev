@@ -9,6 +9,6 @@ Tryout_Manager: NOWW!!! It's time for equipment maintenance!!
 Tryout_Manager: So for this equipment maintenance! We would do what you call "Taping"!
 Tryout_Manager: ADD TUTORIAL TEXT HERE
 Tryout_Manager: Now its your turn to try!
-set {Dialogue_name} = "2"
+set {Dialogue_name_snare} = "2"
 do GlobalSceneManager._changeScene_minigame_drumSeeping()
 [end_timeline]

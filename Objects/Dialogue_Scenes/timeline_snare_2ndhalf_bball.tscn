@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvm5iugqitcpt"]
+
+[ext_resource type="Script" path="res://Objects/Dialogue_Scenes/timeline_snare_2ndhalf_bball.gd" id="1_y3e85"]
+
+[node name="timeline_snare_2ndhalf_bball" type="Node2D"]
+script = ExtResource("1_y3e85")

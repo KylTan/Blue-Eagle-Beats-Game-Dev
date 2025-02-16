@@ -1,5 +1,0 @@
-join PlayerCharacter center
-PlayerCharacter: This is the temporary 2nd Snare Mission!
-set {Mission_unlock_snare} = 2
-do GlobalSceneManager._changeScene_LevelSelect()
-[end_timeline]

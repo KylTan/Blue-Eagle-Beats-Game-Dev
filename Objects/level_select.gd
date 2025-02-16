@@ -34,7 +34,7 @@ func _on_bass_basketball_1_pressed():
 
 
 func _on_snare_basketball_1_pressed():
-	GlobalSceneManager._changeScene_Timeline_snare_Mission2()
+	GlobalSceneManager._changeScene_Timeline_snare_pre_bball()
 
 
 func _on_bass_basketball_2_pressed():

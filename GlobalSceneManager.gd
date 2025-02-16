@@ -31,6 +31,8 @@ func _changeScene_minigame_stickTaping():
 
 #Scenes for Dialogic Timelines (into the dialogs)
 
+#Bass Games
+#level 1
 func _changeScene_Timeline_pre_training():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_pre_training.tscn")
 
@@ -40,6 +42,7 @@ func _changeScene_Timeline_post_training():
 func _changeScene_Timeline_post_maintenance():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_post_maintenance.tscn")
 
+#level 2
 func _changeScene_Timeline_pre_basketball_game():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_pre_basketball_game.tscn")
 
@@ -52,6 +55,7 @@ func _changeScene_Timeline_2ndhalf_basketball_game():
 func _changeScene_Timeline_post_basketball_game():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_post_basketball_game.tscn")
 
+#level 3
 func _changeScene_Timeline_bass_Mission3():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_bass_game_3.tscn")
 
@@ -67,18 +71,42 @@ func _changeScene_Timeline_bass_Mission3_2ndhalf():
 func _changeScene_Timeline_bass_Mission3_post_finals():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_bass_game_3_post_finals.tscn")
 
-
+#Snare Games
+#level 1
 func _changeScene_Timeline_snare_tutorial():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_tutorial.tscn")
 
 func _changeScene_Timeline_snare_post_training():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_tutorial.tscn")
 
-func _changeScene_Timeline_snare_post_maintenance_1():
+func _changeScene_Timeline_snare_post_maintenance():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_tutorial.tscn")
 
-func _changeScene_Timeline_snare_Mission2():
-	get_tree().change_scene_to_file("res://Objects/Temp_testing/timeline_snare_game_2_temp.tscn")
+#level 2
+func _changeScene_Timeline_snare_pre_bball():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_pre_bball.tscn")
 
+func _changeScene_Timeline_snare_1sthalf_bball():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_1sthalf_bball.tscn")
+
+func _changeScene_Timeline_snare_2ndhalf_baball():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_2ndhalf_bball.tscn")
+
+func _changeScene_Timeline_snare_post_bball():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_post_bball.tscn")
+
+#level 3
 func _changeScene_Timeline_snare_Mission3():
-	get_tree().change_scene_to_file("res://Objects/Temp_testing/timeline_snare_game_3_temp.tscn")
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snaregame_3.tscn")
+
+func _changeScene_Timeline_snare_Mission3_pre_finals():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snaregame_3_pre_finals.tscn")
+
+func _changeScene_Timeline_snare_Mission3_1sthalf():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snaregame_3_1sthalf.tscn")
+
+func _changeScene_Timeline_snare_Mission3_2ndhalf():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snaregame_3_2ndhalf.tscn")
+
+func _changeScene_Timeline_snare_Mission3_post_finals():
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snaregame_3_post_finals.tscn")
