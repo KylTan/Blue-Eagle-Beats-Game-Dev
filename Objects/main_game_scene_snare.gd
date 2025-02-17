@@ -23,7 +23,9 @@ func _ready():
 	
 	match nextDialogueIndex:
 		1: #first training arc
-			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_training.tscn"
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_training.tscn" # 2nd dialog
+		2: #first training arc
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_maintanance_1.tscn"
 			
 	var instance = snareGame.instantiate()
 	instance.audiofile = audiofile

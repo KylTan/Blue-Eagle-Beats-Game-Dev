@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Objects/Snare Game.gd" id="1_3dtia"]
 [ext_resource type="PackedScene" uid="uid://be2fgss1xl1th" path="res://Objects/3dBackground.tscn" id="2_gvyoe"]
-[ext_resource type="PackedScene" uid="uid://b07jp0aj6mxbg" path="res://3dBackground_training.tscn" id="2_hnkbf"]
+[ext_resource type="PackedScene" uid="uid://b07jp0aj6mxbg" path="res://Objects/3dBackground_training.tscn" id="2_hnkbf"]
 [ext_resource type="Texture2D" uid="uid://bhldjj6j7db2w" path="res://Assets/sprite-snare-hit.png" id="3_gxabo"]
 [ext_resource type="Texture2D" uid="uid://djlbopvwghant" path="res://Assets/sprite-snare-idle.png" id="4_ps217"]
 [ext_resource type="Texture2D" uid="uid://b541qoxyw28lf" path="res://Assets/sprite-snare-hit-left.png" id="5_jvl2h"]
@@ -87,6 +87,7 @@ height = 206.0
 script = ExtResource("1_3dtia")
 
 [node name="TrainingBG" type="SubViewportContainer" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 
@@ -94,16 +95,15 @@ offset_bottom = 1080.0
 own_world_3d = true
 handle_input_locally = false
 size = Vector2i(1920, 1080)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="SubViewport" parent="SubViewportContainer" instance=ExtResource("2_gvyoe")]
 handle_input_locally = false
-render_target_update_mode = 0
+render_target_update_mode = 4
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(1141, 718)
