@@ -30,10 +30,12 @@ directories/dch_directory={
 "Tryout_Manager": "res://Assets/Character_Dialogic/Tryout_Manager.dch"
 }
 directories/dtl_directory={
+"SnareLvl2/Timeline_1sthalf_bball_snare": "res://Dialogue/MainStory/SnareLvl2/Timeline_1sthalf_bball_snare.dtl",
+"SnareLvl2/Timeline_2ndhalf_bball_snare": "res://Dialogue/MainStory/SnareLvl2/Timeline_2ndhalf_bball_snare.dtl",
+"SnareLvl2/Timeline_post_bball_snare": "res://Dialogue/MainStory/SnareLvl2/Timeline_post_bball_snare.dtl",
+"SnareLvl2/Timeline_pre_bball_snare": "res://Dialogue/MainStory/SnareLvl2/Timeline_pre_bball_snare.dtl",
 "Timeline_1sthalf_basketball_game": "res://Dialogue/MainStory/Timeline_1sthalf_basketball_game.dtl",
-"Timeline_1sthalf_bball_snare": "res://Dialogue/MainStory/Timeline_1sthalf_bball_snare.dtl",
 "Timeline_2ndhalf_basketball_game": "res://Dialogue/MainStory/Timeline_2ndhalf_basketball_game.dtl",
-"Timeline_2ndhalf_bball_snare": "res://Dialogue/MainStory/Timeline_2ndhalf_bball_snare.dtl",
 "Timeline_BassGame_3": "res://Dialogue/MainStory/Timeline_BassGame_3.dtl",
 "Timeline_BassGame_3_1stHalf_finals": "res://Dialogue/MainStory/Timeline_BassGame_3_1stHalf_finals.dtl",
 "Timeline_BassGame_3_2ndHalf_finals": "res://Dialogue/MainStory/Timeline_BassGame_3_2ndHalf_finals.dtl",

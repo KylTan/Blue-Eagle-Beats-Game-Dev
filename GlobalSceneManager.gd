@@ -31,7 +31,7 @@ func _changeScene_minigame_stickTaping():
 
 #Scenes for Dialogic Timelines (into the dialogs)
 
-#Bass Games
+#BASS LEVELS
 #level 1
 func _changeScene_Timeline_pre_training():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_pre_training.tscn")
@@ -71,7 +71,7 @@ func _changeScene_Timeline_bass_Mission3_2ndhalf():
 func _changeScene_Timeline_bass_Mission3_post_finals():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_bass_game_3_post_finals.tscn")
 
-#Snare Games
+#SNARE LEVELS
 #level 1
 func _changeScene_Timeline_snare_tutorial():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_tutorial.tscn")
