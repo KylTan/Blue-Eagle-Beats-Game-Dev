@@ -26,6 +26,8 @@ func _ready():
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_training.tscn" # 2nd dialog
 		2: #first training arc
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_maintanance_1.tscn"
+		3: # LVL 2 - pre bball
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_pre_bball.tscn"
 			
 	var instance = snareGame.instantiate()
 	instance.audiofile = audiofile
