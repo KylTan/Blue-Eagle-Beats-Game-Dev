@@ -1,7 +1,7 @@
 extends Node2D
 @onready var snareGame = preload("res://Objects/Snare Game.tscn")
-var mapfile = "res://Assets/Audio/3-Fights-Cheer-Snare.mboy"
-var audiofile = "res://Assets/Audio/3Fights-Cheer.mp3"
+var mapfile = "res://Assets/Audio/Manson-Snare.mboy"
+var audiofile = "res://Assets/Audio/Manson.mp3"
 
 var nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_pre_training.tscn"
 var nextCheerIndex = 1 #intercepts what the next cheer index is
