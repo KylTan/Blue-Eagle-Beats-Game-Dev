@@ -14,5 +14,6 @@ PlayerCharacter: Wait a minute..Looks like some screws are kinda loose on my dru
 PlayerFriend: Oh yeah you're right... You better tighten it or it may sound weird.. Just remember too move your on top of the loose screws! Then click on them to attach the tool. Then proceed to tighten the screw by moving your mouse in a clockwise circular motion on you successfully tigthen the screw!
 PlayerCharacter: Yeah will do... Now where's that tool?
 set {Dialogue_name_snare} = "4"
+set {Dialogue_name} = 0
 do GlobalSceneManager._changeScene_minigame_drumScrewing()
 [end_timeline]
