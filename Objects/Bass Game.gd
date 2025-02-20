@@ -74,6 +74,12 @@ func _process(delta):
 			remove_bar(bar)
 			add_bar()
 			
+	# animation for bg players
+	if $"Note Receiver".is_Entered == true:
+		$NPCSprite.play("Hit")
+	if $"Note Receiver".is_Entered == false:
+		$NPCSprite.play("Swing")
+			
 # ~~~~~Bass game functions~~~~~
 func followMouse():
 	# beater following mouse

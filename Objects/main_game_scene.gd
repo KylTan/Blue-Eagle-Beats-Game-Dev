@@ -29,8 +29,8 @@ func _ready():
 			audiofile = "res://Assets/Audio/Go Ateneo Quatro with Brass.mp3"
 		4: #bball finals 1 - mission 3
 			#temporary
-			mapfile = "res://Assets/Audio/Vary-Cheer-Bass.mboy"
-			audiofile = "res://Assets/Audio/Vary-Cheer.mp3"
+			mapfile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
+			audiofile = "res://Assets/Audio/Fly High (Brass+Banda).mp3"
 		5:  #bball finals 2 - mission 3
 			mapfile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
 			audiofile = "res://Assets/Audio/Fly High (Brass+Banda).mp3"

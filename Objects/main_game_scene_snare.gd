@@ -29,6 +29,9 @@ func _ready():
 		4: # Finals - Pre game
 			mapfile = "res://Assets/Audio/Manson-Snare.mboy"
 			audiofile = "res://Assets/Audio/Manson.mp3"
+		5: 
+			mapfile = "res://Assets/Audio/Go Ateneo-Snare 2.0.mboy" #REPLACE WIT GO ATENEO
+			audiofile = "res://Assets/Audio/Go Ateneo (BrassAlt+Banda).mp3"
 	
 	match nextDialogueIndex:
 		1: #first training arc
@@ -43,6 +46,15 @@ func _ready():
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_2ndhalf_bball.tscn"
 		5: # first bball - post bball
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_bball.tscn"
+		# start with finals 3 
+		6: 
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_pre_finals.tscn"
+		7:
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_1sthalf.tscn"
+		8:
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_2ndhalf.tscn"
+		9:
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_post_finals.tscn"
 			
 	var instance = snareGame.instantiate()
 	instance.audiofile = audiofile

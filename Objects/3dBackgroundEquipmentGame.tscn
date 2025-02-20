@@ -1,14 +1,52 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvg4uv7ib28ig"]
+[gd_scene load_steps=3 format=3 uid="uid://dvg4uv7ib28ig"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_1wegq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_yrgmn"]
 
 [node name="SubViewport" type="SubViewport"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.898832, 0.382203, -0.214526, 0, 0.489459, 0.872027, 0.438293, -0.783805, 0.439941, -0.00106668, 0.266875, 1.27175)
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.67608, 0, 0, 0, -4.37114e-08, -1.63977, 0, 1, -7.16767e-08, 0, 0, -2.12318)
+visible = false
 mesh = SubResource("PlaneMesh_1wegq")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.898832, 0.382203, -0.214526, 0, 0.489459, 0.872027, 0.438293, -0.783806, 0.439941, -0.00106668, 0.266875, 1.27175)
+[node name="Box" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.8544, 0, 0, 0, 0.126724, 0, 0, 0, 1, -0.678764, 1.04924, -1.85563)
+mesh = SubResource("BoxMesh_yrgmn")
+skeleton = NodePath("../Camera3D")
+
+[node name="Box2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.8544, 0, 0, 0, 0.126724, 0, 0, 0, 1, -0.678764, -1.05548, -1.85563)
+mesh = SubResource("BoxMesh_yrgmn")
+skeleton = NodePath("../Camera3D")
+
+[node name="Box3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.18311, 0, 0, 0, 2.17532, 0, 0, 0, 1, -2.08225, -0.0272741, -1.85563)
+mesh = SubResource("BoxMesh_yrgmn")
+skeleton = NodePath("../Camera3D")
+
+[node name="Box4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.18311, 0, 0, 0, 2.17532, 0, 0, 0, 1, 0.733772, -0.0272741, -1.85563)
+mesh = SubResource("BoxMesh_yrgmn")
+skeleton = NodePath("../Camera3D")
+
+[node name="Box5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.99764, 0, 0, 0, 2.29022, 0, 0, 0, 1, 1.74638, -0.0272741, -1.85563)
+mesh = SubResource("BoxMesh_yrgmn")
+skeleton = NodePath("../Camera3D")
+
+[node name="Box6" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.00061, 0, 0, 0, 2.15291, 0, 0, 0, 0.197903, -0.0287868, -0.0344397, -2.18112)
+mesh = SubResource("BoxMesh_yrgmn")
+skeleton = NodePath("../Camera3D")
+
+[node name="Box7" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.62704, 0, 0, 0, -1.40724, 0.0375549, 0, -1.40454, -0.0376271, -0.666054, 1.69418, -0.665333)
+mesh = SubResource("BoxMesh_yrgmn")
+skeleton = NodePath("../Camera3D")

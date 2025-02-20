@@ -19,6 +19,6 @@ Tryout_Manager: WE GOTTA MAKE SURE THAT THE HYPE DOES NOT DIE DOWN!
 Tryout_Manager: THAT'S WHAT YOU ALL SIGNED UP AFTER ALL!!!! NOW GO OUT THERE AND PLAY!!!
 PlayerCharacter: Okay..Okay.... I got this.... I just gotta believe in myself the same way bro believed in me!
 set {Song_played} = "4"
-set {Dialogue_name} = "5"
+set {Dialogue_name} = "7"
 do GlobalSceneManager._changeScene_main_game_Bass()
 [end_timeline]
