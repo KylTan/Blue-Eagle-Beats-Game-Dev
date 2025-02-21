@@ -70,6 +70,7 @@ func _process(delta):
 		if (bar.position.y + bars_node.position.y)/2 >= bar_Length_In_M:
 			remove_bar(bar)
 			add_bar()
+	
 
 func animationCycle():
 	if receiver.noteDir == 1: #D
@@ -80,6 +81,16 @@ func animationCycle():
 		playerSprite.play("hit")
 	else:
 		playerSprite.play("swing")
+		
+	#npc animation check
+	if $"Note Receiver".is_Entered == 1:
+		$NPCSprite.play("right_hit")
+	if $"Note Receiver".is_Entered == 2:
+		$NPCSprite.play("left_hit")
+	if $"Note Receiver".is_Entered == 3:
+		$NPCSprite.play("right_hit")
+	if $"Note Receiver".is_Entered == 0:
+		$NPCSprite.play("swing")
 			
 # ~~~~~Bass game functions~~~~~
 #func followMouse():

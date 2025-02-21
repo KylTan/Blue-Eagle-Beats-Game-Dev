@@ -14,12 +14,12 @@ script = ExtResource("1_5ixpj")
 texture = ExtResource("2_qtg8d")
 offset = Vector2(-150, 0)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="LeftArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArea"]
 position = Vector2(0.5, 1)
 scale = Vector2(1.85, 1.85)
 shape = SubResource("RectangleShape2D_bgmnr")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="LeftArea" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="LeftArea" to="." method="_on_area_2d_area_exited"]

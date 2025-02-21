@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dakqe0v5jct8i"]
+
+[resource]
+albedo_texture = null
+uv1_scale = Vector3(5, 5, 5)

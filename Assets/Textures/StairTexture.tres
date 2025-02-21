@@ -1,9 +1,12 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cglubbgqrro60"]
 
-[ext_resource type="Texture2D" uid="uid://cwelffrmbc12j" path="res://Assets/Textures/Concrete.png" id="1_2c7p6"]
+[ext_resource type="Texture2D" uid="uid://bow1evvdvyqc5" path="res://Assets/Textures/Metal.png" id="1_k6ne1"]
 
 [resource]
-albedo_color = Color(0.678944, 0.678944, 0.678944, 1)
-albedo_texture = ExtResource("1_2c7p6")
-uv1_scale = Vector3(0.5, 0.835, 2)
+albedo_color = Color(0.956977, 0.956977, 0, 1)
+albedo_texture = ExtResource("1_k6ne1")
+metallic_specular = 0.0
+roughness = 0.0
+uv1_scale = Vector3(2, 1, 2)
+uv1_offset = Vector3(2.74, 1.25, -1.825)
 uv1_triplanar = true

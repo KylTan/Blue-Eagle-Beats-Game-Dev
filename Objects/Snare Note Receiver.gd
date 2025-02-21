@@ -4,6 +4,7 @@ var is_pressed = false
 var noteDir #1 L, 2 R, etc.
 var total_hits = 0
 var particle = preload("res://Objects/particle_explosion.tscn")
+var is_Entered = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -41,3 +42,13 @@ func _input(event):
 		is_Hit = false
 		noteDir = 0
 
+func _on_area_2d_area_entered(area):
+	if area.name == "DoubleArea":
+		is_Entered = 1
+	if area.name == "LeftArea":
+		is_Entered = 2
+	if area.name == "RightArea":
+		is_Entered = 3
+
+func _on_area_2d_area_exited(area):
+	is_Entered = 0
