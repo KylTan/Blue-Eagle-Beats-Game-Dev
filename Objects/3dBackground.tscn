@@ -42,7 +42,7 @@ size = Vector2i(1920, 1080)
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, -0.000209451, 0, 1, 0, 0.000209451, 0, 1, 0.0627704, 0.198373, 0.100952)
 environment = SubResource("Environment_u0ssb")
-fov = 85.0
+far = 400.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.603456, 0.148717, -0.783406, 0.0294197, 0.977633, 0.20825, 0.796854, -0.148717, 0.585583, -4.21285, 2.49555, -1.92999)

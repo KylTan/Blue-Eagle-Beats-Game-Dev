@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://ci7gmcs62ykic"]
+
+[ext_resource type="Texture2D" uid="uid://bcolopctauoc7" path="res://Assets/Textures/BricksAltGrey.png" id="1_6ulph"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wdc6d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ko4sd"]
+albedo_texture = ExtResource("1_6ulph")
+uv1_scale = Vector3(6, 6, 6)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bbbb4"]
+radial_segments = 16
+cap_bottom = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eiq2o"]
+
+[node name="SubViewport" type="SubViewport"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.985271, -0.0706438, -0.155726, 0, 0.910676, -0.41312, 0.171001, 0.407035, 0.897263, 0, 0, 0)
+
+[node name="floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.94308, 0, 0, 0, -4.37114e-08, -2.1178, 0, 1, -9.25719e-08, 0, 0, -2.41141)
+mesh = SubResource("PlaneMesh_wdc6d")
+surface_material_override/0 = SubResource("StandardMaterial3D_ko4sd")
+
+[node name="bass" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.8, 0, 0, 0, -1.64355e-08, -1.8, 0, 0.376, -7.86805e-08, 0.108381, -0.0379464, -1.84213)
+mesh = SubResource("CylinderMesh_bbbb4")
+surface_material_override/0 = SubResource("StandardMaterial3D_eiq2o")
