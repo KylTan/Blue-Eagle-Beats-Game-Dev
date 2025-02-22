@@ -43,6 +43,7 @@ func _ready() -> void:
 					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_bball.tscn"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+# put a cooler ending here
 func _process(delta: float) -> void:
 	if screwTotal <= 0:
 		Input.set_custom_mouse_cursor(null, Input.CURSOR_ARROW)

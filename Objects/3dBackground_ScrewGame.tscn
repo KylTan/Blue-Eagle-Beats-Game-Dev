@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ci7gmcs62ykic"]
+[gd_scene load_steps=13 format=3 uid="uid://ci7gmcs62ykic"]
 
 [ext_resource type="Texture2D" uid="uid://bcolopctauoc7" path="res://Assets/Textures/BricksAltGrey.png" id="1_6ulph"]
+[ext_resource type="Script" path="res://Objects/3dBackground_ScrewGame.gd" id="1_mo2q6"]
+[ext_resource type="Texture2D" uid="uid://b22aqipq3q1t" path="res://Assets/Textures/A Logo.png" id="3_jwuvi"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wdc6d"]
 
@@ -10,23 +12,92 @@ uv1_scale = Vector3(6, 6, 6)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_bbbb4"]
 radial_segments = 16
-cap_bottom = false
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eiq2o"]
 
+[sub_resource type="TorusMesh" id="TorusMesh_vebad"]
+inner_radius = 1.2
+outer_radius = 1.25
+rings = 16
+ring_segments = 15
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77rb7"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_x850k"]
+resource_name = "BassPlacing"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bass shell:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-3.38949, 0.692052, -1.35623), Vector3(0.00750875, 0.692052, -1.35623), Vector3(0.00750875, 0.0272067, -2.04217)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bass shell:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(-1.5708, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_w6uvd"]
+resource_name = "BassFalling"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qs5fk"]
+_data = {
+"BassFalling": SubResource("Animation_w6uvd"),
+"BassPlacing": SubResource("Animation_x850k")
+}
+
 [node name="SubViewport" type="SubViewport"]
+script = ExtResource("1_mo2q6")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.985271, -0.0706438, -0.155726, 0, 0.910676, -0.41312, 0.171001, 0.407035, 0.897263, 0, 0, 0)
+shadow_enabled = true
 
 [node name="floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.94308, 0, 0, 0, -4.37114e-08, -2.1178, 0, 1, -9.25719e-08, 0, 0, -2.41141)
+transform = Transform3D(5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, 0, 0, -2.41141)
 mesh = SubResource("PlaneMesh_wdc6d")
 surface_material_override/0 = SubResource("StandardMaterial3D_ko4sd")
 
-[node name="bass" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.8, 0, 0, 0, -1.64355e-08, -1.8, 0, 0.376, -7.86805e-08, 0.108381, -0.0379464, -1.84213)
+[node name="bass shell" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.8, 3.2871e-08, 6.87847e-15, 0, -1.64355e-08, 1.8, 1.57361e-07, 0.376, 7.86805e-08, 0.00750875, 0.0272067, -2.04217)
 mesh = SubResource("CylinderMesh_bbbb4")
 surface_material_override/0 = SubResource("StandardMaterial3D_eiq2o")
+
+[node name="hoop" type="MeshInstance3D" parent="bass shell"]
+transform = Transform3D(0.416667, 0, 0, 0, 6.4867, 7.10543e-15, 0, -6.75016e-14, 0.416667, 0, 1.06386, -9.31323e-09)
+mesh = SubResource("TorusMesh_vebad")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_77rb7")
+
+[node name="hoop2" type="MeshInstance3D" parent="bass shell"]
+transform = Transform3D(0.416667, 0, 0, 0, 6.4867, 7.10543e-15, 0, -6.75016e-14, 0.416667, 0, -0.931534, 9.31323e-09)
+mesh = SubResource("TorusMesh_vebad")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_77rb7")
+
+[node name="Sprite3D" type="Sprite3D" parent="bass shell"]
+transform = Transform3D(2, 0, 0, 0, -8.74228e-08, -2, 0, 2, -8.74228e-08, 0, -1.07231, 0.0135768)
+texture = ExtResource("3_jwuvi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qs5fk")
+}
+speed_scale = 0.75

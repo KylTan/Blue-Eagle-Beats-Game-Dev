@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://be2fgss1xl1th"]
+[gd_scene load_steps=18 format=3 uid="uid://be2fgss1xl1th"]
 
 [ext_resource type="PackedScene" uid="uid://cxf6q4pop7hux" path="res://Objects/3dArenaSection.tscn" id="1_vd4vy"]
+[ext_resource type="Texture2D" uid="uid://caan8kakjnn11" path="res://Assets/Textures/Metal Horizontal.png" id="2_xx5p8"]
 [ext_resource type="Texture2D" uid="uid://ctf60uktphbt" path="res://Assets/Textures/billboard ad lol.png" id="2_y00nh"]
+[ext_resource type="Texture2D" uid="uid://bmpxqcckhuaql" path="res://Assets/Textures/Wood.png" id="4_xso8c"]
 
 [sub_resource type="Environment" id="Environment_u0ssb"]
 
@@ -12,6 +14,31 @@
 [sub_resource type="QuadMesh" id="QuadMesh_ltv88"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bwbk6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmlo1"]
+albedo_color = Color(0.774446, 0.774446, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8x7po"]
+albedo_color = Color(0.774446, 0.774446, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q4p7q"]
+albedo_texture = ExtResource("2_xx5p8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c4lmn"]
+albedo_color = Color(0.774446, 0.774446, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yennb"]
+albedo_color = Color(0.774446, 0.774446, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25ejt"]
+albedo_color = Color(0.774446, 0.774446, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_snk6k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfnwh"]
+albedo_color = Color(1, 1, 0, 1)
+albedo_texture = ExtResource("4_xso8c")
+uv1_scale = Vector3(4, 4, 4)
 
 [node name="SubViewport" type="SubViewport"]
 size = Vector2i(1920, 1080)
@@ -387,63 +414,77 @@ transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
 [node name="BottomStair" type="MeshInstance3D" parent="GA/Middle Stairs"]
-transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.0869999, -0.279619, -1.39901)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_vmlo1")
 
 [node name="Stair2" type="MeshInstance3D" parent="GA/Middle Stairs"]
-transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 5.96046e-08, 0, 1.99686, 0.210001, -0.236082, -1.39901)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_8x7po")
 
 [node name="Stair3" type="MeshInstance3D" parent="GA/Middle Stairs"]
-transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.183196, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_8x7po")
 
 [node name="Stair4" type="MeshInstance3D" parent="GA/Middle Stairs"]
-transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.131078, -1.40001)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_8x7po")
 
 [node name="Stair5" type="MeshInstance3D" parent="GA/Middle Stairs"]
-transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 1.19209e-07, 0, 1.997, 1.17538, -0.0794427, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_8x7po")
 
 [node name="Wall" type="MeshInstance3D" parent="GA/Middle Stairs"]
 transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
+surface_material_override/0 = SubResource("StandardMaterial3D_q4p7q")
 
 [node name="Roof" type="MeshInstance3D" parent="GA/Middle Stairs"]
 transform = Transform3D(-0.525513, -0.158741, 0, 0.525513, -0.158741, 0, 0, 0, 1, 0.86852, 1.3743, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
+surface_material_override/0 = SubResource("StandardMaterial3D_q4p7q")
 
 [node name="Roof2" type="MeshInstance3D" parent="GA/Middle Stairs"]
 transform = Transform3D(-0.320429, -0.112, 0, 0.185, -0.19399, 0, 0, 0, 1, 0.038625, 2.07355, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
+surface_material_override/0 = SubResource("StandardMaterial3D_q4p7q")
 
 [node name="Roof3" type="MeshInstance3D" parent="GA/Middle Stairs"]
 transform = Transform3D(-2.20081, -0.102601, 0, 0.485975, -0.464643, 0, 0, 0, 1, -2.39891, 2.70605, -1.40426)
 mesh = SubResource("PlaneMesh_3mvib")
+surface_material_override/0 = SubResource("StandardMaterial3D_q4p7q")
 
 [node name="Tiny Stairs" type="Node3D" parent="GA"]
 transform = Transform3D(0.815029, 0, 0.0933256, 0, 1, 0, -0.570689, 0, 0.133283, -2.12639, -0.0275775, -7.96258)
 
 [node name="BottomStair" type="MeshInstance3D" parent="GA/Tiny Stairs"]
-transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.0870001, -0.29, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_c4lmn")
 
 [node name="Stair2" type="MeshInstance3D" parent="GA/Tiny Stairs"]
-transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 1.19209e-07, 0, 1.99686, 0.21, -0.243, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_c4lmn")
 
 [node name="Stair3" type="MeshInstance3D" parent="GA/Tiny Stairs"]
 transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_c4lmn")
 
 [node name="Stair4" type="MeshInstance3D" parent="GA/Tiny Stairs"]
-transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.799999, -0.143759, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_c4lmn")
 
 [node name="Stair5" type="MeshInstance3D" parent="GA/Tiny Stairs"]
-transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 2.38419e-07, 0, 1.997, 1.17538, -0.095, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_c4lmn")
 
 [node name="One Section 2" type="Node3D" parent="GA"]
 transform = Transform3D(0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, -1.85827, 0, -7.95529)
@@ -458,24 +499,29 @@ transform = Transform3D(0.418578, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.354, -1.4)
 mesh = SubResource("PlaneMesh_3mvib")
 
 [node name="BottomStair" type="MeshInstance3D" parent="GA/Middle Stairs2"]
-transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
+transform = Transform3D(0.301, 0, 2.23517e-08, 0, 0.14, 0, 0, 0, 1.997, -0.0870008, -0.287828, -1.50578)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_yennb")
 
 [node name="Stair2" type="MeshInstance3D" parent="GA/Middle Stairs2"]
-transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
+transform = Transform3D(0.298699, 0, 7.45058e-09, 0, 0.235675, 0, 5.96046e-08, 0, 1.99686, 0.21, -0.239343, -1.50578)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_yennb")
 
 [node name="Stair3" type="MeshInstance3D" parent="GA/Middle Stairs2"]
-transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
+transform = Transform3D(0.299, 0, 2.23517e-08, 0, 0.334, 0, -5.96046e-08, 0, 1.997, 0.509001, -0.187817, -1.50578)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_yennb")
 
 [node name="Stair4" type="MeshInstance3D" parent="GA/Middle Stairs2"]
-transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
+transform = Transform3D(0.299, 0, 2.23517e-08, 0, 0.432, 0, -5.96046e-08, 0, 1.997, 0.8, -0.137056, -1.50678)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_yennb")
 
 [node name="Stair5" type="MeshInstance3D" parent="GA/Middle Stairs2"]
-transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
+transform = Transform3D(0.45, 0, 2.23517e-08, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.0867761, -1.50679)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_yennb")
 
 [node name="Wall" type="MeshInstance3D" parent="GA/Middle Stairs2"]
 transform = Transform3D(-1.82966e-08, -1, 0, 0.418578, -4.37114e-08, 0, 0, 0, 1, 1.398, 0.431, -1.4)
@@ -499,22 +545,27 @@ transform = Transform3D(0.257516, 0, 0.157164, 0, 1, 0, -0.961064, 0, 0.042112, 
 [node name="BottomStair" type="MeshInstance3D" parent="GA/Tiny Stairs2"]
 transform = Transform3D(0.301, 0, 0, 0, 0.14, 0, 0, 0, 1.997, -0.087, -0.29, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_25ejt")
 
 [node name="Stair2" type="MeshInstance3D" parent="GA/Tiny Stairs2"]
 transform = Transform3D(0.298699, 0, 0, 0, 0.235675, 0, 0, 0, 1.99686, 0.21, -0.243, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_25ejt")
 
 [node name="Stair3" type="MeshInstance3D" parent="GA/Tiny Stairs2"]
 transform = Transform3D(0.299, 0, 0, 0, 0.334, 0, 0, 0, 1.997, 0.509, -0.193, -1.399)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_25ejt")
 
 [node name="Stair4" type="MeshInstance3D" parent="GA/Tiny Stairs2"]
 transform = Transform3D(0.299, 0, 0, 0, 0.432, 0, 0, 0, 1.997, 0.8, -0.143759, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_25ejt")
 
 [node name="Stair5" type="MeshInstance3D" parent="GA/Tiny Stairs2"]
 transform = Transform3D(0.45, 0, 0, 0, 0.53, 0, 0, 0, 1.997, 1.17538, -0.095, -1.4)
 mesh = SubResource("BoxMesh_se1y1")
+surface_material_override/0 = SubResource("StandardMaterial3D_25ejt")
 
 [node name="One Section 3" type="Node3D" parent="GA"]
 transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, -8.38036, 0, -12.8101)
@@ -532,3 +583,8 @@ texture = ExtResource("2_y00nh")
 [node name="Sprite3D3" type="Sprite3D" parent="."]
 transform = Transform3D(0.330308, 0, -0.938514, 0, 0.927269, 0, 0.885522, 0, 0.350075, 0.524841, 0.598526, -5.93207)
 texture = ExtResource("2_y00nh")
+
+[node name="Court" type="MeshInstance3D" parent="."]
+transform = Transform3D(11.0521, 0, 0, 0, 1, 0, 0, 0, 13.2327, -13.9784, -2.38436, -8.63712)
+mesh = SubResource("PlaneMesh_snk6k")
+surface_material_override/0 = SubResource("StandardMaterial3D_jfnwh")

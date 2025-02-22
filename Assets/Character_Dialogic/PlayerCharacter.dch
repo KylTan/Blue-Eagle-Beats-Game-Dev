@@ -17,7 +17,7 @@
 "portraits": {
 "DefaultFace": {
 "export_overrides": {
-"image": "\"res://Assets/sprite-bass-idle.png\""
+"image": "\"res://Assets/sprite-bass-idle-training.png\""
 },
 "ignore_char_scale": true,
 "mirror": false,

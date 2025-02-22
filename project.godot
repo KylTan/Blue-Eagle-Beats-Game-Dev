@@ -25,6 +25,7 @@ DataHandler="*res://Objects/Minigames/CarryEquipment/DataHandler.gd"
 
 directories/dch_directory={
 "Background_BabbleMember": "res://Assets/Character_Dialogic/Background_BabbleMember.dch",
+"Placeholder": "res://Assets/Character_Dialogic/Placeholder.dch",
 "PlayerCharacter": "res://Assets/Character_Dialogic/PlayerCharacter.dch",
 "PlayerFriend": "res://Assets/Character_Dialogic/PlayerFriend.dch",
 "Tryout_Manager": "res://Assets/Character_Dialogic/Tryout_Manager.dch"

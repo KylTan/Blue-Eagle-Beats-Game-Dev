@@ -17,7 +17,7 @@
 "portraits": {
 "DefaultFace": {
 "export_overrides": {
-"image": "\"res://Assets/sprite-snare-portrait.png\""
+"image": "\"res://Assets/sprite-snare-idle-noequip.png\""
 },
 "ignore_char_scale": true,
 "mirror": false,
