@@ -2,8 +2,10 @@
 join Tryout_Manager right
 join PlayerCharacter left [mirrored="true"]
 join PlayerFriend left
-Tryout_Manager: OK GUYS!!! Goodjob on your performance! Shoutout to the rookies too! It's a bit rough here and there but it's a start! Just keep joining our practices to get more used to the cheers!
-Tryout_Manager: Now that's out of the way! Remember to pack the equipment up and head back! That's all for now!
+Tryout_Manager: Okay everyone, our first game is a wrap. For the rooks, this is your first taste of what it's like so make sure you remember this feeling!
+Tryout_Manager: It's a bit rough here and there, but always remember to just keep playing through it. Don't forget what we spent all those nights trainings for. 
+Tryout_Manager: We expect that this team will only get better in time, so remember to give it your all everytime we step in here.
+Tryout_Manager: Okay, the transpo should be arriving soon so everyone pack up and follow the managers to the exit.
 set {Mission_unlock_bass} = 3
 do GlobalSceneManager._changeScene_LevelSelect()
 [end_timeline]

@@ -1,9 +1,9 @@
 [background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join PlayerCharacter left [mirrored="true"]
+join PlayerCharacter (JerseyFace) left [mirrored="true"]
 join PlayerFriend left [mirrored="true"]
 join Tryout_Manager right
 update Tryout_Manager [animation="Bounce"]
-Tryout_Manager: OK GUYS! GOODJOB OUT THERE!! Now go and take a breather and don't forget to go over your equipment and do some maintenance for the next half!!
+Tryout_Manager: Keep up the work guys!! Do what you have to do now before the next half starts, and make sure to [u]maintain[/u] the equipment!
 leave Tryout_Manager [animation="Bounce Out" wait="true"]
 PlayerFriend: Huh..huh.. that was tiring but great! The hype was through the roof bud!
 PlayerCharacter: Yeah!! You can say that again!! It felt great but tiring huh...

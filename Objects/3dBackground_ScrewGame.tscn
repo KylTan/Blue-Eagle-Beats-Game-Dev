@@ -24,6 +24,9 @@ ring_segments = 15
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77rb7"]
 albedo_color = Color(0, 0, 0, 1)
 
+[sub_resource type="Animation" id="Animation_w6uvd"]
+resource_name = "BassFalling"
+
 [sub_resource type="Animation" id="Animation_x850k"]
 resource_name = "BassPlacing"
 length = 2.0
@@ -51,9 +54,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(-1.5708, 3.14159, 0)]
 }
-
-[sub_resource type="Animation" id="Animation_w6uvd"]
-resource_name = "BassFalling"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qs5fk"]
 _data = {
