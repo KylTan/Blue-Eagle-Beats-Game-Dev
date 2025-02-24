@@ -2,7 +2,7 @@
 join Tryout_Manager right
 join PlayerCharacter left [mirrored="true"]
 join PlayerFriend left
-Tryout_Manager: Ok guys! That's it for the maintenance for now! Remember to always maintain equipment after using the drums!
+Tryout_Manager: Ok everyone, wrap it up. We've gotta wrap this up blah blah blah
 Tryout_Manager: Oh! Before I forget! Remember that there would be performing at an upcoming basketball game! For the rookies this will be your first performance so remember to practice a lot!! Shall we say this would be your first trial!
 Tryout_Manager: GOOD LUCK!!
 leave Tryout_Manager [animation="Slide Out Right" length="0.6" wait="true"]
