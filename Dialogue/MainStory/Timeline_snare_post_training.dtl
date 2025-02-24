@@ -2,13 +2,13 @@
 join PlayerCharacter left [mirrored="true"]
 join PlayerFriend left
 join Tryout_Manager right
-Tryout_Manager: OK THATS IT!!! Goodjob rookies! You did well for your 1st training!!!
-Tryout_Manager: Keep in mind that our trainings would be similar to this from here on out until the start of a UAAP season!
-Tryout_Manager: When the UAAP season starts, our trainings will be longer and harder!!! So keep that in mind!
-Tryout_Manager: NOWW!!! It's time for equipment maintenance!!
-Tryout_Manager: So for this equipment maintenance! We would do what you call "Taping"!
-Tryout_Manager: ADD TUTORIAL TEXT HERE
-Tryout_Manager: Now its your turn to try!
+Tryout_Manager: Okay rooks, that was better, but still rough in a lot of ways. Let's hope you all keep that up, and we might even make it in time for you all to play for the incoming basketball games.
+Tryout_Manager: Trainings are only going to get more and more intense since the games are nearing!
+Tryout_Manager: Okay now let's pack up, and rookies don't forget to pack up the equipment
+PlayerFriend: (Now that I think about it, I haven't gotten around to taping my new sticks! I should get it done here first before I leave...)
+Placeholder: (Time to wrap your sticks! For pep squads, it is common practice to wrap their drumsticks in tape and other materials to maintain their integrity. Hold down the key to tape your sticks, but make sure to follow the path with your mouse to ensure you get a nice and even layering!)
+Tryout_Manager: (Now its your turn to try!)
+PlayerFriend: Let's hope this next pair lasts longer than the last!
 set {Dialogue_name_snare} = "2"
 do GlobalSceneManager._changeScene_minigame_drumSeeping()
 [end_timeline]

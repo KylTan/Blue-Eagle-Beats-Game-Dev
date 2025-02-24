@@ -1,25 +1,27 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join PlayerCharacter left [animation="Slide In Left" mirrored="true"]
 join PlayerFriend left [animation="Slide In Left" length="0.7" wait="true"]
-Tryout_Manager: Alright rookies! Make a straight line so we can begin our practice!
+Tryout_Manager: Okay rookies, gather around. You should all know the drill by now!
 update PlayerFriend [animation="Bounce" repeat="2"]
-PlayerFriend: Hey! We're finally here! I can't actually believe we got in to Blue Babble! I finally got to achieve my dream of being a bass drummer!!!!
-PlayerFriend: Don't be looking nervous now bud!
-PlayerCharacter: Yeah.. I'm happy for you. I'm just not sure if I actually deserve to be a snare drummer an all that... \:<
+PlayerFriend: (We've been training for awhile, but I still can't seem to get a hold of the cheers...)
+PlayerFriend: But it's a new day, and I'll do my best to catch up!
+PlayerCharacter: There you are again [i]babbling[/i] to yourself randomly. Come on, training's gonna start. You've still got quite a bit of catching up to do, even for a rookie.
+update PlayerCharacter [animation="Shake Y"]
 update PlayerFriend left [mirrored="true"]
-PlayerFriend: Don't think that way!! You got passed the tryouts and you are now here! You deserve to be here thanks to your hard work!
-PlayerFriend: So just believe in yourself the same way I believe in you!
+PlayerFriend: There you go again being a grumpy little idiot. Plus I was already coming anyway!
+Tryout_Manager: EVERYONE LISTEN UP! FIRST SET TO PLAY WILL BE THE ROOKIES!
+Tryout_Manager: You all know the drill, we'll be brushing up on the [b]Endurance Cheers[/b]. 
+Tryout_Manager: Snare is still falling behind with their timing, but the bass is also still heavily lacking in strength. Rooks step up, and lets get this over with.
 update PlayerFriend [animation="Shake Y" mirrored="true"]
-PlayerCharacter: Thanks... I really appreciate that.
-PlayerCharacter: **Yeah I just gotta believe in myself... I mean I got here with my own hardwork didn't I?**
-PlayerFriend: Looks like the captain just arrived.
+PlayerCharacter: .....
+PlayerFriend: Come on, don't tell me you're still down about yourself. We're all gonna get there, we just have to keep going at it. Even if it's little by little!
+PlayerCharacter: .....
+PlayerCharacter: You're right, let's do this.
 join Tryout_Manager right [animation="Slide In Right" length="0.8" wait="true"]
-Tryout_Manager: OK GUYS SETTLE DOWN NOW!!!
-Tryout_Manager: Ok now that I have your attention! We want to congratulate the new recruits for passing the tryouts!
-Tryout_Manager: Now that's out of the way! We are now going to hold our training!
-YESSIR!
+PlayerFriend: (Ok great, I think we got this. This training for sure, we'll do better than before!)
+PlayerFriend: (Time to step up. Let's do this)
+Tryout_Manager: Okay! Let's begin!!!
 update PlayerCharacter [animation="Bounce" repeat="2" mirrored="true"]
-Tryout_Manager: We will now begin by brushing up on the basics!
 set {Song_played_snare} = 1
 set {Dialogue_name_snare} = 1
 do GlobalSceneManager._changeScene_main_game_Snare()
