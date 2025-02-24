@@ -3,7 +3,6 @@ join PlayerCharacter left [mirrored="true"]
 PlayerCharacter: Okay, this is it..
 PlayerCharacter: No more feeling sorry for myself. She’s not here, but... that doesn’t mean I can’t still give everything I’ve got.
 PlayerCharacter: Just gotta remember to trust myself. Just gotta play my heart out!
-PlayerCharacter: Ya don't wanna disappoint you good ol' pal watching you from the hospital right?
 join Tryout_Manager center
 Tryout_Manager: OK GUYS! READY UP!! REMEMBER TO GIVE IT ALL YOU GOT!
 PlayerCharacter: Ok, Let's do THIS!

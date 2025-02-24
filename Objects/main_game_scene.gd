@@ -25,10 +25,9 @@ func _ready():
 			mapfile = "res://Assets/Audio/1 Min Endurance - First Bball Game.mboy"
 			audiofile = "res://Assets/Audio/Endurance String 1 minute.mp3"
 		3: #first bball 2 - mission 2
-			mapfile = "res://Assets/Audio/Go Ateneo Quatro (Brass+Banda)-Bass.mboy"
-			audiofile = "res://Assets/Audio/Go Ateneo Quatro with Brass.mp3"
+			mapfile = "res://Assets/Audio/Fabilioh.mboy"
+			audiofile = "res://Assets/Audio/Fabilioh.mp3"
 		4: #bball finals 1 - mission 3
-			#temporary
 			mapfile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
 			audiofile = "res://Assets/Audio/Fly High (Brass+Banda).mp3"
 		5:  #bball finals 2 - mission 3

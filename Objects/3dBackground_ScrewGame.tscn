@@ -38,7 +38,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
 "update": 0,
 "values": [Vector3(-3.38949, 0.692052, -1.35623), Vector3(0.00750875, 0.692052, -1.35623), Vector3(0.00750875, 0.0272067, -2.04217)]
 }
@@ -50,7 +50,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"transitions": PackedFloat32Array(0.5, 1, -2),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(-1.5708, 3.14159, 0)]
 }
@@ -76,7 +76,7 @@ mesh = SubResource("PlaneMesh_wdc6d")
 surface_material_override/0 = SubResource("StandardMaterial3D_ko4sd")
 
 [node name="bass shell" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.8, 3.2871e-08, 6.87847e-15, 0, -1.64355e-08, 1.8, 1.57361e-07, 0.376, 7.86805e-08, 0.00750875, 0.0272067, -2.04217)
+transform = Transform3D(-1.8, -9.53228e-07, -1.65192e-11, 0, -1.36112e-06, 1.8, -4.56333e-06, 0.376, 6.51598e-06, 0.00750875, 0.0272067, -2.04217)
 mesh = SubResource("CylinderMesh_bbbb4")
 surface_material_override/0 = SubResource("StandardMaterial3D_eiq2o")
 

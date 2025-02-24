@@ -2,12 +2,14 @@
 join PlayerCharacter left [mirrored="true"]
 join Tryout_Manager right
 update Tryout_Manager [animation="Bounce"]
-Tryout_Manager: OK GUYS! GOODJOB OUT THERE!! Now go and take a breather and don't forget to go over your equipment and do some maintenance for the next half!!
+Tryout_Manager: COME ON GUYS! TELL ME RIGHT NOW, ARE YOU TIRED?
+(......)
+Tryout_Manager: WHATEVER IT IS YOU THINK, YOU GUYS AREN'T. IT'S AT TIMES LIKE THIS WHERE YOU DIG DEEP. 
 leave Tryout_Manager [animation="Bounce Out" wait="true"]
-PlayerCharacter: It’s just not the same without him. It’s supposed to be the two of us out here, keeping the beat, pumping up the crowd. But... here I am, alone.
-PlayerCharacter: It feels weird without having her around as much. I gotta hold it together. I gotta focus on the cheering right now...
-PlayerCharacter: It’s just halftime. No reason to get down. I’ve still got a job to do. The crowd’s waiting, the team's counting on us to keep that energy up. I can’t let them down. I can't let my friend down either
-PlayerFriend: Wel before all that, I should do some maintainance  before the next cheer starts..
-PlayerCharacter: Now where's that tool?
+PlayerCharacter: (It’s just not the same without her.. We went through the whole season pumping each other up. I know she's trying her best to help around, but this sucks)
+PlayerCharacter: (If she's trying her best with a broken hand, I have no excuse. I gotta hold it together. I made a promise for the both of us...)
+PlayerCharacter: (I'll shake this off, I need to get back to it and maintain the drum. We still have the half to go.)
+Placeholder: (The drum seems quite worn. You might need to [u]seep and adjust the drum[/u] for maintainance this time.)
+PlayerCharacter: Time to get to work.
 do GlobalSceneManager._changeScene_minigame_drumScrewing()
 [end_timeline]
