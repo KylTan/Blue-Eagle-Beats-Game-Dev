@@ -1,22 +1,273 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2x4r4uh41fag"]
+[gd_scene load_steps=12 format=3 uid="uid://c2x4r4uh41fag"]
 
+[ext_resource type="Script" path="res://Objects/Minigames/StickTape/MG-Stick-Tape.gd" id="1_3ycul"]
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_068n0"]
 [ext_resource type="Texture2D" uid="uid://1pv06ilf2ub0" path="res://Assets/StickTapeMinigame/MG3_DrumStick.png" id="2_v2o66"]
 
-[node name="Mg-stick-tape" type="Node2D"]
+[sub_resource type="Animation" id="Animation_t2f4w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mg3DrumStick1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(973, 563)]
+}
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(958, 540)
-scale = Vector2(6.2, 3.64)
-zoom = Vector2(0.6, 0.6)
+[sub_resource type="Animation" id="Animation_lmybn"]
+resource_name = "Start"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mg3DrumStick1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-357, 563), Vector2(967, 563)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mg3DrumStick1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-6.45772, -4.71239, -2.96706, -1.22173, 0.523599]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mg3DrumStick2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2389, 563), Vector2(967, 563), Vector2(871, -2238)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mg3DrumStick2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [6.45772, 4.71239, 2.96706, 1.22173, -0.523599, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mg3DrumStick2:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.895, 0.41), Vector2(0.895, 0.41), Vector2(10.895, 5.41)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jy2fs"]
+_data = {
+"RESET": SubResource("Animation_t2f4w"),
+"Start": SubResource("Animation_lmybn")
+}
+
+[sub_resource type="Animation" id="Animation_77o2a"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_bqxpb"]
+resource_name = "Taping1"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Mg3DrumStick2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(871, -2238), Vector2(871, 3613)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../PathArea/PathBorder:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1.98583), Vector2(0, 5849.01)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../PathArea/CollisionPolygon2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 5851)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_icore"]
+_data = {
+"RESET": SubResource("Animation_77o2a"),
+"Taping1": SubResource("Animation_bqxpb")
+}
+
+[sub_resource type="Animation" id="Animation_vgcwn"]
+resource_name = "EndTaping1"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mg3DrumStick2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(871, 3613), Vector2(967, 563)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mg3DrumStick2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.523599]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mg3DrumStick2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10.895, 5.41), Vector2(0.895, 0.41)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PathArea/PathBorder:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 5849.01), Vector2(1005.85, 780.074)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PathArea/PathBorder:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.523599]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PathArea/PathBorder:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1.00039), Vector2(0.0854992, 0.0831219)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qjo1c"]
+_data = {
+"EndTaping1": SubResource("Animation_vgcwn")
+}
+
+[node name="Mg-stick-tape" type="Node2D"]
+script = ExtResource("1_3ycul")
 
 [node name="TileMap" type="TileMap" parent="."]
+z_index = -1
 tile_set = ExtResource("1_068n0")
 rendering_quadrant_size = 128
 format = 2
 layer_0/tile_data = PackedInt32Array(196611, 0, 0, 196619, 0, 0, 196627, 0, 0, 196635, 0, 0, 196643, 0, 0, 196651, 0, 0, 196659, 3, 0, 196667, 3, 0, 196675, 3, 0, 196683, 3, 0, 196691, 3, 0, 196699, 3, 0, 196707, 3, 0, 196715, 3, 0, 196723, 3, 0, 196731, 3, 0, 720899, 0, 0, 720907, 0, 0, 720915, 0, 0, 720923, 0, 0, 720931, 0, 0, 720939, 0, 0, 720947, 3, 0, 720955, 3, 0, 720963, 3, 0, 720971, 3, 0, 720979, 3, 0, 720987, 3, 0, 720995, 3, 0, 721003, 3, 0, 721011, 3, 0, 721019, 3, 0, 1245187, 0, 0, 1245195, 0, 0, 1245203, 0, 0, 1245211, 0, 0, 1245219, 0, 0, 1245227, 0, 0, 1245235, 3, 0, 1245243, 3, 0, 1245251, 3, 0, 1245259, 3, 0, 1245267, 3, 0, 1245275, 3, 0, 1245283, 3, 0, 1245291, 3, 0, 1245299, 3, 0, 1245307, 3, 0, 1769475, 0, 0, 2293763, 0, 0, 2818051, 0, 0, 1769483, 0, 0, 2293771, 0, 0, 2818059, 0, 0, 1769491, 0, 0, 2293779, 0, 0, 2818067, 0, 0, 1769499, 0, 0, 2293787, 0, 0, 2818075, 0, 0, 1769507, 0, 0, 2293795, 0, 0, 2818083, 0, 0, 1769515, 0, 0, 2293803, 0, 0, 2818091, 0, 0, 1769523, 3, 0, 2293811, 3, 0, 2818099, 3, 0, 1769531, 3, 0, 2293819, 3, 0, 2818107, 3, 0, 1769539, 3, 0, 2293827, 3, 0, 2818115, 3, 0, 1769547, 3, 0, 2293835, 3, 0, 2818123, 3, 0, 1769555, 3, 0, 2293843, 3, 0, 2818131, 3, 0, 1769563, 3, 0, 2293851, 3, 0, 2818139, 3, 0, 1769571, 3, 0, 2293859, 3, 0, 2818147, 3, 0, 1769579, 3, 0, 2293867, 3, 0, 2818155, 3, 0, 1769587, 3, 0, 2293875, 3, 0, 2818163, 3, 0, 1769595, 3, 0, 2293883, 3, 0, 2818171, 3, 0, 3342339, 0, 0, 3866627, 0, 0, 4390915, 0, 0, 3342347, 0, 0, 3866635, 0, 0, 4390923, 0, 0, 3342355, 0, 0, 3866643, 0, 0, 4390931, 0, 0, 3342363, 0, 0, 3866651, 0, 0, 4390939, 0, 0, 3342371, 0, 0, 3866659, 0, 0, 4390947, 0, 0, 3342379, 0, 0, 3866667, 0, 0, 4390955, 0, 0, 3342387, 3, 0, 3866675, 3, 0, 4390963, 3, 0, 3342395, 3, 0, 3866683, 3, 0, 4390971, 3, 0, 3342403, 3, 0, 3866691, 3, 0, 4390979, 3, 0, 3342411, 3, 0, 3866699, 3, 0, 4390987, 3, 0, 3342419, 3, 0, 3866707, 3, 0, 4390995, 3, 0, 3342427, 3, 0, 3866715, 3, 0, 4391003, 3, 0, 3342435, 3, 0, 3866723, 3, 0, 4391011, 3, 0, 3342443, 3, 0, 3866731, 3, 0, 4391019, 3, 0, 3342451, 3, 0, 3866739, 3, 0, 4391027, 3, 0, 3342459, 3, 0, 3866747, 3, 0, 4391035, 3, 0, 196658, 0, 0, 196666, 0, 0, 196674, 0, 0, 196682, 0, 0, 196690, 0, 0, 196698, 0, 0, 196706, 0, 0, 196714, 0, 0, 196722, 0, 0, 196730, 0, 0, 720946, 0, 0, 720954, 0, 0, 720962, 0, 0, 720970, 0, 0, 720978, 0, 0, 720986, 0, 0, 720994, 0, 0, 721002, 0, 0, 721010, 0, 0, 721018, 0, 0, 1245234, 0, 0, 1245242, 0, 0, 1245250, 0, 0, 1245258, 0, 0, 1245266, 0, 0, 1245274, 0, 0, 1245282, 0, 0, 1245290, 0, 0, 1245298, 0, 0, 1245306, 0, 0, 1769522, 0, 0, 1769530, 0, 0, 1769538, 0, 0, 1769546, 0, 0, 1769554, 0, 0, 1769562, 0, 0, 1769570, 0, 0, 1769578, 0, 0, 1769586, 0, 0, 1769594, 0, 0, 2293810, 0, 0, 2293818, 0, 0, 2293826, 0, 0, 2293834, 0, 0, 2293842, 0, 0, 2293850, 0, 0, 2293858, 0, 0, 2293866, 0, 0, 2293874, 0, 0, 2293882, 0, 0, 2818098, 0, 0, 2818106, 0, 0, 2818114, 0, 0, 2818122, 0, 0, 2818130, 0, 0, 2818138, 0, 0, 2818146, 0, 0, 2818154, 0, 0, 2818162, 0, 0, 2818170, 0, 0, 3342386, 0, 0, 3342394, 0, 0, 3342402, 0, 0, 3342410, 0, 0, 3342418, 0, 0, 3342426, 0, 0, 3342434, 0, 0, 3342442, 0, 0, 3342450, 0, 0, 3342458, 0, 0, 3866674, 0, 0, 3866682, 0, 0, 3866690, 0, 0, 3866698, 0, 0, 3866706, 0, 0, 3866714, 0, 0, 3866722, 0, 0, 3866730, 0, 0, 3866738, 0, 0, 3866746, 0, 0, 4390962, 0, 0, 4390970, 0, 0, 4390978, 0, 0, 4390986, 0, 0, 4390994, 0, 0, 4391002, 0, 0, 4391010, 0, 0, 4391018, 0, 0, 4391026, 0, 0, 4391034, 0, 0)
 
-[node name="Mg3DrumStick" type="Sprite2D" parent="."]
-position = Vector2(918, -1229)
-scale = Vector2(9.96224, 3.84049)
+[node name="Mg3DrumStick1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(973, 563)
+rotation = 0.523599
+scale = Vector2(0.895264, 0.409525)
 texture = ExtResource("2_v2o66")
+
+[node name="Mg3DrumStick2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(871, 3613)
+scale = Vector2(10.895, 5.41)
+texture = ExtResource("2_v2o66")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jy2fs")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimationPlayer")
+libraries = {
+"": SubResource("AnimationLibrary_icore")
+}
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qjo1c")
+}
+
+[node name="PathArea" type="Area2D" parent="."]
+z_index = -1
+
+[node name="PathBorder" type="Polygon2D" parent="PathArea"]
+scale = Vector2(1, 1.00039)
+invert_border = 0.1
+polygon = PackedVector2Array(1189, -36.0008, 1002, -41.998, 771, -358.876, 1023, -560.798, 749, -894.498, 836, -1296.73, 1112, -1305.74, 1113, -1331.75, 771, -1317.74, 773, -1580.89, 1087, -1593.9, 1096, -1880.07, 818, -1906.08, 809, -2132.21, 798, -2650.51, 911, -2635.5, 1067, -2285.3, 1047, -2652.51, 764, -2995.71, 772, -3556.04, 1037, -3718.13, 1045, -4062.33, 843, -4328.48, 922, -4644.67, 758, -4718.71, 755, -4984.86, 1050, -4984.86, 1041, -5094.93, 758, -5086.92, 761, -5217, 852, -5214, 854, -5182.98, 1166, -5190.98, 1168, -4891.81, 880, -4859.79, 882, -4809.76, 1064, -4727.72, 1007, -4354.5, 1183, -4079.34, 1168, -3612.07, 908, -3462.98, 908, -3091.77, 1168, -2751.57, 1185, -2143.22, 1027, -2118.21, 905, -2358.34, 917, -2024.15, 1180, -2005.14, 1186.49, -1707.77, 1191, -1500.85, 863, -1486.84, 883, -1418.8, 1191, -1429.81, 1188, -1186.67, 970, -1164.65, 905, -957.534, 1197, -655.359, 1194, -420.223, 1034, -295.9)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PathArea"]
+polygon = PackedVector2Array(1002, -47, 1189, -37, 1035, -297, 1194, -425, 1199, -662, 904, -962, 972, -1165, 1191, -1189, 1191, -1433, 883, -1424, 866, -1490, 1191, -1501, 1180, -2011, 918, -2030, 904, -2360, 1028, -2117, 1188, -2145, 1168, -2762, 909, -3100, 914, -3472, 1175, -3611, 1186, -4117, 1014, -4374, 1067, -4740, 886, -4817, 895, -4857, 1173, -4893, 1173, -5208, 855, -5195, 854, -5237, 754, -5233, 754, -5086, 1037, -5099, 1044, -5001, 755, -4999, 759, -4723, 922, -4638, 837, -4323, 1044, -4059, 1022, -3723, 765, -3551, 763, -2981, 1046, -2654, 1063, -2305, 914, -2648, 791, -2664, 799, -1901, 1091, -1871, 1067, -1599, 748, -1601, 774, -1318, 1086, -1320, 1110, -1314, 834, -1299, 748, -897, 1018, -559, 752, -362)
+
+[connection signal="mouse_entered" from="PathArea" to="." method="_on_path_area_mouse_entered"]
+[connection signal="mouse_exited" from="PathArea" to="." method="_on_path_area_mouse_exited"]
