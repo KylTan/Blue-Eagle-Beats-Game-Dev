@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="New Rhythm System Experimental"
-run/main_scene="res://Objects/Minigames/CarryEquipment/MG-Carry-Equipment.tscn"
+run/main_scene="res://Objects/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -25,23 +25,44 @@ DataHandler="*res://Objects/Minigames/CarryEquipment/DataHandler.gd"
 
 directories/dch_directory={
 "Background_BabbleMember": "res://Assets/Character_Dialogic/Background_BabbleMember.dch",
+"Placeholder": "res://Assets/Character_Dialogic/Placeholder.dch",
 "PlayerCharacter": "res://Assets/Character_Dialogic/PlayerCharacter.dch",
 "PlayerFriend": "res://Assets/Character_Dialogic/PlayerFriend.dch",
 "Tryout_Manager": "res://Assets/Character_Dialogic/Tryout_Manager.dch"
 }
 directories/dtl_directory={
 "Timeline_1sthalf_basketball_game": "res://Dialogue/MainStory/Timeline_1sthalf_basketball_game.dtl",
+"Timeline_1sthalf_bball_snare": "res://Dialogue/MainStory/Timeline_1sthalf_bball_snare.dtl",
 "Timeline_2ndhalf_basketball_game": "res://Dialogue/MainStory/Timeline_2ndhalf_basketball_game.dtl",
-"Timeline_Level2": "res://Assets/Character_Dialogic/Timeline_Level2.dtl",
+"Timeline_2ndhalf_bball_snare": "res://Dialogue/MainStory/Timeline_2ndhalf_bball_snare.dtl",
+"Timeline_BassGame_3": "res://Dialogue/MainStory/Timeline_BassGame_3.dtl",
+"Timeline_BassGame_3_1stHalf_finals": "res://Dialogue/MainStory/Timeline_BassGame_3_1stHalf_finals.dtl",
+"Timeline_BassGame_3_2ndHalf_finals": "res://Dialogue/MainStory/Timeline_BassGame_3_2ndHalf_finals.dtl",
+"Timeline_BassGame_3_post_finals": "res://Dialogue/MainStory/Timeline_BassGame_3_post_finals.dtl",
+"Timeline_BassGame_3_pre_finals": "res://Dialogue/MainStory/Timeline_BassGame_3_pre_finals.dtl",
+"Timeline_SnareGame_3": "res://Dialogue/MainStory/Timeline_SnareGame_3.dtl",
+"Timeline_SnareGame_3_1stHalf_finals": "res://Dialogue/MainStory/Timeline_SnareGame_3_1stHalf_finals.dtl",
+"Timeline_SnareGame_3_2ndHalf_finals": "res://Dialogue/MainStory/Timeline_SnareGame_3_2ndHalf_finals.dtl",
+"Timeline_SnareGame_3_post_finals": "res://Dialogue/MainStory/Timeline_SnareGame_3_post_finals.dtl",
+"Timeline_SnareGame_3_pre_finals": "res://Dialogue/MainStory/Timeline_SnareGame_3_pre_finals.dtl",
 "Timeline_post_basketball_game": "res://Dialogue/MainStory/Timeline_post_basketball_game.dtl",
+"Timeline_post_bball_snare": "res://Dialogue/MainStory/Timeline_post_bball_snare.dtl",
 "Timeline_post_maintenance": "res://Dialogue/MainStory/Timeline_post_maintenance.dtl",
 "Timeline_post_training": "res://Dialogue/MainStory/Timeline_post_training.dtl",
 "Timeline_pre_basketball_game": "res://Dialogue/MainStory/Timeline_pre_basketball_game.dtl",
-"Timeline_pre_training": "res://Dialogue/MainStory/Timeline_pre_training.dtl"
+"Timeline_pre_bball_snare": "res://Dialogue/MainStory/Timeline_pre_bball_snare.dtl",
+"Timeline_pre_training": "res://Dialogue/MainStory/Timeline_pre_training.dtl",
+"Timeline_snare_post_maintenance_1": "res://Dialogue/MainStory/Timeline_snare_post_maintenance_1.dtl",
+"Timeline_snare_post_training": "res://Dialogue/MainStory/Timeline_snare_post_training.dtl",
+"Timeline_snare_tutorial": "res://Dialogue/MainStory/Timeline_snare_tutorial.dtl"
 }
 variables={
 "Dialogue_name": 0,
-"Song_played": 0
+"Dialogue_name_snare": 0,
+"Mission_unlock_bass": 0,
+"Mission_unlock_snare": 0,
+"Song_played": 0,
+"Song_played_snare": 0
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -65,7 +86,7 @@ save/encryption_on_exports_only=true
 text/autopauses={}
 glossary/default_case_sensitive=true
 layout/style_list=[]
-layout/default_style="Default"
+layout/default_style=""
 
 [display]
 

@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwkpj5sr5n65r"]
+
+[ext_resource type="PackedScene" uid="uid://dnoywddxa48vs" path="res://Objects/Bass Game.tscn" id="1_08kd4"]
+[ext_resource type="Texture2D" uid="uid://cb1aweaia5eog" path="res://Assets/sprite-bass-hit-training.png" id="2_ekf2y"]
+[ext_resource type="Texture2D" uid="uid://dfrj7p5ve7q2a" path="res://Assets/sprite-bass-idle-training-beater.png" id="3_mnpci"]
+[ext_resource type="Texture2D" uid="uid://d3dhkudv0c0bg" path="res://Assets/sprite-bass-swing-training.png" id="4_mic7n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5x3th"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ekf2y")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mnpci")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mic7n")
+}],
+"loop": true,
+"name": &"swing",
+"speed": 5.0
+}]
+
+[node name="Game" instance=ExtResource("1_08kd4")]
+
+[node name="GameBG" parent="." index="1"]
+visible = false
+
+[node name="SubViewport" parent="GameBG" index="0"]
+render_target_update_mode = 0
+
+[node name="PlayerSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_5x3th")

@@ -3,7 +3,8 @@ var beaterSprite
 var chargeValue	
 var NoteRecLight
 var NoteRecHeavy
-var is_Hit = false #changes when clear area is hit with the cursour with a charge
+var is_Hit = false #changes when clear area is hit with the cursour with a chargek
+var endBuffer = 0
 
 #bar spawning variables
 var bar_scn = preload("res://Objects/Snare Bar.tscn")
@@ -24,25 +25,34 @@ var note_speed
 var note_scale
 var start_pos_in_sec #offset
 var audio
-var audiofile = "res://Assets/Audio/Go Ateneo (Brass+Banda).mp3"
+var audiofile = "res://Assets/Audio/Get that Ball.mp3"
 @onready var music_node = $Music
 	
 #mapping file
-var map_file = "res://Assets/Audio/Go Ateneo (Brass+Banda) - Snare.mboy"
+@onready var map_file #= "res://Assets/Audio/Go Ateneo (Brass+Banda) - Snare.mboy"
+@onready var nextScene
 var map
-var curr_bar_index = 0 
+var curr_bar_index = 0
 var tracks_data
+var parentNode = get_parent()
+
+#scoring
+var total_note_count = 0
+var percent_score = 0
 
 func _ready():
+	if parentNode:
+		audiofile = parentNode.audiofile
+		map_file = parentNode.mapfile
 	audio = load(audiofile)
-	beaterSprite = get_node("BeaterSprite") #beater
+	#beaterSprite = get_node("BeaterSprite") #beater
 	#NoteRecLight = get_node("Note Receiver Light")
 	#NoteRecHeavy = get_node("Note Receiver Heavy")
 	
 	map = load_map()	
 	calc_params()
 	tracks_data = map.tracks
-	print(tracks_data)
+	#print(tracks_data)
 	music_node.setup(self)
 	
 	# bar spawning on ready
@@ -52,6 +62,7 @@ func _ready():
 		
 func _process(delta):
 	#followMouse()
+	score_check()
 	animationCycle()
 	bars_node.translate(Vector2(0, note_speed*delta))
 	
@@ -59,6 +70,7 @@ func _process(delta):
 		if (bar.position.y + bars_node.position.y)/2 >= bar_Length_In_M:
 			remove_bar(bar)
 			add_bar()
+	
 
 func animationCycle():
 	if receiver.noteDir == 1: #D
@@ -69,6 +81,16 @@ func animationCycle():
 		playerSprite.play("hit")
 	else:
 		playerSprite.play("swing")
+		
+	#npc animation check
+	if $"Note Receiver".is_Entered == 1:
+		$NPCSprite.play("right_hit")
+	if $"Note Receiver".is_Entered == 2:
+		$NPCSprite.play("left_hit")
+	if $"Note Receiver".is_Entered == 3:
+		$NPCSprite.play("right_hit")
+	if $"Note Receiver".is_Entered == 0:
+		$NPCSprite.play("swing")
 			
 # ~~~~~Bass game functions~~~~~
 #func followMouse():
@@ -110,6 +132,11 @@ func add_bar():
 		bars_node.add_child(bar)
 		curr_location += Vector2(0, -bar_Length_In_M)	
 		curr_bar_index += 1
+		
+	else: # if it is null
+		if endBuffer >= 2:
+			get_tree().change_scene_to_file(nextScene)
+		endBuffer += 1
 	
 func get_bar_data(): 
 	if curr_bar_index < tracks_data[0].bars.size():
@@ -133,6 +160,21 @@ func calc_params():
 	note_speed = bar_Length_In_M/float(4*quarter_time_in_sec)
 	note_scale = bar_Length_In_M/float(4*400) #idk about the 4*400 bit -> 0.675
 	start_pos_in_sec = (float(map.start_pos)/400.0)*quarter_time_in_sec
+
+	# ~~ Scoring Init. ~~ #
+	
+	#loops thru each track of the track then every bar to count total beats
+	for i in range(3): #should iterate thru each track type in the track array
+		for j in range(map.tracks[i].bars.size()): #iterates thru all the bars in a track
+				total_note_count += map.tracks[i].bars[j].notes.size() #checks number of notes in each bar
+	#print(total_note_count)
+
+func score_check():
+	if total_note_count > 0 and receiver.total_hits > 0:
+		percent_score = float(receiver.total_hits)/total_note_count * 100
+		#print(percent_score)
+		#print(float(receiver.total_hits))
+		$Label.text = str(int(percent_score)) + "%"
 
 # ~~~~~Mapping Stuff~~~~~
 func load_map():

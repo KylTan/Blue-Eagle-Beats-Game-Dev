@@ -12,14 +12,14 @@ script = ExtResource("1_3mkwm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_tmpfi")
-offset = Vector2(40, 0)
+offset = Vector2(150, 0)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="RightArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightArea"]
 position = Vector2(0.5, 1)
-scale = Vector2(1.2, 1.2)
+scale = Vector2(1.85, 1.85)
 shape = SubResource("RectangleShape2D_bgmnr")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="RightArea" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="RightArea" to="." method="_on_area_2d_area_exited"]

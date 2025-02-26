@@ -29,6 +29,7 @@ func collect(): # takes signal from receiver to know when to delete/hide()
 		if is_colliding and receiver.is_Hit and receiver.noteDir == 3: #if its colliding and can access the receiver
 			collected = true
 			receiver.is_Hit = false
+			receiver.total_hits += 1
 			hide()
 			
 func _on_area_2d_area_entered(area): #if it enters the zone, it gets the parent aka the receiver

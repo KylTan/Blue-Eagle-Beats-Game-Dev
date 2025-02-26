@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://mh6j3pmw4xwr"]
+
+[ext_resource type="PackedScene" uid="uid://b2gxjfdnyi2cs" path="res://Objects/Snare Game.tscn" id="1_0is4j"]
+
+[node name="Game" instance=ExtResource("1_0is4j")]
+
+[node name="TrainingBG" parent="." index="0"]
+visible = true
+
+[node name="SubViewport2" parent="TrainingBG" index="0"]
+render_target_update_mode = 4
+
+[node name="SubViewportContainer" parent="." index="1"]
+visible = false
+
+[node name="SubViewport" parent="SubViewportContainer" index="0"]
+render_target_update_mode = 0
+
+[node name="PlayerSprite" parent="." index="2"]
+position = Vector2(1049, 725)
+scale = Vector2(1.5, 1.5)

@@ -1,0 +1,24 @@
+[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
+join Tryout_Manager rightmost
+join PlayerCharacter right [mirrored="true"]
+join PlayerFriend right
+join Background_BabbleMember left
+join Background_BabbleMember leftmost
+PlayerCharacter: Nice, we just gotta setup the drums for the event. Be careful though, the drums are rather heavy.
+PlayerCharacter: They might cause injury if it falls on you.
+update PlayerFriend [animation="Shake X" length="0.9" wait="true" repeat="2"]
+PlayerFriend: OOOOOOWWWWWW!!!!
+PlayerFriend: Aaaahh I think I broke my hand from the drum falling on me....
+PlayerCharacter: NooooOOOOOO!!!!
+PlayerFriend: Ughhh... I don't think I can perform later with this hand of mine... Sorry buddy \:<
+PlayerFriend: You gotta go perform extra hard for me okay! Don't worry about me I'll still cheer you on from the hospital! You got this!!
+update Tryout_Manager [animation="Bounce" wait="true"]
+Tryout_Manager: OK GUYSS!! Make some space! We gotta bring him to first aid. But continue settign up the equipment so we can still perform on time!
+Tryout_Manager: REMEMBER WHY WE'RE HERE!! WE ARE HERE TO HYPE UP ATENEO OK!!!
+Tryout_Manager: WE GOTTA MAKE SURE THAT THE HYPE DOES NOT DIE DOWN!
+Tryout_Manager: THAT'S WHAT YOU ALL SIGNED UP AFTER ALL!!!! NOW GO OUT THERE AND PLAY!!!
+PlayerCharacter: Okay..Okay.... I got this.... I just gotta believe in myself the same way bro believed in me!
+set {Song_played_snare} = "4"
+set {Dialogue_name_snare} = "5"
+do GlobalSceneManager._changeScene_main_game_Snare()
+[end_timeline]

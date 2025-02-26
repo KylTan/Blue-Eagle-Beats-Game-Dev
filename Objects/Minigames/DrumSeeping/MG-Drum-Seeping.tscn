@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://d20ohbao5xm0v"]
+[gd_scene load_steps=20 format=3 uid="uid://d20ohbao5xm0v"]
 
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_0rddx"]
 [ext_resource type="Script" path="res://Objects/Minigames/DrumSeeping/MG-Drum-Seeping.gd" id="1_eoxep"]
 [ext_resource type="Texture2D" uid="uid://c1qoqhj11uut4" path="res://Assets/DrumScrewMinigame/ScrewDrumMinigame.png" id="2_jfh1y"]
 [ext_resource type="Texture2D" uid="uid://cigf2cuc3hnru" path="res://Assets/DrumSeepingMinigame/Pressing.png" id="3_jm5rb"]
+[ext_resource type="PackedScene" uid="uid://ci7gmcs62ykic" path="res://Objects/3dBackground_ScrewGame.tscn" id="5_25ase"]
 [ext_resource type="Texture2D" uid="uid://bygos2e234mru" path="res://Assets/DrumSeepingMinigame/MG2_SlidingScale.png" id="5_i0s25"]
 [ext_resource type="Texture2D" uid="uid://dqo0qnv6j7ban" path="res://Assets/DrumSeepingMinigame/MG2_SlidingScale2.png" id="6_yslej"]
 [ext_resource type="Texture2D" uid="uid://bq62xyb0oc8ew" path="res://Assets/DrumSeepingMinigame/MG2_SlidingScale3.png" id="7_emks1"]
@@ -76,6 +77,7 @@ radius = 24.8887
 script = ExtResource("1_eoxep")
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 tile_set = ExtResource("1_0rddx")
 rendering_quadrant_size = 128
 format = 2
@@ -86,8 +88,17 @@ position = Vector2(1014, 560)
 scale = Vector2(0.841204, 0.864352)
 texture = ExtResource("2_jfh1y")
 
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="SubViewport" parent="SubViewportContainer" instance=ExtResource("5_25ase")]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
 [node name="Pressing" type="Sprite2D" parent="."]
-position = Vector2(1029, 519)
+position = Vector2(965, 487)
 scale = Vector2(1.73698, 1.79167)
 texture = ExtResource("3_jm5rb")
 

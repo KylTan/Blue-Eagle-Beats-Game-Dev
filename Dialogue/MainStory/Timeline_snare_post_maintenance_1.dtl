@@ -1,0 +1,24 @@
+[background arg="res://Assets/AteneoField.jpg" fade="0.0"]
+join Tryout_Manager right
+join PlayerCharacter left [mirrored="true"]
+join PlayerFriend left
+Tryout_Manager: Ok everyone, wrap it up. We've gotta wrap this up. It's lights out soon and we'll be closing the storage room!
+Tryout_Manager: Oh! Before I forget! The official game schedules for the basketball games are coming out soon, so be ready for it.
+Tryout_Manager: GOOD LUCK!!
+leave Tryout_Manager [animation="Slide Out Right" length="0.6" wait="true"]
+join  center
+update PlayerFriend right [mirrored="true"]
+update PlayerCharacter center
+PlayerFriend: Well all things considered, I think I did a lot better for today's training!
+PlayerCharacter: I don't know.. I think we still have way more to go. And the game schedule's going to be out soon too.
+PlayerFriend: Don't worry bud, I'm there for you! We got this!
+PlayerFriend: Remember what I said! Just believe in yourself the same way I believe in you!
+update PlayerFriend [animation="Shake Y" wait="true"]
+PlayerCharacter: Thanks bud... I really appreciate whenever you do this.
+PlayerFriend: Don't worry about it. Anyways, wanna grab dinner at the usual?
+PlayerCharacter: Yea! Let's go.
+set {Mission_unlock_snare} = 2
+leave PlayerFriend [animation="Slide Out Left"]
+leave PlayerCharacter [animation="Slide Out Left" wait="true"]
+do GlobalSceneManager._changeScene_LevelSelect()
+[end_timeline]
