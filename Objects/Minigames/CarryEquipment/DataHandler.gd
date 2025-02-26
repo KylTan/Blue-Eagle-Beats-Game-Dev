@@ -16,7 +16,7 @@ func load_data(a_path):
 	var item_data_file = FileAccess.open(a_path, FileAccess.READ)
 	item_data = JSON.parse_string(item_data_file.get_as_text())
 	item_data_file.close()
-	print(item_data)
+	#print(item_data)
 
 func set_grid_data():
 	for item in item_data.keys():
@@ -24,4 +24,4 @@ func set_grid_data():
 		for point in item_data[item]["Grid"].split("/"):
 			temp_grid_array.push_back(point.split(","))
 		item_grid_data[item] = temp_grid_array
-	print(item_grid_data)
+	#print(item_grid_data)
