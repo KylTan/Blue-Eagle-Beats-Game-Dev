@@ -1,8 +1,8 @@
 extends Node2D
 @onready var bassGame = preload("res://Objects/Bass Game.tscn")
 @onready var bassGameTr = preload("res://Objects/Bass Game Training.tscn")
-var mapfile = "res://Assets/Audio/Vary-Cheer-Bass.mboy"
-var audiofile = "res://Assets/Audio/Vary-Cheer.mp3"
+var mapfile = "res://Assets/Audio/Jabba - Bass.mboy"
+var audiofile = "res://Assets/Audio/Jabba.mp3"
 var nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_pre_training.tscn"
 var nextCheerIndex = 1 #intercepts what the next cheer index is
 var nextDialogueIndex = 1  #number corresponds to a scene 
@@ -45,6 +45,16 @@ func _ready():
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_2ndhalf_basketball_game.tscn"
 		5: # first bball 3 - mission 2
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_basketball_game.tscn"
+		6: # finals start
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3.tscn"
+		7: # finals pre
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_pre_finals.tscn"
+		8: # finals 1st half
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_1_sthalf.tscn"
+		9: # finals 2nd half
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_2_ndhalf.tscn"
+		10: # finals post game
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_post_finals.tscn"
 		
 			
 	if nextCheerIndex == 1:

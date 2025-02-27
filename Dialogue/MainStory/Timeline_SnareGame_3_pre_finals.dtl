@@ -4,20 +4,27 @@ join PlayerCharacter right [mirrored="true"]
 join PlayerFriend right
 join Background_BabbleMember left
 join Background_BabbleMember leftmost
-PlayerCharacter: Nice, we just gotta setup the drums for the event. Be careful though, the drums are rather heavy.
-PlayerCharacter: They might cause injury if it falls on you.
+PlayerCharacter: Ok were practically finished setting up, and we have a little time to spare before the crowds start showing up.
+PlayerFriend: Wow, even this early before the game some people already starting to show up. This is gonna be one hell of a packed game!!! 
+PlayerCharacter: I don't think I've seen anything like that since I was a kid..
 update PlayerFriend [animation="Shake X" length="0.9" wait="true" repeat="2"]
-PlayerFriend: OOOOOOWWWWWW!!!!
-PlayerFriend: Aaaahh I think I broke my hand from the drum falling on me....
-PlayerCharacter: NooooOOOOOO!!!!
-PlayerFriend: Ughhh... I don't think I can perform later with this hand of mine... Sorry buddy \:<
-PlayerFriend: You gotta go perform extra hard for me okay! Don't worry about me I'll still cheer you on from the hospital! You got this!!
+PlayerCharacter: Man, that really makes me wish I could play alongside all of you today. You think captain would let me play even just for a little bit?
+PlayerFriend: Don't be ridiculous, if you try to use your arm now you might just break it again!
+PlayerCharacter: Heh. You're right. A man can dream though I guess!
+update PlayerCharacter (DefaultFace) [animation="Bounce"]
+PlayerFriend: (Back then, he would totally just sink in his own sadness if something like this happened. I'm glad to see he's trying to keep our spirits up even though he can't play the drums with us today.)
+update PlayerFriend [animation="Bounce"]
+PlayerFriend: You don't have to dream, cause I'm gonna play twice as had for the both of us today! Just you watch!
 update Tryout_Manager [animation="Bounce" wait="true"]
-Tryout_Manager: OK GUYSS!! Make some space! We gotta bring him to first aid. But continue settign up the equipment so we can still perform on time!
-Tryout_Manager: REMEMBER WHY WE'RE HERE!! WE ARE HERE TO HYPE UP ATENEO OK!!!
-Tryout_Manager: WE GOTTA MAKE SURE THAT THE HYPE DOES NOT DIE DOWN!
-Tryout_Manager: THAT'S WHAT YOU ALL SIGNED UP AFTER ALL!!!! NOW GO OUT THERE AND PLAY!!!
-PlayerCharacter: Okay..Okay.... I got this.... I just gotta believe in myself the same way bro believed in me!
+Tryout_Manager: LISTEN EVERYONE! GET ON YOUR INSTRUMENTS, WE'RE GONNA MAKE SURE WE START THE DAY OFF STRONG.
+leave PlayerFriend
+Tryout_Manager: KEEP YOUR EYES ON THE CALLER, AND PLAY LIKE YOU'VE NEVER PLAYED BEFORE.
+Tryout_Manager: WHATEVER IT IS YOU HAVE, GIVE EVERY SINGLE DROP OF IT HERE! I DON'T CARE IF ITS A 40 MINUTE GAME OR A 5 HOUR GAME.
+Tryout_Manager: THINK OF EVERY GAME WE HAD TO GO THROUGH TO GET TO THIS MOMENT. I WANT YOU ALL TO PLAY HARDER THAN ALL OF THOSE GAMES COMBINED!
+Tryout_Manager: THERE IS NO MORE NEXT GAME. I WANT YOU ALL TO LEAVE WHATEVER YOU HAVE LEFT ON THE DRUMS!
+PlayerFriend: (This is it, there's a lot riding on this game. The team, the crowd, the drums.)
+Tryout_Manager: TIME TO GIVE THE CROWD A PROPER WAKE UP CALL,
+Tryout_Manager: FLY HIGH!!!
 set {Song_played_snare} = "4"
 set {Dialogue_name_snare} = "5"
 do GlobalSceneManager._changeScene_main_game_Snare()

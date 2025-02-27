@@ -14,6 +14,10 @@ var inside_time: float = 0.0
 var is_inside: bool = false
 var threshold: float = 0.75
 
+var nextDialogueIndex
+var nextDialogueScene
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	animationPlayer.play("Start")
@@ -37,7 +41,7 @@ func _process(delta):
 			print(total_time)
 			print(inside_time / total_time)
 			game_state += 1
-	elif game_state == 3:
+	elif game_state == 3: # its done
 		if !animationPlayer3.is_playing():
 			pass
 	
@@ -56,3 +60,29 @@ func _on_path_area_mouse_entered():
 func _on_path_area_mouse_exited():
 	circle_color = Color.RED
 	is_inside = false
+	
+func _game_over_exit():
+	
+	match nextDialogueIndex:
+		1: #first training arc
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_training.tscn"
+		2: #first training arc
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_maintenance.tscn"
+		3: # first bball 1 - mission 2
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_1sthalf_basketball_game.tscn"
+		4:# first bball 2 - mission 2
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_2ndhalf_basketball_game.tscn"
+		5: # first bball 3 - mission 2
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_basketball_game.tscn"
+		6: # finals start
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3.tscn"
+		7: # finals pre
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_pre_finals.tscn"
+		8: # finals 1st half
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_1_sthalf.tscn"
+		9: # finals 2nd half
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_2_ndhalf.tscn"
+		10: # finals post game
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_post_finals.tscn"
+
+	get_tree().change_scene_to_file(nextDialogueScene)
