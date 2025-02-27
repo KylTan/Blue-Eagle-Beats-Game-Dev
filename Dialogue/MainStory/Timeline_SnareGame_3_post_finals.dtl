@@ -7,5 +7,7 @@ PlayerCharacter: We couldn't have done it without your training sir!
 Tryout_Manager: No, its all thanks to all of your own efforts. Now, time to inspect our equipment and pack it all up. See ya guys at the bus!
 leave Tryout_Manager
 PlayerCharacter: We did it bud... Thanks to your belief in me, I managed to do it.
+set {Dialogue_name_snare} = 0
+set {Song_played_snare} = 0
 do GlobalSceneManager._changeScene_LevelSelect()
 [end_timeline]

@@ -5,7 +5,7 @@ join PlayerFriend right
 join Background_BabbleMember left
 join Background_BabbleMember leftmost
 PlayerCharacter: Ok were practically finished setting up, and we have a little time to spare before the crowds start showing up.
-PlayerFriend: Wow, even this early before the game some people already starting to show up. This is gonna be one hell of a packed game!!! 
+PlayerFriend: Wow, even this early before the game some people already starting to show up. This is gonna be one hell of a packed game!!!
 PlayerCharacter: I don't think I've seen anything like that since I was a kid..
 update PlayerFriend [animation="Shake X" length="0.9" wait="true" repeat="2"]
 PlayerCharacter: Man, that really makes me wish I could play alongside all of you today. You think captain would let me play even just for a little bit?
@@ -26,6 +26,6 @@ PlayerFriend: (This is it, there's a lot riding on this game. The team, the crow
 Tryout_Manager: TIME TO GIVE THE CROWD A PROPER WAKE UP CALL,
 Tryout_Manager: FLY HIGH!!!
 set {Song_played_snare} = "4"
-set {Dialogue_name_snare} = "5"
+set {Dialogue_name_snare} = "7"
 do GlobalSceneManager._changeScene_main_game_Snare()
 [end_timeline]

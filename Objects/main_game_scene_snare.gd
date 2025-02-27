@@ -46,14 +46,14 @@ func _ready():
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_2ndhalf_bball.tscn"
 		5: # first bball - post bball
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_bball.tscn"
-		# start with finals 3 
-		6: 
+			# start with finals 3 
+		6:  # finals pre
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_pre_finals.tscn"
-		7:
+		7: # finals 1st
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_1sthalf.tscn"
-		8:
+		8: # finals 2nd
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_2ndhalf.tscn"
-		9:
+		9: # finals 3rd
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_post_finals.tscn"
 			
 	var instance = snareGame.instantiate()

@@ -44,6 +44,9 @@ var percent_score = 0
 var particle = preload("res://Objects/particle_explosion.tscn")
 
 func _ready():
+	
+	chargeValue = 0
+	
 	if parentNode:
 		audiofile = parentNode.audiofile
 		map_file = parentNode.mapfile
@@ -195,4 +198,5 @@ func load_map():
 
 func _on_idle_timer_timeout():
 	playerSprite.play("idle")
+	chargeValue = 0
 	$BeatLight.texture_scale = 0.0

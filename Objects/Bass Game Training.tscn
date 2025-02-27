@@ -40,5 +40,5 @@ visible = false
 [node name="SubViewport" parent="GameBG" index="0"]
 render_target_update_mode = 0
 
-[node name="PlayerSprite" parent="." index="2"]
+[node name="PlayerSprite" parent="." index="4"]
 sprite_frames = SubResource("SpriteFrames_5x3th")

@@ -30,7 +30,7 @@ func _ready():
 		4: #bball finals 1 - mission 3
 			mapfile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
 			audiofile = "res://Assets/Audio/Fly High (Brass+Banda).mp3"
-		5:  #bball finals 2 - mission 3
+		5:  #bball finals 2 - mission 3 - make this GOATENEO
 			mapfile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
 			audiofile = "res://Assets/Audio/Fly High (Brass+Banda).mp3"
 	

@@ -14,7 +14,9 @@ join Placeholder center
 Placeholder: (Time for another minigame! It's time to load the equipment you're bringing to the game! Click on the button to take a piece of equipment to place in the bus. Be mindful of your organization though, since you'll need to make all the things you're bringing to fit.)
 PlayerFriend: Alright, let's get to it then. We have no time to waste!
 PlayerCharacter: I'm way ahead of you.
-set {Dialogue_name} = 0
+set {Dialogue_name_snare} = 0
+set {Song_played_snare} = 0
+set {Dialogue_name} = 7
 set {Song_played} = 4
 do GlobalSceneManager._changeScene_LevelSelect()
 [end_timeline]
