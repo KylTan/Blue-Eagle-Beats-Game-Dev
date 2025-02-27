@@ -21,7 +21,6 @@ func _process(delta):
 	else:
 		if(is_pressed()):
 			_use_ratchet_key()
-		
 
 var buttonPressed = false
 
@@ -43,7 +42,7 @@ func meterFunctions():
 	progressMeter2D.set_value(ratchetKey2D.returnRotation())
 
 func isScrewed():
-	if(ratchetKey2D.returnRotation() >= turnAmt):
+	if(ratchetKey2D.returnRotation() >= turnAmt and Input.is_action_just_pressed("space_key")):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE) 
 		if parent:
 			parent.screwTotal -= 1
@@ -52,4 +51,6 @@ func isScrewed():
 		return true
 	else:
 		return false
+		
+
 
