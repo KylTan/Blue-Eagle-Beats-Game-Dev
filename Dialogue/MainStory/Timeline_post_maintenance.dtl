@@ -1,15 +1,16 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join Tryout_Manager right
-join PlayerCharacter left [mirrored="true"]
+join PlayerCharacter (DefaultFace) left [mirrored="true"]
 join PlayerFriend left
-Tryout_Manager: That's it for the maintenance for now. Remember that the equipment is [u]sacred[/u]. Some of these drums are older than your parents, so make sure to treat them with the most care.
-Tryout_Manager: Before we formally end, the first basketball game of the season is coming up soon. Hopefully all of you will be trained and prepared by then, so for now just try to keep up.
+Tryout_Manager: That's it for the maintenance for now. Remember that the equipment is [u]sacred[/u]. 
+Some of these drums are older than your parents, so make sure to treat them with the most care!
+Tryout_Manager: Before we formally end, the first basketball game of the season will come up eventually down the road. Hopefully all of you will be trained and prepared by then, so for now we expect you all to keep up.
 update Tryout_Manager [animation="Bounce" repeat="2"]
 Tryout_Manager: [b]GOOD LUCK ROOKIES[/b]
 leave Tryout_Manager [animation="Slide Out Right" length="0.6" wait="true"]
 join  center
 update PlayerFriend right [mirrored="true"]
-update PlayerCharacter center
+update PlayerCharacter left
 PlayerFriend: Well... That was a crazy first training!
 PlayerCharacter: Yeah it really was... I'm not all that sure that I'm ready for all that training.. Especially with the upcoming game..
 PlayerFriend: Don't worry too much about it. We got this!

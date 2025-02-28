@@ -1,23 +1,23 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
-join PlayerCharacter left [animation="Slide In Left" mirrored="true"]
-join PlayerFriend left [animation="Slide In Left" length="0.7" wait="true"]
+join PlayerCharacter (DefaultFace) 'pos=x0.45,y1' [animation="Slide In Left" mirrored="true"]
+join PlayerFriend 'pos=x0.15,y1 [animation="Slide In Left" length="0.7" wait="true"]
 Tryout_Manager: Okay rookies, gather around. You should all know the drill by now!
 update PlayerFriend [animation="Bounce" repeat="2"]
 PlayerFriend: (We've been training for awhile, but I still can't seem to get a hold of the cheers...)
 PlayerFriend: But it's a new day, and I'll do my best to catch up!
 PlayerCharacter: There you are again [i]babbling[/i] to yourself randomly. Come on, training's gonna start. You've still got quite a bit of catching up to do, even for a rookie.
-update PlayerCharacter [animation="Shake Y"]
+update PlayerCharacter 'pos=x0.45,y1' [animation="Shake Y"]
 update PlayerFriend left [mirrored="true"]
 PlayerFriend: There you go again being a grumpy little idiot. Plus I was already coming anyway!
+join Tryout_Manager right [animation="Slide In Right" length="0.8" wait="true"]
 Tryout_Manager: EVERYONE LISTEN UP! FIRST SET TO PLAY WILL BE THE ROOKIES!
-Tryout_Manager: You all know the drill, we'll be brushing up on the [b]Endurance Cheers[/b]. 
+Tryout_Manager: You all know the drill, we'll be brushing up on the [b]ENDURANCE CHEERS[/b] again.
 Tryout_Manager: Snare is still falling behind with their timing, but the bass is also still heavily lacking in strength. Rooks step up, and lets get this over with.
 update PlayerFriend [animation="Shake Y" mirrored="true"]
 PlayerCharacter: .....
 PlayerFriend: Come on, don't tell me you're still down about yourself. We're all gonna get there, we just have to keep going at it. Even if it's little by little!
 PlayerCharacter: .....
 PlayerCharacter: You're right, let's do this.
-join Tryout_Manager right [animation="Slide In Right" length="0.8" wait="true"]
 PlayerFriend: (Ok great, I think we got this. This training for sure, we'll do better than before!)
 PlayerFriend: (Time to step up. Let's do this)
 Tryout_Manager: Okay! Let's begin!!!
