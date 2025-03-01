@@ -14,7 +14,7 @@ var inside_time: float = 0.0
 var is_inside: bool = false
 var threshold: float = 0.75
 
-var nextDialogueIndex
+var nextDialogueIndex = 1
 var nextDialogueScene
 
 
@@ -22,7 +22,7 @@ var nextDialogueScene
 func _ready():
 	animationPlayer.play("Start")
 	nextDialogueIndex = Dialogic.VAR.Dialogue_name_snare
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	queue_redraw()
@@ -44,6 +44,7 @@ func _process(delta):
 	elif game_state == 3: # its done
 		if !animationPlayer3.is_playing():
 			_game_over_exit()
+			
 	
 
 func _input(event):
@@ -85,5 +86,6 @@ func _game_over_exit():
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_2ndhalf.tscn"
 		9: # finals 3rd
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_post_finals.tscn"
-
+	
 	get_tree().change_scene_to_file(nextDialogueScene)
+	

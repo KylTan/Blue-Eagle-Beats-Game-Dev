@@ -16,6 +16,6 @@ visible = false
 [node name="SubViewport" parent="SubViewportContainer" index="0"]
 render_target_update_mode = 0
 
-[node name="PlayerSprite" parent="." index="2"]
+[node name="PlayerSprite" parent="." index="3"]
 position = Vector2(1049, 725)
 scale = Vector2(1.5, 1.5)

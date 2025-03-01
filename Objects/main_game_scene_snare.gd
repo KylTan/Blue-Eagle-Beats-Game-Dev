@@ -1,5 +1,6 @@
 extends Node2D
 @onready var snareGame = preload("res://Objects/Snare Game.tscn")
+@onready var snareGameTr = preload("res://Objects/Snare Game Training.tscn")
 var mapfile = "res://Assets/Audio/Go Ateneo-Snare 2.0.mboy"
 var audiofile = "res://Assets/Audio/Go Ateneo (BrassAlt+Banda).mp3"
 
@@ -18,8 +19,8 @@ func _ready():
 
 	match nextCheerIndex:
 		1: #first training
-			mapfile = "res://Assets/Audio/Otso-Cheer-Snare.mboy"
-			audiofile = "res://Assets/Audio/Otso-Cheer.mp3"
+			mapfile = "res://Assets/Audio/Endurance Training Snare.mboy"
+			audiofile = "res://Assets/Audio/Endurance Training.mp3"
 		2: #first bball - endurance
 			mapfile = "res://Assets/Audio/1 Min Endurance - First Bball Game Snare.mboy"
 			audiofile = "res://Assets/Audio/Endurance String 1 minute.mp3"
@@ -57,6 +58,10 @@ func _ready():
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_post_finals.tscn"
 			
 	var instance = snareGame.instantiate()
+			
+	if nextCheerIndex == 1:
+		instance = snareGameTr.instantiate()
+		
 	instance.audiofile = audiofile
 	instance.map_file = mapfile
 	instance.nextScene = nextDialogueScene 

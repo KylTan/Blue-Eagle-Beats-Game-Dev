@@ -19,8 +19,8 @@ func _ready():
 	
 	match nextCheerIndex:
 		1: #first training - mission 1
-			mapfile = "res://Assets/Audio/Vary-Cheer-Bass.mboy"
-			audiofile = "res://Assets/Audio/Vary-Cheer.mp3"
+			mapfile = "res://Assets/Audio/Endurance Training.mboy"
+			audiofile = "res://Assets/Audio/Endurance Training.mp3"
 		2: # first bball 1 - mission 2
 			mapfile = "res://Assets/Audio/1 Min Endurance - First Bball Game.mboy"
 			audiofile = "res://Assets/Audio/Endurance String 1 minute.mp3"
