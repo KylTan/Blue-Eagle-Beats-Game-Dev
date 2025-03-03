@@ -1,18 +1,23 @@
 [background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join PlayerCharacter left [mirrored="true"]
+join PlayerCharacter (JerseyFace) left [mirrored="true"]
 join PlayerFriend left [mirrored="true"]
 join Tryout_Manager right
 update Tryout_Manager [animation="Bounce"]
-Tryout_Manager: OK GUYS! GOODJOB OUT THERE!! Now go and take a breather and don't forget to go over your equipment and do some maintenance for the next half!!
+Tryout_Manager: Keep up the work guys!! Do what you have to do now before the next half starts, and make sure to [u]maintain[/u] the equipment!
 leave Tryout_Manager [animation="Bounce Out" wait="true"]
-PlayerFriend: Huh..huh.. that was tiring but great! The hype was through the roof bud!
-PlayerCharacter: Yeah!! You can say that again!! It felt great but tiring huh...
-PlayerFriend: Heh now you are sounding much more relaxed hehe...
-PlayerFriend: Maybe you starting to believe in yourself like those anime character hehe!
-PlayerCharacter: Huh. Whatever you say bud..heh..
-PlayerCharacter: Wait a minute..Looks like some screws are kinda loose on my drum..
-PlayerFriend: Oh yeah you're right... You better tighten it or it may sound weird.. Just remember too move your on top of the loose screws! Then click on them to attach the tool. Then proceed to tighten the screw by moving your mouse in a clockwise circular motion on you successfully tigthen the screw!
-PlayerCharacter: Yeah will do... Now where's that tool?
+PlayerFriend: Huh..huh.. that was tiring but great! The hype was through the roof!
+PlayerCharacter: Yeah!! You can say that again!! It felt great but I feel so tired already..
+PlayerFriend: You finally loosened up, it was great wasn't it?
+PlayerFriend: Maybe you're starting to believe in yourself like those anime—
+PlayerCharacter: Ok whatever you say bud...
+...
+PlayerCharacter: Before I forget, I have to [u]maintain[/u] the bass. All that playing must've loosened it up quite a bit.
+PlayerFriend: Oh yeah. Make sure you properly adjust all the rods based on what the Equipment Lead said. You remembered to bring your [u]Rachet[/u] right?
+PlayerCharacter: Yeah will do... Now where did I put that thing?
+join Placeholder center
+Placeholder: (For this minigame, you will be the adjusting the rods, or screws, to a specific degree. Too much, or too little, and it won't end well for your drum.)
+Placeholder: (Click on a rod, and use your mouse to spin the rachet tool by the correct amount shown by the progress meter. You can only move on once you've adjusted each rod by the correct amount!)
+PlayerCharacter: (I better get started before the next half starts then.)
 set {Dialogue_name} = "4"
 do GlobalSceneManager._changeScene_minigame_drumScrewing()
 [end_timeline]

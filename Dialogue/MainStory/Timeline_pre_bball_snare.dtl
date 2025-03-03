@@ -1,0 +1,22 @@
+[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
+join Tryout_Manager rightmost
+join PlayerCharacter right [mirrored="true"]
+join PlayerFriend right
+join Background_BabbleMember left
+join Background_BabbleMember leftmost
+PlayerCharacter: Here we are again.. This time for sure I'll get another chance to show everyone what I've got.
+PlayerFriend: Don't think I'll get left behind! You may have gotten your chances, but this time is my turn to shine!
+update PlayerFriend [animation="Bounce" length="0.6" repeat="2"]
+PlayerCharacter: If you really think so then. I'm not gonna listen to you cry again though if you get shouted at for making a mistake later.
+PlayerFriend: HEY! I was just REALLY passionate that ONE time!!
+PlayerFriend: Anyways, this is a pretty important game for us today too! I'll show you how flawless my endurance is now!
+PlayerCharacter: You always have your energy, I'll at least give you that. Just try not to lose your mind again.
+update Tryout_Manager [animation="Bounce" wait="true"]
+Tryout_Manager: EVERYONE LISTEN UP!!
+Tryout_Manager: We may be a few games in already, but I don't want anyone thinking we can settle and get comfortable. I want to see more from all of you today than before.
+Tryout_Manager: WE MAKE SURE THAT THE HYPE DOES NOT DIE DOWN!
+Tryout_Manager: Step up to your instruments, it's time to get started!
+set {Song_played_snare} = "2"
+set {Dialogue_name_snare} = "3"
+do GlobalSceneManager._changeScene_main_game_Snare()
+[end_timeline]

@@ -1,0 +1,39 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "Thing",
+"description": "",
+"display_name": "Tutorial",
+"mirror": false,
+"nicknames": ["Tutorial"],
+"offset": Vector2(0, 0),
+"portraits": {
+"ArmyBaby": {
+"export_overrides": {
+"image": "\"res://Assets/Textures/ArmyBaby.png\""
+},
+"ignore_char_scale": true,
+"mirror": false,
+"offset": Vector2(0, -200),
+"scale": 0.5,
+"scene": ""
+},
+"Thing": {
+"export_overrides": {
+"image": "\"res://Assets/Textures/WallLight.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 0.5,
+"scene": ""
+}
+},
+"scale": 1.0
+}

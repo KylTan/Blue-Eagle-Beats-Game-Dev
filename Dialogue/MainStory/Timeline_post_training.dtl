@@ -1,15 +1,18 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join PlayerCharacter left [mirrored="true"]
-join PlayerFriend left
+join PlayerFriend 0.35, 1
 join Tryout_Manager right
-Tryout_Manager: OK THATS IT!!! Goodjob rookies! You did well for your 1st training!!!
-Tryout_Manager: Keep in mind that our trainings would be similar to this from here on out until the start of a UAAP season!
-Tryout_Manager: When the UAAP season starts, our trainings will be longer and harder!!! So keep that in mind!
-Tryout_Manager: NOWW!!! It's time for equipment maintenance!!
-Tryout_Manager: So for this equipment maintenance! We would do what you call "seeping"!
-Tryout_Manager: All you have to do is press the space bar to let the bar on right start moving! Once the arrow on the right is inside the moving green bar, press space again to seep the drum! Repeat the process until it is over! 
-Tryout_Manager: If you make a mistake just press the space bar again to retry!
-Tryout_Manager: Now its your turn to try!
+Tryout_Manager: First of all, congratulations to all the rooks for making it through your first training. We will continue learning more cheers as well as perfecting them to the best of our abilities.
+Tryout_Manager: Keep in mind that our trainings will be similar to this from here on out until the start of the season.
+Tryout_Manager: As we go on, the trainings will only get harder. So do expect to go uphill from here in preparation for the season.
+Tryout_Manager: But before we wrap up! We'll introduce you to the basics of our equipment maintainance.
+Tryout_Manager: As you're all still rookies, we'll start you off with some simpler work before moving up from there.
+Tryout_Manager: This is what we call [b]SEEPING[/b]. You put your weight down on the [u]skin of the drum[/u] and you push on it, so we can stretch out the skin and see where we need to make adjustments.
+Placeholder: (For this minigame, press the Spacebar to begin and the arrow on a bar will start moving. Press Spacebar again once the arrow hits the green area, and repeat until you're complete!)
+Tryout_Manager: You really have to get in there and push your weight into it to get a proper seep. Don't be afraid to push hard, the skin won't break.
+Placeholder: (If you make a mistake just press the Spacebar to try again!)
+Placeholder: (Now it's your turn to give it a try!)
+join Tryout_Manager center
 set {Dialogue_name} = "2"
 do GlobalSceneManager._changeScene_minigame_drumSeeping()
 [end_timeline]

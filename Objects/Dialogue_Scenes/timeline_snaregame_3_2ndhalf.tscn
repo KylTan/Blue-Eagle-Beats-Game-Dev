@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnaiunahv0imm"]
+
+[ext_resource type="Script" path="res://Objects/Dialogue_Scenes/timeline_snaregame_3_2ndhalf.gd" id="1_b0x5c"]
+
+[node name="timeline_snaregame_3_2ndhalf" type="Node2D"]
+script = ExtResource("1_b0x5c")

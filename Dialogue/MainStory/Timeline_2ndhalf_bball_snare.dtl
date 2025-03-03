@@ -1,0 +1,28 @@
+[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
+join Tryout_Manager right
+join PlayerCharacter left [mirrored="true"]
+join PlayerFriend left
+Tryout_Manager: Every rod, skin, and wire accounted for! ☝🏿🤓
+Tryout_Manager: Everyone wrap up, it's almost time for halftime!
+(Everyone starts to make their final adjustments before getting back to their stations)
+Tryout_Manager: MARIA! Come here.
+update PlayerFriend [animation="Bounce"]
+PlayerFriend: (Oh no what did I do?? I swear I didn't break anything this time?!)
+PlayerFriend: (I think?)
+Tryout_Manager: Step up, go and play one of the cheers for halftime.
+Tryout_Manager: It's been a long time coming, so don't disappoint. 
+Tryout_Manager: Just make sure you play along like usual!
+PlayerFriend: I'll give it my all!!
+Tryout_Manager: That's the spirit. Now make sure you can actually walk the walk.
+leave Tryout_Manager [animation="Slide Out Right" wait="true"]
+PlayerFriend: (I knew I could do it! Ok I have to make sure I don't mess up this time. I can totally do this!!)
+PlayerCharacter: Looks like someone finally got their breakout.. I knew you had it in you.
+update PlayerFriend [animation="Bounce"]
+PlayerFriend: Thank you, but I swear I'm trying so hard not to crash out right now!!!
+PlayerCharacter: Just like I said, you've always had it in you. Just give it your all like usual. You got this.
+PlayerFriend: (He's right, It's about time I got this chance so I'm not going to waste it.)
+PlayerCharacter: Nice to see you calmed down a bit. Now.. LETS DO THIS!!
+set {Song_played_snare} = "3"
+set {Dialogue_name_snare} = "5"
+do GlobalSceneManager._changeScene_main_game_Snare()
+[end_timeline]

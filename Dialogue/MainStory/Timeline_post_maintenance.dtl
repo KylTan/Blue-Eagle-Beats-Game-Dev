@@ -1,22 +1,28 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join Tryout_Manager right
-join PlayerCharacter left [mirrored="true"]
+join PlayerCharacter (DefaultFace) left [mirrored="true"]
 join PlayerFriend left
-Tryout_Manager: Ok guys! That's it for the maintenance for now! Remember to always maintain equipment after using the drums!
-Tryout_Manager: Oh! Before I forget! Remember that there would be performing at an upcoming basketball game! For the rookies this will be your first performance so remember to practice a lot!! Shall we say this would be your first trial!
-Tryout_Manager: GOOD LUCK!!
+Tryout_Manager: That's it for the maintenance for now. Remember that the equipment is [u]sacred[/u]. 
+Some of these drums are older than your parents, so make sure to treat them with the most care!
+Tryout_Manager: Before we formally end, the first basketball game of the season will come up eventually down the road. Hopefully all of you will be trained and prepared by then, so for now we expect you all to keep up.
+update Tryout_Manager [animation="Bounce" repeat="2"]
+Tryout_Manager: [b]GOOD LUCK ROOKIES[/b]
 leave Tryout_Manager [animation="Slide Out Right" length="0.6" wait="true"]
 join  center
 update PlayerFriend right [mirrored="true"]
-update PlayerCharacter center
+update PlayerCharacter left
 PlayerFriend: Well... That was a crazy first training!
 PlayerCharacter: Yeah it really was... I'm not all that sure that I'm ready for all that training.. Especially with the upcoming game..
-PlayerFriend: Don't worry bud, I'm there for you! We got this!
+PlayerFriend: Don't worry too much about it. We got this!
 PlayerFriend: Remember what I said! Just believe in yourself the same way I believe in you!
 update PlayerFriend [animation="Shake Y" wait="true"]
 PlayerCharacter: Thanks bud... I really appreciate whenever you do this.
-PlayerFriend: Don't worry bud! Anyway it's getting pretty late, wanna grab a bite before going home?
-PlayerCharacter: Yea! Let's go.
+PlayerFriend: Don't worry! Anyway it's getting pretty late, let's grab a bite at Army Baby.
+join Placeholder (ArmyBaby) center [animation="Slide In Down"]
+PlayerCharacter: Sure, let's go.
+set {Mission_unlock_bass} = 1
+set {Mission_unlock_snare} = 1
 leave PlayerFriend [animation="Slide Out Left"]
 leave PlayerCharacter [animation="Slide Out Left" wait="true"]
-jump Timeline_pre_basketball_game/
+do GlobalSceneManager._changeScene_LevelSelect()
+[end_timeline]

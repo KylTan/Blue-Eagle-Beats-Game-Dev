@@ -40,7 +40,13 @@ var parentNode = get_parent()
 var total_note_count = 0
 var percent_score = 0
 
+#particle effect on hit
+var particle = preload("res://Objects/particle_explosion.tscn")
+
 func _ready():
+	
+	chargeValue = 0
+	
 	if parentNode:
 		audiofile = parentNode.audiofile
 		map_file = parentNode.mapfile
@@ -58,7 +64,8 @@ func _ready():
 	# bar spawning on ready
 	for i in range(3):
 		add_bar()
-		
+	
+	$BeatLight.texture_scale = 0.0
 		
 func _process(delta):
 	followMouse()
@@ -69,6 +76,12 @@ func _process(delta):
 		if (bar.position.y + bars_node.position.y)/2 >= bar_Length_In_M:
 			remove_bar(bar)
 			add_bar()
+			
+	# animation for bg players
+	if $"Note Receiver".is_Entered == true:
+		$NPCSprite.play("Hit")
+	if $"Note Receiver".is_Entered == false:
+		$NPCSprite.play("Swing")
 			
 # ~~~~~Bass game functions~~~~~
 func followMouse():
@@ -98,13 +111,23 @@ func _on_clear_area_mouse_entered():
 	receiver.is_Hit = is_Hit
 	playerSprite.play("hit")
 	beaterSprite.play("hit")
+	
+	var particleChild = particle.instantiate()
+	particleChild.position = Vector2(250, 900)
+	particleChild.emitting = true
+	add_child(particleChild)
+	
+	$BeatLight.texture_scale = 1.0
+	
 	$IdleTimer.start()
+
 	
 func _on_clear_area_mouse_exited():
 	is_Hit = false
 	receiver.is_Hit = is_Hit
 	chargeValue = 0
 	beaterSprite.play("default")
+	$BeatLight.texture_scale = 0.0
 	#playerSprite.play("idle") will idle as soon as u leave the drum hitbox
 	
 # ~~~~~Bar spawning functions~~~~~
@@ -155,8 +178,8 @@ func calc_params():
 	#print(total_note_count)
 	
 func score_check():
-	if total_note_count > 0 and receiver.total_hits > 0:
-		percent_score = float(receiver.total_hits)/total_note_count * 100
+	if total_note_count > 0 and receiver.total_hits > 0: #check if number greater than 0
+		percent_score = float(receiver.total_hits)/total_note_count * 100 # calc percent score
 		#print(percent_score)
 		#print(float(receiver.total_hits))
 		$Label.text = str(int(percent_score)) + "%"
@@ -175,3 +198,5 @@ func load_map():
 
 func _on_idle_timer_timeout():
 	playerSprite.play("idle")
+	chargeValue = 0
+	$BeatLight.texture_scale = 0.0

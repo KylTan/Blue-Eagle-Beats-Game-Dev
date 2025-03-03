@@ -1,15 +1,19 @@
-[gd_scene load_steps=24 format=3 uid="uid://dnoywddxa48vs"]
+[gd_scene load_steps=32 format=3 uid="uid://dnoywddxa48vs"]
 
 [ext_resource type="Script" path="res://Objects/Bass Game.gd" id="1_cf0r3"]
 [ext_resource type="Texture2D" uid="uid://bway2cc4nt4k8" path="res://Assets/Bass-Beat-Container-Mini.png" id="1_qa2vd"]
 [ext_resource type="PackedScene" uid="uid://be2fgss1xl1th" path="res://Objects/3dBackground.tscn" id="2_0cdo8"]
+[ext_resource type="PackedScene" uid="uid://b07jp0aj6mxbg" path="res://Objects/3dBackground_training.tscn" id="2_3qkv2"]
 [ext_resource type="PackedScene" uid="uid://da4metl6nxxbt" path="res://Objects/Note Receiver.tscn" id="2_30r12"]
-[ext_resource type="Texture2D" uid="uid://c85r7qruib8m4" path="res://Assets/sprite-bass-hit.png" id="3_h4igy"]
 [ext_resource type="Script" path="res://Objects/Beater Cursour.gd" id="3_wmqhp"]
-[ext_resource type="Texture2D" uid="uid://bhb3td6mjc0r3" path="res://Assets/sprite-bass-idle.png" id="4_3p5h0"]
-[ext_resource type="Texture2D" uid="uid://dsfvw3qbonaca" path="res://Assets/sprite-bass-swing.png" id="5_7qhd0"]
+[ext_resource type="Texture2D" uid="uid://c85r7qruib8m4" path="res://Assets/sprite-bass-hit.png" id="4_remf0"]
+[ext_resource type="Texture2D" uid="uid://bhb3td6mjc0r3" path="res://Assets/sprite-bass-idle.png" id="5_7n64k"]
 [ext_resource type="Script" path="res://Objects/BeaterSprite.gd" id="5_mudu0"]
+[ext_resource type="Texture2D" uid="uid://bow1evvdvyqc5" path="res://Assets/Textures/Metal.png" id="6_cvth5"]
+[ext_resource type="Texture2D" uid="uid://dsfvw3qbonaca" path="res://Assets/sprite-bass-swing.png" id="6_ku8l3"]
+[ext_resource type="Texture2D" uid="uid://cb1aweaia5eog" path="res://Assets/sprite-bass-hit-training.png" id="7_fuwn3"]
 [ext_resource type="Texture2D" uid="uid://eb740uqc8f7c" path="res://Assets/UI-Overlay.png" id="7_iie8y"]
+[ext_resource type="Texture2D" uid="uid://d3dhkudv0c0bg" path="res://Assets/sprite-bass-swing-training.png" id="8_1d26d"]
 [ext_resource type="PackedScene" uid="uid://vgpayaqmtrvl" path="res://music.tscn" id="8_65oaw"]
 [ext_resource type="Texture2D" uid="uid://ci4dhxk8yjbc6" path="res://Assets/Hitzones.png" id="8_itkf6"]
 [ext_resource type="Texture2D" uid="uid://dmw01f04qux0s" path="res://Assets/Bass-Hitbox-Model-Pearl.png" id="9_dy6v6"]
@@ -20,11 +24,32 @@
 [ext_resource type="FontFile" uid="uid://d0ftogm8y3nwr" path="res://Assets/Kola_Complete/Fonts/OTF/Kola-Regular.otf" id="14_qa7i4"]
 [ext_resource type="FontFile" uid="uid://jq4npb7j4ymj" path="res://Assets/Kola_Complete/Fonts/WEB/fonts/Kola-Regular.ttf" id="15_r2jv8"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_7pbdx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_fuwn3")
+}],
+"loop": true,
+"name": &"Hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_1d26d")
+}],
+"loop": true,
+"name": &"Swing",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fppd2"]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_tfee0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_h4igy")
+"texture": ExtResource("4_remf0")
 }],
 "loop": true,
 "name": &"hit",
@@ -32,7 +57,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_3p5h0")
+"texture": ExtResource("5_7n64k")
 }],
 "loop": true,
 "name": &"idle",
@@ -40,7 +65,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_7qhd0")
+"texture": ExtResource("6_ku8l3")
 }],
 "loop": true,
 "name": &"swing",
@@ -48,7 +73,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bobao"]
-size = Vector2(392, 402)
+size = Vector2(334, 377)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ao4nq"]
 animations = [{
@@ -89,22 +114,55 @@ animations = [{
 radius = 31.0
 height = 206.0
 
+[sub_resource type="Gradient" id="Gradient_xfmhl"]
+offsets = PackedFloat32Array(0.779221, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4winw"]
+gradient = SubResource("Gradient_xfmhl")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.188073, 0.87156)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_cf0r3")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+[node name="TrainingBG" type="SubViewportContainer" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="SubViewport" parent="SubViewportContainer" instance=ExtResource("2_0cdo8")]
+[node name="SubViewport2" parent="TrainingBG" instance=ExtResource("2_3qkv2")]
+own_world_3d = true
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="GameBG" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" parent="GameBG" instance=ExtResource("2_0cdo8")]
+own_world_3d = true
 handle_input_locally = false
 render_target_update_mode = 4
+
+[node name="NPCSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(948, 604)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_7pbdx")
+animation = &"Swing"
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(267, 543)
+scale = Vector2(400, 1080)
+mesh = SubResource("BoxMesh_fppd2")
+texture = ExtResource("6_cvth5")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(998, 647)
 scale = Vector2(1.3, 1.3)
 sprite_frames = SubResource("SpriteFrames_tfee0")
-animation = &"idle"
+animation = &"swing"
 
 [node name="Container Path" type="Sprite2D" parent="."]
 position = Vector2(957, 536)
@@ -141,17 +199,17 @@ polygon = PackedVector2Array(502, -368.193, 1223, -415.086, 1215, 17.3676, 346, 
 position = Vector2(992, 544)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clear Area"]
-position = Vector2(-204, 186)
+position = Vector2(-173, 170)
 shape = SubResource("RectangleShape2D_bobao")
 
 [node name="Sprite2D" type="Sprite2D" parent="Clear Area"]
-position = Vector2(-197, 190)
+position = Vector2(-151, 171)
 rotation = -0.359538
-scale = Vector2(0.9, 1.013)
+scale = Vector2(0.637655, 0.850048)
 texture = ExtResource("9_dy6v6")
 
 [node name="BeaterSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(992, 544)
+position = Vector2(1535, 428)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ao4nq")
 script = ExtResource("5_mudu0")
@@ -169,7 +227,7 @@ position = Vector2(2, 1)
 shape = SubResource("CapsuleShape2D_mfkri")
 
 [node name="Music" parent="." instance=ExtResource("8_65oaw")]
-position = Vector2(992, 544)
+position = Vector2(785, 731)
 
 [node name="BarNode" type="Node2D" parent="."]
 
@@ -202,6 +260,11 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("14_qa7i4")
 theme_override_font_sizes/font_size = 145
 text = "0%"
+
+[node name="BeatLight" type="PointLight2D" parent="."]
+position = Vector2(263, 945)
+scale = Vector2(5, 5)
+texture = SubResource("GradientTexture2D_4winw")
 
 [connection signal="mouse_entered" from="Heavy Charge Zone" to="." method="_on_heavy_charge_zone_mouse_entered"]
 [connection signal="mouse_entered" from="Light Charge Zone" to="." method="_on_light_charge_zone_mouse_entered"]

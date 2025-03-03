@@ -1,0 +1,15 @@
+[background arg="res://Assets/AteneoField.jpg" fade="0.0"]
+join PlayerCharacter (DefaultFace) 'pos=x0.45,y1' [mirrored="true"]
+join PlayerFriend 'pos=x0.15,y1'
+join Tryout_Manager right
+Tryout_Manager: Okay rooks, that was better, but still rough in a lot of ways. Let's hope you all keep that up, and we might even make it in time for you all to play for the incoming basketball games.
+Tryout_Manager: Trainings are only going to get more and more intense since the games are nearing!
+Tryout_Manager: Okay now let's pack up, and rookies don't forget to pack up the equipment
+PlayerFriend: (Now that I think about it, I haven't gotten around to taping my new sticks! I should get it done here first before I leave...)
+Placeholder: (Time to wrap your sticks! For pep squads, it is common practice to wrap their drumsticks in tape and other materials to maintain their integrity.)
+Placeholder: (For this minigame, click to being taping your sticks, and make sure to follow the path with your mouse to ensure you get a nice and even layering!)
+Placeholder: (Now its your turn to try!)
+PlayerFriend: (Let's hope this next pair lasts longer than the last!)
+set {Dialogue_name_snare} = "2"
+do GlobalSceneManager._changeScene_minigame_stickTaping()
+[end_timeline]

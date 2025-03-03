@@ -1,0 +1,20 @@
+[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
+join PlayerCharacter left [mirrored="true"]
+join PlayerFriend left [mirrored="true"]
+join Tryout_Manager right
+update Tryout_Manager [animation="Bounce"]
+Tryout_Manager: Keep up the good work! Get all of your maintainance in order, and anything else you need. Make it quick!
+leave Tryout_Manager [animation="Bounce Out" wait="true"]
+PlayerFriend: That first half has me hype! I'm so ready for the next half!
+PlayerCharacter: Let's not get ahead of ourselves here, you still have your maintainance to do..
+PlayerFriend: You can't just have a little fun can you?? I think I did pretty well all things considered!
+update PlayerFriend [animation="Tada" repeat="2"]
+PlayerFriend: Today might just be my main character arch!!!
+PlayerCharacter: Huh... Whatever you say buddy.
+PlayerFriend: Left you speechless huh, time for me to get back to it then.
+Placeholder: (Time for maintainance again! Adjust the screws on your drum by clicking and using your mouse to adjust the screw just right. Make sure to repeat with every screw until complete!)
+PlayerCharacter: Here's my rachet!
+set {Dialogue_name_snare} = "4"
+set {Dialogue_name} = 0
+do GlobalSceneManager._changeScene_minigame_drumScrewing()
+[end_timeline]

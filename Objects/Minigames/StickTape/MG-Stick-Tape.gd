@@ -14,11 +14,15 @@ var inside_time: float = 0.0
 var is_inside: bool = false
 var threshold: float = 0.75
 
+var nextDialogueIndex = 1
+var nextDialogueScene
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	animationPlayer.play("Start")
-
-
+	nextDialogueIndex = Dialogic.VAR.Dialogue_name_snare
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	queue_redraw()
@@ -37,9 +41,10 @@ func _process(delta):
 			print(total_time)
 			print(inside_time / total_time)
 			game_state += 1
-	elif game_state == 3:
+	elif game_state == 3: # its done
 		if !animationPlayer3.is_playing():
-			pass
+			_game_over_exit()
+			
 	
 
 func _input(event):
@@ -56,3 +61,31 @@ func _on_path_area_mouse_entered():
 func _on_path_area_mouse_exited():
 	circle_color = Color.RED
 	is_inside = false
+	
+func _game_over_exit():
+	
+	match nextDialogueIndex:
+		1: #first training arc
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_training.tscn" # 2nd dialog
+		2: #first training arc
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_maintanance_1.tscn"
+		#3: # first bball - pre bball - omitted since its a mission start thing
+			#nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_pre_bball.tscn"
+		3: # first bball - 1st half
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_1sthalf_bball.tscn"
+		4: # first bball - 2nd half
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_2ndhalf_bball.tscn"
+		5: # first bball - post bball
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_bball.tscn"
+			# start with finals 3 
+		6:  # finals pre
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_pre_finals.tscn"
+		7: # finals 1st
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_1sthalf.tscn"
+		8: # finals 2nd
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_2ndhalf.tscn"
+		9: # finals 3rd
+			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_post_finals.tscn"
+	
+	get_tree().change_scene_to_file(nextDialogueScene)
+	
