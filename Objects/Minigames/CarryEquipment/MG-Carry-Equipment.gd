@@ -11,7 +11,9 @@ var item_held = null
 var current_slot = null
 var can_place := false
 var icon_anchor : Vector2
-
+var onArea = false
+var area_item = []
+var placed_items := 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for i in range(30):
@@ -25,11 +27,18 @@ func _process(delta):
 			rotate_item()
 		
 		if Input.is_action_just_pressed("mouse_leftclick"):
-			if grid_container.get_global_rect().has_point(get_global_mouse_position()):
+			if onArea: # place item on temporary storage
+				area_item.append(item_held)
+				item_held.selected = false
+				item_held = null
+			elif grid_container.get_global_rect().has_point(get_global_mouse_position()):
 				place_item()
 	else:
 		if Input.is_action_just_pressed("mouse_leftclick"):
-			if grid_container.get_global_rect().has_point(get_global_mouse_position()):
+			if onArea and area_item.size() > 0: # pick item from temporary storage
+				item_held = area_item.pop_back()
+				item_held.selected = true 
+			elif grid_container.get_global_rect().has_point(get_global_mouse_position()):
 				pick_item()
 
 func create_slot():
@@ -50,13 +59,18 @@ func _on_slot_mouse_entered(a_Slot):
 func _on_slot_mouse_exited(a_Slot):
 	clear_grid()
 
-
+var i = 1;
 func _on_button_spawn_pressed():
-	var new_item = item_scene.instantiate()
-	add_child(new_item)
-	new_item.load_item(randi_range(1,5))
-	new_item.selected = true
-	item_held = new_item
+	if i <= 6:
+		var new_item = item_scene.instantiate()
+		add_child(new_item)
+		if i != 6:
+			new_item.load_item(i)
+		else:
+			new_item.load_item(randi_range(3, 5))
+		new_item.selected = true
+		item_held = new_item
+		i += 1
 
 func check_slot_availability(a_Slot):
 	for grid in item_held.item_grids:
@@ -112,6 +126,10 @@ func place_item():
 		grid_array[grid_to_check].item_stored = item_held
 	
 	item_held = null
+	placed_items += 1  # Increment the counter
+	
+	if placed_items == 6:  # Check if all items are placed
+		print("You Win!") #Code to transition to winning state
 	clear_grid()
 
 func pick_item():
@@ -128,3 +146,10 @@ func pick_item():
 	
 	check_slot_availability(current_slot)
 	set_grids.call_deferred(current_slot)
+
+
+func _on_area_2d_mouse_entered():
+	onArea = true
+
+func _on_area_2d_mouse_exited():
+	onArea = false
