@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://d366dxn5m0jlg"]
+
+[ext_resource type="Texture2D" uid="uid://bnd0rblyysks1" path="res://Assets/Trivia/trivia_dancers.png" id="1_0ktri"]
+[ext_resource type="Script" path="res://Objects/Trivia_Scenes/trivia_scene_dancers.gd" id="1_pxo55"]
+
+[node name="trivia_scene_dancers" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pxo55")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_0ktri")
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 781.0
+offset_top = 821.0
+offset_right = 967.0
+offset_bottom = 866.0
+scale = Vector2(2, 2)
+text = "Continue
+"
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
