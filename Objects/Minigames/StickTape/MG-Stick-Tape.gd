@@ -44,7 +44,7 @@ func _process(delta):
 	elif game_state == 3: # its done
 		if !animationPlayer3.is_playing():
 			_game_over_exit()
-			
+			get_tree().change_scene_to_file(nextDialogueScene)
 	
 
 func _input(event):
@@ -83,9 +83,9 @@ func _game_over_exit():
 		7: # finals 1st
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_1sthalf.tscn"
 		8: # finals 2nd
-			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_2ndhalf.tscn"
+			nextDialogueScene = "res://Objects/Trivia_Scenes/trivia_scene_events.tscn"
 		9: # finals 3rd
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_post_finals.tscn"
 	
-	get_tree().change_scene_to_file(nextDialogueScene)
+
 	

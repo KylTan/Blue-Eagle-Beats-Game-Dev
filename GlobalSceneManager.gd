@@ -27,6 +27,9 @@ func _changeScene_minigame_drumScrewing():
 
 func _changeScene_minigame_stickTaping():
 	get_tree().change_scene_to_file("res://Objects/Minigames/StickTape/MG-Stick-Tape.tscn")
+	
+func _changeScene_minigame_equipmentLoading():
+	get_tree().change_scene_to_file("res://Objects/Minigames/CarryEquipment/MG-Carry-Equipment.tscn")
 
 #Scenes for Trivia (into the dialogs)
 # order is based from figma order

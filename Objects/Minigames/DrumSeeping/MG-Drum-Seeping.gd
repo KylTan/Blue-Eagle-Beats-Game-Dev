@@ -96,7 +96,7 @@ func _EndGame():
 		1: #first training arc
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_training.tscn"
 		2: #first training arc
-			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_maintenance.tscn"
+			nextDialogueScene = "res://Objects/Trivia_Scenes/trivia_scene_1920s.tscn"
 		3: # first bball 1 - mission 2
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_1sthalf_basketball_game.tscn"
 		4:# first bball 2 - mission 2
@@ -110,7 +110,7 @@ func _EndGame():
 		8: # finals 1st half
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_1_sthalf.tscn"
 		9: # finals 2nd half
-			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_2_ndhalf.tscn"
+			nextDialogueScene = "res://Objects/Minigames/DrumScrew/Minigame-DrumScrew-Demo.tscn"
 		10: # finals post game
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_post_finals.tscn"
 
