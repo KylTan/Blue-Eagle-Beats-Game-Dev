@@ -138,6 +138,7 @@ func pick_item():
 	
 	item_held = current_slot.item_stored
 	item_held.selected = true
+	placed_items -= 1
 	
 	for grid in item_held.item_grids:
 		var grid_to_check = item_held.grid_anchor.slot_ID + grid[0] + grid[1] * col_count
