@@ -21,7 +21,7 @@ func set_color(a_state = States.DEFAULT):
 			filter.color = Color(Color.GREEN, 0.2)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+#Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if get_global_rect().has_point(get_global_mouse_position()):
 		if not is_hovering:

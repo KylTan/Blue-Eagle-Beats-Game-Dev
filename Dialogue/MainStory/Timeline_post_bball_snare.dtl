@@ -2,8 +2,9 @@
 join Tryout_Manager right
 join PlayerCharacter left [mirrored="true"]
 join PlayerFriend left
-Tryout_Manager: OK GUYS!!! Goodjob on your performance! Shoutout to the rookies too! It's a bit rough here and there but it's a start! Just keep joining our practices to get more used to the cheers!
-Tryout_Manager: Now that's out of the way! Remember to pack the equipment up and head back! That's all for now!
+Tryout_Manager: OK GUYS!!! Good job on your performance! Ups to the rookies too. We may finally be getting somewhere for once.
+Tryout_Manager: We might actually be on track to make it far this season, maybe even the finals!! So I don't want this momentum to stop anytime soon because the team is going to keep relying on our support!!
+Tryout_Manager: Now that that's out of the way! Remember to pack the equipment up and follow the managers out. The bus should be here any minute.
 set {Mission_unlock_snare} = 3
 do GlobalSceneManager._changeScene_LevelSelect()
 [end_timeline]

@@ -24,7 +24,7 @@ Tryout_Manager: THAT'S WHAT YOU ALL SIGNED UP AFTER ALL!!!! NOW GO OUT THERE AND
 PlayerCharacter: (This is it, there's no more space to be scared. It's time to put it all out there.)
 Tryout_Manager: TIME TO GIVE THE CROWD A PROPER WAKE UP CALL,
 Tryout_Manager: FLY HIGH!!!
+set {Dialogue_name} = "8"
 set {Song_played} = "4"
-set {Dialogue_name} = "7"
 do GlobalSceneManager._changeScene_main_game_Bass()
 [end_timeline]

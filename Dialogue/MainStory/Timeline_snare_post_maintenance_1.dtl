@@ -2,21 +2,23 @@
 join Tryout_Manager right
 join PlayerCharacter left [mirrored="true"]
 join PlayerFriend left
-Tryout_Manager: Ok everyone, wrap it up. We've gotta wrap this up. It's lights out soon and we'll be closing the storage room!
-Tryout_Manager: Oh! Before I forget! The official game schedules for the basketball games are coming out soon, so be ready for it.
+Tryout_Manager: Ok everyone, wrap it up! We've gotta wrap this up, it's getting late and we need to lock up the storage room.
+Tryout_Manager: Oh! Before I forget, game schedules are expected to be released soon! Say goodbye to your loved ones because I promise you will not have the time to see them anymore once we start going to games!!
+update PlayerFriend [animation="Shake X"]
+update PlayerCharacter [animation="Shake X"]
 Tryout_Manager: GOOD LUCK!!
 leave Tryout_Manager [animation="Slide Out Right" length="0.6" wait="true"]
 join  center
 update PlayerFriend right [mirrored="true"]
 update PlayerCharacter center
-PlayerFriend: Well all things considered, I think I did a lot better for today's training!
-PlayerCharacter: I don't know.. I think we still have way more to go. And the game schedule's going to be out soon too.
+PlayerFriend: I can't believe it's happening, we're finally gonna go to a game!!
+PlayerCharacter: I'm not all that sure that I'm ready for all that training.. that and who knows how many games in a week.
 PlayerFriend: Don't worry bud, I'm there for you! We got this!
-PlayerFriend: Remember what I said! Just believe in yourself the same way I believe in you!
+PlayerFriend: We've gotten this far so who knows how much more we can do!
 update PlayerFriend [animation="Shake Y" wait="true"]
-PlayerCharacter: Thanks bud... I really appreciate whenever you do this.
-PlayerFriend: Don't worry about it. Anyways, wanna grab dinner at the usual?
-PlayerCharacter: Yea! Let's go.
+PlayerCharacter: Thanks bud... I really appreciate the optimism even with all this going on.
+PlayerFriend: Don't worry bud! Anyway it's getting pretty late, wanna grab a bite at the usual?
+PlayerCharacter: Let's go.
 set {Mission_unlock_snare} = 2
 leave PlayerFriend [animation="Slide Out Left"]
 leave PlayerCharacter [animation="Slide Out Left" wait="true"]

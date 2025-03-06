@@ -7,12 +7,16 @@ update PlayerFriend [animation="Bounce" repeat="2"]
 PlayerFriend: I told you we would make it here eventually!
 PlayerFriend: All those early mornings getting to games and all those late nights training actually paid off!
 PlayerFriend: Told you our practice wasn't for nothing! Just gotta believe in yourself!
-PlayerCharacter: Ok maybe you are right... If only you didn't get yourself injured, maybe you could actually enjoy this moment as much as you could. 
+PlayerCharacter: Ok maybe you are right... If only you didn't get yourself injured, maybe you could actually enjoy this moment as much as you could.
 PlayerFriend: It wasn't my fault! If that idiot didn't run in front of my bike—
-Wait hold that thought though, the transpo is here we better [u]start loading the equipment[/u]. The last thing we want is to be late for this game!
+PlayerCharacter: Wait hold that thought though, the transpo is here we better [u]start loading the equipment[/u]. The last thing we want is to be late for this game!
 join Placeholder center
 Placeholder: (Time for another minigame! It's time to load the equipment you're bringing to the game! Click on the button to take a piece of equipment to place in the bus. Be mindful of your organization though, since you'll need to make all the things you're bringing to fit.)
 PlayerFriend: Alright, let's get to it then. We have no time to waste!
 PlayerCharacter: I'm way ahead of you.
-do GlobalSceneManager._changeScene_LevelSelect()
+set {Dialogue_name} = 7
+set {Song_played} = 4
+set {Dialogue_name_snare} = 0
+set {Song_played_snare} = 0
+do GlobalSceneManager._changeScene_minigame_equipmentLoading()
 [end_timeline]

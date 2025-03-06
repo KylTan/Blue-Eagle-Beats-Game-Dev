@@ -10,9 +10,9 @@
 },
 "default_portrait": "Thing",
 "description": "",
-"display_name": "Placeholder",
+"display_name": "Tutorial",
 "mirror": false,
-"nicknames": [""],
+"nicknames": ["Tutorial"],
 "offset": Vector2(0, 0),
 "portraits": {
 "ArmyBaby": {
@@ -21,7 +21,7 @@
 },
 "ignore_char_scale": true,
 "mirror": false,
-"offset": Vector2(0, 0),
+"offset": Vector2(0, -200),
 "scale": 0.5,
 "scene": ""
 },
