@@ -19,5 +19,5 @@ set {Dialogue_name} = 0
 set {Song_played} = 0
 set {Dialogue_name_snare} = 6
 set {Song_played_snare} = 4
-do GlobalSceneManager._changeScene_LevelSelect()
+do GlobalSceneManager._changeScene_minigame_equipmentLoading()
 [end_timeline]

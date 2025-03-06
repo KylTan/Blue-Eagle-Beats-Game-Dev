@@ -35,16 +35,19 @@ func _process(delta):
 			inside_time += delta
 
 		if total_time > 0 and !animationPlayer2.is_playing():
-			move_child(drumstick1, get_child_count() - 1)
-			animationPlayer3.play("EndTaping1")
+			#move_child(drumstick1, get_child_count() - 1)
+			#animationPlayer3.play("EndTaping1")
 			print(inside_time)
 			print(total_time)
 			print(inside_time / total_time)
 			game_state += 1
 	elif game_state == 3: # its done
-		if !animationPlayer3.is_playing():
+		#if !animationPlayer3.is_playing():
 			_game_over_exit()
-			get_tree().change_scene_to_file(nextDialogueScene)
+			if nextDialogueIndex == 3:
+				GlobalSceneManager._changeScene_Timeline_post_maintenance()
+			elif nextDialogueIndex == 8:
+				GlobalSceneManager._changeScene_Timeline_snare_Mission3_2ndhalf()
 	
 
 func _input(event):
