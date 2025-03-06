@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d366dxn5m0jlg"]
 
-[ext_resource type="Texture2D" uid="uid://bnd0rblyysks1" path="res://Assets/Trivia/trivia_dancers.png" id="1_0ktri"]
+[ext_resource type="Texture2D" uid="uid://beo8tld6pu07x" path="res://Assets/Trivia/trivia_dancers.png" id="1_0ktri"]
 [ext_resource type="Script" path="res://Objects/Trivia_Scenes/trivia_scene_dancers.gd" id="1_pxo55"]
 
 [node name="trivia_scene_dancers" type="Control"]
@@ -18,10 +18,10 @@ texture = ExtResource("1_0ktri")
 
 [node name="Continue" type="Button" parent="."]
 layout_mode = 0
-offset_left = 781.0
-offset_top = 821.0
-offset_right = 967.0
-offset_bottom = 866.0
+offset_left = 777.0
+offset_top = 893.0
+offset_right = 963.0
+offset_bottom = 938.0
 scale = Vector2(2, 2)
 text = "Continue
 "

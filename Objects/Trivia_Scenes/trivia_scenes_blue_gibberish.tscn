@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c31dq5nag51md"]
 
 [ext_resource type="Script" path="res://Objects/Trivia_Scenes/trivia_scenes_blue_gibberish.gd" id="1_qg4gi"]
-[ext_resource type="Texture2D" uid="uid://c0uqkbdauag86" path="res://Assets/Trivia/trivia_blueGibberish.png" id="1_qhay2"]
+[ext_resource type="Texture2D" uid="uid://j88tqgwd0kx2" path="res://Assets/Trivia/trivia_blueGibberish.png" id="1_qhay2"]
 
 [node name="trivia_scenes_blueGibberish" type="Control"]
 layout_mode = 3
@@ -18,10 +18,10 @@ texture = ExtResource("1_qhay2")
 
 [node name="Continue" type="Button" parent="."]
 layout_mode = 0
-offset_left = 781.0
-offset_top = 821.0
-offset_right = 967.0
-offset_bottom = 866.0
+offset_left = 777.0
+offset_top = 893.0
+offset_right = 963.0
+offset_bottom = 938.0
 scale = Vector2(2, 2)
 text = "Continue
 "
