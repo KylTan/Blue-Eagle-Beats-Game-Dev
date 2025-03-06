@@ -27,7 +27,29 @@ func _changeScene_minigame_drumScrewing():
 
 func _changeScene_minigame_stickTaping():
 	get_tree().change_scene_to_file("res://Objects/Minigames/StickTape/MG-Stick-Tape.tscn")
+	
+func _changeScene_minigame_equipmentLoading():
+	get_tree().change_scene_to_file("res://Objects/Minigames/CarryEquipment/MG-Carry-Equipment.tscn")
 
+#Scenes for Trivia (into the dialogs)
+# order is based from figma order
+func _changeScene_trivia_1920s(): #first trivia, first minigame (bass)
+	get_tree().change_scene_to_file("res://Objects/Trivia_Scenes/trivia_scene_1920s.tscn")
+
+func _changeScene_trivia_diff_units(): #second trivia, second minigame (bass)
+	get_tree().change_scene_to_file("res://Objects/Trivia_Scenes/trivia_scene_1920s.tscn")
+
+func _changeScene_trivia_blue_gibberish(): #third trivia, third minigame (bass)
+	get_tree().change_scene_to_file("res://Objects/Trivia_Scenes/trivia_scene_1920s.tscn")
+
+func _changeScene_trivia_dancers(): #fourth trivia, fourth minigame (bass)
+	get_tree().change_scene_to_file("res://Objects/Trivia_Scenes/trivia_scene_1920s.tscn")
+
+func _changeScene_trivia_events(): #fifth trivia, second minigame (snare)
+	get_tree().change_scene_to_file("res://Objects/Trivia_Scenes/trivia_scene_1920s.tscn")
+
+func _changeScene_trivia_introduced(): #sixth trivia, third minigame (snare)
+	get_tree().change_scene_to_file("res://Objects/Trivia_Scenes/trivia_scene_1920s.tscn")
 
 #Scenes for Dialogic Timelines (into the dialogs)
 

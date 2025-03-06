@@ -22,7 +22,7 @@ func _ready() -> void:
 				3: # first bball 1 - mission 2
 					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_1sthalf_basketball_game.tscn"
 				4:# first bball 2 - mission 2
-					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_2ndhalf_basketball_game.tscn"
+					nextDialogueScene = "res://Objects/Trivia_Scenes/trivia_scene_diff_units.tscn"
 				5: # first bball 3 - mission 2
 					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_basketball_game.tscn"
 				6: # finals start
@@ -32,7 +32,7 @@ func _ready() -> void:
 				8: # finals 1st half
 					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_1_sthalf.tscn"
 				9: # finals 2nd half
-					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_2_ndhalf.tscn"
+					nextDialogueScene = "res://Objects/Trivia_Scenes/trivia_scene_dancers.tscn"
 				10: # finals post game
 					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_post_finals.tscn"
 			
@@ -48,7 +48,7 @@ func _ready() -> void:
 				3: # first bball - 1st half
 					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_1sthalf_bball.tscn"
 				4: # first bball - 2nd half
-					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_2ndhalf_bball.tscn"
+					nextDialogueScene = "res://Objects/Trivia_Scenes/trivia_scene_introduced.tscn"
 				5: # first bball - post bball
 					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_bball.tscn"
 

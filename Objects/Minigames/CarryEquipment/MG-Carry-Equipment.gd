@@ -14,8 +14,11 @@ var icon_anchor : Vector2
 var onArea = false
 var area_item = []
 var placed_items := 0
+var nextDialogueIndex = 1
+var nextDialogueScene = ""
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	for i in range(30):
 		create_slot() 
 
@@ -130,14 +133,70 @@ func place_item():
 	
 	if placed_items == 6:  # Check if all items are placed
 		print("You Win!") #Code to transition to winning state
+		exit_game()
 	clear_grid()
 
+func exit_game():
+	if nextDialogueIndex: # CHECK FOR SCREW GAME TO DIFF BETWEEN BASS TICKS AND SNARE TICKS
+		if Dialogic.VAR.Dialogue_name > 0:
+			nextDialogueIndex = Dialogic.VAR.Dialogue_name #number corresponds to a scene hopefully
+			match nextDialogueIndex:
+				# Bass
+				1: #first training arc
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_training.tscn"
+				2: #first training arc
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_maintenance.tscn"
+				3: # first bball 1 - mission 2
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_1sthalf_basketball_game.tscn"
+				4:# first bball 2 - mission 2
+					nextDialogueScene = "res://Objects/Trivia_Scenes/trivia_scene_diff_units.tscn"
+				5: # first bball 3 - mission 2
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_post_basketball_game.tscn"
+				6: # finals start
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3.tscn"
+				7: # finals pre	
+					nextDialogueScene = "res://Objects/Trivia_Scenes/trivia_scenes_blue_gibberish.tscn"
+				8: # finals 1st half
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_1_sthalf.tscn"
+				9: # finals 2nd half
+					nextDialogueScene = "res://Objects/Trivia_Scenes/trivia_scene_dancers.tscn"
+				10: # finals post game
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_post_finals.tscn"
+		elif Dialogic.VAR.Dialogue_name_snare > 0:
+			nextDialogueIndex = Dialogic.VAR.Dialogue_name_snare #number corresponds to a scene hopefully
+			match nextDialogueIndex:
+				1: #first training arc
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_training.tscn" # 2nd dialog
+				2: #first training arc
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_maintanance_1.tscn"
+				#3: # first bball - pre bball - omitted since its a mission start thing
+					#nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_pre_bball.tscn"
+				3: # first bball - 1st half
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_1sthalf_bball.tscn"
+				4: # first bball - 2nd half
+					nextDialogueScene = "res://Objects/Trivia_Scenes/trivia_scene_introduced.tscn"
+				5: # first bball - post bball
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snare_post_bball.tscn"
+					# start with finals 3 
+				6:  # finals pre
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_pre_finals.tscn"
+				7: # finals 1st
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_1sthalf.tscn"
+				8: # finals 2nd
+					nextDialogueScene = "res://Objects/Trivia_Scenes/trivia_scene_events.tscn"
+				9: # finals 3rd
+					nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_post_finals.tscn"
+	
+	get_tree().change_scene_to_file(nextDialogueScene)
+			
+	
 func pick_item():
 	if not current_slot or not current_slot.item_stored:
 		return
 	
 	item_held = current_slot.item_stored
 	item_held.selected = true
+	placed_items -= 1
 	
 	for grid in item_held.item_grids:
 		var grid_to_check = item_held.grid_anchor.slot_ID + grid[0] + grid[1] * col_count
