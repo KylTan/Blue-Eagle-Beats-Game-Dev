@@ -7,8 +7,10 @@ var progressMeter2D
 var parent
 @export var turnAmt: int
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	turnAmt = randi_range(30,330)
 	parent = get_parent()
 	$ProgressMeter.max_value = 360
 	ratchetKey2D = get_node("RatchetKey")
@@ -21,6 +23,13 @@ func _process(delta):
 	else:
 		if(is_pressed()):
 			_use_ratchet_key()
+			
+	if ratchetKey2D.returnRotation() >= turnAmt:
+		$ProgressMeter.modulate = Color.YELLOW
+		$ButtonPrompt.visible = true
+	else:
+		$ProgressMeter.modulate = Color.GREEN
+		$ButtonPrompt.visible = false
 
 var buttonPressed = false
 

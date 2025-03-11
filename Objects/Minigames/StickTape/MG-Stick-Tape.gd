@@ -43,7 +43,7 @@ func _process(delta):
 			game_state += 1
 	elif game_state == 3: # its done
 		#if !animationPlayer3.is_playing():
-			_game_over_exit()
+		#_game_over_exit()
 			if nextDialogueIndex == 3:
 				GlobalSceneManager._changeScene_Timeline_post_maintenance()
 			elif nextDialogueIndex == 8:

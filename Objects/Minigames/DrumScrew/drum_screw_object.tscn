@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0q7y88u6ljn2"]
+[gd_scene load_steps=8 format=3 uid="uid://c0q7y88u6ljn2"]
 
 [ext_resource type="Texture2D" uid="uid://dcx2r0pnv3yv4" path="res://Assets/DrumScrewMinigame/MG_Screw_DrumScrew.png" id="1_oswlw"]
 [ext_resource type="Texture2D" uid="uid://dmvk87x72hy2a" path="res://Assets/DrumScrewMinigame/MG_Screw_DrumScrewHover.png" id="2_osqbm"]
 [ext_resource type="Script" path="res://Objects/Minigames/DrumScrew/MG_Screw_DrumScrew.gd" id="3_fbn7n"]
 [ext_resource type="Texture2D" uid="uid://slarkm25n0y" path="res://Assets/DrumScrewMinigame/MG_Screw_KeyPressed.png" id="4_m52we"]
 [ext_resource type="Script" path="res://Objects/Minigames/DrumScrew/MG_Screw_RatchetKey.gd" id="5_bdn0l"]
+[ext_resource type="Texture2D" uid="uid://btu3c8etohsut" path="res://Assets/DrumScrewMinigame/Space_prompt.png" id="6_i0oqd"]
 [ext_resource type="Texture2D" uid="uid://bisj163i2o4wa" path="res://Assets/DrumScrewMinigame/progressMeter.png" id="6_pmdy6"]
 
 [node name="DrumScrew1" type="TextureButton"]
@@ -29,6 +30,12 @@ rotation = -6.28319
 texture = ExtResource("4_m52we")
 offset = Vector2(-104.045, 0)
 script = ExtResource("5_bdn0l")
+
+[node name="ButtonPrompt" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(66, 141)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_i0oqd")
 
 [node name="ProgressMeter" type="TextureProgressBar" parent="."]
 visible = false

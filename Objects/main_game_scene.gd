@@ -31,8 +31,8 @@ func _ready():
 			mapfile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
 			audiofile = "res://Assets/Audio/Fly High (Brass+Banda).mp3"
 		5:  #bball finals 2 - mission 3 - make this GOATENEO
-			mapfile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
-			audiofile = "res://Assets/Audio/Fly High (Brass+Banda).mp3"
+			mapfile = "res://Assets/Audio/Go Ateneo (Brass+Banda)-Bass.mboy"
+			audiofile = "res://Assets/Audio/Go Ateneo (BrassAlt+Banda).mp3"
 	
 	match nextDialogueIndex:
 		1: #first training arc
