@@ -27,17 +27,17 @@ func _input(event):
 		is_Hit = true
 		noteDir = 1
 		add_child(particleChild)
-	elif event.is_action_pressed("K_key"):
+	if event.is_action_pressed("K_key"):
 		is_pressed = true
 		is_Hit = true
 		noteDir = 2
 		add_child(particleChild)
-	elif event.is_action_pressed("space_key"):
+	if event.is_action_pressed("space_key"):
 		is_pressed = true
 		is_Hit = true
 		noteDir = 3
 		add_child(particleChild)
-	else: 
+	if !event.is_action_pressed("K_key") and !event.is_action_pressed("D_key") and !event.is_action_pressed("space_key"): 
 		is_pressed = false
 		is_Hit = false
 		noteDir = 0

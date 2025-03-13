@@ -99,10 +99,10 @@ func _changeScene_Timeline_snare_tutorial():
 	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_tutorial.tscn")
 
 func _changeScene_Timeline_snare_post_training():
-	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_tutorial.tscn")
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_post_training.tscn")
 
 func _changeScene_Timeline_snare_post_maintenance():
-	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_tutorial.tscn")
+	get_tree().change_scene_to_file("res://Objects/Dialogue_Scenes/timeline_snare_post_maintenance_1.tscn")
 
 #level 2
 func _changeScene_Timeline_snare_pre_bball():

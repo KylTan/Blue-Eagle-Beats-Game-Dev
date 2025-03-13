@@ -14,7 +14,7 @@ var inside_time: float = 0.0
 var is_inside: bool = false
 var threshold: float = 0.75
 
-var nextDialogueIndex = 1
+var nextDialogueIndex = 0
 var nextDialogueScene
 
 
@@ -45,7 +45,7 @@ func _process(delta):
 		#if !animationPlayer3.is_playing():
 		#_game_over_exit()
 			if nextDialogueIndex == 3:
-				GlobalSceneManager._changeScene_Timeline_post_maintenance()
+				GlobalSceneManager._changeScene_Timeline_snare_post_maintenance()
 			elif nextDialogueIndex == 8:
 				GlobalSceneManager._changeScene_Timeline_snare_Mission3_2ndhalf()
 	

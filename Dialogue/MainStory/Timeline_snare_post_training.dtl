@@ -10,6 +10,6 @@ Placeholder: (Time to wrap your sticks! For pep squads, it is common practice to
 Placeholder: (For this minigame, click to being taping your sticks, and make sure to follow the path with your mouse to ensure you get a nice and even layering!)
 Placeholder: (Now its your turn to try!)
 PlayerFriend: (Let's hope this next pair lasts longer than the last!)
-set {Dialogue_name_snare} = "3"
+set {Dialogue_name_snare} = 3
 do GlobalSceneManager._changeScene_minigame_stickTaping()
 [end_timeline]
