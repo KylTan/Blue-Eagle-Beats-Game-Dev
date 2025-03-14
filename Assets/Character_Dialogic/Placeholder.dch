@@ -23,16 +23,45 @@
 "mirror": false,
 "offset": Vector2(0, -200),
 "scale": 0.5,
-"scene": ""
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 },
-"Thing": {
+"Equip": {
 "export_overrides": {
-"image": "\"res://Assets/Textures/WallLight.png\""
+"image": "\"res://Assets/CarryEquipmentMinigame/Icons/Item2.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"Seep": {
+"export_overrides": {
+"image": "\"res://Assets/DrumSeepingMinigame/Pressing.png\""
+},
+"mirror": false,
+"offset": Vector2(0, -100),
+"scale": 1.0,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"Tape": {
+"export_overrides": {
+"image": "\"res://Assets/StickTapeMinigame/MG3_DrumStick.png\""
+},
+"ignore_char_scale": false,
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"Thing": {
+"export_overrides": {
+"image": "\"res://Assets/DrumScrewMinigame/MG_Screw_RatchetKey.png\""
+},
+"ignore_char_scale": false,
+"mirror": false,
+"offset": Vector2(0, -150),
 "scale": 0.5,
-"scene": ""
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 }
 },
 "scale": 1.0

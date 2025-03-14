@@ -3,11 +3,11 @@ join Tryout_Manager right
 join PlayerCharacter left [mirrored="true"]
 join PlayerFriend left
 Tryout_Manager: Everyone on your feet! Final check on the instruments, halftime should be starting soon!
-(The leads  sign off on the equipment maintainance)
-Tryout_Manager: Ok good. Vets on the basses get ready for halftime. Juan get over here.
+(The leads sign off on the equipment maintainance)
+Tryout_Manager: Ok good. Vets on the basses, get ready for halftime. Juan get over here.
 update PlayerCharacter [animation="Bounce"]
 PlayerCharacter: Yes??
-Tryout_Manager: We're putting some trust on you, so we're giving you a shot for halftime. Try not to mess this up, and just play along with the [u]Battal[/u] chants.
+Tryout_Manager: We're putting some trust on you, so we're giving you a shot for halftime. Try not to mess this up, and just play along with the [u]Battalion[/u] chants.
 Tryout_Manager: We're giving you this chance fo a reason, so make it count.
 PlayerCharacter: Uhmm... Ok sir! Will do!
 Tryout_Manager: Now time to get ready, get on your bass!

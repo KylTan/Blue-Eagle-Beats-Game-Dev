@@ -18,5 +18,7 @@ Tryout_Manager: WE MAKE SURE THAT THE HYPE DOES NOT DIE DOWN!
 Tryout_Manager: Step up to your instruments, it's time to get started!
 set {Song_played_snare} = "2"
 set {Dialogue_name_snare} = "3"
+set {Dialogue_name} = 0
+set {Song_played} = 0
 do GlobalSceneManager._changeScene_main_game_Snare()
 [end_timeline]

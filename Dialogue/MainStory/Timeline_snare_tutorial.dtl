@@ -23,5 +23,7 @@ Tryout_Manager: Okay! Let's begin!!!
 update PlayerCharacter [animation="Bounce" repeat="2" mirrored="true"]
 set {Song_played_snare} = 1
 set {Dialogue_name_snare} = 1
+set {Dialogue_name} = 0
+set {Song_played} = 0
 do GlobalSceneManager._changeScene_main_game_Snare()
 [end_timeline]

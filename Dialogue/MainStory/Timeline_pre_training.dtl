@@ -3,7 +3,7 @@ join PlayerCharacter (DefaultFace) left [animation="Slide In Left" mirrored="tru
 join PlayerFriend 'pos=x0.35,y1' [animation="Slide In Left" length="0.7" wait="true"]
 Tryout_Manager: Alright rooks, line up in front the instruments. We have some announcements to make.
 update PlayerFriend [animation="Bounce" repeat="2"]
-PlayerFriend: Hey! We're finally here! I can't believe we actually got in to Babble! I've always wanted to play drums for the hype cheers they play in the games!
+PlayerFriend: Hey! We're finally here! I can't believe we actually got in to [b]Babble![/b] I've always wanted to play drums for the hype cheers they play in the games!
 PlayerFriend: Let's try not to let the nerves get to us though...
 PlayerCharacter: Yeah.. I'm happy for you. I just hope I can show that I really want to be here, even though we're already in.
 update PlayerFriend 0.35,1 [mirrored="true"]
@@ -22,8 +22,10 @@ Tryout_Manager: Now that's out of the way! We'll start with the palo training. T
 update PlayerCharacter [animation="Tada" repeat="2" mirrored="true"]
 update PlayerFriend [animation="Tada" repeat="2"]
 Tryout_Manager: We'll begin by brushing up on the basics of our [u][b]ENDURANCE CHEERS[/b][/u]
-Tryout_Manager: These of course are [b]Vary, Get that Ball, and Otso[/b].  Of course you guys should already know that so lets just get to it.
+Tryout_Manager: These cheers consist of  [b]Vary, Get that Ball, and Otso[/b].  Of course you guys should already know that, so lets just get to it.
 set {Song_played} = "1"
 set {Dialogue_name} = "1"
+set {Dialogue_name_snare} = 0
+set {Song_played_snare} = 0
 do GlobalSceneManager._changeScene_main_game_Bass()
 [end_timeline]

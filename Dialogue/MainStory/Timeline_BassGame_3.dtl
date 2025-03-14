@@ -1,6 +1,6 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join PlayerCharacter left
-join PlayerFriend center
+join PlayerFriend 'pos=x0.35,y1'
 PlayerCharacter: So this is the big day. I can't believe we've actually made it this far.
 PlayerCharacter: This was just a dream of mine growing up, but here we are going to cheer for our team at the edge of victory.
 update PlayerFriend [animation="Bounce" repeat="2"]
@@ -10,8 +10,8 @@ PlayerFriend: Told you our practice wasn't for nothing! Just gotta believe in yo
 PlayerCharacter: Ok maybe you are right... If only you didn't get yourself injured, maybe you could actually enjoy this moment as much as you could.
 PlayerFriend: It wasn't my fault! If that idiot didn't run in front of my bike—
 PlayerCharacter: Wait hold that thought though, the transpo is here we better [u]start loading the equipment[/u]. The last thing we want is to be late for this game!
-join Placeholder center
-Placeholder: (Time for another minigame! It's time to load the equipment you're bringing to the game! Click on the button to take a piece of equipment to place in the bus. Be mindful of your organization though, since you'll need to make all the things you're bringing to fit.)
+join Placeholder (Equip) center
+Placeholder: [b] (Time for another minigame! It's time to load the equipment you're bringing to the game! Click on the button to take a piece of equipment to place in the bus. Be mindful of your organization though, since you'll need to make all the things you're bringing to fit.) [/b]
 PlayerFriend: Alright, let's get to it then. We have no time to waste!
 PlayerCharacter: I'm way ahead of you.
 set {Dialogue_name} = 7

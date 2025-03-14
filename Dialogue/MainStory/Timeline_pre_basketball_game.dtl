@@ -1,7 +1,7 @@
 [background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
 join Tryout_Manager rightmost
 join PlayerCharacter (JerseyFace) left [mirrored="true"]
-join PlayerFriend left [animation="Bounce In"]
+join PlayerFriend 'pos=x0.35,y1' [animation="Bounce In"]
 # INSERT BG AMBIENCE (CROWD NOICE + SPORTS NOISE?)
 PlayerCharacter: (Oh man... the pressure's starting to get to me...)
 PlayerFriend: So this is what the view is like up here. It makes me feel soo...
@@ -9,19 +9,22 @@ update PlayerFriend [animation="Bounce" length="0.6" repeat="2"]
 PlayerFriend: ALIVEE!!!!
 PlayerCharacter: ....
 PlayerFriend: I AM SO PUMPED RIGHT NOW!!! LETS GO GET EM!!
-PlayerCharacter: You know what, you're right. We can do this. I wish I always had your energy.
+PlayerCharacter: (You know what, she's right. We can do this.) 
+PlayerCharacter: I wish I always had your energy.
 update PlayerCharacter [animation="Bounce" wait="true"]
 update PlayerFriend [animation="Bounce" wait="true"]
 Tryout_Manager: OK EVERYONE LISTEN UP!!
 Tryout_Manager: REMEMBER WHY WE'RE HERE!!
 Tryout_Manager: WE ARE HERE TO CHEER FOR OUR SCHOOL, WIN OR LOSE.
 Tryout_Manager: ITS OUR JOB TO KEEP UP THE HYPE EVEN WHEN EVERYONE ELSE ISN'T, SO GIVE IT ALL YOU GOT!!!
-Tryout_Manager: CAUSE IF NOT WHY ELSE ARE YOU HERE?!?!
+Tryout_Manager: CAUSE IF NOT WHY ELSE WOULD WE BE HERE?!?!
 # INSERT BASKETBALL HORN SOUND
 [sound volume="0.0"]
 Tryout_Manager: THAT'S OUR QUEUE, EVERYONE GET ON YOUR INSTRUMENTS!!
 PlayerCharacter (JerseyFace): (Time to show off what I learned so far, here goes nothing)
 set {Song_played} = "2"
 set {Dialogue_name} = "3"
+set {Dialogue_name_snare} = 0
+set {Song_played_snare} = 0
 do GlobalSceneManager._changeScene_main_game_Bass()
 [end_timeline]

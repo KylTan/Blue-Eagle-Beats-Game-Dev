@@ -124,10 +124,11 @@ func _on_clear_area_mouse_entered():
 	
 func _on_clear_area_mouse_exited():
 	is_Hit = false
-	receiver.is_Hit = is_Hit
-	chargeValue = 0
-	beaterSprite.play("default")
-	$BeatLight.texture_scale = 0.0
+	if chargeValue != 0:
+		receiver.is_Hit = is_Hit
+		chargeValue = 0
+		beaterSprite.play("default")
+		$BeatLight.texture_scale = 0.0
 	#playerSprite.play("idle") will idle as soon as u leave the drum hitbox
 	
 # ~~~~~Bar spawning functions~~~~~

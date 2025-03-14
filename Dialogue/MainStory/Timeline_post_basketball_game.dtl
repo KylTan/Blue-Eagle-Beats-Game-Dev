@@ -3,8 +3,8 @@ join Tryout_Manager right
 join PlayerCharacter left [mirrored="true"]
 join PlayerFriend left
 (The rest of the game goes by without a hitch)
-(The team gathers after the end for some remarks)
-Tryout_Manager: Okay everyone, our first game is a wrap. For the rooks, this is your first taste of what it's like so make sure you remember this feeling!
+Tryout_Manager: Everyone gather round!
+Tryout_Manager: Our first game is a wrap. For the rooks, this is your first taste of what it's like so make sure you remember this feeling!
 Tryout_Manager: It's a bit rough here and there, but always remember to just keep playing through it. Don't forget what we spent all those nights trainings for.
 Tryout_Manager: We expect that this team will only get better in time, so remember to give it your all everytime we step in here.
 update PlayerFriend [animation="Bounce"]

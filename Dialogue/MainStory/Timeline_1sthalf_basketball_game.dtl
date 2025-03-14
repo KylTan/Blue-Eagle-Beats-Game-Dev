@@ -3,20 +3,21 @@ join PlayerCharacter (JerseyFace) left [mirrored="true"]
 join PlayerFriend left [mirrored="true"]
 join Tryout_Manager right
 update Tryout_Manager [animation="Bounce"]
-Tryout_Manager: Keep up the work guys!! Do what you have to do now before the next half starts, and make sure to [u]maintain[/u] the equipment!
+Tryout_Manager: Keep up the work guys!! Do what you have to do now before the next half starts, but don't forget to [u]maintain[/u] the equipment!
 leave Tryout_Manager [animation="Bounce Out" wait="true"]
-PlayerFriend: Huh..huh.. that was tiring but great! The hype was through the roof!
-PlayerCharacter: Yeah!! You can say that again!! It felt great but I feel so tired already..
+PlayerFriend: Huh..huh.. that was tiring, but great! The hype was through the roof!
+PlayerCharacter: Yeah!! You can say that again!! I'm honestly pretty tired already though.
 PlayerFriend: You finally loosened up, it was great wasn't it?
 PlayerFriend: Maybe you're starting to believe in yourself like those anime—
-PlayerCharacter: Ok whatever you say bud...
+PlayerCharacter: Ok let's stop right there bud...
 ...
 PlayerCharacter: Before I forget, I have to [u]maintain[/u] the bass. All that playing must've loosened it up quite a bit.
-PlayerFriend: Oh yeah. Make sure you properly adjust all the rods based on what the Equipment Lead said. You remembered to bring your [u]Rachet[/u] right?
+PlayerFriend: Oh yeah. Make sure you properly adjust all the rods based on what the [u]Equipment Lead[/u] said. You remembered to bring your [u]Rachet[/u] right?
 PlayerCharacter: Yeah will do... Now where did I put that thing?
-join Placeholder center
+join Placeholder (Thing) center
 Placeholder: (For this minigame, you will be the adjusting the rods, or screws, to a specific degree. Too much, or too little, and it won't end well for your drum.)
-Placeholder: (Click on a rod, and use your mouse to spin the rachet tool by the correct amount shown by the progress meter. You can only move on once you've adjusted each rod by the correct amount!)
+Placeholder: [b] (Click on a rod, and use your mouse to spin the rachet tool by the correct amount shown by the progress meter. The color will change once you've reached the right spot) [/b]
+Placeholder:  [b] (A prompt to press the spacebar will appear once you've reached the right spot. You can only move on once you've adjusted each rod by the correct amount!) [/b]
 PlayerCharacter: (I better get started before the next half starts then.)
 set {Dialogue_name} = "4"
 do GlobalSceneManager._changeScene_minigame_drumScrewing()
