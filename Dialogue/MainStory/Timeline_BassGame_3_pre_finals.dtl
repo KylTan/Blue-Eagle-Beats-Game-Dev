@@ -1,5 +1,4 @@
 [background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join Tryout_Manager rightmost
 join PlayerCharacter right [mirrored="true"]
 join PlayerFriend right
 join Background_BabbleMember left
@@ -13,6 +12,7 @@ PlayerFriend: Promise me you'll play twice as loud for the both of us later will
 PlayerCharacter: That's already a given. At this point there's only two people better than me at playing the drums...
 update PlayerCharacter (DefaultFace) [animation="Bounce"]
 PlayerCharacter: [b]AND I'M BOTH OF EM[/b]
+join Tryout_Manager rightmost
 update PlayerFriend [animation="Bounce"]
 PlayerFriend: THAT'S THE SPIRIT, LET'S GO GET THEM
 update Tryout_Manager [animation="Bounce" wait="true"]
@@ -22,8 +22,7 @@ Tryout_Manager: KEEP YOUR EYES ON THE CALLER, AND PLAY LIKE YOU'VE NEVER PLAYED 
 Tryout_Manager: WHATEVER IT IS YOU HAVE, GIVE EVERY SINGLE DROP OF IT HERE! I DON'T CARE IF ITS A 40 MINUTE GAME OR A 5 HOUR GAME.
 Tryout_Manager: THAT'S WHAT YOU ALL SIGNED UP AFTER ALL!!!! NOW GO OUT THERE AND PLAY!!!
 PlayerCharacter: (This is it, there's no more space to be scared. It's time to put it all out there.)
-Tryout_Manager: TIME TO GIVE THE CROWD A PROPER WAKE UP CALL,
-Tryout_Manager: FLY HIGH!!!
+Tryout_Manager: TIME TO GIVE THE CROWD A PROPER WAKE UP CALL.
 set {Dialogue_name} = "8"
 set {Song_played} = "4"
 do GlobalSceneManager._changeScene_main_game_Bass()
