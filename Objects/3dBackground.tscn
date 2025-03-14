@@ -1,8 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://be2fgss1xl1th"]
+[gd_scene load_steps=20 format=3 uid="uid://be2fgss1xl1th"]
 
 [ext_resource type="PackedScene" uid="uid://cxf6q4pop7hux" path="res://Objects/3dArenaSection.tscn" id="1_vd4vy"]
 [ext_resource type="Texture2D" uid="uid://caan8kakjnn11" path="res://Assets/Textures/Metal Horizontal.png" id="2_xx5p8"]
 [ext_resource type="Texture2D" uid="uid://ctf60uktphbt" path="res://Assets/Textures/billboard ad lol.png" id="2_y00nh"]
+[ext_resource type="Texture2D" uid="uid://x31csacs5t5a" path="res://Assets/Textures/2for2.png" id="3_054mh"]
+[ext_resource type="Texture2D" uid="uid://b7eyj6f6pd5f7" path="res://Assets/Textures/glowgo.png" id="4_pkneo"]
 [ext_resource type="Texture2D" uid="uid://bmpxqcckhuaql" path="res://Assets/Textures/Wood.png" id="4_xso8c"]
 
 [sub_resource type="Environment" id="Environment_u0ssb"]
@@ -573,8 +575,10 @@ transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 
 [node name="One Section" parent="GA/One Section 3" instance=ExtResource("1_vd4vy")]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(-4.13125e-08, 0, -1.00168, 0, 0.927269, 0, 0.945121, 0, -4.37848e-08, 1.3214, 0.598526, -1.41615)
-texture = ExtResource("2_y00nh")
+transform = Transform3D(-2.79753e-09, 0, -0.048, 0, 0.041, 0, 0.064, 0, -2.09815e-09, 1.3295, 0.598526, -1.42556)
+texture = ExtResource("3_054mh")
+region_enabled = true
+region_rect = Rect2(-380.517, 137.255, 2612.68, 789.88)
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(0.181811, 0, -0.982971, 0, 0.927269, 0, 0.927468, 0, 0.192691, 1.11656, 0.598526, -3.70003)
@@ -583,6 +587,12 @@ texture = ExtResource("2_y00nh")
 [node name="Sprite3D3" type="Sprite3D" parent="."]
 transform = Transform3D(0.330308, 0, -0.938514, 0, 0.927269, 0, 0.885522, 0, 0.350075, 0.524841, 0.598526, -5.93207)
 texture = ExtResource("2_y00nh")
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform3D(-1.74625e-09, 0, -0.048, 0, 0.041, 0, 0.0399495, 0, -2.09815e-09, 1.32072, 0.598526, -1.87553)
+texture = ExtResource("4_pkneo")
+region_enabled = true
+region_rect = Rect2(246.07, 137.255, 1386.09, 789.88)
 
 [node name="Court" type="MeshInstance3D" parent="."]
 transform = Transform3D(11.0521, 0, 0, 0, 1, 0, 0, 0, 13.2327, -13.9784, -2.38436, -8.63712)

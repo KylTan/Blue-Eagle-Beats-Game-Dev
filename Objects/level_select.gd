@@ -1,10 +1,11 @@
 extends Control
-var mission_unlock_bass = Dialogic.VAR.Mission_unlock_bass
-var mission_unlock_snare = Dialogic.VAR.Mission_unlock_snare
+var mission_unlock_bass = 3
+var mission_unlock_snare = 3
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	if mission_unlock_bass >= 1:
 		$bass_basketball_1.visible = true
 	if mission_unlock_snare >= 1:

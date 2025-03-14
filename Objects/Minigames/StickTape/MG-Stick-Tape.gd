@@ -14,14 +14,15 @@ var inside_time: float = 0.0
 var is_inside: bool = false
 var threshold: float = 0.75
 
-var nextDialogueIndex = 0
+var nextDialogueIndex = 3
 var nextDialogueScene
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	animationPlayer.play("Start")
-	nextDialogueIndex = Dialogic.VAR.Dialogue_name_snare
+	if Dialogic.VAR.Dialogue_name_snare:
+		nextDialogueIndex = Dialogic.VAR.Dialogue_name_snare
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -36,13 +37,13 @@ func _process(delta):
 
 		if total_time > 0 and !animationPlayer2.is_playing():
 			#move_child(drumstick1, get_child_count() - 1)
-			#animationPlayer3.play("EndTaping1")
+			animationPlayer3.play("EndTaping1")
 			print(inside_time)
 			print(total_time)
 			print(inside_time / total_time)
 			game_state += 1
 	elif game_state == 3: # its done
-		#if !animationPlayer3.is_playing():
+		if !animationPlayer3.is_playing():
 		#_game_over_exit()
 			if nextDialogueIndex == 3:
 				GlobalSceneManager._changeScene_Timeline_snare_post_maintenance()
@@ -51,8 +52,12 @@ func _process(delta):
 	
 
 func _input(event):
+	if not event is InputEventMouseButton:
+		return
+
 	if !animationPlayer.is_playing() and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT and game_state == 0:
 		game_state += 1
+		
 
 func _draw():
 	draw_circle(get_global_mouse_position(), 25, circle_color)

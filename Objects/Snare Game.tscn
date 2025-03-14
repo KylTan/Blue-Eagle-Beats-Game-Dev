@@ -189,6 +189,7 @@ position = Vector2(992, 544)
 [node name="BarNode" type="Node2D" parent="."]
 
 [node name="Note Receiver" parent="." instance=ExtResource("13_7g0ee")]
+visible = false
 position = Vector2(111, 900)
 
 [node name="Label" type="Label" parent="."]

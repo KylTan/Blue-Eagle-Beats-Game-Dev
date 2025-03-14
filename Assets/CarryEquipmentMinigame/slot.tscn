@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cdon80nt6p3jq"]
 
-[ext_resource type="Texture2D" uid="uid://7g7wnosx47ks" path="res://Assets/CarryEquipmentMinigame/MG4_inventory_texture.png" id="1_c6ehk"]
+[ext_resource type="Texture2D" uid="uid://bkkef447r5ub4" path="res://Assets/CarryEquipmentMinigame/MG4_inventory_texture_alpha.png" id="1_r6yqb"]
 [ext_resource type="Script" path="res://Assets/CarryEquipmentMinigame/slot.gd" id="2_6vxlq"]
 
 [node name="Slot" type="TextureRect"]
 custom_minimum_size = Vector2(200, 200)
-texture = ExtResource("1_c6ehk")
+texture = ExtResource("1_r6yqb")
 expand_mode = 1
 script = ExtResource("2_6vxlq")
 

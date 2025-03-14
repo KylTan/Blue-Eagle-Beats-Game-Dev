@@ -24,7 +24,7 @@ func _process(delta):
 		if(is_pressed()):
 			_use_ratchet_key()
 			
-	if ratchetKey2D.returnRotation() >= turnAmt:
+	if ratchetKey2D.returnRotation() >= turnAmt and ratchetKey2D.returnRotation() < turnAmt+20:
 		$ProgressMeter.modulate = Color.YELLOW
 		$ButtonPrompt.visible = true
 	else:
@@ -51,7 +51,7 @@ func meterFunctions():
 	progressMeter2D.set_value(ratchetKey2D.returnRotation())
 
 func isScrewed():
-	if(ratchetKey2D.returnRotation() >= turnAmt and Input.is_action_just_pressed("space_key")):
+	if(ratchetKey2D.returnRotation() >= turnAmt and ratchetKey2D.returnRotation() < turnAmt+20 and Input.is_action_just_pressed("space_key")):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE) 
 		if parent:
 			parent.screwTotal -= 1

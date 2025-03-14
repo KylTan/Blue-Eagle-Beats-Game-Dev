@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dnoywddxa48vs"]
+[gd_scene load_steps=30 format=3 uid="uid://dnoywddxa48vs"]
 
 [ext_resource type="Script" path="res://Objects/Bass Game.gd" id="1_cf0r3"]
 [ext_resource type="Texture2D" uid="uid://bway2cc4nt4k8" path="res://Assets/Bass-Beat-Container-Mini.png" id="1_qa2vd"]
@@ -11,9 +11,7 @@
 [ext_resource type="Script" path="res://Objects/BeaterSprite.gd" id="5_mudu0"]
 [ext_resource type="Texture2D" uid="uid://bow1evvdvyqc5" path="res://Assets/Textures/Metal.png" id="6_cvth5"]
 [ext_resource type="Texture2D" uid="uid://dsfvw3qbonaca" path="res://Assets/sprite-bass-swing.png" id="6_ku8l3"]
-[ext_resource type="Texture2D" uid="uid://cb1aweaia5eog" path="res://Assets/sprite-bass-hit-training.png" id="7_fuwn3"]
 [ext_resource type="Texture2D" uid="uid://eb740uqc8f7c" path="res://Assets/UI-Overlay.png" id="7_iie8y"]
-[ext_resource type="Texture2D" uid="uid://d3dhkudv0c0bg" path="res://Assets/sprite-bass-swing-training.png" id="8_1d26d"]
 [ext_resource type="PackedScene" uid="uid://vgpayaqmtrvl" path="res://music.tscn" id="8_65oaw"]
 [ext_resource type="Texture2D" uid="uid://ci4dhxk8yjbc6" path="res://Assets/Hitzones.png" id="8_itkf6"]
 [ext_resource type="Texture2D" uid="uid://dmw01f04qux0s" path="res://Assets/Bass-Hitbox-Model-Pearl.png" id="9_dy6v6"]
@@ -28,7 +26,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_fuwn3")
+"texture": ExtResource("4_remf0")
 }],
 "loop": true,
 "name": &"Hit",
@@ -36,7 +34,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_1d26d")
+"texture": ExtResource("6_ku8l3")
 }],
 "loop": true,
 "name": &"Swing",
@@ -183,6 +181,7 @@ position = Vector2(111, 900)
 position = Vector2(992, 544)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Heavy Charge Zone"]
+visible = false
 position = Vector2(4, 84)
 scale = Vector2(1, 1.15157)
 polygon = PackedVector2Array(13, -542.737, 113, -309.143, 206, -3.47351, 927, -47.7609, 919, -546)
@@ -191,6 +190,7 @@ polygon = PackedVector2Array(13, -542.737, 113, -309.143, 206, -3.47351, 927, -4
 position = Vector2(992, 544)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Light Charge Zone"]
+visible = false
 position = Vector2(-292, 510)
 scale = Vector2(1, 1.15157)
 polygon = PackedVector2Array(502, -368.193, 1223, -415.086, 1215, 17.3676, 346, 13.8941, 380, -256.172)
@@ -199,6 +199,7 @@ polygon = PackedVector2Array(502, -368.193, 1223, -415.086, 1215, 17.3676, 346, 
 position = Vector2(992, 544)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clear Area"]
+visible = false
 position = Vector2(-173, 170)
 shape = SubResource("RectangleShape2D_bobao")
 
@@ -209,7 +210,7 @@ scale = Vector2(0.637655, 0.850048)
 texture = ExtResource("9_dy6v6")
 
 [node name="BeaterSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(1535, 428)
+position = Vector2(984, 357)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ao4nq")
 script = ExtResource("5_mudu0")
