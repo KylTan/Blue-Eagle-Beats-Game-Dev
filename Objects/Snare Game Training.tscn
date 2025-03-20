@@ -1,6 +1,54 @@
-[gd_scene load_steps=2 format=3 uid="uid://mh6j3pmw4xwr"]
+[gd_scene load_steps=8 format=3 uid="uid://mh6j3pmw4xwr"]
 
 [ext_resource type="PackedScene" uid="uid://b2gxjfdnyi2cs" path="res://Objects/Snare Game.tscn" id="1_0is4j"]
+[ext_resource type="Texture2D" uid="uid://cdclvy288twid" path="res://Assets/sprite-snare-hit-training.png" id="2_b8fqq"]
+[ext_resource type="Texture2D" uid="uid://cqb6rpees6jms" path="res://Assets/sprite-snare-idle-training.png" id="3_0ukvj"]
+[ext_resource type="Texture2D" uid="uid://76ao32x6ct0m" path="res://Assets/sprite-snare-hit-left-training.png" id="4_6bxom"]
+[ext_resource type="Texture2D" uid="uid://ceu06p4ko51v6" path="res://Assets/sprite-snare-hit-right-training.png" id="5_iqxj7"]
+[ext_resource type="Texture2D" uid="uid://df6rmnj5qwtck" path="res://Assets/sprite-snare-swing-training.png" id="6_d0c7k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_41eux"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b8fqq")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0ukvj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6bxom")
+}],
+"loop": true,
+"name": &"left_hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_iqxj7")
+}],
+"loop": true,
+"name": &"right_hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_d0c7k")
+}],
+"loop": true,
+"name": &"swing",
+"speed": 5.0
+}]
 
 [node name="Game" instance=ExtResource("1_0is4j")]
 
@@ -17,8 +65,11 @@ visible = false
 render_target_update_mode = 0
 
 [node name="NPCSprite" parent="." index="2"]
+visible = false
 position = Vector2(927, 628)
 
 [node name="PlayerSprite" parent="." index="3"]
-position = Vector2(1199, 730)
+position = Vector2(1068, 722)
 scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_41eux")
+animation = &"swing"

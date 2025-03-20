@@ -3,6 +3,7 @@ extends Node2D
 @onready var bassGameTr = preload("res://Objects/Bass Game Training.tscn")
 var mapfile = "res://Assets/Audio/Jabba - Bass.mboy"
 var audiofile = "res://Assets/Audio/Jabba.mp3"
+var callsign = "res://Assets/Callsigns/3 Fights/3 fights w border.png"
 var nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_pre_training.tscn"
 var nextCheerIndex = 1 #intercepts what the next cheer index is
 var nextDialogueIndex = 1  #number corresponds to a scene 
@@ -27,6 +28,7 @@ func _ready():
 		3: #first bball 2 - mission 2
 			mapfile = "res://Assets/Audio/Fabilioh.mboy"
 			audiofile = "res://Assets/Audio/Fabilioh.mp3"
+			callsign = "res://Assets/Callsigns/Fabilioh/Fabilioh 2 W borders.png"
 		4: #bball finals 1 - mission 3
 			mapfile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
 			audiofile = "res://Assets/Audio/Fly High (Brass+Banda).mp3"

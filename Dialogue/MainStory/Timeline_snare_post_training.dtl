@@ -1,6 +1,6 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join PlayerCharacter (DefaultFace) 'pos=x0.45,y1' [mirrored="true"]
-join PlayerFriend 'pos=x0.15,y1'
+join PlayerFriend (Training) 'pos=x0.15,y1'
 join Tryout_Manager right
 Tryout_Manager: Okay rooks, that was better, but still rough in a lot of ways. Let's hope you all keep that up, and we might even make it in time for you all to play for the incoming basketball games.
 Tryout_Manager: Things are only going to get more and more intense as the season goes on!

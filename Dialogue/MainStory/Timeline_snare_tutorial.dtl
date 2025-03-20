@@ -1,6 +1,6 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join PlayerCharacter (DefaultFace) 'pos=x0.45,y1' [animation="Slide In Left" mirrored="true"]
-join PlayerFriend 'pos=x0.15,y1 [animation="Slide In Left" length="0.7" wait="true"]
+join PlayerFriend (Training) 'pos=x0.15,y1 [animation="Slide In Left" length="0.7" wait="true"]
 Tryout_Manager: Okay rookies, gather around. You should all know the drill by now!
 update PlayerFriend [animation="Bounce" repeat="2"]
 PlayerFriend: (We've been training for awhile, but I still can't seem to get a hold of the cheers...)

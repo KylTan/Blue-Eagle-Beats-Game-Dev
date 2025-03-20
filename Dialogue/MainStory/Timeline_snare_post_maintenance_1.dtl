@@ -1,7 +1,7 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join Tryout_Manager right
 join PlayerCharacter left [mirrored="true"]
-join PlayerFriend left
+join PlayerFriend (Training) left
 Tryout_Manager: Ok everyone, wrap it up! We've gotta wrap this up, it's getting late and we need to lock up the storage room.
 Tryout_Manager: Oh! Before I forget, game schedules are expected to be released soon! Say goodbye to your loved ones because I promise you will not have the time to see them anymore once we start going to games!!
 update PlayerFriend [animation="Shake X"]

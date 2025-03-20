@@ -46,7 +46,11 @@ var particle = preload("res://Objects/particle_explosion.tscn")
 func _ready():
 	
 	chargeValue = 0
-	
+	# funny easter egg
+	#var egg = randi_range(0, 100)
+	#if egg < 0:
+		#$bottle.visible = true
+		
 	if parentNode:
 		audiofile = parentNode.audiofile
 		map_file = parentNode.mapfile
