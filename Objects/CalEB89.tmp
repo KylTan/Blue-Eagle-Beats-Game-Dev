@@ -1,0 +1,157 @@
+[gd_scene load_steps=19 format=3 uid="uid://c00xil0jyq8em"]
+
+[ext_resource type="Texture2D" uid="uid://mvefoho8nk0t" path="res://Assets/Callsigns/3 Fights/3 fights w border.png" id="1_fu5xq"]
+[ext_resource type="Texture2D" uid="uid://dyl6322xs5vw4" path="res://Assets/Callsigns/Fabilioh/Fabilioh 1 W borders.png" id="2_yn604"]
+[ext_resource type="Texture2D" uid="uid://bwt5jeym5j86j" path="res://Assets/Callsigns/Fabilioh/Fabilioh 2 W borders.png" id="3_kph2o"]
+[ext_resource type="Texture2D" uid="uid://bsmtl7i4ehnrp" path="res://Assets/Callsigns/Fly High/Fly High W Borders.png" id="4_13dwh"]
+[ext_resource type="Texture2D" uid="uid://bsat2y0u8ap2l" path="res://Assets/Callsigns/Get That Ball/get dat ball with border.png" id="5_6g812"]
+[ext_resource type="Texture2D" uid="uid://ccehmjlc4fjdt" path="res://Assets/Callsigns/Go Ateneo/Go Ateneo 1 W Borders.png" id="6_dh64f"]
+[ext_resource type="Texture2D" uid="uid://bn26w2txwjph7" path="res://Assets/Callsigns/Go Ateneo/Go Ateneo 2 W Borders.png" id="7_c3i0e"]
+[ext_resource type="Texture2D" uid="uid://2txpakl0dlan" path="res://Assets/Callsigns/Jabba/Jabba W Borders.png" id="8_kdhdn"]
+[ext_resource type="Texture2D" uid="uid://b5eiroq4susdd" path="res://Assets/Callsigns/Manson/Manson With Borders.png" id="9_6deuv"]
+[ext_resource type="Texture2D" uid="uid://b4arfmxoouaut" path="res://Assets/Callsigns/Otso/otso with border.png" id="10_g3ptr"]
+[ext_resource type="Texture2D" uid="uid://cmhe7rgufa2wh" path="res://Assets/Callsigns/Vary/with border.png" id="11_57ci0"]
+[ext_resource type="Script" path="res://Objects/CallsignDirector.gd" id="12_eo7a0"]
+[ext_resource type="Texture2D" uid="uid://b26j0huuvj7nu" path="res://Assets/Callsigns/3 Fights/3 fights arrows.png" id="13_o4bm4"]
+[ext_resource type="Texture2D" uid="uid://bnjgwmjsesv0b" path="res://Assets/Callsigns/Fabilioh/Fabilioh arrows.png" id="14_65xry"]
+[ext_resource type="Texture2D" uid="uid://8kr778k0eg6a" path="res://Assets/Callsigns/Get That Ball/gtb arrow.png" id="15_ubuih"]
+[ext_resource type="Texture2D" uid="uid://c72yj0g5cfla2" path="res://Assets/Callsigns/Go Ateneo/Go Ateneo Arrow.png" id="16_2gs0b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4a6h5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fu5xq")
+}],
+"loop": true,
+"name": &"3Fights",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yn604")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kph2o")
+}],
+"loop": true,
+"name": &"Fabilioh",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_13dwh")
+}],
+"loop": true,
+"name": &"Fly High",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6g812")
+}],
+"loop": true,
+"name": &"GTB",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_dh64f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c3i0e")
+}],
+"loop": true,
+"name": &"Go Ateneo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_kdhdn")
+}],
+"loop": true,
+"name": &"Jabba",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_6deuv")
+}],
+"loop": true,
+"name": &"Manson",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_g3ptr")
+}],
+"loop": true,
+"name": &"Otso",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_57ci0")
+}],
+"loop": true,
+"name": &"Vary",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w2q8d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_o4bm4")
+}],
+"loop": true,
+"name": &"3Fights",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_65xry")
+}],
+"loop": true,
+"name": &"Fabilioh",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ubuih")
+}],
+"loop": true,
+"name": &"GTB",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_2gs0b")
+}],
+"loop": true,
+"name": &"Go Ateneo",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Manson",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"None",
+"speed": 5.0
+}]
+
+[node name="MainSign" type="AnimatedSprite2D"]
+position = Vector2(142, 130)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_4a6h5")
+animation = &"3Fights"
+speed_scale = 0.2
+script = ExtResource("12_eo7a0")
+
+[node name="Arrows" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_w2q8d")
+animation = &"3Fights"

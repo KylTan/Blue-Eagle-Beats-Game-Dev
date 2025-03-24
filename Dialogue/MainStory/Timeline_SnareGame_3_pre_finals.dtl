@@ -24,7 +24,6 @@ Tryout_Manager: THINK OF EVERY GAME WE HAD TO GO THROUGH TO GET TO THIS MOMENT. 
 Tryout_Manager: THERE IS NO MORE NEXT GAME. I WANT YOU ALL TO LEAVE WHATEVER YOU HAVE LEFT ON THE DRUMS!
 PlayerFriend: (This is it, there's a lot riding on this game. The team, the crowd, the drums.)
 Tryout_Manager: TIME TO GIVE THE CROWD A PROPER WAKE UP CALL,
-Tryout_Manager: FLY HIGH!!!
 set {Song_played_snare} = "4"
 set {Dialogue_name_snare} = "7"
 do GlobalSceneManager._changeScene_main_game_Snare()

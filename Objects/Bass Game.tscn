@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dnoywddxa48vs"]
+[gd_scene load_steps=32 format=3 uid="uid://dnoywddxa48vs"]
 
 [ext_resource type="Script" path="res://Objects/Bass Game.gd" id="1_cf0r3"]
 [ext_resource type="Texture2D" uid="uid://bway2cc4nt4k8" path="res://Assets/Bass-Beat-Container-Mini.png" id="1_qa2vd"]
@@ -22,6 +22,7 @@
 [ext_resource type="FontFile" uid="uid://d0ftogm8y3nwr" path="res://Assets/Kola_Complete/Fonts/OTF/Kola-Regular.otf" id="14_qa7i4"]
 [ext_resource type="FontFile" uid="uid://jq4npb7j4ymj" path="res://Assets/Kola_Complete/Fonts/WEB/fonts/Kola-Regular.ttf" id="15_r2jv8"]
 [ext_resource type="Texture2D" uid="uid://c4rsdxwx2nofh" path="res://Assets/sprite-energydrink.png" id="22_d5nco"]
+[ext_resource type="PackedScene" uid="uid://c00xil0jyq8em" path="res://Objects/CallsignDirector.tscn" id="23_ywi5k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7pbdx"]
 animations = [{
@@ -123,7 +124,7 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.188073, 0.87156)
 
-[node name="Game" type="Node2D"]
+[node name="Bass Game" type="Node2D"]
 script = ExtResource("1_cf0r3")
 
 [node name="TrainingBG" type="SubViewportContainer" parent="."]
@@ -273,6 +274,9 @@ visible = false
 position = Vector2(1483, 529)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("22_d5nco")
+
+[node name="MainSign" parent="." instance=ExtResource("23_ywi5k")]
+position = Vector2(622, 289)
 
 [connection signal="mouse_entered" from="Heavy Charge Zone" to="." method="_on_heavy_charge_zone_mouse_entered"]
 [connection signal="mouse_entered" from="Light Charge Zone" to="." method="_on_light_charge_zone_mouse_entered"]
