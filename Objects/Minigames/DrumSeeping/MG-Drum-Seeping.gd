@@ -48,11 +48,12 @@ func _input(event):
 			_PlayGame()
 
 func _PlayGame():
-	if animationPlayer.is_playing():
+	if animationPlayer.is_playing(): # arrow moves, hands stop
 		animationPlayer.stop()
 		animationPlayer2.play("Slide")
 	else:
 		if(SlidingScaleArrow._isHit()):
+			animationPlayer.play("Seep")
 			print("Perfect!")
 			_SetResult(Right)
 			GameState += 1

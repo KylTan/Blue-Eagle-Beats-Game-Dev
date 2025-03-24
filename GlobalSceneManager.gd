@@ -32,6 +32,13 @@ func _changeScene_minigame_equipmentLoading():
 	get_tree().change_scene_to_file("res://Objects/Minigames/CarryEquipment/MG-Carry-Equipment.tscn")
 
 #Scenes for Trivia (into the dialogs)
+# tutorial screens
+func _changeScene_tutorial_bassGame():
+	get_tree().change_scene_to_file("res://Objects/Trivia_Scenes/tutorial_scene_bassgame.tscn")
+	
+func _changeScene_tutorial_snareGame():
+	get_tree().change_scene_to_file("res://Objects/Trivia_Scenes/tutorial_scene_snaregame.tscn")
+
 # order is based from figma order
 func _changeScene_trivia_1920s(): #first trivia, first minigame (bass)
 	get_tree().change_scene_to_file("res://Objects/Trivia_Scenes/trivia_scene_1920s.tscn")

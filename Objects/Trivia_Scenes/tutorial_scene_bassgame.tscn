@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwrse6dqmsg1k"]
+
+[ext_resource type="Script" path="res://Objects/Trivia_Scenes/tutorial_scene_bassgame.gd" id="1_3euie"]
+[ext_resource type="Texture2D" uid="uid://dj6uowe0y7ouq" path="res://Assets/Trivia/tutorial_bassgame.png" id="2_1y3us"]
+
+[node name="tutorial_scene_bassgame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3euie")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(968, 540)
+texture = ExtResource("2_1y3us")
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 1430.0
+offset_top = 958.0
+offset_right = 1616.0
+offset_bottom = 1003.0
+scale = Vector2(2, 2)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+text = "Continue
+"
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]

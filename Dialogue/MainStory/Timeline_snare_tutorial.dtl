@@ -25,5 +25,5 @@ set {Song_played_snare} = 1
 set {Dialogue_name_snare} = 1
 set {Dialogue_name} = 0
 set {Song_played} = 0
-do GlobalSceneManager._changeScene_main_game_Snare()
+do GlobalSceneManager._changeScene_tutorial_snareGame()
 [end_timeline]

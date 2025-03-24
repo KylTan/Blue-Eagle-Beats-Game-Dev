@@ -41,7 +41,7 @@ _data = {
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_rw4aa"]
 
-[node name="SubViewport" type="SubViewport"]
+[node name="EquipBG" type="SubViewport"]
 script = ExtResource("1_nhx8c")
 
 [node name="Camera3D" type="Camera3D" parent="."]

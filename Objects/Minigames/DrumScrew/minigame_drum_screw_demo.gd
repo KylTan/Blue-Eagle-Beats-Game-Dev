@@ -55,7 +55,23 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 # put a cooler ending here
 func _process(delta: float) -> void:
+	if ($SubViewportContainer2.visible):
+		if ($SubViewportContainer2/SnareDrumBG.animFin == 1):
+			$DrumScrew1.visible = true
+			$DrumScrew2.visible = true
+			$DrumScrew3.visible = true
+			$DrumScrew4.visible = true
+			$SubViewportContainer2/SnareDrumBG.animFin = 2
+	elif ($SubViewportContainer.visible):
+		if ($SubViewportContainer/BassDrumBG.animFin == 1):
+			$DrumScrew1.visible = true
+			$DrumScrew2.visible = true
+			$DrumScrew3.visible = true
+			$DrumScrew4.visible = true
+			$SubViewportContainer/BassDrumBG.animFin = 2
+			
 	if screwTotal <= 0:
 		Input.set_custom_mouse_cursor(null, Input.CURSOR_ARROW)
 		get_tree().change_scene_to_file(nextDialogueScene)	
+		#poop
 	
