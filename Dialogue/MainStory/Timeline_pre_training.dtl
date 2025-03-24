@@ -27,5 +27,5 @@ set {Song_played} = "1"
 set {Dialogue_name} = "1"
 set {Dialogue_name_snare} = 0
 set {Song_played_snare} = 0
-do GlobalSceneManager._changeScene_main_game_Bass()
+do GlobalSceneManager._changeScene_tutorial_bassGame()
 [end_timeline]
