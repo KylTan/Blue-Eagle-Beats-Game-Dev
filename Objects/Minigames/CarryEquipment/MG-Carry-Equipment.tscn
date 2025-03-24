@@ -53,6 +53,7 @@ columns = 6
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+modulate = Color(1, 1, 1, 0.392157)
 position = Vector2(1627, 663)
 scale = Vector2(0.739583, 1)
 texture = ExtResource("2_j5ske")
