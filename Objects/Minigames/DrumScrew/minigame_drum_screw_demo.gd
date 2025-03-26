@@ -55,6 +55,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 # put a cooler ending here
 func _process(delta: float) -> void:
+	#let animation play out before allowing interaction
 	if ($SubViewportContainer2.visible):
 		if ($SubViewportContainer2/SnareDrumBG.animFin == 1):
 			$DrumScrew1.visible = true

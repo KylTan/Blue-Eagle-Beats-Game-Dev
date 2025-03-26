@@ -103,7 +103,7 @@ mesh = SubResource("PlaneMesh_wdc6d")
 surface_material_override/0 = SubResource("StandardMaterial3D_ko4sd")
 
 [node name="bass shell" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -9.13568e-09, -1, 0, 0.209, -4.37114e-08, 0, 0, -2)
+transform = Transform3D(1, 0, 0, 0, -0.018215, -0.996195, 0, 0.208205, -0.0871529, 0, 0, -0.355)
 mesh = SubResource("CylinderMesh_bbbb4")
 surface_material_override/0 = SubResource("StandardMaterial3D_eiq2o")
 

@@ -18,6 +18,7 @@ var Right =preload("res://Assets/DrumSeepingMinigame/MG2_Check.png")
 var GameState = 0
 var nextDialogueIndex
 var nextDialogueScene
+var animFin = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -39,12 +40,24 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-
+	if ($SubViewportContainer2.visible):
+		if ($SubViewportContainer2/SnareDrumBG.animFin == 1):
+			$SlidingScale.visible = true
+			$SlidingScaleArrow.visible = true
+			$Pressing.visible = true
+			$SubViewportContainer2/SnareDrumBG.animFin = 2
+			animFin = 2
+	elif ($SubViewportContainer.visible):
+		if ($SubViewportContainer/BassDrumBG.animFin == 1):
+			$SlidingScale.visible = true
+			$SlidingScaleArrow.visible = true
+			$Pressing.visible = true
+			$SubViewportContainer/BassDrumBG.animFin = 2
+			animFin = 2
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_SPACE:
+		if event.keycode == KEY_SPACE and animFin == 2:
 			_PlayGame()
 
 func _PlayGame():
@@ -115,4 +128,5 @@ func _EndGame():
 		10: # finals post game
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_bass_game_3_post_finals.tscn"
 
-	get_tree().change_scene_to_file(nextDialogueScene)
+	if animationPlayer.animation_finished and animationPlayer2.animation_finished:
+		get_tree().change_scene_to_file(nextDialogueScene)

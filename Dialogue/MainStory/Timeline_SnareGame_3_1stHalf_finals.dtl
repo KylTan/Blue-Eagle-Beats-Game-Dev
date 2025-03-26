@@ -15,5 +15,5 @@ PlayerFriend: I'll fix this snare and show everyone why I've made it this far!
 Placeholder (Thing): (Time for some Maintainance work!)
 set {Dialogue_name_snare} = 8
 set {Song_played_snare} = 5
-do GlobalSceneManager._changeScene_minigame_stickTaping()
+do GlobalSceneManager._changeScene_minigame_drumSeeping_snareVer()
 [end_timeline]

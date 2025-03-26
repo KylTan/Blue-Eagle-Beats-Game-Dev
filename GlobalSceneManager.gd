@@ -21,9 +21,15 @@ func _changeScene_LevelSelect():
 
 func _changeScene_minigame_drumSeeping():
 	get_tree().change_scene_to_file("res://Objects/Minigames/DrumSeeping/MG-Drum-Seeping.tscn")
+	
+func _changeScene_minigame_drumSeeping_snareVer():
+	get_tree().change_scene_to_file("res://Objects/Minigames/DrumSeeping/mg_drum_seeping_snareVer.tscn")
 
 func _changeScene_minigame_drumScrewing():
 	get_tree().change_scene_to_file("res://Objects/Minigames/DrumScrew/Minigame-DrumScrew-Demo.tscn")
+
+func _changeScene_minigame_drumScrewing_snareVer():
+	get_tree().change_scene_to_file("res://Objects/Minigames/DrumScrew/minigame_drum_screw_SnareVer.tscn")
 
 func _changeScene_minigame_stickTaping():
 	get_tree().change_scene_to_file("res://Objects/Minigames/StickTape/MG-Stick-Tape.tscn")

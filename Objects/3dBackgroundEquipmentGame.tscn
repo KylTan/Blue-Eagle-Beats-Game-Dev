@@ -84,7 +84,7 @@ libraries = {
 }
 
 [node name="BUS" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0784712, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.97231, 0, 0)
 
 [node name="Box" type="MeshInstance3D" parent="BUS"]
 transform = Transform3D(2.8544, 0, 0, 0, 0.126724, 0, 0, 0, 2.35979, -0.678764, 1.04924, -2.54404)
@@ -159,7 +159,7 @@ skeleton = NodePath("../../Camera3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_acpg7")
 
 [node name="DoorHinge" type="MeshInstance3D" parent="BUS"]
-transform = Transform3D(-3.61999e-07, -0.1, 0, -0.0173649, 6.28607e-08, 0.0984807, -0.0984807, 3.56499e-07, -0.0173649, -0.666054, 1.07748, -1.34814)
+transform = Transform3D(-3.61999e-07, -0.1, 5.08867e-18, 0.0999831, -3.61938e-07, 0.00183773, -0.00183773, 6.65255e-09, 0.0999831, -0.666054, 1.07748, -1.34814)
 mesh = SubResource("CylinderMesh_rw4aa")
 skeleton = NodePath("../../Camera3D")
 
@@ -179,3 +179,5 @@ transform = Transform3D(-1.1483e-06, 3.88679, 1.45519e-11, -26.2699, -1.69896e-0
 mesh = SubResource("BoxMesh_yrgmn")
 skeleton = NodePath("../../../Camera3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_8dokp")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

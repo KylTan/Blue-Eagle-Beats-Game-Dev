@@ -16,5 +16,5 @@ Placeholder: (Time for maintainance again! Adjust the screws on your drum by cli
 PlayerCharacter: Here's my rachet!
 set {Dialogue_name_snare} = "4"
 set {Dialogue_name} = 0
-do GlobalSceneManager._changeScene_minigame_drumScrewing()
+do GlobalSceneManager._changeScene_minigame_drumScrewing_snareVer()
 [end_timeline]

@@ -17,6 +17,7 @@ position = Vector2(968, 540)
 texture = ExtResource("2_1y3us")
 
 [node name="Continue" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1430.0
 offset_top = 958.0
 offset_right = 1616.0

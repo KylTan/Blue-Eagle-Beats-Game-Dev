@@ -1,23 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://7psdiuktjd1"]
+[gd_scene load_steps=2 format=3 uid="uid://7psdiuktjd1"]
 
 [ext_resource type="PackedScene" uid="uid://d20ohbao5xm0v" path="res://Objects/Minigames/DrumSeeping/MG-Drum-Seeping.tscn" id="1_skkb4"]
-[ext_resource type="PackedScene" uid="uid://bfwbdvweyvljo" path="res://Objects/3dBackground_ScrewGame_SnareVer.tscn" id="2_5fpj8"]
 
 [node name="Mg-drum-seeping" instance=ExtResource("1_skkb4")]
 
-[node name="SubViewport" parent="SubViewportContainer" index="0"]
-own_world_3d = true
+[node name="DrumSprite" parent="." index="1"]
+visible = false
 
-[node name="SubViewportContainer2" type="SubViewportContainer" parent="." index="3"]
-offset_right = 1920.0
-offset_bottom = 1080.0
+[node name="SubViewportContainer2" parent="." index="2"]
+visible = true
 
-[node name="SnareDrumBG" parent="SubViewportContainer2" index="0" instance=ExtResource("2_5fpj8")]
-handle_input_locally = false
+[node name="SnareDrumBG" parent="SubViewportContainer2" index="0"]
 render_target_update_mode = 4
 
-[node name="Pressing" parent="." index="4"]
-scale = Vector2(1.8674, 1.92713)
+[node name="SubViewportContainer" parent="." index="3"]
+visible = false
+
+[node name="BassDrumBG" parent="SubViewportContainer" index="0"]
+handle_input_locally = false
+render_target_update_mode = 0
 
 [node name="SlidingScaleArrow" parent="." index="10"]
 position = Vector2(0, -54.7041)

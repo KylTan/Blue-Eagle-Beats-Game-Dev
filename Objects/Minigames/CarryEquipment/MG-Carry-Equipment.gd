@@ -25,6 +25,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if $SubViewportContainer/SubViewport.animFin == 1:
+		$Button_Spawn.visible = true
+		$GridContainer.visible = true
+		$Area2D.visible = true
+	
 	if item_held:
 		if Input.is_action_just_pressed("mouse_rightclick"):
 			rotate_item()

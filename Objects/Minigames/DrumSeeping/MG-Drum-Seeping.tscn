@@ -1,13 +1,15 @@
-[gd_scene load_steps=21 format=3 uid="uid://d20ohbao5xm0v"]
+[gd_scene load_steps=23 format=3 uid="uid://d20ohbao5xm0v"]
 
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_0rddx"]
 [ext_resource type="Script" path="res://Objects/Minigames/DrumSeeping/MG-Drum-Seeping.gd" id="1_eoxep"]
 [ext_resource type="Texture2D" uid="uid://c1qoqhj11uut4" path="res://Assets/DrumScrewMinigame/ScrewDrumMinigame.png" id="2_jfh1y"]
 [ext_resource type="Texture2D" uid="uid://cigf2cuc3hnru" path="res://Assets/DrumSeepingMinigame/Pressing.png" id="3_jm5rb"]
+[ext_resource type="PackedScene" uid="uid://bfwbdvweyvljo" path="res://Objects/3dBackground_ScrewGame_SnareVer.tscn" id="4_lvqxg"]
 [ext_resource type="PackedScene" uid="uid://ci7gmcs62ykic" path="res://Objects/3dBackground_ScrewGame.tscn" id="5_25ase"]
 [ext_resource type="Texture2D" uid="uid://bygos2e234mru" path="res://Assets/DrumSeepingMinigame/MG2_SlidingScale.png" id="5_i0s25"]
 [ext_resource type="Texture2D" uid="uid://dqo0qnv6j7ban" path="res://Assets/DrumSeepingMinigame/MG2_SlidingScale2.png" id="6_yslej"]
 [ext_resource type="Texture2D" uid="uid://bq62xyb0oc8ew" path="res://Assets/DrumSeepingMinigame/MG2_SlidingScale3.png" id="7_emks1"]
+[ext_resource type="Texture2D" uid="uid://btu3c8etohsut" path="res://Assets/DrumScrewMinigame/Space_prompt.png" id="7_f7dq6"]
 [ext_resource type="Texture2D" uid="uid://vqhjammbv5tl" path="res://Assets/DrumSeepingMinigame/MG2_SlidingScaleArrow.png" id="8_ik8k5"]
 [ext_resource type="Script" path="res://Objects/Minigames/DrumSeeping/SlidingScaleArrow.gd" id="8_ted50"]
 
@@ -28,11 +30,6 @@ tracks/0/keys = {
 "values": [Vector2(1.73698, 1.79167), Vector2(1.9, 1.961), Vector2(1.73698, 1.79167)]
 }
 
-[sub_resource type="Animation" id="Animation_jctpk"]
-resource_name = "Slide"
-length = 4.0
-loop_mode = 1
-
 [sub_resource type="Animation" id="Animation_ijyqp"]
 resource_name = "Seep"
 length = 0.25
@@ -48,6 +45,11 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1.73698, 1.79167), Vector2(1.3, 1.341)]
 }
+
+[sub_resource type="Animation" id="Animation_jctpk"]
+resource_name = "Slide"
+length = 4.0
+loop_mode = 1
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_utotr"]
 _data = {
@@ -105,18 +107,34 @@ position = Vector2(1014, 560)
 scale = Vector2(0.841204, 0.864352)
 texture = ExtResource("2_jfh1y")
 
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SnareDrumBG" parent="SubViewportContainer2" instance=ExtResource("4_lvqxg")]
+own_world_3d = true
+handle_input_locally = false
+render_target_update_mode = 0
+
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="SubViewport" parent="SubViewportContainer" instance=ExtResource("5_25ase")]
+[node name="BassDrumBG" parent="SubViewportContainer" instance=ExtResource("5_25ase")]
 handle_input_locally = false
 render_target_update_mode = 4
 
 [node name="Pressing" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(965, 487)
-scale = Vector2(1.3, 1.341)
+scale = Vector2(1.75964, 1.81521)
 texture = ExtResource("3_jm5rb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pressing"]
+position = Vector2(0, 190)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_f7dq6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
