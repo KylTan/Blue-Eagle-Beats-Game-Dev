@@ -34,14 +34,16 @@ scale = Vector2(1.6429, 1.36719)
 texture = ExtResource("2_j5ske")
 
 [node name="Button_Spawn" type="Button" parent="."]
-offset_left = 1444.0
-offset_top = 43.0
-offset_right = 1685.0
-offset_bottom = 74.0
-scale = Vector2(1.6, 6.838)
+visible = false
+offset_left = 1377.0
+offset_top = 62.0
+offset_right = 1618.0
+offset_bottom = 93.0
+scale = Vector2(2, 7)
 text = "SPAWN"
 
 [node name="GridContainer" type="GridContainer" parent="."]
+visible = false
 offset_left = 54.0
 offset_top = 43.0
 offset_right = 54.0
@@ -51,6 +53,7 @@ theme_override_constants/v_separation = 0
 columns = 6
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 modulate = Color(1, 1, 1, 0.392157)
