@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b07jp0aj6mxbg"]
+[gd_scene load_steps=30 format=3 uid="uid://b07jp0aj6mxbg"]
 
 [ext_resource type="Texture2D" uid="uid://1kp2kp3op18u" path="res://Assets/Textures/Clouds 5/1.png" id="1_33n47"]
 [ext_resource type="Texture2D" uid="uid://cwelffrmbc12j" path="res://Assets/Textures/Concrete.png" id="1_yxfta"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bmpxqcckhuaql" path="res://Assets/Textures/Wood.png" id="4_vm7ce"]
 [ext_resource type="Texture2D" uid="uid://br1e6vrs8xptq" path="res://Assets/Textures/WallLight.png" id="6_lpmx0"]
 [ext_resource type="Texture2D" uid="uid://bow1evvdvyqc5" path="res://Assets/Textures/Metal.png" id="7_vu5nv"]
+[ext_resource type="Texture2D" uid="uid://8nqn0tjnnmfn" path="res://Assets/Textures/Bus_Mat.png" id="9_yrs6b"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_vw3jv"]
 panorama = ExtResource("1_33n47")
@@ -186,6 +187,10 @@ texture = ExtResource("6_lpmx0")
 transform = Transform3D(2.22248, 0, 0, 0, 0.0684703, 0.316637, 0, -0.0145538, 1.48966, 0, 1.70687, -1.25652)
 mesh = SubResource("BoxMesh_3pdg7")
 surface_material_override/0 = SubResource("StandardMaterial3D_ej2ix")
+
+[node name="Sprite3D" type="Sprite3D" parent="Block/Platform"]
+transform = Transform3D(0.7, 0, 0, 0, 0.0499629, -0.698215, 0, 0.698215, 0.0499629, -0.154666, 0.0942799, -0.980674)
+texture = ExtResource("9_yrs6b")
 
 [node name="BGPlatform" type="Node3D" parent="Block"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0224155, 0, -3.8206)

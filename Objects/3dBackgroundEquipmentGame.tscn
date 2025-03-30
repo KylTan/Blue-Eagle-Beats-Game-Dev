@@ -1,6 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dvg4uv7ib28ig"]
+[gd_scene load_steps=17 format=3 uid="uid://dvg4uv7ib28ig"]
 
 [ext_resource type="Script" path="res://Objects/3dBackgroundEquipmentGame.gd" id="1_nhx8c"]
+[ext_resource type="Texture2D" uid="uid://dqlygh4r6v84q" path="res://Assets/Textures/Bus Logo.png" id="2_luuq2"]
+[ext_resource type="Texture2D" uid="uid://8nqn0tjnnmfn" path="res://Assets/Textures/Bus_Mat.png" id="3_4h2w8"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_1wegq"]
 
@@ -84,7 +86,7 @@ libraries = {
 }
 
 [node name="BUS" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.97231, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0784712, 0, 0)
 
 [node name="Box" type="MeshInstance3D" parent="BUS"]
 transform = Transform3D(2.8544, 0, 0, 0, 0.126724, 0, 0, 0, 2.35979, -0.678764, 1.04924, -2.54404)
@@ -159,7 +161,7 @@ skeleton = NodePath("../../Camera3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_acpg7")
 
 [node name="DoorHinge" type="MeshInstance3D" parent="BUS"]
-transform = Transform3D(-3.61999e-07, -0.1, 5.08867e-18, 0.0999831, -3.61938e-07, 0.00183773, -0.00183773, 6.65255e-09, 0.0999831, -0.666054, 1.07748, -1.34814)
+transform = Transform3D(-3.61999e-07, -0.1, 0, -0.0173649, 6.28607e-08, 0.0984807, -0.0984807, 3.56499e-07, -0.0173649, -0.666054, 1.07748, -1.34814)
 mesh = SubResource("CylinderMesh_rw4aa")
 skeleton = NodePath("../../Camera3D")
 
@@ -175,9 +177,29 @@ skeleton = NodePath("../../../Camera3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_dm6rt")
 
 [node name="ExtPaintGold2" type="MeshInstance3D" parent="BUS/DoorHinge"]
-transform = Transform3D(-1.1483e-06, 3.88679, 1.45519e-11, -26.2699, -1.69896e-07, 5.55112e-17, 1.47793e-12, -7.45058e-09, 0.00979961, -4.14652, -0.130139, 0.80784)
+transform = Transform3D(-1.12462e-06, 3.88679, -4.65661e-10, -25.7288, -1.69895e-07, 8.88178e-16, 1.81899e-12, 1.19209e-07, 0.00979961, -4.14652, -0.130139, 0.723598)
 mesh = SubResource("BoxMesh_yrgmn")
 skeleton = NodePath("../../../Camera3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_8dokp")
+
+[node name="Bus Logo" type="Sprite3D" parent="BUS"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 4.57697, 0.681728, -1.35223)
+texture = ExtResource("2_luuq2")
+
+[node name="Mats" type="Sprite3D" parent="BUS"]
+transform = Transform3D(1.59217, -0.141287, 0.00342917, -3.53218e-09, -0.0361105, -1.37356, 0.158134, 1.42254, -0.0345265, -0.074219, -0.880247, -1.73103)
+texture = ExtResource("3_4h2w8")
+
+[node name="Mats2" type="Sprite3D" parent="BUS"]
+transform = Transform3D(-0.228141, 1.74778, -0.0366066, 0, -0.0446886, -1.46688, -1.45522, -0.274007, 0.00573898, -1.21331, -0.879474, -1.71749)
+texture = ExtResource("3_4h2w8")
+
+[node name="Mats3" type="Sprite3D" parent="BUS"]
+transform = Transform3D(-0.228141, 1.74778, -0.0366066, 0, -0.0446886, -1.46688, -1.45522, -0.274007, 0.00573898, -1.37168, -0.924963, -2.66205)
+texture = ExtResource("3_4h2w8")
+
+[node name="Mats4" type="Sprite3D" parent="BUS"]
+transform = Transform3D(0.0665881, -1.76733, -0.0366066, 0.00409527, 0.044417, -1.46688, 1.47148, 0.0798523, 0.00573898, -0.116013, -0.913422, -2.67196)
+texture = ExtResource("3_4h2w8")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

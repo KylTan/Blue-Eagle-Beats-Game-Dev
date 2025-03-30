@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0q7y88u6ljn2"]
+[gd_scene load_steps=9 format=3 uid="uid://c0q7y88u6ljn2"]
 
 [ext_resource type="Texture2D" uid="uid://dcx2r0pnv3yv4" path="res://Assets/DrumScrewMinigame/MG_Screw_DrumScrew.png" id="1_oswlw"]
 [ext_resource type="Texture2D" uid="uid://dmvk87x72hy2a" path="res://Assets/DrumScrewMinigame/MG_Screw_DrumScrewHover.png" id="2_osqbm"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Objects/Minigames/DrumScrew/MG_Screw_RatchetKey.gd" id="5_bdn0l"]
 [ext_resource type="Texture2D" uid="uid://btu3c8etohsut" path="res://Assets/DrumScrewMinigame/Space_prompt.png" id="6_i0oqd"]
 [ext_resource type="Texture2D" uid="uid://bisj163i2o4wa" path="res://Assets/DrumScrewMinigame/progressMeter.png" id="6_pmdy6"]
+[ext_resource type="FontFile" uid="uid://d0ftogm8y3nwr" path="res://Assets/Kola_Complete/Fonts/OTF/Kola-Regular.otf" id="8_xjswg"]
 
 [node name="DrumScrew1" type="TextureButton"]
 offset_left = 555.0
@@ -32,7 +33,6 @@ offset = Vector2(-104.045, 0)
 script = ExtResource("5_bdn0l")
 
 [node name="ButtonPrompt" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(66, 141)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("6_i0oqd")
@@ -51,3 +51,19 @@ texture_under = ExtResource("6_pmdy6")
 texture_progress = ExtResource("6_pmdy6")
 tint_under = Color(0.544542, 0.531652, 0.510332, 1)
 tint_progress = Color(0.345098, 1, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -329.0
+offset_top = -71.0
+offset_right = 63.0
+offset_bottom = 127.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_xjswg")
+theme_override_font_sizes/font_size = 50
+text = "Go Back!"
