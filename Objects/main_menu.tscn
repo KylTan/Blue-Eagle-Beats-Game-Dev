@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://cwml2cl88ghoa"]
 
 [ext_resource type="Script" path="res://Objects/main_menu.gd" id="1_ir266"]
+[ext_resource type="Texture2D" uid="uid://d276u8qp3fgyn" path="res://Assets/Textures/BEB_Logo.png" id="2_04m2e"]
 [ext_resource type="Texture2D" uid="uid://bt6kve3l30p31" path="res://Assets/sprite-bass-idle-training.png" id="3_qfa3v"]
 [ext_resource type="Texture2D" uid="uid://bhb3td6mjc0r3" path="res://Assets/sprite-bass-idle.png" id="4_6fgcy"]
-[ext_resource type="Texture2D" uid="uid://ch4ly4g204yq7" path="res://Assets/BlueEagleBeatsLogo.png" id="4_j8p23"]
 [ext_resource type="Texture2D" uid="uid://vmexaogg6k5s" path="res://Assets/sprite-snare-swing.png" id="4_ygsiv"]
 [ext_resource type="Texture2D" uid="uid://dsfvw3qbonaca" path="res://Assets/sprite-bass-swing.png" id="5_6qu60"]
 [ext_resource type="Texture2D" uid="uid://c2huetnkmkx1d" path="res://Assets/sprite-snare-idle-noequip-training.png" id="6_tg4s2"]
@@ -122,7 +122,7 @@ offset_left = -411.0
 offset_top = -213.0
 offset_right = 553.0
 offset_bottom = 298.5
-color = Color(0.968627, 0.968627, 0.968627, 1)
+color = Color(0.254902, 0.54902, 0.890196, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 z_index = 3
@@ -154,9 +154,9 @@ text = "Exit"
 
 [node name="Logo" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(52, -106)
-scale = Vector2(0.580236, 0.550325)
-texture = ExtResource("4_j8p23")
+position = Vector2(61.175, -113.325)
+scale = Vector2(0.311596, 0.295533)
+texture = ExtResource("2_04m2e")
 
 [node name="CharLeft" type="AnimatedSprite2D" parent="."]
 position = Vector2(305.75, 125.75)
