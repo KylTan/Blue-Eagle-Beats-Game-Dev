@@ -24,8 +24,8 @@ tracks/1/path = NodePath("PathFollow3D/Camera3D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(1, 2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.7, 2),
+"transitions": PackedFloat32Array(3.24901, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
 }
@@ -58,7 +58,7 @@ libraries = {
 curve = SubResource("Curve3D_w6t57")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0238815, 0.000691212, 0.999674, 0.00531377, 0.999954, -0.000818334, -0.999661, 0.00533184, 0.0238774, -1.31536, 0.00680109, -0.988035)
+transform = Transform3D(0.023881, 0.000691193, 0.999653, 0.00531367, 0.999928, -0.000818317, -0.999641, 0.0053317, 0.0238769, -1.31536, 0.00680109, -0.988035)
 progress = 1.81742
 
 [node name="Camera3D" type="Camera3D" parent="Path3D/PathFollow3D"]
