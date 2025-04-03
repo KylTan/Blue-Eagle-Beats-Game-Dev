@@ -574,14 +574,22 @@ transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 
 
 [node name="One Section" parent="GA/One Section 3" instance=ExtResource("1_vd4vy")]
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="T2T" type="Sprite3D" parent="."]
 transform = Transform3D(-2.79753e-09, 0, -0.048, 0, 0.041, 0, 0.064, 0, -2.09815e-09, 1.3295, 0.598526, -1.42556)
+visible = false
+texture = ExtResource("3_054mh")
+region_enabled = true
+region_rect = Rect2(-380.517, 137.255, 2612.68, 789.88)
+
+[node name="T2T2" type="Sprite3D" parent="."]
+transform = Transform3D(0.0111135, 0, -0.0472708, 0, 0.041, 0, 0.0630277, 0, 0.00833511, 1.13032, 0.598526, -3.70245)
 texture = ExtResource("3_054mh")
 region_enabled = true
 region_rect = Rect2(-380.517, 137.255, 2612.68, 789.88)
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(0.181811, 0, -0.982971, 0, 0.927269, 0, 0.927468, 0, 0.192691, 1.11656, 0.598526, -3.70003)
+visible = false
 texture = ExtResource("2_y00nh")
 
 [node name="Sprite3D3" type="Sprite3D" parent="."]
@@ -590,6 +598,7 @@ texture = ExtResource("2_y00nh")
 
 [node name="Sprite3D4" type="Sprite3D" parent="."]
 transform = Transform3D(-1.74625e-09, 0, -0.048, 0, 0.041, 0, 0.0399495, 0, -2.09815e-09, 1.32072, 0.598526, -1.87553)
+visible = false
 texture = ExtResource("4_pkneo")
 region_enabled = true
 region_rect = Rect2(246.07, 137.255, 1386.09, 789.88)

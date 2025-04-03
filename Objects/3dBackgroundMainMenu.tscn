@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://csrmwnawy2ykl"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w0wcd"]
+
+[node name="SubViewport" type="SubViewport"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+fov = 70.0
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.713055, -2.32912)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../Camera3D")
+
+[node name="Wall" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 0, 0, 2, 2, 1, -2.3)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../Camera3D")
+
+[node name="Wall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.74228e-08, 2, -1.74846e-07, 2, -8.74228e-08, 0, -7.64274e-15, -1.74846e-07, -2, -2, 1, -2.3)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../Camera3D")
+
+[node name="Wall3" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.82137e-15, 8.74228e-08, 2.52829, 2, -8.74228e-08, 0, 8.74228e-08, 2, -1.10515e-07, -0.0158937, 1.0023, -4.2457)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../Camera3D")
+
+[node name="Wall4" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.82137e-15, 8.74228e-08, -2.52829, 2, -8.74228e-08, 0, -8.74228e-08, -2, -1.10515e-07, -0.0158937, 1.0023, -0.342185)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../Camera3D")
+
+[node name="Ceiling" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.74228e-08, -7.64274e-15, 2.52829, -1.74846e-07, -2, 0, 2, -1.74846e-07, -1.10515e-07, -0.0158937, 2.1468, -2.45172)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../Camera3D")
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="Top Mid" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 0.475348, 0.879798, 0, -0.879798, 0.475348, 0, 2.86114, 0)
+visible = false
+light_energy = 0.7
+shadow_enabled = true
+
+[node name="Left" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(0.975653, 0.180984, 0.123876, 0, -0.564823, 0.825212, 0.219318, -0.805121, -0.551071, 0, 3.97687, -3.47344)
+visible = false
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="Right" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(0.91314, -0.336394, -0.230247, 0, -0.564823, 0.825212, -0.407645, -0.753534, -0.515763, 0, 3.97687, -3.47344)
+visible = false
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82374, -2.53916)
