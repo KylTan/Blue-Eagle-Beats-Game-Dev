@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://c2x4r4uh41fag"]
+[gd_scene load_steps=13 format=3 uid="uid://c2x4r4uh41fag"]
 
 [ext_resource type="Script" path="res://Objects/Minigames/StickTape/MG-Stick-Tape.gd" id="1_3ycul"]
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_068n0"]
 [ext_resource type="Texture2D" uid="uid://1pv06ilf2ub0" path="res://Assets/StickTapeMinigame/MG3_DrumStick.png" id="2_v2o66"]
+[ext_resource type="Texture2D" uid="uid://qe4aghg0w3o7" path="res://Assets/StickTapeMinigame/progressMeter2.png" id="4_2ja0u"]
 
 [sub_resource type="Animation" id="Animation_t2f4w"]
 length = 0.001
@@ -268,6 +269,19 @@ polygon = PackedVector2Array(1189, -36.0008, 1002, -41.998, 771, -358.876, 1023,
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PathArea"]
 polygon = PackedVector2Array(1002, -47, 1189, -37, 1035, -297, 1194, -425, 1199, -662, 904, -962, 972, -1165, 1191, -1189, 1191, -1433, 883, -1424, 866, -1490, 1191, -1501, 1180, -2011, 918, -2030, 904, -2360, 1028, -2117, 1188, -2145, 1168, -2762, 909, -3100, 914, -3472, 1175, -3611, 1186, -4117, 1014, -4374, 1067, -4740, 886, -4817, 895, -4857, 1173, -4893, 1173, -5208, 855, -5195, 854, -5237, 754, -5233, 754, -5086, 1037, -5099, 1044, -5001, 755, -4999, 759, -4723, 922, -4638, 837, -4323, 1044, -4059, 1022, -3723, 765, -3551, 763, -2981, 1046, -2654, 1063, -2305, 914, -2648, 791, -2664, 799, -1901, 1091, -1871, 1067, -1599, 748, -1601, 774, -1318, 1086, -1320, 1110, -1314, 834, -1299, 748, -897, 1018, -559, 752, -362)
+
+[node name="progressBar1" type="TextureProgressBar" parent="."]
+visible = false
+offset_left = 1210.0
+offset_top = 25.0
+offset_right = 2234.0
+offset_bottom = 1049.0
+max_value = 75.0
+fill_mode = 3
+texture_under = ExtResource("4_2ja0u")
+texture_progress = ExtResource("4_2ja0u")
+tint_under = Color(0.435192, 0.435192, 0.435192, 1)
+tint_progress = Color(0.309804, 0.843137, 0.172549, 1)
 
 [connection signal="mouse_entered" from="PathArea" to="." method="_on_path_area_mouse_entered"]
 [connection signal="mouse_exited" from="PathArea" to="." method="_on_path_area_mouse_exited"]

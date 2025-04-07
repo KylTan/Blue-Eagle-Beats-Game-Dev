@@ -13,13 +13,16 @@ var total_time: float = 0.0
 var inside_time: float = 0.0
 var is_inside: bool = false
 var threshold: float = 0.75
+var progressMeter2D
 
 var nextDialogueIndex = 3
 var nextDialogueScene
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	progressMeter2D = get_node("progressBar1")
 	animationPlayer.play("Start")
 	if Dialogic.VAR.Dialogue_name_snare:
 		nextDialogueIndex = Dialogic.VAR.Dialogue_name_snare
@@ -27,10 +30,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	queue_redraw()
+	if(!animationPlayer.is_playing()):
+		progressMeter2D.set_visible(true)
 	if game_state == 1:
 		animationPlayer2.play("Taping1")
 		game_state += 1
-	elif game_state == 2:	
+	elif game_state == 2:
+		meterFunctions()	
 		total_time += delta
 		if is_inside:
 			inside_time += delta
@@ -44,11 +50,12 @@ func _process(delta):
 			game_state += 1
 	elif game_state == 3: # its done
 		if !animationPlayer3.is_playing():
+			pass
 		#_game_over_exit()
-			if nextDialogueIndex == 3:
-				GlobalSceneManager._changeScene_Timeline_snare_post_maintenance()
-			elif nextDialogueIndex == 8:
-				GlobalSceneManager._changeScene_Timeline_snare_Mission3_2ndhalf()
+			#if nextDialogueIndex == 3:
+				#GlobalSceneManager._changeScene_Timeline_snare_post_maintenance()
+			#elif nextDialogueIndex == 8:
+				#GlobalSceneManager._changeScene_Timeline_snare_Mission3_2ndhalf()
 	
 
 func _input(event):
@@ -59,6 +66,9 @@ func _input(event):
 		game_state += 1
 		
 
+func meterFunctions():
+	progressMeter2D.set_value(inside_time * 10)
+	
 func _draw():
 	draw_circle(get_global_mouse_position(), 25, circle_color)
 
