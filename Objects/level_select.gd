@@ -5,6 +5,10 @@ var mission_unlock_snare = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$SubViewportContainer/SubViewport/Path3D2/PathFollow3D2/CameraLvl.current = true
+	$SubViewportContainer/SubViewport/AnimationPlayer2.play("door_open")
+	$SubViewportContainer/SubViewport/AnimationPlayer.play("to_shelf")
+	
 	
 	if mission_unlock_bass >= 1:
 		$bass_basketball_1.visible = true

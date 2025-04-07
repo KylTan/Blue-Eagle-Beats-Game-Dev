@@ -1,0 +1,238 @@
+[gd_scene load_steps=20 format=3 uid="uid://csrmwnawy2ykl"]
+
+[ext_resource type="Script" path="res://Objects/3dBackgroundMainMenu.gd" id="1_2en6l"]
+[ext_resource type="Texture2D" uid="uid://4xyvg5nlnvyk" path="res://Assets/Textures/700 Pixel Art PNGs/Concrete/Concrete_02_Orange_Square_1.png" id="1_girkn"]
+[ext_resource type="PackedScene" uid="uid://dx3wukbvkm21s" path="res://Objects/Equipment_Shelf.tscn" id="1_poavr"]
+[ext_resource type="Texture2D" uid="uid://d21lav7l32j0r" path="res://Assets/Textures/700 Pixel Art PNGs/Bricks/Brick Plaster/Brick_Plaster_03_Grey_1.png" id="1_so5lt"]
+[ext_resource type="Texture2D" uid="uid://dtep5eo1x2lg2" path="res://Assets/Textures/700 Pixel Art PNGs/Painted Wall/Painted_Wall_01_Yellow_2.png" id="2_5rcos"]
+[ext_resource type="Texture2D" uid="uid://cagdnkmp126gr" path="res://Assets/Textures/700 Pixel Art PNGs/Wood/Wood_Planks_05_Wide_1.png" id="5_vasfc"]
+
+[sub_resource type="Animation" id="Animation_356sp"]
+resource_name = "to_table"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow3D:progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.81742]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PathFollow3D/CameraMain:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.7, 2),
+"transitions": PackedFloat32Array(3.24901, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kc8os"]
+_data = {
+"to_table": SubResource("Animation_356sp")
+}
+
+[sub_resource type="Curve3D" id="Curve3D_w6t57"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, -0.85, 0, 0, 0, 0.3, 0, 0, 0, 0, 0, -1.34014, 0.00684279, -0.988946),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w0wcd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vx6ki"]
+albedo_texture = ExtResource("1_so5lt")
+normal_enabled = true
+uv1_scale = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n27jj"]
+albedo_texture = ExtResource("2_5rcos")
+uv1_scale = Vector3(3, 3, 3)
+uv1_offset = Vector3(2, 1.5, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rqe7x"]
+albedo_color = Color(1, 0.765525, 0.452829, 0.239216)
+albedo_texture = ExtResource("1_girkn")
+uv1_scale = Vector3(2.595, 2.595, 2.595)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jj4xt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbwpq"]
+albedo_texture = ExtResource("5_vasfc")
+uv1_scale = Vector3(0.325, -0.25, 0.33)
+uv1_offset = Vector3(0.36, -0.42, 0.415)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7i261"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcl8g"]
+next_pass = SubResource("StandardMaterial3D_7i261")
+cull_mode = 2
+albedo_texture = ExtResource("5_vasfc")
+uv1_scale = Vector3(0.325, 0.005, 0.33)
+uv1_offset = Vector3(0.34, 1.275, 0.415)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ww81"]
+next_pass = SubResource("StandardMaterial3D_7i261")
+cull_mode = 2
+albedo_texture = ExtResource("5_vasfc")
+uv1_scale = Vector3(0.245, 0.245, 0.249)
+uv1_offset = Vector3(0.78, 1.275, 0.415)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0877k"]
+cull_mode = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("5_vasfc")
+uv1_scale = Vector3(0.325, 0.005, 0.33)
+uv1_offset = Vector3(0.36, 1.275, 0.415)
+uv1_triplanar = true
+grow = true
+
+[node name="SubViewport" type="SubViewport"]
+script = ExtResource("1_2en6l")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Path3D")
+libraries = {
+"": SubResource("AnimationLibrary_kc8os")
+}
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_w6t57")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.999929, 0, 0, 0, 0.999926, 0, 0, 0, 0.999928, 0, 0, 0)
+
+[node name="CameraMain" type="Camera3D" parent="Path3D/PathFollow3D"]
+transform = Transform3D(1.00007, 0, 0, 0, 1.00007, 0, 0, 0, 1.00007, -0.160625, 0.253377, 2.8855e-09)
+current = true
+fov = 70.0
+
+[node name="Lower Wall" type="Node3D" parent="."]
+transform = Transform3D(-2.118, 3.01992e-07, -1.32005e-14, 0, -8.74228e-08, -2, -3.19809e-07, -2, 8.74228e-08, 0.116, -0.971381, -0.342)
+
+[node name="Wall" type="MeshInstance3D" parent="Lower Wall"]
+transform = Transform3D(-4.36854e-08, 0.944912, -1.69407e-21, -0.999406, -4.13034e-08, 0, 0, 8.47033e-22, 1, -0.881622, 0.965759, -1.78814e-07)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../../Path3D/PathFollow3D/CameraMain")
+surface_material_override/0 = SubResource("StandardMaterial3D_vx6ki")
+
+[node name="Wall2" type="MeshInstance3D" parent="Lower Wall"]
+transform = Transform3D(7.54979e-08, -0.944287, -2.94283e-15, 1, 7.12917e-08, -1.06581e-14, 1.06581e-14, -2.77887e-15, 1, 0.999056, 0.979, -5.96046e-08)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../../Path3D/PathFollow3D/CameraMain")
+surface_material_override/0 = SubResource("StandardMaterial3D_vx6ki")
+
+[node name="Wall3" type="MeshInstance3D" parent="Lower Wall"]
+transform = Transform3D(-0.944287, -1.50996e-07, 6.98965e-15, 1.42583e-07, -1, 8.74228e-08, -5.8648e-15, 8.74228e-08, 1, 0.0623232, 1.952, -8.9407e-08)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../../Path3D/PathFollow3D/CameraMain")
+surface_material_override/0 = SubResource("StandardMaterial3D_vx6ki")
+
+[node name="Wall4" type="MeshInstance3D" parent="Lower Wall"]
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../../Path3D/PathFollow3D/CameraMain")
+surface_material_override/0 = SubResource("StandardMaterial3D_vx6ki")
+
+[node name="Upper Wall" type="Node3D" parent="."]
+transform = Transform3D(-2.118, 3.01992e-07, -1.32005e-14, 0, -8.74228e-08, -2, -3.19809e-07, -2, 8.74228e-08, 0.116, 3.01914, -0.342)
+
+[node name="Wall" type="MeshInstance3D" parent="Upper Wall"]
+transform = Transform3D(-4.36854e-08, 0.944912, -1.69407e-21, -0.999406, -4.13034e-08, 0, 0, 8.47033e-22, 1, -0.881622, 0.965759, 0)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../../Path3D/PathFollow3D/CameraMain")
+surface_material_override/0 = SubResource("StandardMaterial3D_n27jj")
+
+[node name="Wall2" type="MeshInstance3D" parent="Upper Wall"]
+transform = Transform3D(1.87552e-08, -0.944287, -2.62405e-15, 1, 1.98618e-08, -1.06581e-14, 1.06581e-14, -2.77887e-15, 1, 0.999056, 0.979, -5.96046e-08)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../../Path3D/PathFollow3D/CameraMain")
+surface_material_override/0 = SubResource("StandardMaterial3D_n27jj")
+
+[node name="Wall3" type="MeshInstance3D" parent="Upper Wall"]
+transform = Transform3D(-0.944287, -1.42583e-07, 6.23252e-15, 1.50996e-07, -1, 8.74228e-08, -6.60024e-15, 8.74228e-08, 1, 0.0623232, 1.952, -8.9407e-08)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../../Path3D/PathFollow3D/CameraMain")
+surface_material_override/0 = SubResource("StandardMaterial3D_n27jj")
+
+[node name="Wall4" type="MeshInstance3D" parent="Upper Wall"]
+transform = Transform3D(1, 0, -4.23516e-22, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../../Path3D/PathFollow3D/CameraMain")
+surface_material_override/0 = SubResource("StandardMaterial3D_n27jj")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.713055, -2.32912)
+mesh = SubResource("PlaneMesh_w0wcd")
+surface_material_override/0 = SubResource("StandardMaterial3D_rqe7x")
+
+[node name="Ceiling" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.74228e-08, -7.64274e-15, 2.52829, -1.74846e-07, -2, 0, 2, -1.74846e-07, -1.10515e-07, -0.0158937, 2.1468, -2.31644)
+mesh = SubResource("PlaneMesh_w0wcd")
+skeleton = NodePath("../Path3D/PathFollow3D/CameraMain")
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="Top Mid" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 0.475348, 0.879798, 0, -0.879798, 0.475348, 0, 2.86114, 0)
+light_energy = 0.7
+shadow_enabled = true
+
+[node name="Left" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(0.975653, 0.180984, 0.123876, 0, -0.564823, 0.825212, 0.219318, -0.805121, -0.551071, 0, 3.97687, -3.47344)
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="Right" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(0.91314, -0.336394, -0.230247, 0, -0.564823, 0.825212, -0.407645, -0.753534, -0.515763, 0, 3.97687, -3.47344)
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82374, -2.53916)
+visible = false
+
+[node name="Shelf" parent="." instance=ExtResource("1_poavr")]
+transform = Transform3D(0.375, 0, 0, 0, 0.35, 0, 0, 0, 0.35, -1.03033, 0, -3.79)
+
+[node name="Shelf2" parent="." instance=ExtResource("1_poavr")]
+transform = Transform3D(0.375, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0.880598, 0, -3.79)
+
+[node name="Shelf3" parent="." instance=ExtResource("1_poavr")]
+transform = Transform3D(-1.63918e-08, 0, 0.35, 0, 0.35, 0, -0.375, 0, -1.5299e-08, -1.64314, 0, -2.25086)
+
+[node name="Shelf4" parent="." instance=ExtResource("1_poavr")]
+transform = Transform3D(-1.63918e-08, 0, 0.35, 0, 0.35, 0, -0.375, 0, -1.5299e-08, 1.73739, 0, -1.33911)
+
+[node name="Desk" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.16712, 0, 0, 0, 0.5, 0, 0, 0, 0.764768, -1.38826, -0.468432, -0.731319)
+mesh = SubResource("BoxMesh_jj4xt")
+surface_material_override/0 = SubResource("StandardMaterial3D_hbwpq")
+
+[node name="Desktop" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.22898, 0, 0, 0, 0.0691348, 0, 0, 0, 0.828933, -1.38826, -0.211631, -0.731319)
+mesh = SubResource("BoxMesh_jj4xt")
+surface_material_override/0 = SubResource("StandardMaterial3D_wcl8g")
+
+[node name="Desk Shelf" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.16712, 0, 0, 0, 0.5, 0, 0, 0, 0.0696777, -1.38826, 0.135691, -0.354544)
+mesh = SubResource("BoxMesh_jj4xt")
+surface_material_override/0 = SubResource("StandardMaterial3D_3ww81")
+
+[node name="DesktopOutline" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.23, 0, 0, 0, 0.069, 0, 0, 0, 0.83, -1.38826, -0.201179, -0.731319)
+visible = false
+mesh = SubResource("BoxMesh_jj4xt")
+surface_material_override/0 = SubResource("StandardMaterial3D_0877k")
