@@ -40,6 +40,7 @@ scale = Vector2(0.798212, 0.641234)
 texture = ExtResource("1_5dgtg")
 
 [node name="bass_tutorial" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 152.0
 offset_top = 359.0

@@ -10,20 +10,22 @@ func _ready():
 	$SubViewportContainer/SubViewport/AnimationPlayer.play("to_shelf")
 	
 	
-	if mission_unlock_bass >= 1:
-		$bass_basketball_1.visible = true
-	if mission_unlock_snare >= 1:
-		$snare_tutorial.visible = true
-	if mission_unlock_bass >= 3:
-		$bass_basketball_2.visible = true
-	if mission_unlock_snare >= 2:
-		$snare_basketball_1.visible = true
-	if mission_unlock_snare >= 3:
-		$snare_basketball_2.visible = true
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if $SubViewportContainer/SubViewport.anim_fin1 > 0:
+		$bass_tutorial.visible = true
+		if mission_unlock_bass >= 1:
+			$bass_basketball_1.visible = true
+		if mission_unlock_snare >= 1:
+			$snare_tutorial.visible = true
+		if mission_unlock_bass >= 3:
+			$bass_basketball_2.visible = true
+		if mission_unlock_snare >= 2:
+			$snare_basketball_1.visible = true
+		if mission_unlock_snare >= 3:
+			$snare_basketball_2.visible = true
 
 
 func _on_bass_tutorial_pressed():

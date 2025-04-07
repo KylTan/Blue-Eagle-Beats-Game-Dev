@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfdyefxqk2kps"
-path.s3tc="res://.godot/imported/Painted_Wall_01_Blue_2.png-5afcbb40c2625ed163ec8ca73e1dbf01.s3tc.ctex"
+uid="uid://b5lg0u024n4kl"
+path.s3tc="res://.godot/imported/Poster2.png-5faf623dc471eb995f2fb8ab854c215b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/700 Pixel Art PNGs/Painted Wall/Painted_Wall_01_Blue_2.png"
-dest_files=["res://.godot/imported/Painted_Wall_01_Blue_2.png-5afcbb40c2625ed163ec8ca73e1dbf01.s3tc.ctex"]
+source_file="res://Assets/Textures/Poster2.png"
+dest_files=["res://.godot/imported/Poster2.png-5faf623dc471eb995f2fb8ab854c215b.s3tc.ctex"]
 
 [params]
 
