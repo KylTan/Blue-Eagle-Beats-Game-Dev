@@ -170,19 +170,19 @@ text = "Exit"
 
 [node name="Logo" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(61.175, -113.325)
+position = Vector2(59.5, -147)
 scale = Vector2(0.311596, 0.295533)
 texture = ExtResource("2_04m2e")
 
 [node name="CharLeft" type="AnimatedSprite2D" parent="."]
-position = Vector2(305.75, 125.75)
+position = Vector2(310, 143.5)
 scale = Vector2(1.1, 1.1)
 sprite_frames = SubResource("SpriteFrames_5gluh")
 animation = &"idle"
 speed_scale = 2.0
 
 [node name="CharLeft2" type="AnimatedSprite2D" parent="."]
-position = Vector2(-221, 108)
+position = Vector2(-227, 148.5)
 scale = Vector2(1.1, 1.1)
 sprite_frames = SubResource("SpriteFrames_31is6")
 animation = &"swing"
