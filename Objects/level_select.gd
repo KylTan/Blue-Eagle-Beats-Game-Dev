@@ -16,6 +16,7 @@ func _ready():
 func _process(delta):
 	if $SubViewportContainer/SubViewport.anim_fin1 > 0:
 		$bass_tutorial.visible = true
+		$back_button.visible = true
 		if mission_unlock_bass >= 1:
 			$bass_basketball_1.visible = true
 		if mission_unlock_snare >= 1:
@@ -50,3 +51,6 @@ func _on_bass_basketball_2_pressed():
 
 func _on_snare_basketball_2_pressed():
 	GlobalSceneManager._changeScene_Timeline_snare_Mission3()
+
+func _on_back_button_pressed():
+	GlobalSceneManager._changeScene_MainMenu()

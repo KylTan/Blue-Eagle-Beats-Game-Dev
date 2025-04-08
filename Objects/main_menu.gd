@@ -15,7 +15,8 @@ func _on_start_pressed():
 	GlobalSceneManager._changeScene_LevelSelect()
 	
 func _on_credits_pressed():
-	$SubViewportContainer/SubViewport/AnimationPlayer.play("to_table")
+	GlobalSceneManager._changeScene_Credits()
+	#$SubViewportContainer/SubViewport/AnimationPlayer.play("to_table")
 	
 func _on_exit_pressed():
 	get_tree().quit()

@@ -19,12 +19,12 @@ uv1_offset = Vector3(1.655, 0.11, -0.54)
 [node name="Shelf" type="Node3D"]
 
 [node name="Shelf" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.8, 0, 0, 0, 0.12, 0, 0, 0, 1.4, 0, 0, -0.2)
+transform = Transform3D(4.8, 0, 0, 0, 0.12, 0, 0, 0, 1.4, 0, 0.44603, -0.2)
 mesh = SubResource("BoxMesh_j2bib")
 surface_material_override/0 = SubResource("StandardMaterial3D_do6uo")
 
 [node name="Shelf2" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.8, 0, 0, 0, 0.12, 0, 0, 0, 1.4, 0, 1.5, -0.2)
+transform = Transform3D(4.8, 0, 0, 0, 0.12, 0, 0, 0, 1.4, 0, 2.43652, -0.2)
 mesh = SubResource("BoxMesh_j2bib")
 surface_material_override/0 = SubResource("StandardMaterial3D_do6uo")
 
@@ -34,21 +34,21 @@ mesh = SubResource("BoxMesh_j2bib")
 surface_material_override/0 = SubResource("StandardMaterial3D_do6uo")
 
 [node name="Pole" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 4, 0, 0, 0, 0.2, -2.4, 0, 0.5)
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 0.2, -2.4, 0.495008, 0.5)
 mesh = SubResource("BoxMesh_j2bib")
 surface_material_override/0 = SubResource("StandardMaterial3D_guf10")
 
 [node name="Pole2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 4, 0, 0, 0, 0.2, 2.4, 0, 0.5)
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 0.2, 2.4, 0.495008, 0.5)
 mesh = SubResource("BoxMesh_j2bib")
 surface_material_override/0 = SubResource("StandardMaterial3D_guf10")
 
 [node name="Pole3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 4, 0, 0, 0, 0.2, 2.4, 0, -0.9)
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 0.2, 2.4, 0.495008, -0.9)
 mesh = SubResource("BoxMesh_j2bib")
 surface_material_override/0 = SubResource("StandardMaterial3D_guf10")
 
 [node name="Pole4" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 4, 0, 0, 0, 0.2, -2.4, 0, -0.9)
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 0.2, -2.4, 0.495008, -0.9)
 mesh = SubResource("BoxMesh_j2bib")
 surface_material_override/0 = SubResource("StandardMaterial3D_guf10")

@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_nnvxa")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 3.0
 offset_right = 963.0
@@ -23,3 +24,14 @@ own_world_3d = true
 handle_input_locally = false
 size = Vector2i(1920, 1080)
 render_target_update_mode = 4
+
+[node name="back_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 34.0
+offset_right = 385.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

@@ -159,7 +159,7 @@ text = "Exit"
 
 [node name="Logo" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(59.5, -147)
+position = Vector2(63, -148)
 scale = Vector2(0.311596, 0.295533)
 texture = ExtResource("2_04m2e")
 

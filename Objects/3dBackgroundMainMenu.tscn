@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://csrmwnawy2ykl"]
+[gd_scene load_steps=43 format=3 uid="uid://csrmwnawy2ykl"]
 
 [ext_resource type="Script" path="res://Objects/3dBackgroundMainMenu.gd" id="1_2en6l"]
 [ext_resource type="Texture2D" uid="uid://4xyvg5nlnvyk" path="res://Assets/Textures/700 Pixel Art PNGs/Concrete/Concrete_02_Orange_Square_1.png" id="1_girkn"]
@@ -8,9 +8,13 @@
 [ext_resource type="Script" path="res://Objects/Wall4.gd" id="3_8obyy"]
 [ext_resource type="Texture2D" uid="uid://cagdnkmp126gr" path="res://Assets/Textures/700 Pixel Art PNGs/Wood/Wood_Planks_05_Wide_1.png" id="5_vasfc"]
 [ext_resource type="Texture2D" uid="uid://cwelffrmbc12j" path="res://Assets/Textures/Concrete.png" id="6_htvms"]
+[ext_resource type="PackedScene" uid="uid://fvnqhw4vhgrg" path="res://Objects/bass_3d.tscn" id="7_0e80m"]
+[ext_resource type="Texture2D" uid="uid://cn61wq3s2g3v0" path="res://Assets/Textures/700 Pixel Art PNGs/Metal/Metal_01_Grey_Duct_1.png" id="8_n18i8"]
 [ext_resource type="Texture2D" uid="uid://dfdyefxqk2kps" path="res://Assets/Textures/700 Pixel Art PNGs/Painted Wall/Painted_Wall_01_Blue_2.png" id="9_aaelk"]
+[ext_resource type="Texture2D" uid="uid://pe1ac78ccwxe" path="res://Assets/Textures/700 Pixel Art PNGs/Metal/Metal_01_Grey_Vertical_1.png" id="9_ooh4t"]
 [ext_resource type="Texture2D" uid="uid://bh5h8pdwhow5q" path="res://Assets/Textures/Poster.png" id="10_m2qtv"]
 [ext_resource type="Texture2D" uid="uid://b5lg0u024n4kl" path="res://Assets/Textures/Poster2.png" id="11_1yrri"]
+[ext_resource type="PackedScene" uid="uid://d4emyousq2dmb" path="res://Objects/snare_3d.tscn" id="11_la62m"]
 
 [sub_resource type="Animation" id="Animation_2offh"]
 resource_name = "door_focus"
@@ -139,6 +143,23 @@ uv1_scale = Vector3(2.595, 2.595, 2.595)
 albedo_color = Color(0.724643, 0.724643, 0.724643, 1)
 albedo_texture = ExtResource("6_htvms")
 
+[sub_resource type="BoxMesh" id="BoxMesh_sk4xj"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vkn44"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_j2bib"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_do6uo"]
+albedo_texture = ExtResource("8_n18i8")
+uv1_scale = Vector3(3.82, 1, 1.9)
+uv1_offset = Vector3(0.015, 0.52, 0)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_guf10"]
+albedo_texture = ExtResource("9_ooh4t")
+uv1_scale = Vector3(1, 10, 0)
+uv1_offset = Vector3(1.655, 0.11, -0.54)
+
 [sub_resource type="BoxMesh" id="BoxMesh_jj4xt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbwpq"]
@@ -212,7 +233,7 @@ fov = 70.0
 curve = SubResource("Curve3D_p4m8t")
 
 [node name="PathFollow3D2" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(0.9999, 1.32529e-05, -0.000294157, -4.54702e-13, 0.998977, 0.045006, 0.000294435, -0.0450069, 0.998957, -0.001, 0.253, 1.396)
+transform = Transform3D(0.999899, 1.32529e-05, -0.000294157, -4.54702e-13, 0.998977, 0.045006, 0.000294434, -0.0450069, 0.998957, -0.001, 0.253, 1.396)
 
 [node name="CameraLvl" type="Camera3D" parent="Path3D2/PathFollow3D2"]
 fov = 70.0
@@ -264,6 +285,16 @@ transform = Transform3D(1.5, -2.66454e-15, -8.47033e-22, 5.68434e-14, 0.1, 0, -1
 mesh = SubResource("BoxMesh_tca3g")
 surface_material_override/0 = SubResource("StandardMaterial3D_6ux7f")
 
+[node name="Wall8" type="MeshInstance3D" parent="Lower Wall"]
+transform = Transform3D(-6.55671e-08, -0.1, -8.47033e-22, 1.5, -4.37114e-09, 0, 0, -1.05879e-22, 1.5, 1.04037, -0.837933, -0.25216)
+mesh = SubResource("BoxMesh_tca3g")
+surface_material_override/0 = SubResource("StandardMaterial3D_vx6ki")
+
+[node name="Wall9" type="MeshInstance3D" parent="Lower Wall"]
+transform = Transform3D(-6.55671e-08, -0.1, -8.47033e-22, 1.5, -4.37114e-09, 0, 0, -3.17637e-22, 1.5, -0.918972, -0.837933, -0.25216)
+mesh = SubResource("BoxMesh_tca3g")
+surface_material_override/0 = SubResource("StandardMaterial3D_vx6ki")
+
 [node name="Upper Wall" type="Node3D" parent="."]
 transform = Transform3D(-2.118, 3.01992e-07, -1.32005e-14, 0, -8.74228e-08, -2, -3.19809e-07, -2, 8.74228e-08, 0.116, 3.01914, -0.342)
 
@@ -306,39 +337,136 @@ transform = Transform3D(8.74228e-08, -7.64274e-15, 2.52829, -1.74846e-07, -2, 0,
 mesh = SubResource("PlaneMesh_w0wcd")
 skeleton = NodePath("../Path3D/PathFollow3D/CameraMain")
 
-[node name="Lights" type="Node3D" parent="."]
+[node name="LightBulb" type="Node3D" parent="."]
 
-[node name="Top Mid" type="DirectionalLight3D" parent="Lights"]
+[node name="LightBulb" type="MeshInstance3D" parent="LightBulb"]
+transform = Transform3D(0.148541, -1.23626e-23, 3.55271e-15, -5.29396e-23, 0.0336411, 0, 4.44089e-16, -1.68151e-29, 1, -0.0548258, 2.13084, -3.20026)
+mesh = SubResource("BoxMesh_sk4xj")
+skeleton = NodePath("../..")
+
+[node name="Bulb2" type="MeshInstance3D" parent="LightBulb/LightBulb"]
+transform = Transform3D(0.336608, 0, 0, 0, -6.49672e-07, -1.48628, 0, 0.5, -2.18557e-09, -0.2, -0.848892, 0)
+mesh = SubResource("CylinderMesh_vkn44")
+skeleton = NodePath("../../..")
+
+[node name="Bulb" type="MeshInstance3D" parent="LightBulb/LightBulb"]
+transform = Transform3D(0.336608, 0, 0, 0, -6.49672e-07, -1.48628, 0, 0.5, -2.18557e-09, 0.2, -0.848892, 0)
+mesh = SubResource("CylinderMesh_vkn44")
+skeleton = NodePath("../../..")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="LightBulb/LightBulb"]
+transform = Transform3D(6.73215, 2.47396e-21, -2.39174e-14, 1.05941e-20, 29.7255, -3.76378e-35, -2.98968e-15, 4.99837e-28, 1, 0, -4.86528, 0)
+light_energy = 0.7
+light_size = 0.05
+omni_attenuation = 0.8
+
+[node name="Top Mid" type="DirectionalLight3D" parent="LightBulb"]
 transform = Transform3D(1, 0, 0, 0, 0.475348, 0.879798, 0, -0.879798, 0.475348, 0, 2.86114, 0)
 light_energy = 0.7
 shadow_enabled = true
 
-[node name="Left" type="DirectionalLight3D" parent="Lights"]
+[node name="Left" type="DirectionalLight3D" parent="LightBulb"]
 transform = Transform3D(0.975653, 0.180984, 0.123876, 0, -0.564823, 0.825212, 0.219318, -0.805121, -0.551071, 0, 3.97687, -3.47344)
 visible = false
 light_energy = 0.5
 shadow_enabled = true
 
-[node name="Right" type="DirectionalLight3D" parent="Lights"]
+[node name="Right" type="DirectionalLight3D" parent="LightBulb"]
 transform = Transform3D(0.91314, -0.336394, -0.230247, 0, -0.564823, 0.825212, -0.407645, -0.753534, -0.515763, 0, 3.97687, -3.47344)
 visible = false
 light_energy = 0.5
 shadow_enabled = true
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+[node name="OmniLight3D" type="OmniLight3D" parent="LightBulb"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82374, -1.06887)
+visible = false
 light_energy = 0.7
 omni_attenuation = 0.8
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82374, -3.60957)
+[node name="OmniLight3D3" type="OmniLight3D" parent="LightBulb"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013164, 1.47005, 0.540768)
 light_energy = 0.7
+omni_attenuation = 0.8
+
+[node name="LightBulb2" type="MeshInstance3D" parent="LightBulb"]
+transform = Transform3D(0.148541, -1.23626e-23, 3.55271e-15, -5.29396e-23, 0.0336411, 0, 4.44089e-16, -1.68151e-29, 1, -0.0548258, 2.13084, -0.952803)
+mesh = SubResource("BoxMesh_sk4xj")
+skeleton = NodePath("../..")
+
+[node name="Bulb2" type="MeshInstance3D" parent="LightBulb/LightBulb2"]
+transform = Transform3D(0.336608, 0, 0, 0, -6.49672e-07, -1.48628, 0, 0.5, -2.18557e-09, -0.2, -0.848892, 0)
+mesh = SubResource("CylinderMesh_vkn44")
+skeleton = NodePath("../../..")
+
+[node name="Bulb" type="MeshInstance3D" parent="LightBulb/LightBulb2"]
+transform = Transform3D(0.336608, 0, 0, 0, -6.49672e-07, -1.48628, 0, 0.5, -2.18557e-09, 0.2, -0.848892, 0)
+mesh = SubResource("CylinderMesh_vkn44")
+skeleton = NodePath("../../..")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="LightBulb/LightBulb2"]
+transform = Transform3D(6.73215, 2.47396e-21, -2.39174e-14, 1.05941e-20, 29.7255, -3.76378e-35, -2.98968e-15, 4.99837e-28, 1, 0, -4.86528, 0)
+light_energy = 0.7
+light_size = 0.05
 omni_attenuation = 0.8
 
 [node name="Shelves" type="Node3D" parent="."]
 transform = Transform3D(0.375, 0, 0, 0, 0.35, 0, 0, 0, 0.35, -1.03033, 0, -3.79)
 
-[node name="Shelf" parent="Shelves" instance=ExtResource("1_poavr")]
+[node name="Bass Shell" parent="Shelves" instance=ExtResource("7_0e80m")]
+transform = Transform3D(-0.0772292, -0.499627, -9.356e-08, 3.02512e-22, -2.18557e-08, 2.142, -1.99851, 0.0193073, 3.61548e-09, -1.53718, 2.72998, -0.211393)
+skeleton = NodePath("../..")
+
+[node name="Bass Shell2" parent="Shelves" instance=ExtResource("7_0e80m")]
+transform = Transform3D(0.260118, -0.495753, -9.28345e-08, 3.02512e-22, -2.18557e-08, 2.142, -1.98301, -0.0650295, -1.21774e-08, -0.00825167, 2.72998, -0.195667)
+skeleton = NodePath("../..")
+
+[node name="Bass Shell3" parent="Shelves" instance=ExtResource("7_0e80m")]
+transform = Transform3D(0.16586, -0.498278, -9.33073e-08, 3.02512e-22, -2.18557e-08, 2.142, -1.99311, -0.0414649, -7.76471e-09, 1.34926, 2.72998, -0.195667)
+skeleton = NodePath("../..")
+
+[node name="Bass Shell4" parent="Shelves" instance=ExtResource("7_0e80m")]
+transform = Transform3D(-0.09369, -0.499451, -9.3527e-08, 1.62576e-15, -2.18557e-08, 2.142, -1.9978, 0.0234225, 4.38608e-09, -1.43795, -0.444657, -0.211393)
+skeleton = NodePath("../..")
+
+[node name="Bass Shell5" parent="Shelves" instance=ExtResource("7_0e80m")]
+transform = Transform3D(-0.0794616, -0.499605, -9.35559e-08, 3.30281e-17, -2.18557e-08, 2.142, -1.99842, 0.0198654, 3.71999e-09, 0.0688047, -0.45334, -0.201127)
+skeleton = NodePath("../..")
+
+[node name="Bass Shell6" parent="Shelves" instance=ExtResource("7_0e80m")]
+transform = Transform3D(0.16586, -0.498278, -9.33073e-08, 3.02512e-22, -2.18557e-08, 2.142, -1.99311, -0.0414649, -7.76471e-09, 1.5533, -0.444657, -0.195667)
+skeleton = NodePath("../..")
+
+[node name="Shelf" type="Node3D" parent="Shelves"]
+
+[node name="Shelf2" type="MeshInstance3D" parent="Shelves/Shelf"]
+transform = Transform3D(4.8, 0, 0, 0, 0.12, 0, 0, 0, 1.4, 0, 1.62141, -0.2)
+mesh = SubResource("BoxMesh_j2bib")
+surface_material_override/0 = SubResource("StandardMaterial3D_do6uo")
+
+[node name="Shelf3" type="MeshInstance3D" parent="Shelves/Shelf"]
+transform = Transform3D(4.8, 0, 0, 0, 0.12, 0, 0, 0, 1.4, 0, -1.5, -0.2)
+mesh = SubResource("BoxMesh_j2bib")
+surface_material_override/0 = SubResource("StandardMaterial3D_do6uo")
+
+[node name="Pole" type="MeshInstance3D" parent="Shelves/Shelf"]
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 0.2, -2.4, 0.495008, 0.5)
+mesh = SubResource("BoxMesh_j2bib")
+surface_material_override/0 = SubResource("StandardMaterial3D_guf10")
+
+[node name="Pole2" type="MeshInstance3D" parent="Shelves/Shelf"]
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 0.2, 2.4, 0.495008, 0.5)
+mesh = SubResource("BoxMesh_j2bib")
+surface_material_override/0 = SubResource("StandardMaterial3D_guf10")
+
+[node name="Pole3" type="MeshInstance3D" parent="Shelves/Shelf"]
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 0.2, 2.4, 0.495008, -0.9)
+mesh = SubResource("BoxMesh_j2bib")
+surface_material_override/0 = SubResource("StandardMaterial3D_guf10")
+
+[node name="Pole4" type="MeshInstance3D" parent="Shelves/Shelf"]
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 0.2, -2.4, 0.495008, -0.9)
+mesh = SubResource("BoxMesh_j2bib")
+surface_material_override/0 = SubResource("StandardMaterial3D_guf10")
 
 [node name="Shelf2" parent="Shelves" instance=ExtResource("1_poavr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.09581, 0, 0)
@@ -348,6 +476,21 @@ transform = Transform3D(-4.37115e-08, 0, 0.933333, 0, 1, 0, -1.07143, 0, -4.3711
 
 [node name="Shelf4" parent="Shelves" instance=ExtResource("1_poavr")]
 transform = Transform3D(-4.37115e-08, 0, 0.933333, 0, 1, 0, -1.07143, 0, -4.37114e-08, 7.38059, 0, 7.00254)
+
+[node name="Snare Shell" parent="Shelves" instance=ExtResource("11_la62m")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 0.209, 0, -1, 0, -4.37114e-08, 3.55325, -1.19164, -0.184336)
+
+[node name="Snare Shell2" parent="Shelves" instance=ExtResource("11_la62m")]
+transform = Transform3D(0.0225544, 0.140352, 0.740625, -0.00153581, 0.154835, -0.671684, -0.999744, 0.0029285, 0.0177404, 4.27066, -0.870153, -0.184336)
+
+[node name="Snare Shell3" parent="Shelves" instance=ExtResource("11_la62m")]
+transform = Transform3D(0.0759881, -0.208396, 4.3585e-08, 1.90958e-15, -9.13568e-09, -1, 0.997109, 0.0158815, -3.32154e-09, 5.17622, -0.925927, -0.184336)
+
+[node name="Snare Shell4" parent="Shelves" instance=ExtResource("11_la62m")]
+transform = Transform3D(0.149414, 0.206654, -4.32207e-08, 7.43672e-18, -9.13568e-09, -1, -0.988775, 0.0312276, -6.53112e-09, 5.76435, -0.925927, -0.0593805)
+
+[node name="Snare Shell5" parent="Shelves" instance=ExtResource("11_la62m")]
+transform = Transform3D(-0.00174527, -1.90994e-06, -0.999998, 0.00523604, -0.208997, 0, -0.999985, -0.00109433, 0.0017453, 6.68418, -1.14441, -0.177199)
 
 [node name="Desk" type="Node3D" parent="."]
 
@@ -364,7 +507,7 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_wcl8g")
 
 [node name="Desk Shelf" type="MeshInstance3D" parent="Desk"]
-transform = Transform3D(1.16712, 0, 0, 0, 0.5, 0, 0, 0, 0.0696777, -1.38826, 0.135691, -0.383826)
+transform = Transform3D(1.22301, 0, 0, 0, 0.681879, 0, 0, 0, 0.0696777, -1.38826, 0.152261, -0.383826)
 mesh = SubResource("BoxMesh_jj4xt")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_3ww81")
@@ -376,8 +519,14 @@ mesh = SubResource("BoxMesh_jj4xt")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_0877k")
 
+[node name="Desk Shelf2" type="MeshInstance3D" parent="Desk"]
+transform = Transform3D(1.22301, 0, 0, 0, -1.14791e-08, -0.0696777, 0, 0.26261, -3.04571e-09, -1.38826, 0.152261, -0.496056)
+mesh = SubResource("BoxMesh_jj4xt")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_3ww81")
+
 [node name="Doorhinge" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0153476, 0, -0.0290164, 0, 0.419125, 0, 0.0306562, 0, 0.0145267, 0.502921, 0.132812, -0.239752)
+transform = Transform3D(0.0262626, 0, -0.0208582, 0, 0.419125, 0, 0.022037, 0, 0.0248578, 0.502921, 0.132812, -0.239752)
 mesh = SubResource("BoxMesh_1yw3i")
 
 [node name="Door" type="MeshInstance3D" parent="Doorhinge"]
@@ -386,11 +535,11 @@ mesh = SubResource("BoxMesh_1yw3i")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_8m15u")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="Poster" type="Sprite3D" parent="."]
 transform = Transform3D(0.0849719, 0.0024404, 0, -0.00218351, 0.0949686, 0, 0, 0, 0.08, -1.15729, 0.138622, -0.138727)
 texture = ExtResource("10_m2qtv")
 
-[node name="Sprite3D2" type="Sprite3D" parent="."]
+[node name="Poster2" type="Sprite3D" parent="."]
 transform = Transform3D(0.0849719, 0.0024404, 0, -0.00218351, 0.0949686, 0, 0, 0, 0.08, 1.17388, 0.308627, -0.146692)
 texture = ExtResource("11_1yrri")
 
