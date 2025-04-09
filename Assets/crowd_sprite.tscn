@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://ck7sovptquveh"]
+
+[ext_resource type="Texture2D" uid="uid://cha7mrhkxvvva" path="res://Assets/Textures/CrowdGuy.png" id="1_f8gpt"]
+[ext_resource type="Script" path="res://Assets/crowd_sprite.gd" id="2_ytyuu"]
+
+[sub_resource type="Animation" id="Animation_rs0ty"]
+resource_name = "Hop"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.002, 0.15, 0), Vector3(0.002, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.035, 0.035, 0.035), Vector3(0.045, 0.045, 0.045), Vector3(0.035, 0.035, 0.035)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rjgqe"]
+_data = {
+"Hop": SubResource("Animation_rs0ty")
+}
+
+[node name="Crowd Sprite" type="Sprite3D"]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)
+billboard = 1
+texture = ExtResource("1_f8gpt")
+script = ExtResource("2_ytyuu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rjgqe")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

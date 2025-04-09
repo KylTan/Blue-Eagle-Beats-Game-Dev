@@ -28,7 +28,7 @@ func _ready():
 		3: #first bball 2 - mission 2
 			mapfile = "res://Assets/Audio/Fabilioh.mboy"
 			audiofile = "res://Assets/Audio/Fabilioh.mp3"
-			callsign = "res://Assets/Callsigns/Fabilioh/Fabilioh 2 W borders.png"
+			#callsign = "res://Assets/Callsigns/Fabilioh/Fabilioh 2 W borders.png"
 		4: #bball finals 1 - mission 3
 			mapfile = "res://Assets/Audio/Fly High (Brass+Banda)-Bass.mboy"
 			audiofile = "res://Assets/Audio/Fly High (Brass+Banda).mp3"

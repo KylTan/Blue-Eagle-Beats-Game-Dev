@@ -14,9 +14,10 @@ func _ready():
 	elif parent.name == "Snare Game" and Dialogic.VAR.Song_played_snare:
 		cheerIndex = Dialogic.VAR.Song_played_snare
 		cheerMode = 2
-		
+	
+	#checks mode, then checks which order the story is in (cheerindex)
 	match cheerMode:
-		1:
+		1: #for bass
 			match cheerIndex:
 				3:
 					_FabiliohCall()
@@ -24,7 +25,7 @@ func _ready():
 					_FlyHighCall()
 				5:
 					_GoAtCall()
-		2:
+		2: #for snare
 			match cheerIndex:
 				3:
 					_3FightsCall()
@@ -102,7 +103,8 @@ func _JabbaCall():
 	play("Jabba")
 	$Arrows.visible = false
 	$Label.text = "Jabba"
-	
+
+# unique funcs for endurance strings
 func _training_endurance():
 	if curr_bar_index > 0 and curr_bar_index < 9:
 		_VaryCall()

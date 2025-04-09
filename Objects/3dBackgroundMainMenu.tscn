@@ -233,7 +233,7 @@ fov = 70.0
 curve = SubResource("Curve3D_p4m8t")
 
 [node name="PathFollow3D2" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(0.999899, 1.32529e-05, -0.000294157, -4.54702e-13, 0.998977, 0.045006, 0.000294434, -0.0450069, 0.998957, -0.001, 0.253, 1.396)
+transform = Transform3D(0.999899, 1.32529e-05, -0.000294157, -4.54701e-13, 0.998977, 0.045006, 0.000294434, -0.0450069, 0.998957, -0.001, 0.253, 1.396)
 
 [node name="CameraLvl" type="Camera3D" parent="Path3D2/PathFollow3D2"]
 fov = 70.0
@@ -276,12 +276,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_vx6ki")
 script = ExtResource("3_8obyy")
 
 [node name="Wall6" type="MeshInstance3D" parent="Lower Wall"]
-transform = Transform3D(1.5, -2.66454e-15, -8.47033e-22, 5.68434e-14, 0.1, 0, -1.69407e-21, 0, 1.5, 1.04037, -0.0468582, -0.25216)
+transform = Transform3D(1.5, -2.66454e-15, -8.47033e-22, 5.68434e-14, 0.1, 0, -1.69407e-21, 0, 1.5, 1.04037, -0.0468582, -0.318732)
 mesh = SubResource("BoxMesh_tca3g")
 surface_material_override/0 = SubResource("StandardMaterial3D_vx6ki")
 
 [node name="Wall7" type="MeshInstance3D" parent="Lower Wall"]
-transform = Transform3D(1.5, -2.66454e-15, -8.47033e-22, 5.68434e-14, 0.1, 0, -1.69407e-21, 0, 1.5, -0.916429, -0.0468579, -0.25216)
+transform = Transform3D(1.5, -2.66454e-15, -8.47033e-22, 5.68434e-14, 0.1, 0, -1.69407e-21, 0, 1.5, -0.916429, -0.0468579, -0.318732)
 mesh = SubResource("BoxMesh_tca3g")
 surface_material_override/0 = SubResource("StandardMaterial3D_6ux7f")
 
