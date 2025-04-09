@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2x4r4uh41fag"]
+[gd_scene load_steps=14 format=3 uid="uid://c2x4r4uh41fag"]
 
 [ext_resource type="Script" path="res://Objects/Minigames/StickTape/MG-Stick-Tape.gd" id="1_3ycul"]
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_068n0"]
@@ -84,10 +84,50 @@ tracks/4/keys = {
 "values": [Vector2(0.895, 0.41), Vector2(0.895, 0.41), Vector2(10.895, 5.41)]
 }
 
+[sub_resource type="Animation" id="Animation_0n5py"]
+resource_name = "Start2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mg3DrumStick1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(973, 563), Vector2(871, -2238)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mg3DrumStick1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.523599, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mg3DrumStick1:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.895264, 0.409525), Vector2(10.895, 5.41)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jy2fs"]
 _data = {
 "RESET": SubResource("Animation_t2f4w"),
-"Start": SubResource("Animation_lmybn")
+"Start": SubResource("Animation_lmybn"),
+"Start2": SubResource("Animation_0n5py")
 }
 
 [sub_resource type="Animation" id="Animation_77o2a"]
@@ -141,7 +181,7 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_vgcwn"]
 resource_name = "EndTaping1"
-length = 3.0
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -239,8 +279,9 @@ texture = ExtResource("2_v2o66")
 
 [node name="Mg3DrumStick2" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(871, 3613)
-scale = Vector2(10.895, 5.41)
+position = Vector2(2389, 563)
+rotation = 6.45772
+scale = Vector2(0.895, 0.41)
 texture = ExtResource("2_v2o66")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -263,6 +304,7 @@ libraries = {
 z_index = -1
 
 [node name="PathBorder" type="Polygon2D" parent="PathArea"]
+position = Vector2(0, -1.98583)
 scale = Vector2(1, 1.00039)
 invert_border = 0.1
 polygon = PackedVector2Array(1189, -36.0008, 1002, -41.998, 771, -358.876, 1023, -560.798, 749, -894.498, 836, -1296.73, 1112, -1305.74, 1113, -1331.75, 771, -1317.74, 773, -1580.89, 1087, -1593.9, 1096, -1880.07, 818, -1906.08, 809, -2132.21, 798, -2650.51, 911, -2635.5, 1067, -2285.3, 1047, -2652.51, 764, -2995.71, 772, -3556.04, 1037, -3718.13, 1045, -4062.33, 843, -4328.48, 922, -4644.67, 758, -4718.71, 755, -4984.86, 1050, -4984.86, 1041, -5094.93, 758, -5086.92, 761, -5217, 852, -5214, 854, -5182.98, 1166, -5190.98, 1168, -4891.81, 880, -4859.79, 882, -4809.76, 1064, -4727.72, 1007, -4354.5, 1183, -4079.34, 1168, -3612.07, 908, -3462.98, 908, -3091.77, 1168, -2751.57, 1185, -2143.22, 1027, -2118.21, 905, -2358.34, 917, -2024.15, 1180, -2005.14, 1186.49, -1707.77, 1191, -1500.85, 863, -1486.84, 883, -1418.8, 1191, -1429.81, 1188, -1186.67, 970, -1164.65, 905, -957.534, 1197, -655.359, 1194, -420.223, 1034, -295.9)

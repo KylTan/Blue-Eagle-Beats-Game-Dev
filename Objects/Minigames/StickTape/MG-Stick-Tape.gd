@@ -5,6 +5,7 @@ extends Node2D
 @onready var animationPlayer3:AnimationPlayer = $AnimationPlayer3
 
 @onready var drumstick1:Sprite2D = $Mg3DrumStick1
+#@onready var drumstick2:Sprite2D = $Mg3DrumStick2
 
 var game_state: int = 0
 
@@ -12,7 +13,7 @@ var circle_color: Color = Color.RED
 var total_time: float = 0.0
 var inside_time: float = 0.0
 var is_inside: bool = false
-var threshold: float = 0.75
+#var threshold: float = 0.75
 var progressMeter2D
 
 var nextDialogueIndex = 3
@@ -30,9 +31,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	queue_redraw()
-	if(!animationPlayer.is_playing()):
-		progressMeter2D.set_visible(true)
-	if game_state == 1:
+	if game_state == 0:
+		if(!animationPlayer.is_playing()):
+			progressMeter2D.set_visible(true)
+	elif game_state == 1:
 		animationPlayer2.play("Taping1")
 		game_state += 1
 	elif game_state == 2:
@@ -43,12 +45,27 @@ func _process(delta):
 
 		if total_time > 0 and !animationPlayer2.is_playing():
 			#move_child(drumstick1, get_child_count() - 1)
-			animationPlayer3.play("EndTaping1")
+			#animationPlayer3.play("EndTaping1")
 			print(inside_time)
 			print(total_time)
 			print(inside_time / total_time)
-			game_state += 1
+			print(progressMeter2D.value)
+			if progressMeter2D.value >= progressMeter2D.max_value:
+				animationPlayer3.play("EndTaping1")
+				#progressMeter2D.set_visible(false)
+				game_state += 1
+			else:
+				reset()
 	elif game_state == 3: # its done
+		if !animationPlayer3.is_playing():
+			reset()
+			drumstick1.move_to_front()
+			animationPlayer.play("Start2")
+			game_state += 1
+			pass
+	elif game_state == 4:
+		pass
+	elif game_state == 5: # its done
 		if !animationPlayer3.is_playing():
 			pass
 		#_game_over_exit()
@@ -65,7 +82,15 @@ func _input(event):
 	if !animationPlayer.is_playing() and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT and game_state == 0:
 		game_state += 1
 		
-
+func reset():
+	if game_state == 2:
+		animationPlayer2.play("Taping1", -2, -3, true)
+		game_state = 0
+	total_time = 0
+	inside_time = 0
+	progressMeter2D.set_value(0)
+	
+	
 func meterFunctions():
 	progressMeter2D.set_value(inside_time * 10)
 	
