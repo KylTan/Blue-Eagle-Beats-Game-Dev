@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://75dm3h4ygnx0"
-path.s3tc="res://.godot/imported/Plaster_01_Orange_1.png-c8ce3dca71d07f237f11382e75367f7a.s3tc.ctex"
+uid="uid://1fchdss1m3gm"
+path.s3tc="res://.godot/imported/Crowd Guy 2.png-24be2bb7ae5bcb11c8d230d794bbd13c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/700 Pixel Art PNGs/Plaster Wall/Plaster_01_Orange_1.png"
-dest_files=["res://.godot/imported/Plaster_01_Orange_1.png-c8ce3dca71d07f237f11382e75367f7a.s3tc.ctex"]
+source_file="res://Assets/Textures/Crowd Guy 2.png"
+dest_files=["res://.godot/imported/Crowd Guy 2.png-24be2bb7ae5bcb11c8d230d794bbd13c.s3tc.ctex"]
 
 [params]
 

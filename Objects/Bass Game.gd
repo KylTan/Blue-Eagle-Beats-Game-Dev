@@ -125,7 +125,6 @@ func _on_clear_area_mouse_entered():
 	
 	$IdleTimer.start()
 
-	
 func _on_clear_area_mouse_exited():
 	is_Hit = false
 	if chargeValue != 0:
