@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c2x4r4uh41fag"]
+[gd_scene load_steps=17 format=3 uid="uid://c2x4r4uh41fag"]
 
 [ext_resource type="Script" path="res://Objects/Minigames/StickTape/MG-Stick-Tape.gd" id="1_3ycul"]
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_068n0"]
@@ -7,18 +7,6 @@
 
 [sub_resource type="Animation" id="Animation_t2f4w"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Mg3DrumStick1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(973, 563)]
-}
 
 [sub_resource type="Animation" id="Animation_lmybn"]
 resource_name = "Start"
@@ -173,10 +161,51 @@ tracks/2/keys = {
 "values": [Vector2(0, 0), Vector2(0, 5851)]
 }
 
+[sub_resource type="Animation" id="Animation_4ggkc"]
+resource_name = "Taping2"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Mg3DrumStick1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(871, -2238), Vector2(871, 3613)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../PathArea2/PathBorder2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1.98583), Vector2(0, 5849.01)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../PathArea2/CollisionPolygon2D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-11, -34), Vector2(-11, 5816.91)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_icore"]
 _data = {
 "RESET": SubResource("Animation_77o2a"),
-"Taping1": SubResource("Animation_bqxpb")
+"Taping1": SubResource("Animation_bqxpb"),
+"Taping2": SubResource("Animation_4ggkc")
 }
 
 [sub_resource type="Animation" id="Animation_vgcwn"]
@@ -254,10 +283,115 @@ tracks/5/keys = {
 "update": 0,
 "values": [Vector2(1, 1.00039), Vector2(0.0854992, 0.0831219)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PathArea/CollisionPolygon2D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 5851), Vector2(0, 6885.12)]
+}
+
+[sub_resource type="Animation" id="Animation_pmd4w"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_e7wfh"]
+resource_name = "EndTaping2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mg3DrumStick1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(871, 3613), Vector2(967, 563)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mg3DrumStick1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.523599]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mg3DrumStick1:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10.895, 5.41), Vector2(0.895, 0.41)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PathArea2/PathBorder2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 5849.01), Vector2(798, 706)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PathArea2/PathBorder2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.523599]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PathArea2/PathBorder2:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.0854992, 0.0831219)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PathArea2/CollisionPolygon2D2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-11, 5816.91), Vector2(7, 6394)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qjo1c"]
 _data = {
-"EndTaping1": SubResource("Animation_vgcwn")
+"EndTaping1": SubResource("Animation_vgcwn"),
+"EndTaping2": SubResource("Animation_e7wfh"),
+"RESET": SubResource("Animation_pmd4w")
 }
 
 [node name="Mg-stick-tape" type="Node2D"]
@@ -312,6 +446,17 @@ polygon = PackedVector2Array(1189, -36.0008, 1002, -41.998, 771, -358.876, 1023,
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PathArea"]
 polygon = PackedVector2Array(1002, -47, 1189, -37, 1035, -297, 1194, -425, 1199, -662, 904, -962, 972, -1165, 1191, -1189, 1191, -1433, 883, -1424, 866, -1490, 1191, -1501, 1180, -2011, 918, -2030, 904, -2360, 1028, -2117, 1188, -2145, 1168, -2762, 909, -3100, 914, -3472, 1175, -3611, 1186, -4117, 1014, -4374, 1067, -4740, 886, -4817, 895, -4857, 1173, -4893, 1173, -5208, 855, -5195, 854, -5237, 754, -5233, 754, -5086, 1037, -5099, 1044, -5001, 755, -4999, 759, -4723, 922, -4638, 837, -4323, 1044, -4059, 1022, -3723, 765, -3551, 763, -2981, 1046, -2654, 1063, -2305, 914, -2648, 791, -2664, 799, -1901, 1091, -1871, 1067, -1599, 748, -1601, 774, -1318, 1086, -1320, 1110, -1314, 834, -1299, 748, -897, 1018, -559, 752, -362)
 
+[node name="PathArea2" type="Area2D" parent="."]
+z_index = -1
+
+[node name="PathBorder2" type="Polygon2D" parent="PathArea2"]
+position = Vector2(0, -1.98583)
+polygon = PackedVector2Array(1173, -62, 1175, -430, 916, -428, 916, -707, 1163, -712, 1163, -975, 806, -1200, 795, -1867, 1175, -2112, 800, -2443, 1163, -2761, 1178, -3248, 813, -3443, 1169, -3519, 1169, -3773, 817, -3979, 813, -4347, 1163, -4080, 1167, -4482, 1020, -4511, 1012, -5227, 929, -5223, 932, -4533, 948, -4435, 1100, -4399, 1100, -4219, 750, -4480, 754, -3928, 1089, -3737, 1089, -3595, 743, -3515, 736, -3380, 887.278, -3308.81, 1093, -3212, 1085, -2799, 743, -2514, 732, -2386, 1053, -2111, 743, -1930, 741, -1097, 1062, -928, 1053, -823, 751, -799, 756, -309, 994, -284, 1006, -48)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="PathArea2"]
+position = Vector2(-11, -34)
+polygon = PackedVector2Array(1183, -29, 1185, -398, 927, -393, 930, -674, 1180, -674, 1178, -944, 818, -1175, 813, -1835, 1190, -2078, 812, -2412, 1182, -2725, 1192, -3215, 828, -3411, 1181, -3486, 1184, -3742, 829, -3951, 828, -4309, 1172, -4045, 1181, -4453, 1030, -4483, 1026, -5196, 934, -5192, 952, -4401, 1103, -4361, 1107, -4198, 755, -4457, 763, -3885, 1089, -3699, 1087, -3578, 745, -3488, 743, -3333, 1082, -3172, 1083, -2767, 745, -2494, 734, -2323, 1048, -2079, 745, -1895, 740, -1048, 1056, -886, 1056, -806, 749, -769, 759, -259, 996, -242, 1008, -7)
+
 [node name="progressBar1" type="TextureProgressBar" parent="."]
 visible = false
 offset_left = 1210.0
@@ -327,3 +472,5 @@ tint_progress = Color(0.309804, 0.843137, 0.172549, 1)
 
 [connection signal="mouse_entered" from="PathArea" to="." method="_on_path_area_mouse_entered"]
 [connection signal="mouse_exited" from="PathArea" to="." method="_on_path_area_mouse_exited"]
+[connection signal="mouse_entered" from="PathArea2" to="." method="_on_path_area_mouse_entered"]
+[connection signal="mouse_exited" from="PathArea2" to="." method="_on_path_area_mouse_exited"]

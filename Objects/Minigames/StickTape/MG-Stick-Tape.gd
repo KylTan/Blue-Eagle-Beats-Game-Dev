@@ -5,6 +5,7 @@ extends Node2D
 @onready var animationPlayer3:AnimationPlayer = $AnimationPlayer3
 
 @onready var drumstick1:Sprite2D = $Mg3DrumStick1
+@onready var pathArea2:Area2D = $PathArea2
 #@onready var drumstick2:Sprite2D = $Mg3DrumStick2
 
 var game_state: int = 0
@@ -30,7 +31,6 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	queue_redraw()
 	if game_state == 0:
 		if(!animationPlayer.is_playing()):
 			progressMeter2D.set_visible(true)
@@ -39,33 +39,25 @@ func _process(delta):
 		game_state += 1
 	elif game_state == 2:
 		meterFunctions()	
-		total_time += delta
-		if is_inside:
-			inside_time += delta
-
-		if total_time > 0 and !animationPlayer2.is_playing():
-			#move_child(drumstick1, get_child_count() - 1)
-			#animationPlayer3.play("EndTaping1")
-			print(inside_time)
-			print(total_time)
-			print(inside_time / total_time)
-			print(progressMeter2D.value)
-			if progressMeter2D.value >= progressMeter2D.max_value:
-				animationPlayer3.play("EndTaping1")
-				#progressMeter2D.set_visible(false)
-				game_state += 1
-			else:
-				reset()
+		moveStick(delta)
 	elif game_state == 3: # its done
 		if !animationPlayer3.is_playing():
 			reset()
+			progressMeter2D.set_max(55)
 			drumstick1.move_to_front()
+			pathArea2.move_to_front()
 			animationPlayer.play("Start2")
 			game_state += 1
 			pass
-	elif game_state == 4:
+	elif game_state == 4: #buffer so stick 2 doesn't move before a mouse click
 		pass
-	elif game_state == 5: # its done
+	elif game_state == 5:
+		animationPlayer2.play("Taping2")
+		game_state += 1
+	elif game_state == 6:
+		meterFunctions()
+		moveStick(delta)
+	elif game_state == 7: # its done
 		if !animationPlayer3.is_playing():
 			pass
 		#_game_over_exit()
@@ -73,19 +65,43 @@ func _process(delta):
 				#GlobalSceneManager._changeScene_Timeline_snare_post_maintenance()
 			#elif nextDialogueIndex == 8:
 				#GlobalSceneManager._changeScene_Timeline_snare_Mission3_2ndhalf()
+	queue_redraw()
 	
 
 func _input(event):
 	if not event is InputEventMouseButton:
 		return
+	if game_state == 0 or game_state == 4:
+		if !animationPlayer.is_playing() and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+			game_state += 1
 
-	if !animationPlayer.is_playing() and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT and game_state == 0:
-		game_state += 1
+func moveStick(delta):
+	total_time += delta
+	if is_inside:
+		inside_time += delta
+
+	if total_time > 0 and !animationPlayer2.is_playing():
+		print(inside_time)
+		print(total_time)
+		print(inside_time / total_time)
+		print(progressMeter2D.value)
+		if progressMeter2D.value >= progressMeter2D.max_value:
+			if game_state == 2:
+				animationPlayer3.play("EndTaping1")
+			elif game_state == 6:
+				animationPlayer3.play("EndTaping2")
+			#progressMeter2D.set_visible(false)
+			game_state += 1
+		else:
+			reset()
 		
 func reset():
 	if game_state == 2:
 		animationPlayer2.play("Taping1", -2, -3, true)
 		game_state = 0
+	elif game_state == 6:
+		animationPlayer2.play("Taping2", -2, -3, true)
+		game_state = 4
 	total_time = 0
 	inside_time = 0
 	progressMeter2D.set_value(0)
