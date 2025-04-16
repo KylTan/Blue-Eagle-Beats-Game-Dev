@@ -16,6 +16,9 @@ func _changeScene_MainMenu():
 
 func _changeScene_LevelSelect():
 	get_tree().change_scene_to_file("res://Objects/level_select.tscn")
+	
+func _changeScene_Credits():
+	get_tree().change_scene_to_file("res://Objects/credits_menu.tscn")
 
 #Scenes for Minigames Timelines (into the dialogs)
 

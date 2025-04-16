@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxx34a2ygacjm"]
+[gd_scene load_steps=4 format=3 uid="uid://dxx34a2ygacjm"]
 
 [ext_resource type="Texture2D" uid="uid://ch4ly4g204yq7" path="res://Assets/BlueEagleBeatsLogo.png" id="1_5dgtg"]
 [ext_resource type="Script" path="res://Objects/level_select.gd" id="1_n7ra2"]
+[ext_resource type="PackedScene" uid="uid://csrmwnawy2ykl" path="res://Objects/3dBackgroundMainMenu.tscn" id="2_geh8n"]
 
 [node name="level_select" type="Control"]
 layout_mode = 3
@@ -14,19 +15,32 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_n7ra2")
 
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" parent="SubViewportContainer" instance=ExtResource("2_geh8n")]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.968627, 0.968627, 0.968627, 1)
 
 [node name="Logo" type="Sprite2D" parent="."]
+visible = false
 z_index = 2
 position = Vector2(961, 156)
 scale = Vector2(0.798212, 0.641234)
 texture = ExtResource("1_5dgtg")
 
 [node name="bass_tutorial" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 152.0
 offset_top = 359.0
@@ -38,56 +52,68 @@ text = "Bass Tutorial"
 [node name="snare_tutorial" type="Button" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 152.0
-offset_top = 693.0
-offset_right = 288.0
-offset_bottom = 796.0
+offset_left = 1186.0
+offset_top = 364.0
+offset_right = 1322.0
+offset_bottom = 467.0
 scale = Vector2(2, 2)
 text = "Snare Tutorial"
 
 [node name="bass_basketball_1" type="Button" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 818.0
-offset_top = 350.0
-offset_right = 958.0
-offset_bottom = 455.0
+offset_left = 574.0
+offset_top = 356.0
+offset_right = 714.0
+offset_bottom = 461.0
 scale = Vector2(2, 2)
-text = "Bass: Blue Hoops
+text = "Bass: First
+Basketball Game
 "
 
 [node name="snare_basketball_1" type="Button" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 812.0
-offset_top = 688.0
-offset_right = 953.0
-offset_bottom = 793.0
+offset_left = 1558.0
+offset_top = 364.0
+offset_right = 1699.0
+offset_bottom = 469.0
 scale = Vector2(2, 2)
-text = "Snare: Mission 1
+text = "Snare: First
+Basketball game
 "
 
 [node name="bass_basketball_2" type="Button" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 1435.0
-offset_top = 350.0
-offset_right = 1589.0
-offset_bottom = 455.0
+offset_left = 344.0
+offset_top = 693.0
+offset_right = 498.0
+offset_bottom = 798.0
 scale = Vector2(2, 2)
-text = "Bass: Blue Finals
+text = "Bass: Finals Game
 "
 
 [node name="snare_basketball_2" type="Button" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 1435.0
-offset_top = 685.0
-offset_right = 1589.0
-offset_bottom = 790.0
+offset_left = 1365.0
+offset_top = 670.0
+offset_right = 1519.0
+offset_bottom = 775.0
 scale = Vector2(2, 2)
-text = "Snare: Mission 2
+text = "Snare: Finals Game
 "
+
+[node name="back_button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 49.0
+offset_top = 34.0
+offset_right = 385.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
 
 [connection signal="pressed" from="bass_tutorial" to="." method="_on_bass_tutorial_pressed"]
 [connection signal="pressed" from="snare_tutorial" to="." method="_on_snare_tutorial_pressed"]
@@ -95,3 +121,4 @@ text = "Snare: Mission 2
 [connection signal="pressed" from="snare_basketball_1" to="." method="_on_snare_basketball_1_pressed"]
 [connection signal="pressed" from="bass_basketball_2" to="." method="_on_bass_basketball_2_pressed"]
 [connection signal="pressed" from="snare_basketball_2" to="." method="_on_snare_basketball_2_pressed"]
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

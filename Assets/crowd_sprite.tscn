@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://ck7sovptquveh"]
+
+[ext_resource type="Texture2D" uid="uid://cha7mrhkxvvva" path="res://Assets/Textures/CrowdGuy.png" id="1_f8gpt"]
+[ext_resource type="Texture2D" uid="uid://1fchdss1m3gm" path="res://Assets/Textures/Crowd Guy 2.png" id="2_61wma"]
+[ext_resource type="Script" path="res://Assets/crowd_sprite.gd" id="2_ytyuu"]
+[ext_resource type="Script" path="res://Assets/Timer.gd" id="4_amy1w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i0ter"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f8gpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_61wma")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Crowd Sprite" type="AnimatedSprite3D"]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_i0ter")
+frame_progress = 0.439169
+script = ExtResource("2_ytyuu")
+
+[node name="Timer" type="Timer" parent="."]
+script = ExtResource("4_amy1w")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

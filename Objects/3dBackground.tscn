@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://be2fgss1xl1th"]
+[gd_scene load_steps=21 format=3 uid="uid://be2fgss1xl1th"]
 
 [ext_resource type="PackedScene" uid="uid://cxf6q4pop7hux" path="res://Objects/3dArenaSection.tscn" id="1_vd4vy"]
 [ext_resource type="Texture2D" uid="uid://caan8kakjnn11" path="res://Assets/Textures/Metal Horizontal.png" id="2_xx5p8"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://x31csacs5t5a" path="res://Assets/Textures/2for2.png" id="3_054mh"]
 [ext_resource type="Texture2D" uid="uid://b7eyj6f6pd5f7" path="res://Assets/Textures/glowgo.png" id="4_pkneo"]
 [ext_resource type="Texture2D" uid="uid://bmpxqcckhuaql" path="res://Assets/Textures/Wood.png" id="4_xso8c"]
+[ext_resource type="PackedScene" uid="uid://ck7sovptquveh" path="res://Assets/crowd_sprite.tscn" id="7_dq14x"]
 
 [sub_resource type="Environment" id="Environment_u0ssb"]
 
@@ -574,15 +575,14 @@ transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 
 
 [node name="One Section" parent="GA/One Section 3" instance=ExtResource("1_vd4vy")]
 
-[node name="T2T" type="Sprite3D" parent="."]
-transform = Transform3D(-2.79753e-09, 0, -0.048, 0, 0.041, 0, 0.064, 0, -2.09815e-09, 1.3295, 0.598526, -1.42556)
-visible = false
-texture = ExtResource("3_054mh")
+[node name="Glow" type="Sprite3D" parent="."]
+transform = Transform3D(-3.01609e-09, 0, -0.048, 0, 0.041, 0, 0.069, 0, -2.09815e-09, 1.32301, 0.598526, -1.4123)
+texture = ExtResource("4_pkneo")
 region_enabled = true
-region_rect = Rect2(-380.517, 137.255, 2612.68, 789.88)
+region_rect = Rect2(-281.803, 137.255, 2400.02, 789.88)
 
 [node name="T2T2" type="Sprite3D" parent="."]
-transform = Transform3D(0.0111135, 0, -0.0472708, 0, 0.041, 0, 0.0630277, 0, 0.00833511, 1.13032, 0.598526, -3.70245)
+transform = Transform3D(0.0107662, 0, -0.0472708, 0, 0.041, 0, 0.0610581, 0, 0.00833513, 1.12727, 0.598526, -3.71972)
 texture = ExtResource("3_054mh")
 region_enabled = true
 region_rect = Rect2(-380.517, 137.255, 2612.68, 789.88)
@@ -607,3 +607,829 @@ region_rect = Rect2(246.07, 137.255, 1386.09, 789.88)
 transform = Transform3D(11.0521, 0, 0, 0, 1, 0, 0, 0, 13.2327, -13.9784, -2.38436, -8.63712)
 mesh = SubResource("PlaneMesh_snk6k")
 surface_material_override/0 = SubResource("StandardMaterial3D_jfnwh")
+
+[node name="LB Crowd" type="Node3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, -0.570618, -0.0406845, -4.88026)
+
+[node name="Crowd8" type="Node3D" parent="LB Crowd"]
+
+[node name="Crowd Sprite" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02131, 1.72687, -4.03256)
+
+[node name="Crowd Sprite2" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite3" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03154, 1.72687, -2.33342)
+
+[node name="Crowd Sprite4" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7842, 5.03127, -3.68999)
+
+[node name="Crowd Sprite5" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54428)
+
+[node name="Crowd Sprite6" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01026, 0, -7.106)
+
+[node name="Crowd Sprite7" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02131, 1.72687, -9.43913)
+
+[node name="Crowd Sprite8" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03127, -9.59914)
+
+[node name="Crowd Sprite9" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6503)
+
+[node name="Crowd Sprite10" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21466, 0, -13.6706)
+
+[node name="Crowd Sprite11" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81691, 1.72687, -16.0037)
+
+[node name="Crowd Sprite12" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03127, -17.3606)
+
+[node name="Crowd Sprite13" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2148)
+
+[node name="Crowd Sprite14" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7766)
+
+[node name="Crowd Sprite15" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806658, 1.72687, -23.1097)
+
+[node name="Crowd Sprite16" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64811, 5.03127, -23.2697)
+
+[node name="Crowd Sprite17" parent="LB Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1784, 6.91767, -28.3206)
+
+[node name="Crowd9" type="Node3D" parent="LB Crowd"]
+transform = Transform3D(0.995121, 0, 0.0986598, 0, 1, 0, -0.0986598, 0, 0.995121, -57.9397, -25.7198, -27.9382)
+
+[node name="Crowd Sprite" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="LB Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Crowd10" type="Node3D" parent="LB Crowd"]
+transform = Transform3D(0.997881, 0, 0.0650896, 0, 1, 0, -0.0650896, 0, 0.997881, -40.4104, -24.2189, 17.4405)
+
+[node name="Crowd Sprite" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="LB Crowd/Crowd10" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Crowd11" type="Node3D" parent="LB Crowd"]
+transform = Transform3D(0.903209, 0, 0.429203, 0, 1, 0, -0.429203, 0, 0.903209, -80.1428, -25.6694, -57.1062)
+
+[node name="Crowd Sprite" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="LB Crowd/Crowd11" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Crowd12" type="Node3D" parent="LB Crowd"]
+transform = Transform3D(0.903209, 0, 0.429203, 0, 1, 0, -0.429203, 0, 0.903209, -101.362, -25.9252, -86.9488)
+
+[node name="Crowd Sprite" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="LB Crowd/Crowd12" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Crowd13" type="Node3D" parent="LB Crowd"]
+transform = Transform3D(0.778309, 0, 0.627883, 0, 1, 0, -0.627883, 0, 0.778309, -133.822, -24.9552, -121.202)
+
+[node name="Crowd Sprite" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="LB Crowd/Crowd13" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Crowd14" type="Node3D" parent="LB Crowd"]
+transform = Transform3D(0.778309, 0, 0.627883, 0, 1, 0, -0.627883, 0, 0.778309, -159.892, -25.7375, -144.404)
+
+[node name="Crowd Sprite" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="LB Crowd/Crowd14" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="GA Crowd" type="Node3D" parent="."]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, -0.570618, -0.0406845, -4.88026)
+
+[node name="Crowd" type="Node3D" parent="GA Crowd"]
+
+[node name="Crowd Sprite" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02131, 1.72687, -4.03256)
+
+[node name="Crowd Sprite2" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite3" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03154, 1.72687, -2.33342)
+
+[node name="Crowd Sprite4" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7842, 5.03127, -3.68999)
+
+[node name="Crowd Sprite5" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54428)
+
+[node name="Crowd Sprite6" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01026, 0, -7.106)
+
+[node name="Crowd Sprite7" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02131, 1.72687, -9.43913)
+
+[node name="Crowd Sprite8" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03127, -9.59914)
+
+[node name="Crowd Sprite9" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6503)
+
+[node name="Crowd Sprite10" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21466, 0, -13.6706)
+
+[node name="Crowd Sprite11" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81691, 1.72687, -16.0037)
+
+[node name="Crowd Sprite12" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03127, -17.3606)
+
+[node name="Crowd Sprite13" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2148)
+
+[node name="Crowd Sprite14" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7766)
+
+[node name="Crowd Sprite15" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806658, 1.72687, -23.1097)
+
+[node name="Crowd Sprite16" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64811, 5.03127, -23.2697)
+
+[node name="Crowd Sprite17" parent="GA Crowd/Crowd" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1784, 6.91767, -28.3206)
+
+[node name="Crowd2" type="Node3D" parent="GA Crowd"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1503, 0, -31.1846)
+
+[node name="Crowd Sprite" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="GA Crowd/Crowd2" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Crowd3" type="Node3D" parent="GA Crowd"]
+transform = Transform3D(0.942969, 0, 0.332886, 0, 1, 0, -0.332886, 0, 0.942969, -25.9161, 2.86102e-06, -58.4617)
+
+[node name="Crowd Sprite" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="GA Crowd/Crowd3" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Crowd4" type="Node3D" parent="GA Crowd"]
+transform = Transform3D(0.903209, 0, 0.429203, 0, 1, 0, -0.429203, 0, 0.903209, -53.7595, 0, -105.271)
+
+[node name="Crowd Sprite" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="GA Crowd/Crowd4" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Crowd5" type="Node3D" parent="GA Crowd"]
+transform = Transform3D(0.903209, 0, 0.429203, 0, 1, 0, -0.429203, 0, 0.903209, -77.2943, 0, -129.031)
+
+[node name="Crowd Sprite" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="GA Crowd/Crowd5" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Crowd6" type="Node3D" parent="GA Crowd"]
+transform = Transform3D(0.778309, 0, 0.627883, 0, 1, 0, -0.627883, 0, 0.778309, -99.8243, 1.41859e-05, -154.304)
+
+[node name="Crowd Sprite" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="GA Crowd/Crowd6" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Crowd7" type="Node3D" parent="GA Crowd"]
+transform = Transform3D(0.778309, 0, 0.627883, 0, 1, 0, -0.627883, 0, 0.778309, -138.508, 1.41859e-05, -182.715)
+
+[node name="Crowd Sprite" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="GA Crowd/Crowd7" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Crowd8" type="Node3D" parent="GA Crowd"]
+transform = Transform3D(0.560378, 0, 0.828238, 0, 1, 0, -0.828238, 0, 0.560378, -168.402, 0.450013, -203.704)
+
+[node name="Crowd Sprite" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="GA Crowd/Crowd8" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Crowd9" type="Node3D" parent="GA Crowd"]
+transform = Transform3D(0.560378, 0, 0.828238, 0, 1, 0, -0.828238, 0, 0.560378, -210.084, 0.45001, -221.149)
+
+[node name="Crowd Sprite" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Crowd Sprite2" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03157, 1.72687, -2.33327)
+
+[node name="Crowd Sprite3" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7843, 5.03126, -3.69)
+
+[node name="Crowd Sprite4" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7081, 6.91767, -7.54425)
+
+[node name="Crowd Sprite5" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01024, 0, -7.10591)
+
+[node name="Crowd Sprite6" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02133, 1.72687, -9.43918)
+
+[node name="Crowd Sprite7" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8628, 5.03126, -9.59915)
+
+[node name="Crowd Sprite8" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3931, 6.91767, -14.6502)
+
+[node name="Crowd Sprite9" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21464, 0, -13.6705)
+
+[node name="Crowd Sprite10" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81693, 1.72687, -16.0037)
+
+[node name="Crowd Sprite11" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5696, 5.03126, -17.3605)
+
+[node name="Crowd Sprite12" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4934, 6.91767, -21.2147)
+
+[node name="Crowd Sprite13" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22489, 0, -20.7764)
+
+[node name="Crowd Sprite14" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806684, 1.72687, -23.1096)
+
+[node name="Crowd Sprite15" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
+
+[node name="Crowd Sprite16" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
