@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://extb850c1lie"]
+[gd_scene load_steps=7 format=3 uid="uid://extb850c1lie"]
 
 [ext_resource type="Script" path="res://Objects/Minigames/CarryEquipment/MG-Carry-Equipment.gd" id="1_4t0ix"]
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_c1o0u"]
 [ext_resource type="PackedScene" uid="uid://dvg4uv7ib28ig" path="res://Objects/3dBackgroundEquipmentGame.tscn" id="2_ds3vj"]
 [ext_resource type="Texture2D" uid="uid://dcvl3mj7t6dxg" path="res://Assets/CarryEquipmentMinigame/MG4_BoxContainer.png" id="2_j5ske"]
+[ext_resource type="Texture2D" uid="uid://bbhenget0pewq" path="res://Assets/CarryEquipmentMinigame/MG4_Instructions.png" id="5_fow5w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0mtu4"]
 size = Vector2(526, 721)
@@ -53,7 +54,6 @@ theme_override_constants/v_separation = 0
 columns = 6
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 modulate = Color(1, 1, 1, 0.392157)
@@ -64,6 +64,11 @@ texture = ExtResource("2_j5ske")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1627, 662.5)
 shape = SubResource("RectangleShape2D_0mtu4")
+
+[node name="Mg4Instructions" type="Sprite2D" parent="."]
+position = Vector2(1629.5, 663.5)
+scale = Vector2(1.125, 1.11894)
+texture = ExtResource("5_fow5w")
 
 [connection signal="pressed" from="Button_Spawn" to="." method="_on_button_spawn_pressed"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
