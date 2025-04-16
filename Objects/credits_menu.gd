@@ -5,11 +5,12 @@ extends Control
 func _ready():
 	$SubViewportContainer/SubViewport/AnimationPlayer2.play("door_open")
 	$SubViewportContainer/SubViewport/AnimationPlayer.play("to_table")
-
+	$Credits.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if $SubViewportContainer/SubViewport.anim_fin1 == 1:
+		$Credits.visible = true
 
 
 func _on_back_button_pressed():
