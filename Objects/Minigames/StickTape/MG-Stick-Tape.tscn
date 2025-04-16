@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://c2x4r4uh41fag"]
+[gd_scene load_steps=18 format=3 uid="uid://c2x4r4uh41fag"]
 
 [ext_resource type="Script" path="res://Objects/Minigames/StickTape/MG-Stick-Tape.gd" id="1_3ycul"]
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_068n0"]
 [ext_resource type="Texture2D" uid="uid://1pv06ilf2ub0" path="res://Assets/StickTapeMinigame/MG3_DrumStick.png" id="2_v2o66"]
 [ext_resource type="Texture2D" uid="uid://qe4aghg0w3o7" path="res://Assets/StickTapeMinigame/progressMeter2.png" id="4_2ja0u"]
+[ext_resource type="Texture2D" uid="uid://bscnetdmp0top" path="res://Assets/StickTapeMinigame/MG3_Instructions.png" id="5_mwlsg"]
 
 [sub_resource type="Animation" id="Animation_t2f4w"]
 length = 0.001
@@ -296,9 +297,6 @@ tracks/6/keys = {
 "values": [Vector2(0, 5851), Vector2(0, 6885.12)]
 }
 
-[sub_resource type="Animation" id="Animation_pmd4w"]
-length = 0.001
-
 [sub_resource type="Animation" id="Animation_e7wfh"]
 resource_name = "EndTaping2"
 length = 0.5
@@ -387,6 +385,9 @@ tracks/6/keys = {
 "values": [Vector2(-11, 5816.91), Vector2(7, 6394)]
 }
 
+[sub_resource type="Animation" id="Animation_pmd4w"]
+length = 0.001
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qjo1c"]
 _data = {
 "EndTaping1": SubResource("Animation_vgcwn"),
@@ -459,16 +460,21 @@ polygon = PackedVector2Array(1183, -29, 1185, -398, 927, -393, 930, -674, 1180, 
 
 [node name="progressBar1" type="TextureProgressBar" parent="."]
 visible = false
-offset_left = 1210.0
-offset_top = 25.0
-offset_right = 2234.0
-offset_bottom = 1049.0
+offset_left = 1044.0
+offset_top = 27.0
+offset_right = 2068.0
+offset_bottom = 1051.0
 max_value = 75.0
 fill_mode = 3
 texture_under = ExtResource("4_2ja0u")
 texture_progress = ExtResource("4_2ja0u")
 tint_under = Color(0.435192, 0.435192, 0.435192, 1)
 tint_progress = Color(0.309804, 0.843137, 0.172549, 1)
+
+[node name="instructions" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(307, 557)
+texture = ExtResource("5_mwlsg")
 
 [connection signal="mouse_entered" from="PathArea" to="." method="_on_path_area_mouse_entered"]
 [connection signal="mouse_exited" from="PathArea" to="." method="_on_path_area_mouse_exited"]

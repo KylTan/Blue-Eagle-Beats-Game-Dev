@@ -112,6 +112,7 @@ speed_scale = 0.75
 
 [node name="Ins" type="Sprite3D" parent="."]
 transform = Transform3D(0.156861, -0.0315376, 0, 0.0315376, 0.156861, 0, 0, 0, 0.16, 2.19498, -0.638687, -2.34768)
+visible = false
 texture = ExtResource("5_gytxr")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

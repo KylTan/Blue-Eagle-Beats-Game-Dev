@@ -16,6 +16,7 @@ var inside_time: float = 0.0
 var is_inside: bool = false
 #var threshold: float = 0.75
 var progressMeter2D
+var instructions2D
 
 var nextDialogueIndex = 3
 var nextDialogueScene
@@ -25,6 +26,7 @@ var nextDialogueScene
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	progressMeter2D = get_node("progressBar1")
+	instructions2D = get_node("instructions")
 	animationPlayer.play("Start")
 	if Dialogic.VAR.Dialogue_name_snare:
 		nextDialogueIndex = Dialogic.VAR.Dialogue_name_snare
@@ -34,6 +36,7 @@ func _process(delta):
 	if game_state == 0:
 		if(!animationPlayer.is_playing()):
 			progressMeter2D.set_visible(true)
+			instructions2D.set_visible(true)
 	elif game_state == 1:
 		animationPlayer2.play("Taping1")
 		game_state += 1
@@ -59,12 +62,11 @@ func _process(delta):
 		moveStick(delta)
 	elif game_state == 7: # its done
 		if !animationPlayer3.is_playing():
-			pass
 		#_game_over_exit()
-			#if nextDialogueIndex == 3:
-				#GlobalSceneManager._changeScene_Timeline_snare_post_maintenance()
-			#elif nextDialogueIndex == 8:
-				#GlobalSceneManager._changeScene_Timeline_snare_Mission3_2ndhalf()
+			if nextDialogueIndex == 3:
+				GlobalSceneManager._changeScene_Timeline_snare_post_maintenance()
+			elif nextDialogueIndex == 8:
+				GlobalSceneManager._changeScene_Timeline_snare_Mission3_2ndhalf()
 	queue_redraw()
 	
 
@@ -90,7 +92,8 @@ func moveStick(delta):
 				animationPlayer3.play("EndTaping1")
 			elif game_state == 6:
 				animationPlayer3.play("EndTaping2")
-			#progressMeter2D.set_visible(false)
+				progressMeter2D.set_visible(false)
+				instructions2D.set_visible(false)
 			game_state += 1
 		else:
 			reset()

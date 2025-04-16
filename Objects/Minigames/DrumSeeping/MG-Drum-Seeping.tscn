@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d20ohbao5xm0v"]
+[gd_scene load_steps=24 format=3 uid="uid://d20ohbao5xm0v"]
 
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_0rddx"]
 [ext_resource type="Script" path="res://Objects/Minigames/DrumSeeping/MG-Drum-Seeping.gd" id="1_eoxep"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://btu3c8etohsut" path="res://Assets/DrumScrewMinigame/Space_prompt.png" id="7_f7dq6"]
 [ext_resource type="Texture2D" uid="uid://vqhjammbv5tl" path="res://Assets/DrumSeepingMinigame/MG2_SlidingScaleArrow.png" id="8_ik8k5"]
 [ext_resource type="Script" path="res://Objects/Minigames/DrumSeeping/SlidingScaleArrow.gd" id="8_ted50"]
+[ext_resource type="Texture2D" uid="uid://bfyeepnf5u8xa" path="res://Assets/DrumSeepingMinigame/MG2_Instrunctions.png" id="13_d2hbe"]
 
 [sub_resource type="Animation" id="Animation_7ft6i"]
 resource_name = "Pulsate"
@@ -87,7 +88,7 @@ size = Vector2(209, 283)
 size = Vector2(207, 154)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ft2g5"]
-size = Vector2(205, 74)
+size = Vector2(218, 104)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d7ldw"]
 radius = 24.8887
@@ -148,7 +149,6 @@ libraries = {
 }
 
 [node name="SlidingScale" type="Area2D" parent="."]
-visible = false
 
 [node name="Mg2SlidingScale" type="Sprite2D" parent="SlidingScale"]
 position = Vector2(1637, 564)
@@ -180,7 +180,7 @@ scale = Vector2(1, 1.319)
 texture = ExtResource("7_emks1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SlidingScale3"]
-position = Vector2(1640.5, 561)
+position = Vector2(1642, 561)
 shape = SubResource("RectangleShape2D_ft2g5")
 
 [node name="SlidingScaleArrow" type="Area2D" parent="."]
@@ -208,6 +208,11 @@ scale = Vector2(0.450521, 0.494792)
 [node name="Result3" type="Sprite2D" parent="."]
 position = Vector2(280, 949)
 scale = Vector2(0.450521, 0.494792)
+
+[node name="Mg2Instrunctions" type="Sprite2D" parent="."]
+position = Vector2(1349, 817)
+scale = Vector2(0.654334, 0.698748)
+texture = ExtResource("13_d2hbe")
 
 [connection signal="area_entered" from="SlidingScale" to="SlidingScaleArrow" method="_on_sliding_scale_area_entered"]
 [connection signal="area_exited" from="SlidingScale" to="SlidingScaleArrow" method="_on_sliding_scale_area_exited"]
