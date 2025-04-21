@@ -1,5 +1,5 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
-join PlayerCharacter left
+join PlayerCharacter right
 join PlayerFriend 'pos=x0.35,y1'
 PlayerCharacter: So this is the big day. I can't believe we've actually made it this far.
 PlayerCharacter: This was just a dream of mine growing up, but here we are going to cheer for our team at the edge of victory.

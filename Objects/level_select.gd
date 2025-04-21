@@ -1,6 +1,6 @@
 extends Control
-var mission_unlock_bass = 3
-var mission_unlock_snare = 3
+var mission_unlock_bass = 0
+var mission_unlock_snare = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,8 +8,10 @@ func _ready():
 	$SubViewportContainer/SubViewport/Path3D2/PathFollow3D2/CameraLvl.current = true
 	$SubViewportContainer/SubViewport/AnimationPlayer2.play("door_open")
 	$SubViewportContainer/SubViewport/AnimationPlayer.play("to_shelf")
-	
-	
+	if Dialogic.VAR.Mission_unlock_bass > 0:
+		mission_unlock_bass = Dialogic.VAR.Mission_unlock_bass
+	if Dialogic.VAR.Mission_unlock_snare > 0:
+		mission_unlock_snare = Dialogic.VAR.Mission_unlock_snare
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

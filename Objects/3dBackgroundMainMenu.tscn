@@ -926,7 +926,7 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_3ww81")
 
 [node name="Doorhinge" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0153476, 0, -0.0290164, 0, 0.419125, 0, 0.0306562, 0, 0.0145267, 0.502921, 0.132812, -0.239752)
+transform = Transform3D(0.0262626, 0, -0.0208582, 0, 0.419125, 0, 0.022037, 0, 0.0248578, 0.502921, 0.132812, -0.239752)
 mesh = SubResource("BoxMesh_1yw3i")
 
 [node name="Door" type="MeshInstance3D" parent="Doorhinge"]

@@ -1,6 +1,6 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join PlayerCharacter (DefaultFace) left [mirrored="true"]
-join PlayerFriend 'pos=x0.35,y1'
+join PlayerFriend (Training) 'pos=x0.35,y1'
 join Tryout_Manager right
 Tryout_Manager: First of all, congratulations to all the rooks for making it through your first training. We will continue learning more cheers as well as perfecting them to the best of our abilities.
 Tryout_Manager: Keep in mind that our trainings will be similar to this from here on out until the start of the season.

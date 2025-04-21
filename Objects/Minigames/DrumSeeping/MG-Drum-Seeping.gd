@@ -12,8 +12,8 @@ var Result
 var Result2
 var Result3
 
-var Wrong =preload("res://Assets/DrumSeepingMinigame/MG2_X.png")
-var Right =preload("res://Assets/DrumSeepingMinigame/MG2_Check.png")
+var Wrong = preload("res://Assets/DrumSeepingMinigame/MG2_X.png")
+var Right = preload("res://Assets/DrumSeepingMinigame/MG2_Check.png")
 
 var GameState = 0
 var nextDialogueIndex

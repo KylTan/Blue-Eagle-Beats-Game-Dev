@@ -1,6 +1,6 @@
 [background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
 join Tryout_Manager rightmost
-join PlayerCharacter right [mirrored="true"]
+join PlayerCharacter (JerseyFace) right [mirrored="true"]
 join PlayerFriend right
 join Background_BabbleMember left
 join Background_BabbleMember leftmost
@@ -11,13 +11,13 @@ update PlayerFriend [animation="Shake X" length="0.9" wait="true" repeat="2"]
 PlayerCharacter: Man, that really makes me wish I could play alongside all of you today. You think captain would let me play even just for a little bit?
 PlayerFriend: Don't be ridiculous, if you try to use your arm now you might just break it again!
 PlayerCharacter: Heh. You're right. A man can dream though I guess!
-update PlayerCharacter (DefaultFace) [animation="Bounce"]
+update PlayerCharacter (JerseyFace) [animation="Bounce"]
 PlayerFriend: (Back then, he would totally just sink in his own sadness if something like this happened. I'm glad to see he's trying to keep our spirits up even though he can't play the drums with us today.)
 update PlayerFriend [animation="Bounce"]
 PlayerFriend: You don't have to dream, cause I'm gonna play twice as had for the both of us today! Just you watch!
 update Tryout_Manager [animation="Bounce" wait="true"]
 Tryout_Manager: LISTEN EVERYONE! GET ON YOUR INSTRUMENTS, WE'RE GONNA MAKE SURE WE START THE DAY OFF STRONG.
-leave PlayerFriend
+leave PlayerCharacter
 Tryout_Manager: KEEP YOUR EYES ON THE CALLER, AND PLAY LIKE YOU'VE NEVER PLAYED BEFORE.
 Tryout_Manager: WHATEVER IT IS YOU HAVE, GIVE EVERY SINGLE DROP OF IT HERE! I DON'T CARE IF ITS A 40 MINUTE GAME OR A 5 HOUR GAME.
 Tryout_Manager: THINK OF EVERY GAME WE HAD TO GO THROUGH TO GET TO THIS MOMENT. I WANT YOU ALL TO PLAY HARDER THAN ALL OF THOSE GAMES COMBINED!

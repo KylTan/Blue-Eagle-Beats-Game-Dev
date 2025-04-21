@@ -1,6 +1,6 @@
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join PlayerCharacter (DefaultFace) left [animation="Slide In Left" mirrored="true"]
-join PlayerFriend 'pos=x0.35,y1' [animation="Slide In Left" length="0.7" wait="true"]
+join PlayerFriend (Training) 'pos=x0.35,y1' [animation="Slide In Left" length="0.7" wait="true"]
 Tryout_Manager: Alright rooks, line up in front the instruments. We have some announcements to make.
 update PlayerFriend [animation="Bounce" repeat="2"]
 PlayerFriend: Hey! We're finally here! I can't believe we actually got in to [b]Babble![/b] I've always wanted to play drums for the hype cheers they play in the games!

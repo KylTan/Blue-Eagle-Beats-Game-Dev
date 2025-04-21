@@ -1,5 +1,5 @@
 [background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join PlayerCharacter left [mirrored="true"]
+join PlayerFriend left [mirrored="true"]
 PlayerFriend: Okay, this is it..
 PlayerFriend: (I made a promise to Juan, and I don't plan on breaking it any time soon.)
 PlayerFriend: (I Just gotta remember to trust myself, and play my heart out!)
