@@ -1,7 +1,14 @@
 #Global Variable For calling function to Change Scenes (needs to be global for dialogic to detect)
 extends Node
+var LevelSelect = 0
 
 #Into the non-dialogue scenes
+func _changeScene_Freeplay_Bass():
+	get_tree().change_scene_to_file("res://Objects/freeplay_game_scene.tscn")
+
+func _changeScene_Freeplay_Snare():
+	get_tree().change_scene_to_file("res://Objects/freeplay_snare_game_scene.tscn")
+
 func _changeScene_main_game_Bass():
 	get_tree().change_scene_to_file("res://Objects/main_game_scene.tscn")
 

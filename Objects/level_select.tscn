@@ -115,6 +115,101 @@ offset_bottom = 180.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
 
+[node name="free_play_button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1541.0
+offset_top = 23.0
+offset_right = 1877.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 50
+text = "To Freeplay"
+
+[node name="FPButtons" type="Node2D" parent="."]
+visible = false
+position = Vector2(-100, 100)
+
+[node name="free_play_Jabba" type="Button" parent="FPButtons"]
+offset_left = 434.0
+offset_top = 700.0
+offset_right = 773.0
+offset_bottom = 820.0
+theme_override_font_sizes/font_size = 50
+text = "Jabba"
+metadata/_edit_use_anchors_ = true
+
+[node name="free_play_Fabilioh" type="Button" parent="FPButtons"]
+offset_left = 434.0
+offset_top = 250.0
+offset_right = 773.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 50
+text = "Fabilioh
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="free_play_FlyHigh" type="Button" parent="FPButtons"]
+offset_left = 434.0
+offset_top = 550.0
+offset_right = 773.0
+offset_bottom = 670.0
+theme_override_font_sizes/font_size = 50
+text = "Fly High"
+metadata/_edit_use_anchors_ = true
+
+[node name="free_play_GOAT" type="Button" parent="FPButtons"]
+offset_left = 434.0
+offset_top = 406.0
+offset_right = 773.0
+offset_bottom = 526.0
+theme_override_font_sizes/font_size = 50
+text = "Go Ateneo"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="FPButtons"]
+offset_left = 485.0
+offset_top = 84.0
+offset_right = 735.0
+offset_bottom = 221.0
+theme_override_font_sizes/font_size = 100
+text = "Bass"
+
+[node name="FPButtonsSnare" type="Node2D" parent="."]
+visible = false
+position = Vector2(800, 100)
+
+[node name="free_play_Manson" type="Button" parent="FPButtonsSnare"]
+offset_left = 434.0
+offset_top = 400.0
+offset_right = 773.0
+offset_bottom = 520.0
+theme_override_font_sizes/font_size = 50
+text = "Manson"
+
+[node name="free_play_3Fights" type="Button" parent="FPButtonsSnare"]
+offset_left = 434.0
+offset_top = 250.0
+offset_right = 773.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 50
+text = "3 Fights"
+
+[node name="free_play_S_GOAT" type="Button" parent="FPButtonsSnare"]
+offset_left = 434.0
+offset_top = 550.0
+offset_right = 773.0
+offset_bottom = 670.0
+theme_override_font_sizes/font_size = 50
+text = "Go Ateneo"
+
+[node name="Label" type="Label" parent="FPButtonsSnare"]
+offset_left = 463.0
+offset_top = 102.0
+offset_right = 740.0
+offset_bottom = 239.0
+theme_override_font_sizes/font_size = 100
+text = "Snare"
+
 [connection signal="pressed" from="bass_tutorial" to="." method="_on_bass_tutorial_pressed"]
 [connection signal="pressed" from="snare_tutorial" to="." method="_on_snare_tutorial_pressed"]
 [connection signal="pressed" from="bass_basketball_1" to="." method="_on_bass_basketball_1_pressed"]
@@ -122,3 +217,11 @@ text = "Back"
 [connection signal="pressed" from="bass_basketball_2" to="." method="_on_bass_basketball_2_pressed"]
 [connection signal="pressed" from="snare_basketball_2" to="." method="_on_snare_basketball_2_pressed"]
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="free_play_button" to="." method="_on_free_play_button_pressed"]
+[connection signal="pressed" from="FPButtons/free_play_Jabba" to="." method="_on_free_play_jabba_pressed"]
+[connection signal="pressed" from="FPButtons/free_play_Fabilioh" to="." method="_on_free_play_fabilioh_pressed"]
+[connection signal="pressed" from="FPButtons/free_play_FlyHigh" to="." method="_on_free_play_fly_high_pressed"]
+[connection signal="pressed" from="FPButtons/free_play_GOAT" to="." method="_on_free_play_goat_pressed"]
+[connection signal="pressed" from="FPButtonsSnare/free_play_Manson" to="." method="_on_free_play_manson_pressed"]
+[connection signal="pressed" from="FPButtonsSnare/free_play_3Fights" to="." method="_on_free_play_3_fights_pressed"]
+[connection signal="pressed" from="FPButtonsSnare/free_play_S_GOAT" to="." method="_on_free_play_s_goat_pressed"]

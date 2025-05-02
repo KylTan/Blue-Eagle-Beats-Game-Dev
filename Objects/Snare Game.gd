@@ -70,8 +70,7 @@ func _process(delta):
 		if (bar.position.y + bars_node.position.y)/2 >= bar_Length_In_M:
 			remove_bar(bar)
 			add_bar()
-	
-
+			
 func animationCycle():
 	if receiver.noteDir == 1: #D
 		playerSprite.play("right_hit")

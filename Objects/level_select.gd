@@ -1,6 +1,7 @@
 extends Control
-var mission_unlock_bass = 0
-var mission_unlock_snare = 0
+var mission_unlock_bass = 3
+var mission_unlock_snare = 3
+var fp_pressed = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,9 +17,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if $SubViewportContainer/SubViewport.anim_fin1 > 0:
+	if $SubViewportContainer/SubViewport.anim_fin1 > 0 && fp_pressed == 0:
 		$bass_tutorial.visible = true
 		$back_button.visible = true
+		$free_play_button.visible = true
 		if mission_unlock_bass >= 1:
 			$bass_basketball_1.visible = true
 		if mission_unlock_snare >= 1:
@@ -56,3 +58,55 @@ func _on_snare_basketball_2_pressed():
 
 func _on_back_button_pressed():
 	GlobalSceneManager._changeScene_MainMenu()
+
+# FREEPLAY 
+func _on_free_play_jabba_pressed():
+	GlobalSceneManager.LevelSelect = 1 #make sure this goes first
+	GlobalSceneManager._changeScene_Freeplay_Bass()
+	
+func _on_free_play_fabilioh_pressed():
+	GlobalSceneManager.LevelSelect = 2 #make sure this goes first
+	GlobalSceneManager._changeScene_Freeplay_Bass()
+	
+func _on_free_play_fly_high_pressed():
+	GlobalSceneManager.LevelSelect = 3 #make sure this goes first
+	GlobalSceneManager._changeScene_Freeplay_Bass()
+
+func _on_free_play_goat_pressed():
+	GlobalSceneManager.LevelSelect = 4 #make sure this goes first
+	GlobalSceneManager._changeScene_Freeplay_Bass()
+
+func _on_free_play_button_pressed():
+	if fp_pressed == 0:
+		fp_pressed = 1
+		
+		$bass_tutorial.visible = false
+		$bass_basketball_1.visible = false
+		$snare_tutorial.visible = false
+		$bass_basketball_2.visible = false
+		$snare_basketball_1.visible = false
+		$snare_basketball_2.visible = false
+		$FPButtons.visible = true
+		$FPButtonsSnare.visible = true
+		$free_play_button.text = "To Story"
+	elif fp_pressed == 1:
+		fp_pressed = 0
+		
+		$FPButtons.visible = false
+		$FPButtonsSnare.visible = false
+		$free_play_button.text = "To Freeplay"
+
+
+func _on_free_play_manson_pressed():
+	GlobalSceneManager.LevelSelect = 5 #make sure this goes first
+	GlobalSceneManager._changeScene_Freeplay_Snare()
+
+
+func _on_free_play_3_fights_pressed():
+	GlobalSceneManager.LevelSelect = 6 #make sure this goes first
+	GlobalSceneManager._changeScene_Freeplay_Snare()
+
+
+func _on_free_play_s_goat_pressed():
+	GlobalSceneManager.LevelSelect = 7 #make sure this goes first
+	GlobalSceneManager._changeScene_Freeplay_Snare()

@@ -25,6 +25,8 @@ func _ready():
 					_FlyHighCall()
 				5:
 					_GoAtCall()
+				6: 
+					_JabbaCall()
 		2: #for snare
 			match cheerIndex:
 				3:

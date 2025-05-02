@@ -172,6 +172,11 @@ texture = ExtResource("1_qa2vd")
 position = Vector2(953, 542)
 texture = ExtResource("7_iie8y")
 
+[node name="UI Frame2" type="Sprite2D" parent="."]
+position = Vector2(-884, 542)
+rotation = 3.14159
+texture = ExtResource("7_iie8y")
+
 [node name="Hitzones" type="Sprite2D" parent="."]
 position = Vector2(961, 543)
 texture = ExtResource("8_itkf6")
