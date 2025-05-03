@@ -7,7 +7,7 @@ var particle = preload("res://Objects/particle_explosion.tscn")
 var is_Entered = 0
 var last_right_hit_time = 0
 var last_left_hit_time = 0
-var double_hit_window = 100
+var double_hit_window = 20
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
