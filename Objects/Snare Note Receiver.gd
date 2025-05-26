@@ -36,12 +36,12 @@ func _input(event):
 		handle_left_hit()
 	elif event.is_action_pressed("K_key") or event.is_action_pressed("Taiko_Right"):
 		handle_right_hit()
-
 	if !event.is_action_pressed("K_key") and !event.is_action_pressed("D_key") and !event.is_action_pressed("space_key") and !event.is_action_pressed("Taiko_Right") and !event.is_action_pressed("Taiko_Left"): 
 		is_pressed = false
 		is_Hit = false
 		noteDir = 0
-
+	
+	
 func _on_area_2d_area_entered(area):
 	if area.name == "DoubleArea":
 		is_Entered = 1

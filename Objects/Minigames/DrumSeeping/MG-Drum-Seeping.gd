@@ -36,7 +36,11 @@ func _ready():
 	animationPlayer.play("Pulsate")
 	GameState += 1
 	_SetSlidingScale()
-
+	
+	if ($SubViewportContainer2.visible):
+		$SubViewportContainer2/SnareDrumBG/Ins.visible = false
+	if ($SubViewportContainer.visible):
+		$SubViewportContainer/BassDrumBG/Ins2.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -10,7 +10,7 @@ update PlayerFriend [animation="Shake X" length="0.9" wait="true" repeat="2"]
 PlayerFriend: You know, I kind of wish more than anything right now to play, but I guess there's not much I can do.
 PlayerFriend: Promise me you'll play twice as loud for the both of us later will you?
 PlayerCharacter: That's already a given. At this point there's only two people better than me at playing the drums...
-update PlayerCharacter (DefaultFace) [animation="Bounce"]
+update PlayerCharacter (JerseyFace) [animation="Bounce"]
 PlayerCharacter: [b]AND I'M BOTH OF EM[/b]
 join Tryout_Manager rightmost
 update PlayerFriend [animation="Bounce"]

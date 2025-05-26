@@ -1,6 +1,6 @@
 extends Control
-var mission_unlock_bass = 3
-var mission_unlock_snare = 3
+var mission_unlock_bass = 0
+var mission_unlock_snare = 0
 var fp_pressed = 0
 
 
@@ -21,16 +21,16 @@ func _process(delta):
 		$bass_tutorial.visible = true
 		$back_button.visible = true
 		$free_play_button.visible = true
-		if mission_unlock_bass >= 1:
-			$bass_basketball_1.visible = true
-		if mission_unlock_snare >= 1:
-			$snare_tutorial.visible = true
-		if mission_unlock_bass >= 3:
-			$bass_basketball_2.visible = true
-		if mission_unlock_snare >= 2:
-			$snare_basketball_1.visible = true
-		if mission_unlock_snare >= 3:
-			$snare_basketball_2.visible = true
+	#if mission_unlock_bass >= 1:
+		$bass_basketball_1.visible = true
+	#if mission_unlock_snare >= 1:
+		$snare_tutorial.visible = true
+	#if mission_unlock_bass >= 3:
+		$bass_basketball_2.visible = true
+	#if mission_unlock_snare >= 2:
+		$snare_basketball_1.visible = true
+	#if mission_unlock_snare >= 3:
+		$snare_basketball_2.visible = true
 
 
 func _on_bass_tutorial_pressed():

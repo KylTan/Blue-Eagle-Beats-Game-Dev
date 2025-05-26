@@ -122,8 +122,10 @@ func _on_clear_area_mouse_entered():
 	add_child(particleChild)
 	
 	$BeatLight.texture_scale = 1.0
-	
 	$IdleTimer.start()
+	
+	$"Bass Soundplayer".play()
+	$"Clear Area/Sprite2D".scale *= 0.9
 
 func _on_clear_area_mouse_exited():
 	is_Hit = false
@@ -132,6 +134,9 @@ func _on_clear_area_mouse_exited():
 		chargeValue = 0
 		beaterSprite.play("default")
 		$BeatLight.texture_scale = 0.0
+		
+	$"Clear Area/Sprite2D".scale *= 1.11
+	
 	#playerSprite.play("idle") will idle as soon as u leave the drum hitbox
 	
 # ~~~~~Bar spawning functions~~~~~
