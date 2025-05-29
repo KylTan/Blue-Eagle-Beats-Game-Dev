@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://byo718rs36bj0"]
+
+[ext_resource type="Texture2D" uid="uid://bow1evvdvyqc5" path="res://Assets/Textures/Metal.png" id="1_hlq01"]
+[ext_resource type="Texture2D" uid="uid://c1tgmyq25mnpq" path="res://Assets/Credits Reso.png" id="2_dkb17"]
+[ext_resource type="Texture2D" uid="uid://b5qqcceh2jho1" path="res://Assets/Textures/700 Pixel Art PNGs/Glass/Glass_01_Transparent.png" id="3_pswtl"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_7leif"]
+inner_radius = 0.98
+rings = 32
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfddl"]
+albedo_color = Color(0.60933, 0.60933, 0.60933, 1)
+albedo_texture = ExtResource("1_hlq01")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_h57bc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8w42"]
+transparency = 1
+albedo_color = Color(0.359069, 0.359069, 0.359069, 1)
+albedo_texture = ExtResource("3_pswtl")
+uv1_scale = Vector3(20, 20, 20)
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("TorusMesh_7leif")
+surface_material_override/0 = SubResource("StandardMaterial3D_wfddl")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.19, 0, 0, 0, -8.30516e-09, 0.19, 0, -0.19, -8.30516e-09, 0, 0.01, 0)
+texture = ExtResource("2_dkb17")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.96, 0, 0, 0, 0.005, 0, 0, 0, 1.96, 0, -0.01, 0)
+mesh = SubResource("CylinderMesh_h57bc")
+surface_material_override/0 = SubResource("StandardMaterial3D_d8w42")

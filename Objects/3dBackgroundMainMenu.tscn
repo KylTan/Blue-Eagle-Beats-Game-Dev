@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://csrmwnawy2ykl"]
+[gd_scene load_steps=60 format=3 uid="uid://csrmwnawy2ykl"]
 
 [ext_resource type="Script" path="res://Objects/3dBackgroundMainMenu.gd" id="1_2en6l"]
 [ext_resource type="Texture2D" uid="uid://4xyvg5nlnvyk" path="res://Assets/Textures/700 Pixel Art PNGs/Concrete/Concrete_02_Orange_Square_1.png" id="1_girkn"]
@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://b22aqipq3q1t" path="res://Assets/Textures/A Logo.png" id="12_f5k0n"]
 [ext_resource type="Texture2D" uid="uid://ccvio0nncpafr" path="res://Assets/Textures/Bass_Tape.png" id="13_akn0x"]
 [ext_resource type="PackedScene" uid="uid://qtrw58nfko2" path="res://Objects/Glasses3D.tscn" id="19_wyehg"]
+[ext_resource type="PackedScene" uid="uid://byo718rs36bj0" path="res://Objects/credits_reso_object.tscn" id="20_bp3mk"]
+[ext_resource type="PackedScene" uid="uid://bwaa237exsp4d" path="res://Objects/rachet_object.tscn" id="21_8scr4"]
 
 [sub_resource type="Animation" id="Animation_2offh"]
 resource_name = "door_focus"
@@ -327,12 +329,12 @@ mesh = SubResource("BoxMesh_tca3g")
 surface_material_override/0 = SubResource("StandardMaterial3D_6ux7f")
 
 [node name="Wall8" type="MeshInstance3D" parent="Lower Wall"]
-transform = Transform3D(-6.55671e-08, -0.1, -8.47033e-22, 1.5, -4.37114e-09, 0, 0, -1.05879e-22, 1.5, 1.04037, -0.837933, -0.25216)
+transform = Transform3D(-6.55671e-08, -0.1, -8.47033e-22, 1.5, -4.37114e-09, 0, 0, -9.52912e-22, 1.5, 1.04037, -0.761325, -0.764262)
 mesh = SubResource("BoxMesh_tca3g")
 surface_material_override/0 = SubResource("StandardMaterial3D_vx6ki")
 
 [node name="Wall9" type="MeshInstance3D" parent="Lower Wall"]
-transform = Transform3D(-6.55671e-08, -0.1, -8.47033e-22, 1.5, -4.37114e-09, 0, 0, -3.17637e-22, 1.5, -0.918972, -0.837933, -0.25216)
+transform = Transform3D(-6.55671e-08, -0.1, -8.47033e-22, 1.5, -4.37114e-09, 0, 0, -1.16467e-21, 1.5, -0.918972, -0.761325, -0.764262)
 mesh = SubResource("BoxMesh_tca3g")
 surface_material_override/0 = SubResource("StandardMaterial3D_vx6ki")
 
@@ -943,8 +945,15 @@ texture = ExtResource("10_m2qtv")
 transform = Transform3D(0.0849719, 0.0024404, 0, -0.00218351, 0.0949686, 0, 0, 0, 0.08, 1.17388, 0.308627, -0.146692)
 texture = ExtResource("11_1yrri")
 
-[node name="Node3D" parent="." instance=ExtResource("19_wyehg")]
+[node name="Glasses" parent="." instance=ExtResource("19_wyehg")]
 transform = Transform3D(0.0321611, 0, 0.0506524, 0, 0.06, 0, -0.0506524, 0, 0.0321611, -1.05691, -0.146955, -0.927961)
+visible = false
+
+[node name="MeshInstance3D" parent="." instance=ExtResource("20_bp3mk")]
+transform = Transform3D(-0.399744, 0.00621189, -0.0129012, 0.014285, 0.148256, -0.371236, -0.000983495, -0.371459, -0.148383, -1.29589, 0.19367, -0.644337)
+
+[node name="Rachet" parent="." instance=ExtResource("21_8scr4")]
+transform = Transform3D(-0.38445, -0.00747707, 0.524063, -0.00515274, 0.649956, 0.00549322, -0.524091, -0.00090537, -0.384484, -1.66278, -0.165642, -0.797811)
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer2" to="." method="_on_animation_player_2_animation_finished"]

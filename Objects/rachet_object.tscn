@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwaa237exsp4d"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_a3ged"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rjphl"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hyk7j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfxcy"]
+albedo_color = Color(0.310617, 0.310617, 0.310617, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_x0ghx"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_fuipi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wmtpg"]
+albedo_color = Color(0.709804, 0, 0, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MidBase" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.24, 0, 0, 0, 0.036, 0, 0, 0, 0.0230668, -0.0195021, 0, 0)
+mesh = SubResource("BoxMesh_a3ged")
+surface_material_override/0 = SubResource("StandardMaterial3D_rjphl")
+
+[node name="tip2" type="MeshInstance3D" parent="MidBase"]
+transform = Transform3D(0.130573, 0, 0, 0, -1.57282e-08, -1, 0, 0.498213, -6.05235e-08, 0.490446, 0, 0)
+mesh = SubResource("CylinderMesh_hyk7j")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_rjphl")
+
+[node name="tip" type="MeshInstance3D" parent="MidBase"]
+transform = Transform3D(0.129496, 0, 0, 0, -1.55985e-08, -0.991748, 0, 0.494101, -6.0024e-08, -0.490446, 0, 0)
+mesh = SubResource("CylinderMesh_hyk7j")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_rjphl")
+
+[node name="MidBase2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.24, 0, 0, 0, 0.03, 0, 0, 0, 0.025, -0.0195021, 0, 0)
+mesh = SubResource("BoxMesh_a3ged")
+surface_material_override/0 = SubResource("StandardMaterial3D_gfxcy")
+
+[node name="tip2" type="MeshInstance3D" parent="MidBase2"]
+transform = Transform3D(0.127244, 0, 0, 0, -1.57282e-08, -1, 0, 0.498213, -6.05235e-08, 0.477942, 0, 0)
+mesh = SubResource("CylinderMesh_hyk7j")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_gfxcy")
+
+[node name="tip" type="MeshInstance3D" parent="MidBase2"]
+transform = Transform3D(0.126194, 0, 0, 0, -1.55985e-08, -0.991748, 0, 0.494101, -6.0024e-08, -0.477942, 0, 0)
+mesh = SubResource("CylinderMesh_hyk7j")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_gfxcy")
+
+[node name="Rachet Tip" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.027, 0, 0, 0, -1.59264e-09, -0.024, 0, 0.0364352, -1.04907e-09, -0.127579, 0, -0.0234614)
+mesh = SubResource("CylinderMesh_x0ghx")
+surface_material_override/0 = SubResource("StandardMaterial3D_rjphl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.069419, 0, 0, 0, 0.0300899, 0, 0, 0, 0.0169131, 0.0631115, 0, 0.00859695)
+mesh = SubResource("SphereMesh_fuipi")
+surface_material_override/0 = SubResource("StandardMaterial3D_wmtpg")

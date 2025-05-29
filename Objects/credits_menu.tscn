@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cckekcvin7hen"]
+[gd_scene load_steps=4 format=3 uid="uid://cckekcvin7hen"]
 
 [ext_resource type="Script" path="res://Objects/credits_menu.gd" id="1_nnvxa"]
 [ext_resource type="PackedScene" uid="uid://csrmwnawy2ykl" path="res://Objects/3dBackgroundMainMenu.tscn" id="2_gve52"]
+[ext_resource type="FontFile" uid="uid://cc4xli25271fd" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Bold.ttf" id="3_kaqrv"]
 
 [node name="CreditsMenu" type="Control"]
 layout_mode = 3
@@ -37,11 +38,12 @@ text = "Back"
 [node name="Credits" type="Node2D" parent="."]
 
 [node name="Devs" type="Label" parent="Credits"]
-offset_left = 315.0
-offset_top = 171.0
-offset_right = 901.0
-offset_bottom = 456.0
-theme_override_font_sizes/font_size = 45
+offset_left = 1202.0
+offset_top = 157.0
+offset_right = 1788.0
+offset_bottom = 442.0
+theme_override_fonts/font = ExtResource("3_kaqrv")
+theme_override_font_sizes/font_size = 34
 text = "Developed and Created by:
 Elmo Gumapos
 Justin Mendoza
@@ -49,12 +51,13 @@ Kyle Tan"
 horizontal_alignment = 1
 
 [node name="Thanks" type="Label" parent="Credits"]
-offset_left = 700.0
-offset_top = 510.0
-offset_right = 1225.0
-offset_bottom = 795.0
+offset_left = 1234.0
+offset_top = 586.0
+offset_right = 1759.0
+offset_bottom = 871.0
 rotation = 0.00160653
-theme_override_font_sizes/font_size = 45
+theme_override_fonts/font = ExtResource("3_kaqrv")
+theme_override_font_sizes/font_size = 34
 text = "Special Thanks to:"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -63,12 +66,13 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_left = -0.084375
 anchor_right = -0.084375
-offset_left = 485.0
-offset_top = 504.0
-offset_right = 1010.0
-offset_bottom = 789.0
+offset_left = 1228.0
+offset_top = 746.0
+offset_right = 1753.0
+offset_bottom = 1031.0
 rotation = 0.00160653
-theme_override_font_sizes/font_size = 45
+theme_override_fonts/font = ExtResource("3_kaqrv")
+theme_override_font_sizes/font_size = 34
 text = "
 Sound Design
 Mattia Morales
@@ -83,12 +87,13 @@ anchor_left = 0.0875
 anchor_top = 0.0111111
 anchor_right = 0.0875
 anchor_bottom = 0.0111111
-offset_left = 930.0
-offset_top = 504.0
-offset_right = 1455.0
-offset_bottom = 789.0
+offset_left = 1228.0
+offset_top = 592.0
+offset_right = 1753.0
+offset_bottom = 877.0
 rotation = 0.00160653
-theme_override_font_sizes/font_size = 45
+theme_override_fonts/font = ExtResource("3_kaqrv")
+theme_override_font_sizes/font_size = 34
 text = "
 Visual Design
 Dani Danao
@@ -102,12 +107,13 @@ anchor_left = -2.38562
 anchor_top = -1.75467
 anchor_right = -2.38562
 anchor_bottom = -1.71578
-offset_left = 1105.0
-offset_top = 110.0
-offset_right = 1630.0
-offset_bottom = 437.0
+offset_left = 1229.0
+offset_top = 325.0
+offset_right = 1754.0
+offset_bottom = 652.0
 rotation = 0.00160653
-theme_override_font_sizes/font_size = 45
+theme_override_fonts/font = ExtResource("3_kaqrv")
+theme_override_font_sizes/font_size = 34
 text = "
 Advisors:
 Dylan Sy
