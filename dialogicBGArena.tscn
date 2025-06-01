@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://652piku53s7h"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_432aw"]
+[ext_resource type="PackedScene" uid="uid://c01pw05l84wtq" path="res://3dBackgroundDialogicAngle.tscn" id="2_32jcf"]
+
+[node name="DialogicBackground" type="Node"]
+script = ExtResource("1_432aw")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" parent="SubViewportContainer" instance=ExtResource("2_32jcf")]
+handle_input_locally = false
+render_target_update_mode = 4

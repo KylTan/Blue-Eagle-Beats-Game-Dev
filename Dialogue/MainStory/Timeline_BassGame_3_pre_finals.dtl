@@ -1,4 +1,4 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
+[background scene="res://dialogicBGArena.tscn" arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
 join PlayerCharacter right [mirrored="true"]
 join PlayerFriend right
 join Background_BabbleMember left
