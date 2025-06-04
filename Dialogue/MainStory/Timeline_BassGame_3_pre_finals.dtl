@@ -5,7 +5,7 @@ join Background_BabbleMember left
 join Background_BabbleMember leftmost
 PlayerCharacter: Ok were practically finished setting up, and we have a little time to spare before the crowds start showing up.
 PlayerFriend: Make sure you actually placed that bass properly, the last thing we want is it falling over the railing!
-PlayerCharacter: I may have seen that happen a time of two... But you go woeey about yourself first.
+PlayerCharacter: I may have seen that happen a time of two... But you go worry about yourself first.
 update PlayerFriend [animation="Shake X" length="0.9" wait="true" repeat="2"]
 PlayerFriend: You know, I kind of wish more than anything right now to play, but I guess there's not much I can do.
 PlayerFriend: Promise me you'll play twice as loud for the both of us later will you?

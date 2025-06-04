@@ -1,7 +1,7 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join Tryout_Manager right
-join PlayerCharacter left [mirrored="true"]
-join PlayerFriend left
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerFriend (DefaultFace) pos=x0.32,y0.89 size=y450px [animation="Slide In Left" length="0.7" wait="true"]
+join PlayerCharacter (JerseyFace) pos=x0.27,y0.89 size=y450px [animation="Slide In Left" mirrored="true"]
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 Tryout_Manager: Everyone on your feet! Final check on the instruments, halftime should be starting soon!
 (The leads sign off on the equipment maintainance)
 Tryout_Manager: Ok good. Vets on the basses, get ready for halftime. Juan get over here.
@@ -11,10 +11,10 @@ Tryout_Manager: We're putting some trust on you, so we're giving you a shot for 
 Tryout_Manager: We're giving you this chance fo a reason, so make it count.
 PlayerCharacter: Uhmm... Ok sir! Will do!
 Tryout_Manager: Now time to get ready, get on your bass!
-leave Tryout_Manager [animation="Slide Out Right" wait="true"]
+leave Tryout_Manager [animation="Slide Out Left" length="2.0"]
 PlayerCharacter: (I'm starting to feel those stomach cramps now.)
 PlayerFriend: OMG! it looks like your effort's been paying off! Good luck!!
-update PlayerFriend [animation="Bounce"]
+update PlayerFriend pos=x0.33,y0.89 [animation="Bounce" mirrored="true"]
 PlayerCharacter: I just feel like the pressure came back... What if I mess up this time!!
 PlayerFriend: We've been here before bud.. Just remember what we've done in training.
 PlayerFriend: I know you got this bud.. I believe in you!

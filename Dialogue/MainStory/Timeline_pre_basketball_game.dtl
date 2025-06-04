@@ -1,7 +1,7 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join Tryout_Manager rightmost
-join PlayerCharacter (JerseyFace) left [mirrored="true"]
-join PlayerFriend 'pos=x0.35,y1' [animation="Bounce In"]
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerCharacter (JerseyFace) pos=x0.23,y1.05 size=y500px [mirrored="true"]
+join PlayerFriend (Default w/ Snare) pos=x0.4,y0.70 size=y300px
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 # INSERT BG AMBIENCE (CROWD NOICE + SPORTS NOISE?)
 PlayerCharacter: (Oh man... the pressure's starting to get to me...)
 PlayerFriend: So this is what the view is like up here. It makes me feel soo...
@@ -9,7 +9,7 @@ update PlayerFriend [animation="Bounce" length="0.6" repeat="2"]
 PlayerFriend: ALIVEE!!!!
 PlayerCharacter: ....
 PlayerFriend: I AM SO PUMPED RIGHT NOW!!! LETS GO GET EM!!
-PlayerCharacter: (You know what, she's right. We can do this.) 
+PlayerCharacter: (You know what, she's right. We can do this.)
 PlayerCharacter: I wish I always had your energy.
 update PlayerCharacter [animation="Bounce" wait="true"]
 update PlayerFriend [animation="Bounce" wait="true"]
