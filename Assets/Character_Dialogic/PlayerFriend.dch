@@ -41,18 +41,9 @@
 },
 "ignore_char_scale": true,
 "mirror": false,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-"offset": Vector2(0, 100),
-"scale": 1,
-"scene": ""
-=======
-=======
->>>>>>> Stashed changes
 "offset": Vector2(0, 0),
 "scale": 1.1,
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
->>>>>>> Stashed changes
 }
 },
 "scale": 1.0
