@@ -1,13 +1,19 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join Tryout_Manager right
 join PlayerCharacter (DefaultFace) left [mirrored="true"]
 join PlayerFriend 'pos=x0.35,y1'
 =======
+=======
+>>>>>>> Stashed changes
 [background scene="res://Objects/dialogicBGTraining.tscn" fade="0.0"]
 join PlayerCharacter (DefaultFace) pos=x0.15,y0.89 size=y450px [mirrored="true"]
 join PlayerFriend (Training) pos=x0.2,y0.89 size=y450px
 join Tryout_Manager pos=x0.75,y0.89 size=y450px
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 Tryout_Manager: That's it for the maintenance for now. Remember that the equipment is [u]sacred[/u].
 Tryout_Manager: Some of these drums are older than your parents, so make sure to treat them with the most care!

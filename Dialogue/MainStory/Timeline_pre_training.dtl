@@ -1,7 +1,13 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [background arg="res://Assets/AteneoField.jpg" fade="0.0"]
 join PlayerCharacter (DefaultFace) left [animation="Slide In Left" mirrored="true"]
 join PlayerFriend 'pos=x0.35,y1' [animation="Slide In Left" length="0.7" wait="true"]
+=======
+[background scene="res://Objects/dialogicBGTraining.tscn" fade="0.0"]
+join PlayerFriend (Training) pos=x0.2,y0.89 size=y450px [animation="Slide In Left" length="0.7" wait="true"]
+join PlayerCharacter (DefaultFace) pos=x0.15,y0.89 size=y450px [animation="Slide In Left" mirrored="true"]
+>>>>>>> Stashed changes
 =======
 [background scene="res://Objects/dialogicBGTraining.tscn" fade="0.0"]
 join PlayerFriend (Training) pos=x0.2,y0.89 size=y450px [animation="Slide In Left" length="0.7" wait="true"]
