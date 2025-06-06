@@ -1,6 +1,7 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join Tryout_Manager right
-join PlayerCharacter left [mirrored="true"]
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerCharacter (JerseyFace) pos=x0.23,y1.05 size=y500px [mirrored="true"]
+join Placeholder (Snare) pos=x0.6,y0.8 size=y400px
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 Tryout_Manager: OK GUYS!!! THATS A WRAP!! 
 Tryout_Manager: It's been a long time coming, but our efforts paid off in the end. This is the part where we can all sit and take this victory in!
 Tryout_Manager: <Empty Text Event>
