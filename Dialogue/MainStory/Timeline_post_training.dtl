@@ -1,7 +1,11 @@
-[background arg="res://Assets/AteneoField.jpg" fade="0.0"]
-join PlayerCharacter (DefaultFace) left [mirrored="true"]
-join PlayerFriend (Training) 'pos=x0.35,y1'
-join Tryout_Manager right
+[background scene="res://Objects/dialogicBGTraining.tscn" fade="0.0"]
+join PlayerFriend (Training) pos=x0.2,y0.89 size=y450px [animation="Slide In Left" length="0.7" wait="true"]
+join PlayerCharacter (DefaultFace) pos=x0.15,y0.89 size=y450px [animation="Slide In Left" mirrored="true"]
+join Tryout_Manager pos=x0.75,y0.89 size=y450px [animation="Slide In Right" length="0.8" wait="true"]
+[background scene="res://Objects/dialogicBGTraining.tscn" fade="0.0"]
+join PlayerCharacter (DefaultFace) pos=x0.15,y0.89 size=y450px [mirrored="true"]
+join PlayerFriend (Training) pos=x0.2,y0.89 size=y450px
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 Tryout_Manager: First of all, congratulations to all the rooks for making it through your first training. We will continue learning more cheers as well as perfecting them to the best of our abilities.
 Tryout_Manager: Keep in mind that our trainings will be similar to this from here on out until the start of the season.
 Tryout_Manager: As we go on, the trainings will only get harder. So do expect to go uphill from here in preparation for the season.

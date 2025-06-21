@@ -1,18 +1,17 @@
-[background scene="res://dialogicBGArena.tscn" arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join PlayerCharacter right [mirrored="true"]
-join PlayerFriend right
-join Background_BabbleMember left
-join Background_BabbleMember leftmost
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerCharacter (JerseyFace) pos=x0.23,y1.05 size=y500px [mirrored="true"]
+join PlayerFriend (DefaultFace) pos=x0.4,y0.85 size=y400px [mirrored="true"]
+join Placeholder (Snare) pos=x0.6,y0.8 size=y400px
 PlayerCharacter: Ok were practically finished setting up, and we have a little time to spare before the crowds start showing up.
 PlayerFriend: Make sure you actually placed that bass properly, the last thing we want is it falling over the railing!
-PlayerCharacter: I may have seen that happen a time of two... But you go woeey about yourself first.
+PlayerCharacter: I may have seen that happen a time of two... But you go worry about yourself first.
 update PlayerFriend [animation="Shake X" length="0.9" wait="true" repeat="2"]
 PlayerFriend: You know, I kind of wish more than anything right now to play, but I guess there's not much I can do.
 PlayerFriend: Promise me you'll play twice as loud for the both of us later will you?
 PlayerCharacter: That's already a given. At this point there's only two people better than me at playing the drums...
 update PlayerCharacter (JerseyFace) [animation="Bounce"]
 PlayerCharacter: [b]AND I'M BOTH OF EM[/b]
-join Tryout_Manager rightmost
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 update PlayerFriend [animation="Bounce"]
 PlayerFriend: THAT'S THE SPIRIT, LET'S GO GET THEM
 update Tryout_Manager [animation="Bounce" wait="true"]

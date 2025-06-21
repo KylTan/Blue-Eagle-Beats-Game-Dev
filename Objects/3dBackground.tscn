@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://be2fgss1xl1th"]
+[gd_scene load_steps=22 format=3 uid="uid://be2fgss1xl1th"]
 
 [ext_resource type="PackedScene" uid="uid://cxf6q4pop7hux" path="res://Objects/3dArenaSection.tscn" id="1_vd4vy"]
 [ext_resource type="Texture2D" uid="uid://caan8kakjnn11" path="res://Assets/Textures/Metal Horizontal.png" id="2_xx5p8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b7eyj6f6pd5f7" path="res://Assets/Textures/glowgo.png" id="4_pkneo"]
 [ext_resource type="Texture2D" uid="uid://bmpxqcckhuaql" path="res://Assets/Textures/Wood.png" id="4_xso8c"]
 [ext_resource type="PackedScene" uid="uid://ck7sovptquveh" path="res://Assets/crowd_sprite.tscn" id="7_dq14x"]
+[ext_resource type="PackedScene" uid="uid://fvnqhw4vhgrg" path="res://Objects/bass_3d.tscn" id="8_84l1i"]
 
 [sub_resource type="Environment" id="Environment_u0ssb"]
 
@@ -1433,3 +1434,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64814, 5.03126, -23.2696)
 
 [node name="Crowd Sprite16" parent="GA Crowd/Crowd9" instance=ExtResource("7_dq14x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1785, 6.91767, -28.3206)
+
+[node name="Bass Shell" parent="." instance=ExtResource("8_84l1i")]
+transform = Transform3D(-0.25, -1.27192e-05, -2.31655e-12, 0, -2.62268e-09, 0.25, -5.29965e-05, 0.06, 1.09278e-08, 1.26601, 0.301966, -2.27198)
+skeleton = NodePath("../Camera3D")
+
+[node name="Bass Shell2" parent="." instance=ExtResource("8_84l1i")]
+transform = Transform3D(-0.247463, 0.00852649, -2.31648e-12, -1.55523e-09, -2.59599e-09, 0.25, 0.035527, 0.0593911, 1.09278e-08, 1.26597, 0.301966, -2.09835)
+skeleton = NodePath("../Camera3D")
+
+[node name="Bass Shell3" parent="." instance=ExtResource("8_84l1i")]
+transform = Transform3D(0.249975, -0.000846995, -2.31655e-12, 1.5658e-10, 2.62242e-09, 0.25, -0.00352915, -0.059994, 1.09278e-08, 1.26594, 0.301966, -1.91949)
+skeleton = NodePath("../Camera3D")

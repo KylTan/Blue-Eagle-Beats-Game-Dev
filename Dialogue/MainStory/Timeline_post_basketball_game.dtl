@@ -1,7 +1,7 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join Tryout_Manager right
-join PlayerCharacter left [mirrored="true"]
-join PlayerFriend left
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerFriend (DefaultFace) pos=x0.32,y0.89 size=y450px [animation="Slide In Left" length="0.7" wait="true"]
+join PlayerCharacter (JerseyFace) pos=x0.27,y0.89 size=y450px [animation="Slide In Left" mirrored="true"]
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 (The rest of the game goes by without a hitch)
 Tryout_Manager: Everyone gather round!
 Tryout_Manager: Our first game is a wrap. For the rooks, this is your first taste of what it's like so make sure you remember this feeling!

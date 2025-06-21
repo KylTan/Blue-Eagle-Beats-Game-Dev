@@ -1,7 +1,7 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join PlayerCharacter left [mirrored="true"]
-join Tryout_Manager right
-update Tryout_Manager [animation="Bounce"]
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerCharacter (JerseyFace) pos=x0.23,y1.05 size=y500px [mirrored="true"]
+join Placeholder (Snare) pos=x0.6,y0.8 size=y400px
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 Tryout_Manager: COME ON GUYS! TELL ME RIGHT NOW, ARE YOU TIRED?
 (......)
 Tryout_Manager: WHATEVER IT IS YOU THINK, YOU GUYS AREN'T. IT'S AT TIMES LIKE THIS WHERE YOU DIG DEEP.

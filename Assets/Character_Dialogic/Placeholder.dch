@@ -43,6 +43,15 @@
 "scale": 1.0,
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 },
+"Snare": {
+"export_overrides": {
+"image": "\"res://Assets/just-snare.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 0.95,
+"scene": ""
+},
 "Tape": {
 "export_overrides": {
 "image": "\"res://Assets/StickTapeMinigame/MG3_DrumStick.png\""

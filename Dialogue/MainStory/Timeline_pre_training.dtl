@@ -1,12 +1,12 @@
-[background arg="res://Assets/AteneoField.jpg" fade="0.0"]
-join PlayerCharacter (DefaultFace) left [animation="Slide In Left" mirrored="true"]
-join PlayerFriend (Training) 'pos=x0.35,y1' [animation="Slide In Left" length="0.7" wait="true"]
+[background scene="res://Objects/dialogicBGTraining.tscn" fade="0.0"]
+join PlayerFriend (Training) pos=x0.2,y0.89 size=y450px [animation="Slide In Left" length="0.7" wait="true"]
+join PlayerCharacter (DefaultFace) pos=x0.15,y0.89 size=y450px [animation="Slide In Left" mirrored="true"]
 Tryout_Manager: Alright rooks, line up in front the instruments. We have some announcements to make.
 update PlayerFriend [animation="Bounce" repeat="2"]
 PlayerFriend: Hey! We're finally here! I can't believe we actually got in to [b]Babble![/b] I've always wanted to play drums for the hype cheers they play in the games!
 PlayerFriend: Let's try not to let the nerves get to us though...
 PlayerCharacter: Yeah.. I'm happy for you. I just hope I can show that I really want to be here, even though we're already in.
-update PlayerFriend 0.35,1 [mirrored="true"]
+update PlayerFriend [mirrored="true"]
 PlayerFriend: Don't think that way!! You got past the tryouts for a reason! You deserve to be here thanks to your hard work!
 update PlayerFriend [animation="Shake Y" mirrored="true"]
 PlayerFriend: So just believe in yourself, and we'll get through this!
@@ -14,7 +14,7 @@ PlayerCharacter: Thanks... I really appreciate that.
 PlayerCharacter: (I just gotta believe in myself... I mean I got here with my own hardwork didn't I?)
 update PlayerFriend [mirrored="false"]
 PlayerFriend: Looks like the captain just arrived.
-join Tryout_Manager right [animation="Slide In Right" length="0.8" wait="true"]
+join Tryout_Manager pos=x0.75,y0.89 size=y450px [animation="Slide In Right" length="0.8" wait="true"]
 Tryout_Manager: OK EVERYONE SETTLE DOWN NOW!!!
 Tryout_Manager: Ok now that I have your attention! We want to congratulate the new rookies for passing the tryouts.
 Tryout_Manager: Now that's out of the way! We'll start with the palo training. There's still a lot to learn before you're all in shape for the season. Any questions?

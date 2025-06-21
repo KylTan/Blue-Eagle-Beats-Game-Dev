@@ -1,10 +1,10 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join PlayerCharacter (JerseyFace) left [mirrored="true"]
-join PlayerFriend left [mirrored="true"]
-join Tryout_Manager right
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerCharacter (JerseyFace) pos=x0.23,y1.05 size=y500px [mirrored="true"]
+join PlayerFriend (DefaultFace) pos=x0.4,y0.70 size=y300px
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 update Tryout_Manager [animation="Bounce"]
 Tryout_Manager: Keep up the work guys!! Do what you have to do now before the next half starts, but don't forget to [u]maintain[/u] the equipment!
-leave Tryout_Manager [animation="Bounce Out" wait="true"]
+leave Tryout_Manager [animation="Slide Out Left" length="3.0"]
 PlayerFriend: Huh..huh.. that was tiring, but great! The hype was through the roof!
 PlayerCharacter: Yeah!! You can say that again!! I'm honestly pretty tired already though.
 PlayerFriend: You finally loosened up, it was great wasn't it?

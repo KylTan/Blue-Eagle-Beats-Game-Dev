@@ -1,6 +1,6 @@
-[background arg="res://Assets/AteneoField.jpg" fade="0.0"]
-join PlayerCharacter right
-join PlayerFriend 'pos=x0.35,y1'
+[background scene="res://Objects/dialogicBGTraining.tscn" fade="0.0"]
+join PlayerFriend (DefaultFace) pos=x0.2,y0.89 size=y450px [animation="Slide In Left" length="0.7" mirrored="true"]
+join PlayerCharacter (JerseyFace) pos=x0.15,y0.89 size=y450px [animation="Slide In Left" mirrored="true"]
 PlayerCharacter: So this is the big day. I can't believe we've actually made it this far.
 PlayerCharacter: This was just a dream of mine growing up, but here we are going to cheer for our team at the edge of victory.
 update PlayerFriend [animation="Bounce" repeat="2"]

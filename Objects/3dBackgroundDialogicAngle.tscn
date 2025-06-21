@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c01pw05l84wtq"]
+
+[ext_resource type="PackedScene" uid="uid://be2fgss1xl1th" path="res://Objects/3dBackground.tscn" id="1_qra0a"]
+[ext_resource type="PackedScene" uid="uid://cxf6q4pop7hux" path="res://Objects/3dArenaSection.tscn" id="2_nsvxd"]
+
+[node name="SubViewport" instance=ExtResource("1_qra0a")]
+
+[node name="Camera3D" parent="." index="0"]
+transform = Transform3D(0.167629, 0, -0.98585, 0, 1, 0, 0.98585, 0, 0.167629, -0.845599, 0.253246, -3.52342)
+
+[node name="One Section2" parent="GA" index="7" instance=ExtResource("2_nsvxd")]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -2.295, 0, 7.757)
+
+[node name="Glow" parent="." index="6"]
+transform = Transform3D(-3.0598e-09, 0, -0.049, 0, 0.042, 0, 0.07, 0, -2.14186e-09, 1.32301, 0.598526, -1.43462)

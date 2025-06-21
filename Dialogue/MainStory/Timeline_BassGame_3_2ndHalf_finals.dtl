@@ -1,9 +1,10 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join PlayerCharacter left [mirrored="true"]
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerCharacter (JerseyFace) pos=x0.23,y1.05 size=y500px [mirrored="true"]
+join Placeholder (Snare) pos=x0.6,y0.8 size=y400px
 PlayerCharacter: Okay, this is it..
 PlayerCharacter: (No more feeling sorry for myself. She’s not here, but... that doesn’t mean I can’t still give everything I’ve got.)
 PlayerCharacter: (I Just gotta remember to trust myself, and play my heart out!)
-join Tryout_Manager center
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 Tryout_Manager: OK GUYS! READY UP!! REMEMBER TO GIVE IT ALL YOU GOT!
 PlayerCharacter: Ok, Let's do THIS!
 set {Dialogue_name} = 10
