@@ -31,7 +31,7 @@ func _input(event):
 		is_Hit = true
 		noteDir = 3
 		add_child(particleChild)
-		print("double")
+		#print("double")
 	elif event.is_action_pressed("D_key") or event.is_action_pressed("Taiko_Left"):
 		handle_left_hit()
 	elif event.is_action_pressed("K_key") or event.is_action_pressed("Taiko_Right"):
@@ -58,11 +58,10 @@ func handle_left_hit():
 
 	# Check if the right button was pressed recently (within the double hit window)
 	if current_time - last_right_hit_time <= double_hit_window:
-		print("Double hit! Left and Right hit together!")
 		trigger_double_hit()
 	else:
 		# Otherwise, it's just a single left hit
-		print("Left hit!")
+		#print("Left hit!")
 		is_pressed = true
 		is_Hit = true
 		noteDir = 1
@@ -76,11 +75,10 @@ func handle_right_hit():
 
 	# Check if the left button was pressed recently (within the double hit window)
 	if current_time - last_left_hit_time <= double_hit_window:
-		print("Double hit! Left and Right hit together!")
 		trigger_double_hit()
 	else:
 		# Otherwise, it's just a single right hit
-		print("Right hit!")
+		#print("Right hit!")
 		is_pressed = true
 		is_Hit = true
 		noteDir = 2

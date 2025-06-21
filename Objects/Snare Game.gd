@@ -70,7 +70,7 @@ func _process(delta):
 		if (bar.position.y + bars_node.position.y)/2 >= bar_Length_In_M:
 			remove_bar(bar)
 			add_bar()
-			
+			print(curr_bar_index)
 # really just for the snare play sound
 func _input(event):			
 	if event.is_action_pressed("D_key") or event.is_action_pressed("K_key") or event.is_action_pressed("space_key"):
