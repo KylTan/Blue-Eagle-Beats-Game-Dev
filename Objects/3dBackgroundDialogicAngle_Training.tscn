@@ -1,9 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://5ud53jd3nbwj"]
+[gd_scene load_steps=9 format=3 uid="uid://5ud53jd3nbwj"]
 
 [ext_resource type="PackedScene" uid="uid://b07jp0aj6mxbg" path="res://Objects/3dBackground_training.tscn" id="1_v0jvd"]
 [ext_resource type="Texture2D" uid="uid://dfrj7p5ve7q2a" path="res://Assets/sprite-bass-idle-training-beater.png" id="2_0myrv"]
 [ext_resource type="Texture2D" uid="uid://c2huetnkmkx1d" path="res://Assets/sprite-snare-idle-noequip-training.png" id="3_73y36"]
 [ext_resource type="Texture2D" uid="uid://cvfox6slnvxi0" path="res://Assets/sprite-capt-idle.png" id="4_k81iw"]
+[ext_resource type="Script" path="res://Objects/CarAnimation.gd" id="5_01tk1"]
+[ext_resource type="PackedScene" uid="uid://dn3p5y8kdiqwx" path="res://Objects/Car.tscn" id="5_pgy1v"]
+
+[sub_resource type="Animation" id="Animation_1b8ko"]
+resource_name = "Car driving"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(5.309, -0.026, -3.51), Vector3(-9.27, -0.026, -3.51)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xtyg7"]
+_data = {
+"Car driving": SubResource("Animation_1b8ko")
+}
 
 [node name="SubViewport2" instance=ExtResource("1_v0jvd")]
 
@@ -24,3 +47,17 @@ texture = ExtResource("3_73y36")
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.74353, 0.436744, -0.696877)
 visible = false
 texture = ExtResource("4_k81iw")
+
+[node name="CarAnimation" type="AnimationPlayer" parent="." index="18"]
+root_node = NodePath("Car")
+libraries = {
+"": SubResource("AnimationLibrary_xtyg7")
+}
+script = ExtResource("5_01tk1")
+
+[node name="Timer" type="Timer" parent="CarAnimation" index="0"]
+
+[node name="Car" parent="CarAnimation" index="1" instance=ExtResource("5_pgy1v")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 6.77725, -0.026, -3.51)
+
+[connection signal="timeout" from="CarAnimation/Timer" to="CarAnimation" method="_on_timer_timeout"]

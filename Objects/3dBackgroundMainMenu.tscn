@@ -19,8 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://b22aqipq3q1t" path="res://Assets/Textures/A Logo.png" id="12_f5k0n"]
 [ext_resource type="Texture2D" uid="uid://ccvio0nncpafr" path="res://Assets/Textures/Bass_Tape.png" id="13_akn0x"]
 [ext_resource type="PackedScene" uid="uid://qtrw58nfko2" path="res://Objects/Glasses3D.tscn" id="19_wyehg"]
-[ext_resource type="PackedScene" path="res://Objects/credits_reso_object.tscn" id="20_bp3mk"]
-[ext_resource type="PackedScene" path="res://Objects/rachet_object.tscn" id="21_8scr4"]
+[ext_resource type="PackedScene" uid="uid://byo718rs36bj0" path="res://Objects/credits_reso_object.tscn" id="20_bp3mk"]
+[ext_resource type="PackedScene" uid="uid://bwaa237exsp4d" path="res://Objects/rachet_object.tscn" id="21_8scr4"]
 
 [sub_resource type="Animation" id="Animation_2offh"]
 resource_name = "door_focus"
