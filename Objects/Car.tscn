@@ -1,4 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://dn3p5y8kdiqwx"]
+[gd_scene load_steps=15 format=3 uid="uid://dn3p5y8kdiqwx"]
+
+[ext_resource type="Script" path="res://Objects/Car.gd" id="1_od1j8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_m7q3u"]
 
@@ -25,7 +27,34 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cywd1"]
 albedo_color = Color(0.404511, 0.404511, 0.404511, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tykqv"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_3cif7"]
+resource_name = "shake"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.0349066, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tm4a5"]
+_data = {
+"shake": SubResource("Animation_3cif7")
+}
+
 [node name="Car" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999732, -0.0231487, 0, 0.0231487, 0.999732, 0, 0, 0)
+script = ExtResource("1_od1j8")
 
 [node name="Roof" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0344889, 0)
@@ -172,7 +201,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_w3mdf")
 [node name="Wheels" type="Node3D" parent="."]
 
 [node name="Wheel" type="MeshInstance3D" parent="Wheels"]
-transform = Transform3D(1.26105e-15, 4.93939e-09, 0.66, 0.66, -4.93939e-09, 0, 2.88495e-08, 0.113, -2.88495e-08, -1.30719, 0.410168, 1.3735)
+transform = Transform3D(1.26105e-15, 4.93939e-09, 0.66, 0.66, -4.93939e-09, 2.4282e-21, 2.88495e-08, 0.113, -2.88495e-08, -1.30719, 0.410168, 1.3735)
 mesh = SubResource("CylinderMesh_gxeoi")
 surface_material_override/0 = SubResource("StandardMaterial3D_hpaqa")
 
@@ -181,6 +210,43 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.53876, -1.19209e-0
 mesh = SubResource("CylinderMesh_gxeoi")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_cywd1")
+
+[node name="Wheel5" type="MeshInstance3D" parent="Wheels/Wheel/Wheel5"]
+transform = Transform3D(0.1, 7.39853e-14, -1.19114e-22, -1.24345e-14, 0.595, -5.22458e-16, 1.19114e-22, 3.10862e-15, 0.1, 0, 0.699312, 0)
+visible = false
+mesh = SubResource("CylinderMesh_gxeoi")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tykqv")
+
+[node name="Wheel6" type="MeshInstance3D" parent="Wheels/Wheel/Wheel5/Wheel5"]
+transform = Transform3D(1, -4.9738e-14, 8.47033e-22, -3.55271e-15, 1, 3.55271e-15, -2.11758e-22, -3.55271e-15, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_gxeoi")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tykqv")
+
+[node name="Wheel7" type="MeshInstance3D" parent="Wheels/Wheel/Wheel5/Wheel5"]
+transform = Transform3D(1, -5.32907e-14, 8.47033e-22, -3.55271e-15, 1, 3.55271e-15, -1.05879e-21, -1.42109e-14, 1, -1.36611, 0, 0)
+mesh = SubResource("CylinderMesh_gxeoi")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tykqv")
+
+[node name="Wheel8" type="MeshInstance3D" parent="Wheels/Wheel/Wheel5/Wheel5"]
+transform = Transform3D(1, -7.81597e-14, -1.69407e-21, -3.19744e-14, 1, 2.84217e-14, 4.23516e-22, 2.13163e-14, 1, 0, 0, 1.45719)
+mesh = SubResource("CylinderMesh_gxeoi")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tykqv")
+
+[node name="Wheel9" type="MeshInstance3D" parent="Wheels/Wheel/Wheel5/Wheel5"]
+transform = Transform3D(1, -7.81597e-14, -1.69407e-21, -3.19744e-14, 1, 2.84217e-14, 4.23516e-22, 2.13163e-14, 1, 0, -7.62939e-06, -1.32769)
+mesh = SubResource("CylinderMesh_gxeoi")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tykqv")
+
+[node name="Wheel10" type="MeshInstance3D" parent="Wheels/Wheel/Wheel5/Wheel5"]
+transform = Transform3D(1, -7.81597e-14, -1.90582e-21, -3.19744e-14, 1, 2.84217e-14, 4.23516e-22, 2.13163e-14, 1, 1.30233, -1.52588e-05, 0)
+mesh = SubResource("CylinderMesh_gxeoi")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tykqv")
 
 [node name="Wheel2" type="MeshInstance3D" parent="Wheels"]
 transform = Transform3D(0.66, 0, 0, 0, -4.93939e-09, -0.66, 0, 0.113, -2.88495e-08, 0.962208, 0.410168, 1.3735)
@@ -214,3 +280,8 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.53876, -1.19209e-0
 mesh = SubResource("CylinderMesh_gxeoi")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_cywd1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tm4a5")
+}
