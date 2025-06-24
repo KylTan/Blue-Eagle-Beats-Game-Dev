@@ -1,7 +1,7 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join Tryout_Manager right
-join PlayerCharacter left [mirrored="true"]
-join PlayerFriend left
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerCharacter (JerseyFace) pos=x0.23,y1.05 size=y500px [mirrored="true"]
+join PlayerFriend (DefaultFace) pos=x0.4,y0.70 size=y300px
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 Tryout_Manager: OK GUYS!!! Good job on your performance! Ups to the rookies too. We may finally be getting somewhere for once.
 Tryout_Manager: We might actually be on track to make it far this season, maybe even the finals!! So I don't want this momentum to stop anytime soon because the team is going to keep relying on our support!!
 Tryout_Manager: Now that that's out of the way! Remember to pack the equipment up and follow the managers out. The bus should be here any minute.

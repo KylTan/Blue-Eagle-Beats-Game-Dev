@@ -1,8 +1,7 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join PlayerCharacter left [mirrored="true"]
-join PlayerFriend left [mirrored="true"]
-join Tryout_Manager right
-update Tryout_Manager [animation="Bounce"]
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerCharacter (JerseyFace) pos=x0.23,y1.05 size=y500px [mirrored="true"]
+join PlayerFriend (DefaultFace) pos=x0.4,y0.70 size=y300px
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 Tryout_Manager: Keep up the good work! Get all of your maintainance in order, and anything else you need. Make it quick!
 leave Tryout_Manager [animation="Bounce Out" wait="true"]
 PlayerFriend: That first half has me hype! I'm so ready for the next half!

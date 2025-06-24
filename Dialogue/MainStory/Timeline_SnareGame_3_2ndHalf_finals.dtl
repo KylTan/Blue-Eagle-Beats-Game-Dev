@@ -1,9 +1,9 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join PlayerFriend left [mirrored="true"]
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerFriend (DefaultFace) pos=x0.4,y0.70 size=y300px
 PlayerFriend: Okay, this is it..
 PlayerFriend: (I made a promise to Juan, and I don't plan on breaking it any time soon.)
 PlayerFriend: (I Just gotta remember to trust myself, and play my heart out!)
-join Tryout_Manager center
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 Tryout_Manager: OK GUYS! READY UP!! REMEMBER TO GIVE IT ALL YOU GOT!
 PlayerFriend: AHHHHHHH!!! Let's do THIS!
 set {Dialogue_name_snare} = 9

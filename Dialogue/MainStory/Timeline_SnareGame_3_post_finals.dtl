@@ -1,6 +1,6 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join Tryout_Manager right
-join PlayerFriend left [mirrored="true"]
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerFriend (DefaultFace) pos=x0.4,y0.70 size=y300px
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 Tryout_Manager: OK GUYS!!! THATS A WRAP! GOOD JOB ALL!
 Tryout_Manager: You all performed fantasitc!! You guys made your unit proud!
 PlayerFriend: We couldn't have done it without your training sir!

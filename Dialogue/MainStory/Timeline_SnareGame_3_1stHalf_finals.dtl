@@ -1,12 +1,11 @@
-[background arg="res://Assets/AteneoAranetaGame.jpg" fade="0.0"]
-join PlayerFriend left [mirrored="true"]
-join Tryout_Manager right
-update Tryout_Manager [animation="Bounce"]
+[background scene="res://Objects/dialogicBGArena.tscn" fade="0.0"]
+join PlayerFriend (DefaultFace) pos=x0.4,y0.70 size=y300px
+join Tryout_Manager pos=x0.75,y0.89 size=y450px
 PlayerFriend: (Okay, we're finally through the half. I thought I was going to die, this calling is no joke.)
 PlayerFriend: (I have to make sure I can keep up for the next half..)
 leave Tryout_Manager [animation="Bounce Out" wait="true"]
 PlayerCharacter: Hey Maria catch!
-join PlayerCharacter right [animation="Bounce"]
+join PlayerCharacter pos=x0.25 size=y450px [animation="Bounce" mirrored="true"]
 (Juan tosses his rachet key to Maria, and she barely catches it)
 PlayerCharacter: Nice catch, snare!
 PlayerCharacter: Not my name, bass!

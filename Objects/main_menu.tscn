@@ -1,14 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://cwml2cl88ghoa"]
+[gd_scene load_steps=16 format=3 uid="uid://cwml2cl88ghoa"]
 
 [ext_resource type="Script" path="res://Objects/main_menu.gd" id="1_ir266"]
 [ext_resource type="Texture2D" uid="uid://d276u8qp3fgyn" path="res://Assets/Textures/BEB_Logo.png" id="2_04m2e"]
 [ext_resource type="PackedScene" uid="uid://csrmwnawy2ykl" path="res://Objects/3dBackgroundMainMenu.tscn" id="2_xm8d4"]
+[ext_resource type="Theme" uid="uid://bgb0ue21y72mg" path="res://Assets/Textures/DefaultButton.tres" id="3_hp87m"]
 [ext_resource type="Texture2D" uid="uid://bt6kve3l30p31" path="res://Assets/sprite-bass-idle-training.png" id="3_qfa3v"]
 [ext_resource type="Texture2D" uid="uid://bhb3td6mjc0r3" path="res://Assets/sprite-bass-idle.png" id="4_6fgcy"]
 [ext_resource type="Texture2D" uid="uid://vmexaogg6k5s" path="res://Assets/sprite-snare-swing.png" id="4_ygsiv"]
 [ext_resource type="Texture2D" uid="uid://dsfvw3qbonaca" path="res://Assets/sprite-bass-swing.png" id="5_6qu60"]
 [ext_resource type="Texture2D" uid="uid://c2huetnkmkx1d" path="res://Assets/sprite-snare-idle-noequip-training.png" id="6_tg4s2"]
 [ext_resource type="Texture2D" uid="uid://djlbopvwghant" path="res://Assets/sprite-snare-idle.png" id="7_048n6"]
+[ext_resource type="AudioStream" uid="uid://c1arccdps4r5h" path="res://Assets/Audio/Riel's Menu Music.mp3" id="11_kgpld"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5gluh"]
 animations = [{
@@ -77,7 +79,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.426, 0.426), Vector2(0.47, 0.47)]
+"values": [Vector2(0.8, 0.8), Vector2(1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -89,7 +91,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.285, 0.285), Vector2(0.33, 0.33)]
+"values": [Vector2(0.5, 0.5), Vector2(0.7, 0.7)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_40ofj"]
@@ -105,28 +107,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -139.0
-offset_top = -117.0
-offset_right = -18.0
-offset_bottom = -58.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -929.0
+offset_bottom = -540.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(2, 2)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("1_ir266")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 layout_mode = 0
-offset_left = -410.5
-offset_top = -211.5
-offset_right = -370.5
-offset_bottom = -171.5
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="SubViewport" parent="SubViewportContainer" instance=ExtResource("2_xm8d4")]
 own_world_3d = true
 handle_input_locally = false
-size = Vector2i(960, 540)
+size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -137,44 +136,47 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -106.5
-offset_top = -35.0
-offset_right = 116.5
-offset_bottom = 86.0
+offset_left = 715.365
+offset_top = 400.0
+offset_right = 938.366
+offset_bottom = 521.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_hp87m")
 text = "Start Game"
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_hp87m")
 text = "Credits
 "
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_hp87m")
 text = "Exit"
 
 [node name="Logo" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(63, -148)
-scale = Vector2(0.311596, 0.295533)
+position = Vector2(939, 173)
+scale = Vector2(0.4, 0.379)
 texture = ExtResource("2_04m2e")
 
 [node name="CharLeft" type="AnimatedSprite2D" parent="."]
-position = Vector2(354, 49.5)
+position = Vector2(1531, 524)
 rotation = -0.0698132
-scale = Vector2(0.426, 0.426)
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_5gluh")
-animation = &"idle"
 speed_scale = 2.0
 
 [node name="CharLeft2" type="AnimatedSprite2D" parent="."]
-position = Vector2(-228.381, 67.2482)
+position = Vector2(366, 563)
 rotation = 0.0349066
-scale = Vector2(0.285, 0.285)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_31is6")
 animation = &"idle"
 flip_h = true
@@ -184,6 +186,17 @@ libraries = {
 "": SubResource("AnimationLibrary_40ofj")
 }
 speed_scale = 2.0
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_kgpld")
+volume_db = -10.0
+autoplay = true
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="focus_entered" from="VBoxContainer/Start" to="." method="_on_start_focus_entered"]
 [connection signal="mouse_entered" from="VBoxContainer/Start" to="." method="_on_start_mouse_entered"]

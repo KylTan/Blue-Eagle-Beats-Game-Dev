@@ -45,9 +45,10 @@ layout_mode = 0
 offset_left = 152.0
 offset_top = 359.0
 offset_right = 288.0
-offset_bottom = 463.0
+offset_bottom = 426.0
 scale = Vector2(2, 2)
-text = "Bass Tutorial"
+text = "Bass Training
+"
 
 [node name="snare_tutorial" type="Button" parent="."]
 visible = false
@@ -55,17 +56,17 @@ layout_mode = 0
 offset_left = 1186.0
 offset_top = 364.0
 offset_right = 1322.0
-offset_bottom = 467.0
+offset_bottom = 431.0
 scale = Vector2(2, 2)
-text = "Snare Tutorial"
+text = "Snare Training"
 
 [node name="bass_basketball_1" type="Button" parent="."]
 visible = false
 layout_mode = 0
 offset_left = 574.0
 offset_top = 356.0
-offset_right = 714.0
-offset_bottom = 461.0
+offset_right = 713.0
+offset_bottom = 423.0
 scale = Vector2(2, 2)
 text = "Bass: First
 Basketball Game
@@ -76,8 +77,8 @@ visible = false
 layout_mode = 0
 offset_left = 1558.0
 offset_top = 364.0
-offset_right = 1699.0
-offset_bottom = 469.0
+offset_right = 1694.0
+offset_bottom = 431.0
 scale = Vector2(2, 2)
 text = "Snare: First
 Basketball game
@@ -87,9 +88,9 @@ Basketball game
 visible = false
 layout_mode = 0
 offset_left = 344.0
-offset_top = 693.0
-offset_right = 498.0
-offset_bottom = 798.0
+offset_top = 670.0
+offset_right = 491.0
+offset_bottom = 737.0
 scale = Vector2(2, 2)
 text = "Bass: Finals Game
 "
@@ -99,8 +100,8 @@ visible = false
 layout_mode = 0
 offset_left = 1365.0
 offset_top = 670.0
-offset_right = 1519.0
-offset_bottom = 775.0
+offset_right = 1521.0
+offset_bottom = 737.0
 scale = Vector2(2, 2)
 text = "Snare: Finals Game
 "
