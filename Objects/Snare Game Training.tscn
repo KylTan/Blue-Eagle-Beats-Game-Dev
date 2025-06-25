@@ -69,7 +69,7 @@ visible = false
 position = Vector2(927, 628)
 
 [node name="PlayerSprite" parent="." index="3"]
-position = Vector2(1025, 670)
+position = Vector2(1123, 671)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_41eux")
 animation = &"swing"

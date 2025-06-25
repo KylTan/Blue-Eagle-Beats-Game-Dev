@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b2gxjfdnyi2cs"]
+[gd_scene load_steps=28 format=3 uid="uid://b2gxjfdnyi2cs"]
 
 [ext_resource type="Script" path="res://Objects/Snare Game.gd" id="1_3dtia"]
 [ext_resource type="PackedScene" uid="uid://be2fgss1xl1th" path="res://Objects/3dBackground.tscn" id="2_gvyoe"]
@@ -20,6 +20,7 @@
 [ext_resource type="FontFile" uid="uid://d0ftogm8y3nwr" path="res://Assets/Kola_Complete/Fonts/OTF/Kola-Regular.otf" id="16_yimqd"]
 [ext_resource type="PackedScene" uid="uid://c00xil0jyq8em" path="res://Objects/CallsignDirector.tscn" id="19_rv8m7"]
 [ext_resource type="AudioStream" uid="uid://dl5xkqfdch3vd" path="res://Assets/Audio/Snare Hitsound.mp3" id="20_hoepe"]
+[ext_resource type="PackedScene" uid="uid://uykn501jy5u" path="res://Objects/hit_feedback_sprite.tscn" id="21_6snto"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tfee0"]
 animations = [{
@@ -215,6 +216,10 @@ texture = ExtResource("7_ud6be")
 [node name="Snare Soundplayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_hoepe")
 volume_db = -10.0
+
+[node name="Hit Feedback" parent="." instance=ExtResource("21_6snto")]
+visible = false
+position = Vector2(954, 619)
 
 [connection signal="mouse_entered" from="Heavy Charge Zone" to="." method="_on_heavy_charge_zone_mouse_entered"]
 [connection signal="mouse_entered" from="Light Charge Zone" to="." method="_on_light_charge_zone_mouse_entered"]

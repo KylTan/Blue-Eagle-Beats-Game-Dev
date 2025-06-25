@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://b07jp0aj6mxbg"]
+[gd_scene load_steps=33 format=3 uid="uid://b07jp0aj6mxbg"]
 
 [ext_resource type="Texture2D" uid="uid://1kp2kp3op18u" path="res://Assets/Textures/Clouds 5/1.png" id="1_33n47"]
+[ext_resource type="Script" path="res://Objects/3dBackground_training.gd" id="1_cff6y"]
 [ext_resource type="Texture2D" uid="uid://cwelffrmbc12j" path="res://Assets/Textures/Concrete.png" id="1_yxfta"]
 [ext_resource type="Texture2D" uid="uid://bcolopctauoc7" path="res://Assets/Textures/BricksAltGrey.png" id="2_4oovu"]
 [ext_resource type="Texture2D" uid="uid://dj5p0i2nl3x0j" path="res://Assets/Textures/Clouds 5/3.png" id="2_17gvv"]
@@ -20,6 +21,27 @@ sky_material = SubResource("PanoramaSkyMaterial_vw3jv")
 [sub_resource type="Environment" id="Environment_fojr2"]
 background_mode = 2
 sky = SubResource("Sky_jqfuu")
+
+[sub_resource type="Animation" id="Animation_46yre"]
+resource_name = "Clouds"
+length = 360.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 355.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(2.66, 3.049, -11.877), Vector3(-21.9983, 3.049, -11.877)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y4qpb"]
+_data = {
+"Clouds": SubResource("Animation_46yre")
+}
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ioiwl"]
 
@@ -88,6 +110,7 @@ albedo_texture = ExtResource("1_yxfta")
 uv1_scale = Vector3(5, 5, 5)
 
 [node name="SubViewport2" type="SubViewport"]
+script = ExtResource("1_cff6y")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fojr2")
@@ -95,6 +118,11 @@ environment = SubResource("Environment_fojr2")
 [node name="Sprite3D" type="Sprite3D" parent="WorldEnvironment"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 2.66, 3.049, -11.877)
 texture = ExtResource("2_17gvv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WorldEnvironment"]
+libraries = {
+"": SubResource("AnimationLibrary_y4qpb")
+}
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.999999, 0.00174533, -1.29428e-10, -0.00173842, 0.99604, 0.0888943, 0.00015515, -0.0888942, 0.996041, 0, 0.692, -0.116)

@@ -3,6 +3,7 @@ var notePosition = 0
 var is_colliding = false
 var collected = false
 var receiver 
+var feedback = preload("res://Objects/hit_feedback_sprite.tscn").instantiate()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,7 +22,16 @@ func collect():
 			collected = true
 			receiver.is_Hit = false
 			receiver.total_hits += 1
-			hide()
+			
+			if get_tree().root.get_node("Hit Feedback"):
+				get_tree().root.get_node("Hit Feedback").queue_free()
+			
+			get_tree().root.add_child(feedback)
+			feedback.get_node("Hit").show()
+			feedback.get_node("Miss").hide()
+			feedback.get_node("AnimationPlayer").play("Hitpop")
+			feedback.position = Vector2(807,469)
+			queue_free()
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("receiver"):
@@ -31,3 +41,17 @@ func _on_area_2d_area_entered(area):
 func _on_area_2d_area_exited(area):
 	if area.is_in_group("receiver"):
 		is_colliding = false
+	if !collected:
+		
+		if get_tree().root.get_node("Hit Feedback"):
+				get_tree().root.get_node("Hit Feedback").queue_free()
+		
+		get_tree().root.add_child(feedback)
+		feedback.get_node("Miss").show()
+		feedback.get_node("Hit").hide()
+		feedback.get_node("AnimationPlayer").play("Misspop")
+		feedback.position = Vector2(807,469)
+		#queue_free()
+		
+		
+	

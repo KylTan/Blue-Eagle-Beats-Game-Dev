@@ -7,7 +7,7 @@ var is_Hit = false #changes when clear area is hit with the cursour with a charg
 var endBuffer = 0
 
 #bar spawning variables
-var bar_scn = preload("res://Objects/Bar.tscn")
+var bar_scn = preload("res://Objects/Bar.tscn") # object in charge of spawning notes, based on mboy data
 var barList = []
 @onready var bars_node = $BarNode #was called Barsnode
 var bar_Length_In_M = 945# 1080 cuz we using 2d pixels not 3d scaling
