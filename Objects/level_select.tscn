@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxx34a2ygacjm"]
+[gd_scene load_steps=6 format=3 uid="uid://dxx34a2ygacjm"]
 
 [ext_resource type="Texture2D" uid="uid://ch4ly4g204yq7" path="res://Assets/BlueEagleBeatsLogo.png" id="1_5dgtg"]
 [ext_resource type="Script" path="res://Objects/level_select.gd" id="1_n7ra2"]
 [ext_resource type="PackedScene" uid="uid://csrmwnawy2ykl" path="res://Objects/3dBackgroundMainMenu.tscn" id="2_geh8n"]
 [ext_resource type="Theme" uid="uid://bgb0ue21y72mg" path="res://Assets/Textures/DefaultButton.tres" id="4_420qu"]
+[ext_resource type="FontFile" uid="uid://cc4xli25271fd" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Bold.ttf" id="5_ad4th"]
 
 [node name="level_select" type="Control"]
 layout_mode = 3
@@ -41,6 +42,7 @@ scale = Vector2(0.798212, 0.641234)
 texture = ExtResource("1_5dgtg")
 
 [node name="bass_tutorial" type="Button" parent="."]
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
 offset_left = 152.0
@@ -52,6 +54,7 @@ text = "Bass Training
 "
 
 [node name="snare_tutorial" type="Button" parent="."]
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
 offset_left = 1186.0
@@ -62,6 +65,7 @@ theme = ExtResource("4_420qu")
 text = "Snare Training"
 
 [node name="bass_basketball_1" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 574.0
 offset_top = 356.0
@@ -73,6 +77,7 @@ Basketball Game
 "
 
 [node name="snare_basketball_1" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 1558.0
 offset_top = 364.0
@@ -84,6 +89,7 @@ Basketball game
 "
 
 [node name="bass_basketball_2" type="Button" parent="."]
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
 offset_left = 344.0
@@ -95,6 +101,7 @@ text = "Bass: Finals Game
 "
 
 [node name="snare_basketball_2" type="Button" parent="."]
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
 offset_left = 1365.0
@@ -106,6 +113,7 @@ text = "Snare: Finals Game
 "
 
 [node name="back_button" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 49.0
 offset_top = 34.0
@@ -116,6 +124,7 @@ theme_override_font_sizes/font_size = 50
 text = "Back"
 
 [node name="free_play_button" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 1541.0
 offset_top = 23.0
@@ -127,50 +136,54 @@ text = "To Freeplay"
 
 [node name="FPButtons" type="Node2D" parent="."]
 visible = false
-position = Vector2(-100, 100)
+position = Vector2(-100, 98)
 
 [node name="free_play_Jabba" type="Button" parent="FPButtons"]
 offset_left = 434.0
 offset_top = 700.0
 offset_right = 773.0
 offset_bottom = 820.0
+theme = ExtResource("4_420qu")
 theme_override_font_sizes/font_size = 50
 text = "Jabba"
-metadata/_edit_use_anchors_ = true
 
 [node name="free_play_Fabilioh" type="Button" parent="FPButtons"]
 offset_left = 434.0
 offset_top = 250.0
 offset_right = 773.0
 offset_bottom = 370.0
+theme = ExtResource("4_420qu")
 theme_override_font_sizes/font_size = 50
 text = "Fabilioh
 "
-metadata/_edit_use_anchors_ = true
 
 [node name="free_play_FlyHigh" type="Button" parent="FPButtons"]
 offset_left = 434.0
 offset_top = 550.0
 offset_right = 773.0
 offset_bottom = 670.0
+theme = ExtResource("4_420qu")
 theme_override_font_sizes/font_size = 50
 text = "Fly High"
-metadata/_edit_use_anchors_ = true
 
 [node name="free_play_GOAT" type="Button" parent="FPButtons"]
 offset_left = 434.0
 offset_top = 406.0
 offset_right = 773.0
 offset_bottom = 526.0
+theme = ExtResource("4_420qu")
 theme_override_font_sizes/font_size = 50
 text = "Go Ateneo"
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="FPButtons"]
 offset_left = 485.0
-offset_top = 84.0
+offset_top = 119.0
 offset_right = 735.0
-offset_bottom = 221.0
+offset_bottom = 256.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("5_ad4th")
 theme_override_font_sizes/font_size = 100
 text = "Bass"
 
@@ -183,6 +196,7 @@ offset_left = 434.0
 offset_top = 400.0
 offset_right = 773.0
 offset_bottom = 520.0
+theme = ExtResource("4_420qu")
 theme_override_font_sizes/font_size = 50
 text = "Manson"
 
@@ -191,6 +205,7 @@ offset_left = 434.0
 offset_top = 250.0
 offset_right = 773.0
 offset_bottom = 370.0
+theme = ExtResource("4_420qu")
 theme_override_font_sizes/font_size = 50
 text = "3 Fights"
 
@@ -199,14 +214,19 @@ offset_left = 434.0
 offset_top = 550.0
 offset_right = 773.0
 offset_bottom = 670.0
+theme = ExtResource("4_420qu")
 theme_override_font_sizes/font_size = 50
 text = "Go Ateneo"
 
 [node name="Label" type="Label" parent="FPButtonsSnare"]
 offset_left = 463.0
-offset_top = 102.0
+offset_top = 132.0
 offset_right = 740.0
-offset_bottom = 239.0
+offset_bottom = 269.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("5_ad4th")
 theme_override_font_sizes/font_size = 100
 text = "Snare"
 
