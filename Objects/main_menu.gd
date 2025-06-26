@@ -43,5 +43,5 @@ func _on_start_mouse_exited():
 	$CharLeft2.play("idle")
 	$AnimationPlayer.stop()
 
-
-
+func _on_timer_timeout():
+	$Music.play()

@@ -1,5 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://be2fgss1xl1th"]
+[gd_scene load_steps=24 format=3 uid="uid://be2fgss1xl1th"]
 
+[ext_resource type="Script" path="res://Objects/3dBackground.gd" id="1_fwvvw"]
 [ext_resource type="PackedScene" uid="uid://cxf6q4pop7hux" path="res://Objects/3dArenaSection.tscn" id="1_vd4vy"]
 [ext_resource type="Texture2D" uid="uid://caan8kakjnn11" path="res://Assets/Textures/Metal Horizontal.png" id="2_xx5p8"]
 [ext_resource type="Texture2D" uid="uid://ctf60uktphbt" path="res://Assets/Textures/billboard ad lol.png" id="2_y00nh"]
@@ -8,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bmpxqcckhuaql" path="res://Assets/Textures/Wood.png" id="4_xso8c"]
 [ext_resource type="PackedScene" uid="uid://ck7sovptquveh" path="res://Assets/crowd_sprite.tscn" id="7_dq14x"]
 [ext_resource type="PackedScene" uid="uid://fvnqhw4vhgrg" path="res://Objects/bass_3d.tscn" id="8_84l1i"]
+[ext_resource type="AudioStream" uid="uid://crp0nb2myi8qv" path="res://Assets/Audio/SportsCrowdAudio.wav" id="9_shpq8"]
 
 [sub_resource type="Environment" id="Environment_u0ssb"]
 
@@ -46,6 +48,7 @@ uv1_scale = Vector3(4, 4, 4)
 
 [node name="SubViewport" type="SubViewport"]
 size = Vector2i(1920, 1080)
+script = ExtResource("1_fwvvw")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, -0.000209451, 0, 1, 0, 0.000209451, 0, 1, 0.0627704, 0.198373, 0.100952)
@@ -1446,3 +1449,10 @@ skeleton = NodePath("../Camera3D")
 [node name="Bass Shell3" parent="." instance=ExtResource("8_84l1i")]
 transform = Transform3D(0.249975, -0.000846995, -2.31655e-12, 1.5658e-10, 2.62242e-09, 0.25, -0.00352915, -0.059994, 1.09278e-08, 1.26594, 0.301966, -1.91949)
 skeleton = NodePath("../Camera3D")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_shpq8")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

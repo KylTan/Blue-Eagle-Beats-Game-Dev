@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b07jp0aj6mxbg"]
+[gd_scene load_steps=35 format=3 uid="uid://b07jp0aj6mxbg"]
 
 [ext_resource type="Texture2D" uid="uid://1kp2kp3op18u" path="res://Assets/Textures/Clouds 5/1.png" id="1_33n47"]
 [ext_resource type="Script" path="res://Objects/3dBackground_training.gd" id="1_cff6y"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://br1e6vrs8xptq" path="res://Assets/Textures/WallLight.png" id="6_lpmx0"]
 [ext_resource type="Texture2D" uid="uid://bow1evvdvyqc5" path="res://Assets/Textures/Metal.png" id="7_vu5nv"]
 [ext_resource type="Texture2D" uid="uid://8nqn0tjnnmfn" path="res://Assets/Textures/Bus_Mat.png" id="9_yrs6b"]
+[ext_resource type="AudioStream" uid="uid://06yan2tm0w7x" path="res://Assets/Audio/CityAmbiance.wav" id="12_ml3uy"]
+[ext_resource type="AudioStream" uid="uid://cyy2gn2itn54y" path="res://Assets/Audio/BrassNoise.wav" id="13_tvekc"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_vw3jv"]
 panorama = ExtResource("1_33n47")
@@ -2240,3 +2242,16 @@ transform = Transform3D(1.81134, 0, 0, 0, 1, 0, 0, 0, 1.48879, -1.97991, 0.01909
 mesh = SubResource("PlaneMesh_q7rfe")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_yh31n")
+
+[node name="Ambiance" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_ml3uy")
+autoplay = true
+
+[node name="BrassRandomTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Brass" type="AudioStreamPlayer" parent="BrassRandomTimer"]
+stream = ExtResource("13_tvekc")
+
+[connection signal="finished" from="Ambiance" to="." method="_on_ambiance_finished"]
+[connection signal="timeout" from="BrassRandomTimer" to="." method="_on_brass_random_timer_timeout"]
