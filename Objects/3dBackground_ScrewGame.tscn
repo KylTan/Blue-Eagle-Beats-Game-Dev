@@ -1,10 +1,12 @@
-[gd_scene load_steps=20 format=3 uid="uid://ci7gmcs62ykic"]
+[gd_scene load_steps=22 format=3 uid="uid://ci7gmcs62ykic"]
 
 [ext_resource type="Script" path="res://Objects/3dBackground_ScrewGame.gd" id="1_mo2q6"]
 [ext_resource type="Texture2D" uid="uid://cwelffrmbc12j" path="res://Assets/Textures/Concrete.png" id="2_m8lmh"]
 [ext_resource type="Texture2D" uid="uid://b22aqipq3q1t" path="res://Assets/Textures/A Logo.png" id="3_jwuvi"]
 [ext_resource type="Texture2D" uid="uid://ccvio0nncpafr" path="res://Assets/Textures/Bass_Tape.png" id="4_y40tr"]
 [ext_resource type="Texture2D" uid="uid://bqrdrbf7w5vco" path="res://Assets/Textures/ScrewGame_Instructions.png" id="5_gytxr"]
+[ext_resource type="AudioStream" uid="uid://kkmlgtcqvxfj" path="res://Assets/Audio/BassRollingFalling.mp3" id="5_ilsak"]
+[ext_resource type="AudioStream" uid="uid://crp0nb2myi8qv" path="res://Assets/Audio/SportsCrowdAudio.wav" id="6_a77hv"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wdc6d"]
 
@@ -366,6 +368,12 @@ libraries = {
 }
 speed_scale = 0.75
 
+[node name="BassSounds" type="AudioStreamPlayer" parent="AnimationPlayer"]
+stream = ExtResource("5_ilsak")
+
+[node name="BGSound" type="AudioStreamPlayer" parent="AnimationPlayer"]
+stream = ExtResource("6_a77hv")
+
 [node name="Ins" type="Sprite3D" parent="."]
 transform = Transform3D(0.156861, -0.0315376, 0, 0.0315376, 0.156861, 0, 0, 0, 0.16, 2.19498, -0.638687, -2.34768)
 visible = false
@@ -376,3 +384,4 @@ transform = Transform3D(0.144522, 0.0686548, 0, -0.0686548, 0.144522, 0, 0, 0, 0
 texture = ExtResource("5_gytxr")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="finished" from="AnimationPlayer/BGSound" to="." method="_on_bg_sound_finished"]

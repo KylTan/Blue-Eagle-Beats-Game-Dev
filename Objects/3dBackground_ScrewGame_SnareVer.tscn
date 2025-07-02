@@ -1,11 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://bfwbdvweyvljo"]
+[gd_scene load_steps=23 format=3 uid="uid://bfwbdvweyvljo"]
 
 [ext_resource type="Script" path="res://Objects/3dBackground_ScrewGame_SnareVer.gd" id="1_g2hvg"]
 [ext_resource type="Texture2D" uid="uid://cwelffrmbc12j" path="res://Assets/Textures/Concrete.png" id="2_xveom"]
 [ext_resource type="Texture2D" uid="uid://djyiwtbc1l0a1" path="res://Assets/Textures/Snare_Tape.png" id="3_6x0dc"]
 [ext_resource type="Texture2D" uid="uid://dswqfot0w8t0j" path="res://Assets/Textures/Snare_Batter.png" id="4_qqlvl"]
 [ext_resource type="Texture2D" uid="uid://y0cc6nken5lw" path="res://Assets/Textures/Snare_Batter_Damage.png" id="5_phpf1"]
+[ext_resource type="AudioStream" uid="uid://b0e0xbab5wp7v" path="res://Assets/Audio/SnareFalling.mp3" id="6_hjh3c"]
 [ext_resource type="Texture2D" uid="uid://bqrdrbf7w5vco" path="res://Assets/Textures/ScrewGame_Instructions.png" id="6_sjipg"]
+[ext_resource type="AudioStream" uid="uid://crp0nb2myi8qv" path="res://Assets/Audio/SportsCrowdAudio.wav" id="7_j3ysb"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wdc6d"]
 
@@ -122,7 +124,7 @@ mesh = SubResource("PlaneMesh_wdc6d")
 surface_material_override/0 = SubResource("StandardMaterial3D_ko4sd")
 
 [node name="bass shell" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -7.56579e-07, -1, 0, 0.209, -3.61999e-06, 0, 0, -2)
+transform = Transform3D(1, 0, 0, 0, -7.56578e-07, -1, 0, 0.209, -3.61999e-06, 0, 0, -2)
 mesh = SubResource("CylinderMesh_bbbb4")
 surface_material_override/0 = SubResource("StandardMaterial3D_eiq2o")
 
@@ -398,8 +400,15 @@ libraries = {
 }
 speed_scale = 0.75
 
+[node name="SnareFalling" type="AudioStreamPlayer" parent="AnimationPlayer"]
+stream = ExtResource("6_hjh3c")
+
+[node name="BGSound" type="AudioStreamPlayer" parent="AnimationPlayer"]
+stream = ExtResource("7_j3ysb")
+
 [node name="Ins" type="Sprite3D" parent="."]
 transform = Transform3D(0.144522, 0.0686548, 0, -0.0686548, 0.144522, 0, 0, 0, 0.16, -2.06172, 0.619768, -2.34768)
 texture = ExtResource("6_sjipg")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="finished" from="AnimationPlayer/BGSound" to="." method="_on_bg_sound_finished"]

@@ -69,6 +69,7 @@ func _PlayGame():
 		animationPlayer.stop()
 		animationPlayer2.play("Slide")
 	else:
+		$SeepSound.play()
 		if(SlidingScaleArrow._isHit()):
 			animationPlayer.play("Seep")
 			print("Perfect!")

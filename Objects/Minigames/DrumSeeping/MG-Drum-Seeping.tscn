@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d20ohbao5xm0v"]
+[gd_scene load_steps=25 format=3 uid="uid://d20ohbao5xm0v"]
 
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_0rddx"]
 [ext_resource type="Script" path="res://Objects/Minigames/DrumSeeping/MG-Drum-Seeping.gd" id="1_eoxep"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://vqhjammbv5tl" path="res://Assets/DrumSeepingMinigame/MG2_SlidingScaleArrow.png" id="8_ik8k5"]
 [ext_resource type="Script" path="res://Objects/Minigames/DrumSeeping/SlidingScaleArrow.gd" id="8_ted50"]
 [ext_resource type="Texture2D" uid="uid://bfyeepnf5u8xa" path="res://Assets/DrumSeepingMinigame/MG2_Instrunctions.png" id="13_d2hbe"]
+[ext_resource type="AudioStream" uid="uid://cetf3lm3gf05p" path="res://Assets/Audio/BassSeep.mp3" id="14_siaqq"]
 
 [sub_resource type="Animation" id="Animation_7ft6i"]
 resource_name = "Pulsate"
@@ -213,6 +214,9 @@ scale = Vector2(0.450521, 0.494792)
 position = Vector2(1349, 817)
 scale = Vector2(0.654334, 0.698748)
 texture = ExtResource("13_d2hbe")
+
+[node name="SeepSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_siaqq")
 
 [connection signal="area_entered" from="SlidingScale" to="SlidingScaleArrow" method="_on_sliding_scale_area_entered"]
 [connection signal="area_exited" from="SlidingScale" to="SlidingScaleArrow" method="_on_sliding_scale_area_exited"]
