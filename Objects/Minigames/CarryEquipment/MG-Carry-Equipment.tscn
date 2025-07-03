@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://extb850c1lie"]
+[gd_scene load_steps=8 format=3 uid="uid://extb850c1lie"]
 
 [ext_resource type="Script" path="res://Objects/Minigames/CarryEquipment/MG-Carry-Equipment.gd" id="1_4t0ix"]
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_c1o0u"]
 [ext_resource type="PackedScene" uid="uid://dvg4uv7ib28ig" path="res://Objects/3dBackgroundEquipmentGame.tscn" id="2_ds3vj"]
 [ext_resource type="Texture2D" uid="uid://dcvl3mj7t6dxg" path="res://Assets/CarryEquipmentMinigame/MG4_BoxContainer.png" id="2_j5ske"]
+[ext_resource type="Theme" uid="uid://bgb0ue21y72mg" path="res://Assets/Textures/DefaultButton.tres" id="5_djojp"]
 [ext_resource type="Texture2D" uid="uid://bbhenget0pewq" path="res://Assets/CarryEquipmentMinigame/MG4_Instructions.png" id="5_fow5w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0mtu4"]
@@ -35,13 +36,13 @@ scale = Vector2(1.6429, 1.36719)
 texture = ExtResource("2_j5ske")
 
 [node name="Button_Spawn" type="Button" parent="."]
-visible = false
-offset_left = 1377.0
-offset_top = 62.0
-offset_right = 1618.0
-offset_bottom = 93.0
-scale = Vector2(2, 7)
-text = "SPAWN"
+offset_left = 1399.0
+offset_top = 86.0
+offset_right = 1856.0
+offset_bottom = 259.0
+theme = ExtResource("5_djojp")
+theme_override_font_sizes/font_size = 50
+text = "Grab Equipment"
 
 [node name="GridContainer" type="GridContainer" parent="."]
 visible = false
