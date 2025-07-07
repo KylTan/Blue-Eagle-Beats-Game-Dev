@@ -38,6 +38,8 @@ func _process(delta):
 			progressMeter2D.set_visible(true)
 			instructions2D.set_visible(true)
 	elif game_state == 1:
+		var irand = randi_range(1,4)
+		tape_sound(irand)
 		animationPlayer2.play("Taping1")
 		game_state += 1
 	elif game_state == 2:
@@ -55,6 +57,8 @@ func _process(delta):
 	elif game_state == 4: #buffer so stick 2 doesn't move before a mouse click
 		pass
 	elif game_state == 5:
+		var irand = randi_range(1,4)
+		tape_sound(irand)
 		animationPlayer2.play("Taping2")
 		game_state += 1
 	elif game_state == 6:
@@ -149,5 +153,33 @@ func _game_over_exit():
 		9: # finals 3rd
 			nextDialogueScene = "res://Objects/Dialogue_Scenes/timeline_snaregame_3_post_finals.tscn"
 	
+func tape_sound(i):
+	match(i):
+		1:
+			$Tape1.play()
+		2:
+			$Tape2.play()
+		3:
+			$Tape3.play()
+		4:
+			$Tape4.play()
 
-	
+func _on_tape_1_finished():
+	if game_state == 2 or game_state == 6:
+		var irand = randi_range(2,4)
+		tape_sound(irand)
+
+func _on_tape_2_finished():
+	if game_state == 2 or game_state == 6:
+		var irand = randi_range(3,4)
+		tape_sound(irand)
+
+func _on_tape_3_finished():
+	if game_state == 2 or game_state == 6:
+		var irand = randi_range(1,2)
+		tape_sound(irand)
+
+func _on_tape_4_finished():
+	if game_state == 2 or game_state == 6:
+		var irand = randi_range(1,3)
+		tape_sound(irand)

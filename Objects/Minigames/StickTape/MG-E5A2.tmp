@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c2x4r4uh41fag"]
+[gd_scene load_steps=23 format=3 uid="uid://c2x4r4uh41fag"]
 
 [ext_resource type="Script" path="res://Objects/Minigames/StickTape/MG-Stick-Tape.gd" id="1_3ycul"]
 [ext_resource type="TileSet" uid="uid://cy0a6hqn3padk" path="res://Assets/DrumScrewMinigame/Floortile_set.tres" id="1_068n0"]
@@ -10,7 +10,6 @@
 [ext_resource type="AudioStream" uid="uid://4xmlsdh40l8l" path="res://Assets/Audio/Tape2.mp3" id="8_su0gt"]
 [ext_resource type="AudioStream" uid="uid://dj3te4kfqq4br" path="res://Assets/Audio/Tape3.mp3" id="9_53xqd"]
 [ext_resource type="AudioStream" uid="uid://ckhlrkcjr0nla" path="res://Assets/Audio/Tape4.mp3" id="10_78n46"]
-[ext_resource type="PackedScene" uid="uid://d1qnh4735ekye" path="res://snare_stick_tape_BG.tscn" id="11_ry73i"]
 
 [sub_resource type="Animation" id="Animation_t2f4w"]
 length = 0.001
@@ -404,18 +403,7 @@ _data = {
 [node name="Mg-stick-tape" type="Node2D"]
 script = ExtResource("1_3ycul")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-z_index = -2
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="SnareDrumBG" parent="SubViewportContainer" instance=ExtResource("11_ry73i")]
-own_world_3d = true
-handle_input_locally = false
-render_target_update_mode = 4
-
 [node name="TileMap" type="TileMap" parent="."]
-visible = false
 z_index = -1
 tile_set = ExtResource("1_068n0")
 rendering_quadrant_size = 128
@@ -513,7 +501,3 @@ stream = ExtResource("10_78n46")
 [connection signal="mouse_exited" from="PathArea" to="." method="_on_path_area_mouse_exited"]
 [connection signal="mouse_entered" from="PathArea2" to="." method="_on_path_area_mouse_entered"]
 [connection signal="mouse_exited" from="PathArea2" to="." method="_on_path_area_mouse_exited"]
-[connection signal="finished" from="Tape1" to="." method="_on_tape_1_finished"]
-[connection signal="finished" from="Tape2" to="." method="_on_tape_2_finished"]
-[connection signal="finished" from="Tape3" to="." method="_on_tape_3_finished"]
-[connection signal="finished" from="Tape4" to="." method="_on_tape_4_finished"]

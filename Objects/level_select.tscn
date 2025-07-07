@@ -41,20 +41,38 @@ position = Vector2(961, 156)
 scale = Vector2(0.798212, 0.641234)
 texture = ExtResource("1_5dgtg")
 
-[node name="bass_tutorial" type="Button" parent="."]
-visible = false
-custom_minimum_size = Vector2(100, 100)
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
 offset_left = 152.0
 offset_top = 359.0
-offset_right = 288.0
-offset_bottom = 426.0
+offset_right = 669.0
+offset_bottom = 655.0
+theme_override_constants/separation = 20
+
+[node name="bass_tutorial" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
 theme = ExtResource("4_420qu")
-text = "Bass Training
-"
+text = "Bass: Training"
+alignment = 0
+
+[node name="bass_basketball_1" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("4_420qu")
+text = "Bass: First Basketball Game"
+alignment = 0
+
+[node name="bass_basketball_2" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("4_420qu")
+text = "Bass: Finals Game"
+alignment = 0
 
 [node name="snare_tutorial" type="Button" parent="."]
-visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
 offset_left = 1186.0
@@ -64,20 +82,7 @@ offset_bottom = 431.0
 theme = ExtResource("4_420qu")
 text = "Snare Training"
 
-[node name="bass_basketball_1" type="Button" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 574.0
-offset_top = 356.0
-offset_right = 713.0
-offset_bottom = 423.0
-theme = ExtResource("4_420qu")
-text = "Bass: First
-Basketball Game
-"
-
 [node name="snare_basketball_1" type="Button" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 1558.0
 offset_top = 364.0
@@ -88,20 +93,7 @@ text = "Snare: First
 Basketball game
 "
 
-[node name="bass_basketball_2" type="Button" parent="."]
-visible = false
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 0
-offset_left = 344.0
-offset_top = 670.0
-offset_right = 491.0
-offset_bottom = 737.0
-theme = ExtResource("4_420qu")
-text = "Bass: Finals Game
-"
-
 [node name="snare_basketball_2" type="Button" parent="."]
-visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
 offset_left = 1365.0
@@ -113,7 +105,6 @@ text = "Snare: Finals Game
 "
 
 [node name="back_button" type="Button" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 49.0
 offset_top = 34.0
@@ -124,7 +115,6 @@ theme_override_font_sizes/font_size = 50
 text = "Back"
 
 [node name="free_play_button" type="Button" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 1541.0
 offset_top = 23.0
@@ -230,11 +220,11 @@ theme_override_fonts/font = ExtResource("5_ad4th")
 theme_override_font_sizes/font_size = 100
 text = "Snare"
 
-[connection signal="pressed" from="bass_tutorial" to="." method="_on_bass_tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer/bass_tutorial" to="." method="_on_bass_tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer/bass_basketball_1" to="." method="_on_bass_basketball_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/bass_basketball_2" to="." method="_on_bass_basketball_2_pressed"]
 [connection signal="pressed" from="snare_tutorial" to="." method="_on_snare_tutorial_pressed"]
-[connection signal="pressed" from="bass_basketball_1" to="." method="_on_bass_basketball_1_pressed"]
 [connection signal="pressed" from="snare_basketball_1" to="." method="_on_snare_basketball_1_pressed"]
-[connection signal="pressed" from="bass_basketball_2" to="." method="_on_bass_basketball_2_pressed"]
 [connection signal="pressed" from="snare_basketball_2" to="." method="_on_snare_basketball_2_pressed"]
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="free_play_button" to="." method="_on_free_play_button_pressed"]

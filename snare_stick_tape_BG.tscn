@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1qnh4735ekye"]
+
+[ext_resource type="PackedScene" uid="uid://bfwbdvweyvljo" path="res://Objects/3dBackground_ScrewGame_SnareVer.tscn" id="1_qhucl"]
+
+[node name="SnareDrumBG" instance=ExtResource("1_qhucl")]
+script = null
+
+[node name="bass shell" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, -0.018215, -0.996195, 0, 0.208205, -0.0871529, 0, 0, -2.22415)
+
+[node name="AnimationPlayer" parent="." index="4"]
+active = false
+
+[node name="BGSound" parent="AnimationPlayer" index="1"]
+volume_db = -0.25
+autoplay = true
+
+[node name="Ins" parent="." index="5"]
+visible = false
