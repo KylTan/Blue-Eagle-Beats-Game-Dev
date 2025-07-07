@@ -18,19 +18,21 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if $SubViewportContainer/SubViewport.anim_fin1 > 0 && fp_pressed == 0:
-		$bass_tutorial.visible = true
+		$BassCampaign.visible = true
+		$SnareCampaign.visible = true
+		#$bass_tutorial.visible = true
 		$back_button.visible = true
 		$free_play_button.visible = true
 	#if mission_unlock_bass >= 1:
-		$bass_basketball_1.visible = true
+		#$bass_basketball_1.visible = true
 	#if mission_unlock_snare >= 1:
-		$snare_tutorial.visible = true
+		#$snare_tutorial.visible = true
 	#if mission_unlock_bass >= 3:
-		$bass_basketball_2.visible = true
+		#$bass_basketball_2.visible = true
 	#if mission_unlock_snare >= 2:
-		$snare_basketball_1.visible = true
+		#$snare_basketball_1.visible = true
 	#if mission_unlock_snare >= 3:
-		$snare_basketball_2.visible = true
+		#$snare_basketball_2.visible = true
 
 
 func _on_bass_tutorial_pressed():
@@ -80,12 +82,14 @@ func _on_free_play_button_pressed():
 	if fp_pressed == 0:
 		fp_pressed = 1
 		
-		$bass_tutorial.visible = false
-		$bass_basketball_1.visible = false
-		$snare_tutorial.visible = false
-		$bass_basketball_2.visible = false
-		$snare_basketball_1.visible = false
-		$snare_basketball_2.visible = false
+		$BassCampaign.visible = false
+		$SnareCampaign.visible = false
+		#$bass_tutorial.visible = false
+		#$bass_basketball_1.visible = false
+		#$snare_tutorial.visible = false
+		#$bass_basketball_2.visible = false
+		#$snare_basketball_1.visible = false
+		#$snare_basketball_2.visible = false
 		$FPButtons.visible = true
 		$FPButtonsSnare.visible = true
 		$free_play_button.text = "To Story"

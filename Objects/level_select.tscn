@@ -41,70 +41,73 @@ position = Vector2(961, 156)
 scale = Vector2(0.798212, 0.641234)
 texture = ExtResource("1_5dgtg")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="BassCampaign" type="VBoxContainer" parent="."]
+visible = false
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
 offset_left = 152.0
-offset_top = 359.0
+offset_top = 420.0
 offset_right = 669.0
-offset_bottom = 655.0
+offset_bottom = 716.0
 theme_override_constants/separation = 20
 
-[node name="bass_tutorial" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
+[node name="bass_tutorial" type="Button" parent="BassCampaign"]
+custom_minimum_size = Vector2(100, 80)
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 theme = ExtResource("4_420qu")
 text = "Bass: Training"
 alignment = 0
 
-[node name="bass_basketball_1" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
+[node name="bass_basketball_1" type="Button" parent="BassCampaign"]
+custom_minimum_size = Vector2(100, 80)
 layout_mode = 2
 theme = ExtResource("4_420qu")
 text = "Bass: First Basketball Game"
 alignment = 0
 
-[node name="bass_basketball_2" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
+[node name="bass_basketball_2" type="Button" parent="BassCampaign"]
+custom_minimum_size = Vector2(100, 80)
 layout_mode = 2
 theme = ExtResource("4_420qu")
 text = "Bass: Finals Game"
 alignment = 0
 
-[node name="snare_tutorial" type="Button" parent="."]
-custom_minimum_size = Vector2(100, 100)
+[node name="SnareCampaign" type="VBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
-offset_left = 1186.0
-offset_top = 364.0
-offset_right = 1299.0
-offset_bottom = 431.0
-theme = ExtResource("4_420qu")
-text = "Snare Training"
+offset_left = 1240.0
+offset_top = 420.0
+offset_right = 1768.0
+offset_bottom = 700.0
+theme_override_constants/separation = 20
+alignment = 2
 
-[node name="snare_basketball_1" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1558.0
-offset_top = 364.0
-offset_right = 1694.0
-offset_bottom = 431.0
+[node name="snare_tutorial" type="Button" parent="SnareCampaign"]
+custom_minimum_size = Vector2(500, 80)
+layout_mode = 2
 theme = ExtResource("4_420qu")
-text = "Snare: First
-Basketball game
+text = "Snare: Training"
+alignment = 2
+
+[node name="snare_basketball_1" type="Button" parent="SnareCampaign"]
+custom_minimum_size = Vector2(500, 80)
+layout_mode = 2
+theme = ExtResource("4_420qu")
+text = "Snare: First Basketball game
 "
 
-[node name="snare_basketball_2" type="Button" parent="."]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 0
-offset_left = 1365.0
-offset_top = 670.0
-offset_right = 1521.0
-offset_bottom = 737.0
+[node name="snare_basketball_2" type="Button" parent="SnareCampaign"]
+custom_minimum_size = Vector2(500, 80)
+layout_mode = 2
 theme = ExtResource("4_420qu")
 text = "Snare: Finals Game
 "
+alignment = 2
 
 [node name="back_button" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 49.0
 offset_top = 34.0
@@ -115,123 +118,135 @@ theme_override_font_sizes/font_size = 50
 text = "Back"
 
 [node name="free_play_button" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 1541.0
-offset_top = 23.0
+offset_top = 34.0
 offset_right = 1877.0
-offset_bottom = 169.0
+offset_bottom = 180.0
 theme = ExtResource("4_420qu")
 theme_override_font_sizes/font_size = 50
 text = "To Freeplay"
 
 [node name="FPButtons" type="Node2D" parent="."]
 visible = false
-position = Vector2(-100, 98)
 
-[node name="free_play_Jabba" type="Button" parent="FPButtons"]
-offset_left = 434.0
-offset_top = 700.0
-offset_right = 773.0
-offset_bottom = 820.0
-theme = ExtResource("4_420qu")
-theme_override_font_sizes/font_size = 50
-text = "Jabba"
+[node name="VBoxContainer" type="VBoxContainer" parent="FPButtons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 150.0
+offset_top = 300.0
+offset_right = 674.0
+offset_bottom = 770.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(4.43, 0)
+size_flags_horizontal = 0
+theme_override_constants/separation = 20
 
-[node name="free_play_Fabilioh" type="Button" parent="FPButtons"]
-offset_left = 434.0
-offset_top = 250.0
-offset_right = 773.0
-offset_bottom = 370.0
-theme = ExtResource("4_420qu")
-theme_override_font_sizes/font_size = 50
-text = "Fabilioh
-"
-
-[node name="free_play_FlyHigh" type="Button" parent="FPButtons"]
-offset_left = 434.0
-offset_top = 550.0
-offset_right = 773.0
-offset_bottom = 670.0
-theme = ExtResource("4_420qu")
-theme_override_font_sizes/font_size = 50
-text = "Fly High"
-
-[node name="free_play_GOAT" type="Button" parent="FPButtons"]
-offset_left = 434.0
-offset_top = 406.0
-offset_right = 773.0
-offset_bottom = 526.0
-theme = ExtResource("4_420qu")
-theme_override_font_sizes/font_size = 50
-text = "Go Ateneo"
-
-[node name="Label" type="Label" parent="FPButtons"]
-offset_left = 485.0
-offset_top = 119.0
-offset_right = 735.0
-offset_bottom = 256.0
+[node name="Label" type="Label" parent="FPButtons/VBoxContainer"]
+layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("5_ad4th")
 theme_override_font_sizes/font_size = 100
 text = "Bass"
+horizontal_alignment = 1
 
-[node name="FPButtonsSnare" type="Node2D" parent="."]
-visible = false
-position = Vector2(800, 100)
-
-[node name="free_play_Manson" type="Button" parent="FPButtonsSnare"]
-offset_left = 434.0
-offset_top = 400.0
-offset_right = 773.0
-offset_bottom = 520.0
+[node name="free_play_Jabba" type="Button" parent="FPButtons/VBoxContainer"]
+layout_mode = 2
 theme = ExtResource("4_420qu")
 theme_override_font_sizes/font_size = 50
-text = "Manson"
+text = "Jabba"
 
-[node name="free_play_3Fights" type="Button" parent="FPButtonsSnare"]
-offset_left = 434.0
-offset_top = 250.0
-offset_right = 773.0
-offset_bottom = 370.0
+[node name="free_play_Fabilioh" type="Button" parent="FPButtons/VBoxContainer"]
+layout_mode = 2
 theme = ExtResource("4_420qu")
 theme_override_font_sizes/font_size = 50
-text = "3 Fights"
+text = "Fabilioh
+"
 
-[node name="free_play_S_GOAT" type="Button" parent="FPButtonsSnare"]
-offset_left = 434.0
-offset_top = 550.0
-offset_right = 773.0
-offset_bottom = 670.0
+[node name="free_play_FlyHigh" type="Button" parent="FPButtons/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_420qu")
+theme_override_font_sizes/font_size = 50
+text = "Fly High"
+
+[node name="free_play_GOAT" type="Button" parent="FPButtons/VBoxContainer"]
+layout_mode = 2
 theme = ExtResource("4_420qu")
 theme_override_font_sizes/font_size = 50
 text = "Go Ateneo"
 
-[node name="Label" type="Label" parent="FPButtonsSnare"]
-offset_left = 463.0
-offset_top = 132.0
-offset_right = 740.0
-offset_bottom = 269.0
+[node name="Control" type="Control" parent="FPButtons"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FPButtonsSnare" type="Node2D" parent="."]
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FPButtonsSnare"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1230.0
+offset_top = 300.0
+offset_right = 1754.0
+offset_bottom = 770.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(4.43, 0)
+size_flags_horizontal = 0
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="FPButtonsSnare/VBoxContainer"]
+layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("5_ad4th")
 theme_override_font_sizes/font_size = 100
 text = "Snare"
+horizontal_alignment = 1
 
-[connection signal="pressed" from="VBoxContainer/bass_tutorial" to="." method="_on_bass_tutorial_pressed"]
-[connection signal="pressed" from="VBoxContainer/bass_basketball_1" to="." method="_on_bass_basketball_1_pressed"]
-[connection signal="pressed" from="VBoxContainer/bass_basketball_2" to="." method="_on_bass_basketball_2_pressed"]
-[connection signal="pressed" from="snare_tutorial" to="." method="_on_snare_tutorial_pressed"]
-[connection signal="pressed" from="snare_basketball_1" to="." method="_on_snare_basketball_1_pressed"]
-[connection signal="pressed" from="snare_basketball_2" to="." method="_on_snare_basketball_2_pressed"]
+[node name="free_play_Manson" type="Button" parent="FPButtonsSnare/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_420qu")
+theme_override_font_sizes/font_size = 50
+text = "Manson"
+
+[node name="free_play_3Fights" type="Button" parent="FPButtonsSnare/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_420qu")
+theme_override_font_sizes/font_size = 50
+text = "3 Fights"
+
+[node name="free_play_S_GOAT" type="Button" parent="FPButtonsSnare/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_420qu")
+theme_override_font_sizes/font_size = 50
+text = "Go Ateneo"
+
+[connection signal="pressed" from="BassCampaign/bass_tutorial" to="." method="_on_bass_tutorial_pressed"]
+[connection signal="pressed" from="BassCampaign/bass_basketball_1" to="." method="_on_bass_basketball_1_pressed"]
+[connection signal="pressed" from="BassCampaign/bass_basketball_2" to="." method="_on_bass_basketball_2_pressed"]
+[connection signal="pressed" from="SnareCampaign/snare_tutorial" to="." method="_on_snare_tutorial_pressed"]
+[connection signal="pressed" from="SnareCampaign/snare_basketball_1" to="." method="_on_snare_basketball_1_pressed"]
+[connection signal="pressed" from="SnareCampaign/snare_basketball_2" to="." method="_on_snare_basketball_2_pressed"]
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="free_play_button" to="." method="_on_free_play_button_pressed"]
-[connection signal="pressed" from="FPButtons/free_play_Jabba" to="." method="_on_free_play_jabba_pressed"]
-[connection signal="pressed" from="FPButtons/free_play_Fabilioh" to="." method="_on_free_play_fabilioh_pressed"]
-[connection signal="pressed" from="FPButtons/free_play_FlyHigh" to="." method="_on_free_play_fly_high_pressed"]
-[connection signal="pressed" from="FPButtons/free_play_GOAT" to="." method="_on_free_play_goat_pressed"]
-[connection signal="pressed" from="FPButtonsSnare/free_play_Manson" to="." method="_on_free_play_manson_pressed"]
-[connection signal="pressed" from="FPButtonsSnare/free_play_3Fights" to="." method="_on_free_play_3_fights_pressed"]
-[connection signal="pressed" from="FPButtonsSnare/free_play_S_GOAT" to="." method="_on_free_play_s_goat_pressed"]
+[connection signal="pressed" from="FPButtons/VBoxContainer/free_play_Jabba" to="." method="_on_free_play_jabba_pressed"]
+[connection signal="pressed" from="FPButtons/VBoxContainer/free_play_Fabilioh" to="." method="_on_free_play_fabilioh_pressed"]
+[connection signal="pressed" from="FPButtons/VBoxContainer/free_play_FlyHigh" to="." method="_on_free_play_fly_high_pressed"]
+[connection signal="pressed" from="FPButtons/VBoxContainer/free_play_GOAT" to="." method="_on_free_play_goat_pressed"]
+[connection signal="pressed" from="FPButtonsSnare/VBoxContainer/free_play_Manson" to="." method="_on_free_play_manson_pressed"]
+[connection signal="pressed" from="FPButtonsSnare/VBoxContainer/free_play_3Fights" to="." method="_on_free_play_3_fights_pressed"]
+[connection signal="pressed" from="FPButtonsSnare/VBoxContainer/free_play_S_GOAT" to="." method="_on_free_play_s_goat_pressed"]
