@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://bow1evvdvyqc5" path="res://Assets/Textures/Metal.png" id="6_cvth5"]
 [ext_resource type="Texture2D" uid="uid://dsfvw3qbonaca" path="res://Assets/sprite-bass-swing.png" id="6_ku8l3"]
 [ext_resource type="Texture2D" uid="uid://eb740uqc8f7c" path="res://Assets/UI-Overlay.png" id="7_iie8y"]
-[ext_resource type="PackedScene" uid="uid://vgpayaqmtrvl" path="res://music.tscn" id="8_65oaw"]
 [ext_resource type="Texture2D" uid="uid://ci4dhxk8yjbc6" path="res://Assets/Hitzones.png" id="8_itkf6"]
 [ext_resource type="Texture2D" uid="uid://dmw01f04qux0s" path="res://Assets/Bass-Hitbox-Model-Pearl.png" id="9_dy6v6"]
 [ext_resource type="Texture2D" uid="uid://tm5qp2rne6bh" path="res://Assets/sprite-bass-beater-cursour.png" id="11_ov4wu"]
@@ -21,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://y5bl3t5bxc4p" path="res://Assets/sprite-bass-beater-cursour-light-charge.png" id="13_oadnm"]
 [ext_resource type="FontFile" uid="uid://d0ftogm8y3nwr" path="res://Assets/Kola_Complete/Fonts/OTF/Kola-Regular.otf" id="14_qa7i4"]
 [ext_resource type="FontFile" uid="uid://jq4npb7j4ymj" path="res://Assets/Kola_Complete/Fonts/WEB/fonts/Kola-Regular.ttf" id="15_r2jv8"]
+[ext_resource type="PackedScene" uid="uid://vgpayaqmtrvl" path="res://Objects/music.tscn" id="19_pwy1v"]
 [ext_resource type="Texture2D" uid="uid://c4rsdxwx2nofh" path="res://Assets/sprite-energydrink.png" id="22_d5nco"]
 [ext_resource type="PackedScene" uid="uid://c00xil0jyq8em" path="res://Objects/CallsignDirector.tscn" id="23_ywi5k"]
 [ext_resource type="AudioStream" uid="uid://duhj64rvby6yd" path="res://Assets/Audio/Bass Hitsound.mp3" id="24_4i2fl"]
@@ -235,7 +235,7 @@ visible = false
 position = Vector2(2, 1)
 shape = SubResource("CapsuleShape2D_mfkri")
 
-[node name="Music" parent="." instance=ExtResource("8_65oaw")]
+[node name="Music" parent="." instance=ExtResource("19_pwy1v")]
 position = Vector2(785, 731)
 
 [node name="BarNode" type="Node2D" parent="."]

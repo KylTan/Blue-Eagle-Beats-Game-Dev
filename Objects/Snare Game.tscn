@@ -16,7 +16,7 @@
 [ext_resource type="Script" path="res://Objects/BeaterSprite.gd" id="11_8d3f2"]
 [ext_resource type="Script" path="res://Objects/Beater Cursour.gd" id="12_bqb23"]
 [ext_resource type="PackedScene" uid="uid://drrphak0li8wd" path="res://Objects/Snare Note Receiver.tscn" id="13_7g0ee"]
-[ext_resource type="PackedScene" uid="uid://vgpayaqmtrvl" path="res://music.tscn" id="13_vsbgf"]
+[ext_resource type="PackedScene" uid="uid://vgpayaqmtrvl" path="res://Objects/music.tscn" id="16_3633b"]
 [ext_resource type="FontFile" uid="uid://d0ftogm8y3nwr" path="res://Assets/Kola_Complete/Fonts/OTF/Kola-Regular.otf" id="16_yimqd"]
 [ext_resource type="PackedScene" uid="uid://c00xil0jyq8em" path="res://Objects/CallsignDirector.tscn" id="19_rv8m7"]
 [ext_resource type="AudioStream" uid="uid://dl5xkqfdch3vd" path="res://Assets/Audio/Snare Hitsound.mp3" id="20_hoepe"]
@@ -186,7 +186,7 @@ visible = false
 position = Vector2(2, 1)
 shape = SubResource("CapsuleShape2D_mfkri")
 
-[node name="Music" parent="." instance=ExtResource("13_vsbgf")]
+[node name="Music" parent="." instance=ExtResource("16_3633b")]
 position = Vector2(992, 544)
 
 [node name="BarNode" type="Node2D" parent="."]

@@ -10,7 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://4xmlsdh40l8l" path="res://Assets/Audio/Tape2.mp3" id="8_su0gt"]
 [ext_resource type="AudioStream" uid="uid://dj3te4kfqq4br" path="res://Assets/Audio/Tape3.mp3" id="9_53xqd"]
 [ext_resource type="AudioStream" uid="uid://ckhlrkcjr0nla" path="res://Assets/Audio/Tape4.mp3" id="10_78n46"]
-[ext_resource type="PackedScene" uid="uid://d1qnh4735ekye" path="res://snare_stick_tape_BG.tscn" id="11_ry73i"]
+[ext_resource type="PackedScene" uid="uid://d1qnh4735ekye" path="res://Objects/snare_stick_tape_BG.tscn" id="11_ry73i"]
 
 [sub_resource type="Animation" id="Animation_t2f4w"]
 length = 0.001

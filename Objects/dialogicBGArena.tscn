@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://652piku53s7h"]
 
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_00myw"]
-[ext_resource type="PackedScene" uid="uid://c01pw05l84wtq" path="res://Objects/3dBackgroundDialogicAngle.tscn" id="2_ilqpn"]
+[ext_resource type="PackedScene" uid="uid://c01pw05l84wtq" path="res://Objects/3dBackgroundDialogicAngle.tscn" id="2_t8v7t"]
 
 [node name="DialogicBackground" type="Node"]
 script = ExtResource("1_00myw")
@@ -10,6 +10,4 @@ script = ExtResource("1_00myw")
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="SubViewport" parent="SubViewportContainer" instance=ExtResource("2_ilqpn")]
-handle_input_locally = false
-render_target_update_mode = 4
+[node name="SubViewport" parent="SubViewportContainer" instance=ExtResource("2_t8v7t")]
