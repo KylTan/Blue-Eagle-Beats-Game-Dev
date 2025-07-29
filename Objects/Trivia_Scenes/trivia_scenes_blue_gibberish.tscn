@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c31dq5nag51md"]
+[gd_scene load_steps=4 format=3 uid="uid://c31dq5nag51md"]
 
 [ext_resource type="Script" path="res://Objects/Trivia_Scenes/trivia_scenes_blue_gibberish.gd" id="1_qg4gi"]
 [ext_resource type="Texture2D" uid="uid://j88tqgwd0kx2" path="res://Assets/Trivia/trivia_blueGibberish.png" id="1_qhay2"]
+[ext_resource type="AudioStream" uid="uid://qhe2lxh4hesj" path="res://Assets/Audio/MGVictorySound.mp3" id="3_31dfg"]
 
 [node name="trivia_scenes_blueGibberish" type="Control"]
 layout_mode = 3
@@ -25,5 +26,9 @@ offset_bottom = 938.0
 scale = Vector2(2, 2)
 text = "Continue
 "
+
+[node name="VictorySound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_31dfg")
+autoplay = true
 
 [connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]

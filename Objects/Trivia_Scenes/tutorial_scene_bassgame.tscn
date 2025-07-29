@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwrse6dqmsg1k"]
+[gd_scene load_steps=4 format=3 uid="uid://cwrse6dqmsg1k"]
 
 [ext_resource type="Script" path="res://Objects/Trivia_Scenes/tutorial_scene_bassgame.gd" id="1_3euie"]
 [ext_resource type="Texture2D" uid="uid://dj6uowe0y7ouq" path="res://Assets/Trivia/tutorial_bassgame.png" id="2_1y3us"]
+[ext_resource type="AudioStream" uid="uid://qhe2lxh4hesj" path="res://Assets/Audio/MGVictorySound.mp3" id="3_vlqeb"]
 
 [node name="tutorial_scene_bassgame" type="Control"]
 layout_mode = 3
@@ -30,5 +31,9 @@ theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
 text = "Continue
 "
+
+[node name="VictorySound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vlqeb")
+autoplay = true
 
 [connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]

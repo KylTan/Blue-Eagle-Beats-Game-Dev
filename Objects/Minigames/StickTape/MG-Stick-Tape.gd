@@ -70,7 +70,8 @@ func _process(delta):
 			if nextDialogueIndex == 3:
 				GlobalSceneManager._changeScene_Timeline_snare_post_maintenance()
 			elif nextDialogueIndex == 8:
-				GlobalSceneManager._changeScene_Timeline_snare_Mission3_2ndhalf()
+				GlobalSceneManager._changeScene_trivia_introduced()
+				
 	queue_redraw()
 	
 

@@ -6,7 +6,9 @@
 [node name="SubViewport" instance=ExtResource("1_qra0a")]
 
 [node name="Camera3D" parent="." index="0"]
-transform = Transform3D(0.189952, 0, -0.981793, 0, 1, 0, 0.981793, 0, 0.189952, -0.591723, 0.194878, -3.83588)
+transform = Transform3D(0.173648, 0, -0.984807, 0, 1, 0, 0.984807, 0, 0.173648, -0.507, 0.2, -3.676)
+fov = 84.0
+near = 0.001
 
 [node name="One Section2" parent="GA" index="7" instance=ExtResource("2_nsvxd")]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -2.295, 0, 7.757)

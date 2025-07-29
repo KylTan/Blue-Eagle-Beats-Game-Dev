@@ -12,4 +12,4 @@ func _process(delta):
 
 
 func _on_continue_pressed():
-	GlobalSceneManager._changeScene_Timeline_snare_2ndhalf_baball()
+	GlobalSceneManager._changeScene_Timeline_snare_Mission3_2ndhalf()

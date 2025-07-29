@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://rdvudqmhapqa"]
+[gd_scene load_steps=4 format=3 uid="uid://rdvudqmhapqa"]
 
 [ext_resource type="Texture2D" uid="uid://cyr385msux4uf" path="res://Assets/Trivia/trivia_1920.png" id="1_exk5y"]
 [ext_resource type="Script" path="res://Objects/Trivia_Scenes/trivia_scene_1920s.gd" id="1_tj31c"]
+[ext_resource type="AudioStream" uid="uid://qhe2lxh4hesj" path="res://Assets/Audio/MGVictorySound.mp3" id="3_sjn1m"]
 
 [node name="trivia_scene_1920s" type="Control"]
 layout_mode = 3
@@ -25,5 +26,9 @@ offset_bottom = 938.0
 scale = Vector2(2, 2)
 text = "Continue
 "
+
+[node name="VictorySound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_sjn1m")
+autoplay = true
 
 [connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
